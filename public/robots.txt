@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /Homepage/
+Sitemap: https://simsim314.github.io/Homepage/sitemap.xml

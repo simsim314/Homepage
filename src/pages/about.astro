@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/content';
+import { site } from '../lib/site';
+---
+
+<Base title="About & contact"
+  ><section class="container page-intro">
+    <span class="eyebrow">About & contact</span><h1>
+      Michael Simkin.<br /><em>Independent AI researcher.</em>
+    </h1><p>{site.introduction}</p>
+  </section><section class="container about-layout">
+    <div class="prose">
+      <h2>From computer vision to broader AI research</h2><p>
+        Computer vision was my main research interest for many years. As the field of AI has
+        evolved, my interests have broadened beyond vision. Recently I have been exploring
+        AI-assisted mathematical proofs.
+      </p><h2>Building the tools to ask a question</h2><p>
+        My work ranges from Conway’s Game of Life constructions to mathematical research and
+        software experiments. This site collects those interests through articles about specific
+        results and projects.
+      </p><p>
+        For the glider-gun search, I wanted a simple approach: place a few potential catalysts and
+        search the combinations. Making that practical meant first building the infrastructure,
+        LifeAPI and CatForce.
+      </p><p>
+        Some work here is demonstrated, some is experimental, and some remains a candidate claim.
+        Each article makes that distinction explicit and links to the public material behind it.
+      </p><h2>Explore the work</h2><p>
+        Start with an <a href={href('interests/')}>interest</a>, or browse the <a
+          href={href('#articles')}>recent articles</a
+        >. The categories are different ways into the same collection.
+      </p><h2>Contact</h2><p>My public code and project documentation are on GitHub.</p><div
+        class="about-links"
+      >
+        <a href={site.github}>simsim314 on GitHub ↗</a>{
+          site.email && <a href={`mailto:${site.email}`}>{site.email}</a>
+        }{site.arxiv && <a href={site.arxiv}>arXiv profile ↗</a>}
+      </div>
+    </div>
+  </section></Base
+>

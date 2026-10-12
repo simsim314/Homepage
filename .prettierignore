@@ -1,0 +1,6 @@
+dist/
+node_modules/
+.astro/
+package-lock.json
+docs/neural-ca-example.json
+public/licenses/

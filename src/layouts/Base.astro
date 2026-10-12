@@ -1,0 +1,121 @@
+---
+import '../styles/global.css';
+import 'katex/dist/katex.min.css';
+import { href, getContent } from '../lib/content';
+import { site } from '../lib/site';
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+const { title, description = site.description, image } = Astro.props;
+const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.profession}`;
+const canonical = new URL(Astro.url.pathname.replace(/\/404\/?$/, '/404.html'), Astro.site);
+const { interests } = await getContent();
+const nav = [
+  { label: 'Home', path: '' },
+  { label: 'Interests', path: 'interests/' },
+  { label: 'Research', path: 'research/' },
+  { label: 'Projects', path: 'projects/' },
+  { label: 'About', path: 'about/' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} /><meta name="theme-color" content="#102f39" />
+    <title>{pageTitle}</title><link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={href('favicon.svg')} />
+    <link rel="sitemap" href={href('sitemap.xml')} />
+    <meta property="og:type" content="website" /><meta
+      property="og:title"
+      content={pageTitle}
+    /><meta property="og:description" content={description} /><meta
+      property="og:url"
+      content={canonical}
+    />
+    {image && <meta property="og:image" content={new URL(href(image), Astro.site)} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href={href()} aria-label="Michael Simkin home"
+          ><span class="brand-mark" aria-hidden="true">m<span>·</span>s</span><span
+            >Michael Simkin<small>{site.profession} · {site.location}</small></span
+          ></a
+        >
+        <nav aria-label="Main navigation">
+          {
+            nav.map((n) => (
+              <a
+                href={href(n.path)}
+                aria-current={
+                  Astro.url.pathname === href(n.path) ||
+                  (n.path && Astro.url.pathname.startsWith(href(n.path)))
+                    ? 'page'
+                    : undefined
+                }
+              >
+                {n.label}
+              </a>
+            ))
+          }
+        </nav>
+        <a class="search-link" href={href('search/')} aria-label="Search articles"
+          ><svg
+            viewBox="0 0 24 24"
+            width="19"
+            height="19"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+            ><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg
+          ><span>Search</span></a
+        >
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="footer-name" href={href()}>Michael Simkin</a><p>
+            AI research, mathematical exploration, and computational discovery.
+          </p><a href={site.github}>GitHub ↗</a>
+        </div><div>
+          <span class="eyebrow">Explore the interests</span><div class="footer-topics">
+            {interests.map((i) => <a href={href(`interests/${i.id}/`)}>{i.data.title}</a>)}
+          </div>
+        </div>
+      </div><div class="container footer-bottom">
+        <span>© {new Date().getUTCFullYear()} Michael Simkin</span><span
+          >A personal research journal.</span
+        ><button type="button" class="motion-toggle" aria-pressed="false"
+          >Pause animated images</button
+        ><a href={href('about/')}>About & contact ↗</a>
+      </div>
+    </footer>
+    <script>
+      const motionButton = document.querySelector<HTMLButtonElement>('.motion-toggle')!;
+      let paused = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const updateMotion = () => {
+        document.querySelectorAll<HTMLImageElement>('img').forEach((img) => {
+          const current = img.dataset.animated || img.getAttribute('src') || '';
+          if (!current.endsWith('.gif')) return;
+          img.dataset.animated = current;
+          img.src = paused ? current.replace(/\.gif$/, '-still.png') : current;
+        });
+        motionButton.textContent = paused ? 'Play animated images' : 'Pause animated images';
+        motionButton.setAttribute('aria-pressed', String(paused));
+      };
+      motionButton.addEventListener('click', () => {
+        paused = !paused;
+        updateMotion();
+      });
+      updateMotion();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Article } from '../lib/content';
+import InterestCard from './InterestCard.astro';
+interface Props {
+  interests: CollectionEntry<'interests'>[];
+  articles: Article[];
+}
+const { interests, articles } = Astro.props;
+---
+
+<div class:list={['interest-grid', { 'balanced-thirds': interests.length % 3 === 0 }]}>
+  {
+    interests.map((interest, index) => (
+      <InterestCard
+        interest={interest}
+        number={index + 1}
+        count={articles.filter((article) => article.data.topics.includes(interest.id)).length}
+      />
+    ))
+  }
+</div>

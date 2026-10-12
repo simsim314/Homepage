@@ -1,0 +1,95 @@
+[
+  {
+    "file": "src/assets/images/cryptohanko.jpg",
+    "source": "https://github.com/simsim314/CryptoHanko/blob/main/Screenshot_20250924_041751_Crypto%20Hanko.jpg",
+    "retrieved": "2026-10-12",
+    "approval": "approved by author"
+  },
+  {
+    "file": "src/assets/images/cryptocash.png",
+    "source": "https://github.com/simsim314/CryptoCash/blob/main/crypto_cash.png",
+    "retrieved": "2026-10-12",
+    "approval": "approved by author"
+  },
+  {
+    "file": "src/assets/images/qr-wifi.png",
+    "source": "https://github.com/simsim314/QR-Wifi-Password/blob/main/scanner.png",
+    "retrieved": "2026-10-12",
+    "approval": "approved by author"
+  },
+  {
+    "file": "images/gear-wire.gif",
+    "source": "https://github.com/simsim314/Multilayer-Mutilated-Gear/blob/main/presentation/wire.gif",
+    "retrieved": "2026-10-12"
+  },
+  {
+    "file": "images/gear-or.gif",
+    "source": "https://github.com/simsim314/Multilayer-Mutilated-Gear/blob/main/presentation/OR_Gates.gif",
+    "retrieved": "2026-10-12"
+  },
+  {
+    "file": "public/images/mandelbrot.png",
+    "source": "Computed on this site with z(n+1)=z(n)^2+c, 800×440 pixels and 110 maximum iterations; a subject illustration, not a project screenshot.",
+    "approval": "approved by author"
+  },
+  {
+    "file": "public/images/gear-3d.gif",
+    "source": "https://github.com/simsim314/Multilayer-Mutilated-Gear/blob/main/presentation/MMG_3dview.gif",
+    "retrieved": "2026-10-12",
+    "approval": "approved by author"
+  },
+  {
+    "file": "src/assets/images/deep-formix-gpu.png",
+    "source": "Built-in image_gen; conceptual editorial illustration, not hardware photo",
+    "prompt": "docs/deep-formix-image-prompt.txt",
+    "approval": "approved by author"
+  },
+  {
+    "file": "src/assets/images/caterloopillar-lifewiki.png",
+    "source": "https://conwaylife.com/w/images/d/d2/Caterloopillar.png",
+    "filePage": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+    "credit": "Uploaded by dvgrn",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-12",
+    "approval": "approved by author"
+  },
+  {
+    "file": "src/assets/images/lifeapi-code.png",
+    "source": "https://github.com/simsim314/LifeAPI#readme",
+    "renderer": "scripts/render-code-preview.py",
+    "description": "Static syntax-colored rendering of documented API operations; no editor controls.",
+    "approval": "pending revised image review"
+  },
+  {
+    "file": "public/images/catforce-combinations.gif",
+    "renderer": "scripts/render-catforce-preview.py",
+    "description": "Illustrative enumeration of 24 placements of blocks and a beehive; not an actual completed search.",
+    "approval": "pending revised image review"
+  },
+  {
+    "file": "public/images/neural-ca-evolution.gif",
+    "source": "https://github.com/simsim314/NeauralCA_MNIST/blob/main/assets/model.onnx",
+    "model_sha256": "389550aa2eb4f27b3907f9642364f4fd53df533aeafb85f40e1a48455cde1787",
+    "data": "docs/neural-ca-example.json",
+    "renderer": "scripts/render-neural-animation.py",
+    "description": "Actual model outputs on synthetic hand-drawn input at selected steps; not a benchmark.",
+    "approval": "pending revised image review"
+  },
+  {
+    "component": "src/components/ArticleVisual.astro#tqrng-webcam",
+    "description": "Conceptual photon-arrival and webcam sensor schematic",
+    "approval": "approved by author"
+  },
+  {
+    "component": "src/components/ArticleVisual.astro#high-dimensional-sphere-packing",
+    "description": "Three-dimensional sphere arrangement as subject illustration; not the high-dimensional candidate construction.",
+    "approval": "pending revised image review"
+  },
+  {
+    "component": "src/components/LifeDemo.astro",
+    "source": "https://conwaylife.com/wiki/Simkin_glider_gun",
+    "description": "Exact RLE evolved in live B3/S23 canvas at adjustable speed, with Play/Pause.",
+    "approval": "slower playback and controls requested by author"
+  }
+]

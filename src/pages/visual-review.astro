@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import { getContent, previewHref } from '../lib/content';
+const { articles } = await getContent();
+---
+
+<Base title="Image placement review"
+  ><section class="container page-intro">
+    <span class="eyebrow">Editorial review</span><h1>One image. One place.</h1><p>
+      Each visual appears once on the homepage. These links lead to those unique placements.
+    </p>
+  </section><section class="container section search-results">
+    {
+      articles
+        .filter((a) => a.data.showPreview)
+        .map((a) => (
+          <article class="search-result">
+            <>
+              <h2>
+                <a href={previewHref(a)}>{a.data.title} ↗</a>
+              </h2>
+              <p>
+                {a.id === 'simkin-glider-gun'
+                  ? 'Homepage animation with Play/Pause.'
+                  : a.id === 'lifeapi'
+                    ? 'Static syntax-colored code image without scrollbars.'
+                    : a.id === 'high-dimensional-sphere-packing'
+                      ? 'Three-dimensional sphere arrangement.'
+                      : a.id === 'tqrng-webcam'
+                        ? 'Conceptual photon-arrival and sensor-noise diagram.'
+                        : a.data.imageCredit ||
+                          (a.data.image
+                            ? 'Original image from the source repository.'
+                            : 'Article illustration.')}
+              </p>
+            </>
+          </article>
+        ))
+    }
+  </section></Base
+>

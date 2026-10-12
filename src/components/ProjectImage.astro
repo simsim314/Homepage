@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import { href } from '../lib/content';
+import type { ImageMetadata } from 'astro';
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  eager?: boolean;
+}
+const { src, alt, class: className, eager = false } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.{png,jpg}', {
+  eager: true,
+});
+const image = images[`../assets${src}`]?.default;
+const animated = src.endsWith('.gif');
+const dimensions = src.includes('simkin-glider-gun')
+  ? [660, 350]
+  : src.includes('neural-ca')
+    ? [360, 360]
+    : src.includes('catforce')
+      ? [576, 342]
+      : [293, 306];
+if (!image && !animated) throw new Error(`Missing project image: ${src}`);
+---
+
+{
+  animated ? (
+    <img
+      src={href(src)}
+      alt={alt}
+      width={dimensions[0]}
+      height={dimensions[1]}
+      loading={eager ? 'eager' : 'lazy'}
+      class={className}
+      data-visual-key={`asset-${src}`}
+    />
+  ) : (
+    <Image
+      src={image!}
+      alt={alt}
+      widths={[400, 800]}
+      sizes="(max-width: 640px) 100vw, 50vw"
+      width={800}
+      format="webp"
+      quality={80}
+      loading={eager ? 'eager' : 'lazy'}
+      class={className}
+      data-visual-key={`asset-${src}`}
+    />
+  )
+}

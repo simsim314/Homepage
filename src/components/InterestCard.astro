@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { href } from '../lib/content';
+interface Props {
+  interest: CollectionEntry<'interests'>;
+  count: number;
+  number: number;
+}
+const { interest, count, number } = Astro.props;
+---
+
+<a
+  class:list={['interest-card', 'interest-typographic', `interest-${interest.id}`]}
+  href={href(`interests/${interest.id}/`)}
+>
+  <div class="interest-copy">
+    <span class="eyebrow"
+      >{String(number).padStart(2, '0')} / {count} {count === 1 ? 'article' : 'articles'}</span
+    ><h3>{interest.data.title}<span aria-hidden="true">↗</span></h3><p>
+      {interest.data.description}
+    </p>
+  </div>
+</a>

@@ -1,0 +1,54 @@
+---
+title: 'Mandelbrot CUDA'
+description: 'Deep fractal exploration using adjustable fixed-point precision on CUDA and WebGPU.'
+type: 'project'
+topics: ['simulation-visualization', 'programming-computing']
+status: 'implemented'
+showPreview: true
+visual: 'fractal'
+featured: true
+date: '2026-10-12'
+tags: ['CUDA', 'WebGPU', 'fractals', 'arbitrary precision']
+github: 'https://github.com/simsim314/mandelbrot-cuda'
+demo: 'https://simsim314.github.io/mandelbrot-cuda/'
+demoNote: 'Requires WebGPU and a compatible browser/GPU. Drag a rectangle to zoom; increase precision and iterations as needed.'
+sources:
+  [
+    {
+      'label': 'Project README and documentation',
+      'url': 'https://github.com/simsim314/mandelbrot-cuda#readme',
+    },
+  ]
+---
+
+Zooming into a fractal eventually becomes an arithmetic problem. When adjacent pixels correspond to coordinates too close for the available numerical precision, the image stops reflecting the intended region.
+
+This project implements desktop and browser Mandelbrot viewers with adjustable fixed-point precision.
+
+## The mathematical core
+
+The Mandelbrot iteration starts at $z_0=0$ and repeatedly applies
+
+$$
+z_{n+1}=z_n^2+c.
+$$
+
+Each pixel supplies a complex parameter $c$. An escape-time rendering colors points according to when their orbit escapes. Points that do not escape within the iteration budget are drawn black; a finite computation is not a proof that every black point belongs to the set.
+
+## Beyond float64 coordinates
+
+The desktop viewer uses CuPy with a custom CUDA kernel. Coordinates are controlled through Python's `Decimal` and converted into signed fixed-point arrays of 32-bit limbs.
+
+The browser viewer implements the same approach with WebGPU/WGSL. JavaScript `BigInt` handles coordinate conversion. Increasing the limb count increases precision and recompiles the relevant shader or kernel.
+
+## Interaction and rendering
+
+Drag a rectangle to zoom, or use touch input in the browser. Controls adjust the iteration budget, precision, coloring, and rendering chunk size. Rendering proceeds in row chunks, and obsolete jobs are canceled when you change the viewport.
+
+More precision addresses coordinate accuracy. More iterations give a boundary orbit longer to escape. They solve different limitations, and both cost computation.
+
+## Try the browser version
+
+The original demo below requires WebGPU, a compatible GPU/driver, and a suitable browser. If it cannot run in the embedded view, open it directly. The desktop alternative requires Python, Pygame, NumPy, and a CuPy package matched to the CUDA installation.
+
+Arbitrary precision means precision can be raised; practical zoom depth remains limited by time, memory, and hardware.

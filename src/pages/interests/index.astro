@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import InterestGrid from '../../components/InterestGrid.astro';
+import { getContent } from '../../lib/content';
+const { articles, interests } = await getContent();
+---
+
+<Base title="Interests"
+  ><section class="container page-intro">
+    <span class="eyebrow">Explore / Interests</span><h1>
+      Different paths.<br /><em>Connected ideas.</em>
+    </h1><p>
+      Different starting points into the same collection of research, discoveries, and experiments.
+    </p>
+  </section><section class="container section">
+    <InterestGrid interests={interests} articles={articles} />
+  </section></Base
+>

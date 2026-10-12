@@ -1,0 +1,36 @@
+---
+interface Props {
+  url: string;
+  title: string;
+  note?: string;
+}
+const { url, title, note } = Astro.props;
+---
+
+<div class="embed-demo" data-url={url} data-title={title}>
+  <div class="embed-intro">
+    <span class="eyebrow">Interactive project</span><h3>{title}</h3>{note && <p>{note}</p>}<button
+      type="button"
+      class="button">Load demonstration <span aria-hidden="true">↗</span></button
+    ><a href={url} target="_blank" rel="noopener noreferrer">Open in its own tab ↗</a>
+  </div>
+  <div class="embed-container"></div>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('.embed-demo').forEach((root) => {
+    root.querySelector('button')!.addEventListener(
+      'click',
+      () => {
+        const frame = document.createElement('iframe');
+        frame.src = root.dataset.url!;
+        frame.title = root.dataset.title!;
+        frame.loading = 'lazy';
+        frame.allow = 'fullscreen';
+        frame.referrerPolicy = 'no-referrer';
+        root.querySelector('.embed-container')!.append(frame);
+        root.querySelector('button')!.remove();
+      },
+      { once: true },
+    );
+  });
+</script>

@@ -1,0 +1,51 @@
+{
+  "profile": "https://conwaylife.com/wiki/Michael_Simkin",
+  "reviewed": "2026-10-12",
+  "scope": "The 11 discoveries listed on the profile, including shared credits; not a claim to cover every contribution in forum history.",
+  "discoveries": [
+    {
+      "article": "switch-engine-ping-pong",
+      "source": "https://conwaylife.com/wiki/Switch_engine_ping-pong"
+    },
+    {
+      "article": "25-cell-quadratic-growth",
+      "source": "https://conwaylife.com/wiki/25-cell_quadratic_growth"
+    },
+    {
+      "article": "24-cell-quadratic-growth",
+      "source": "https://conwaylife.com/wiki/24-cell_quadratic_growth"
+    },
+    {
+      "article": "b60",
+      "source": "https://conwaylife.com/wiki/B60"
+    },
+    {
+      "article": "bne14t30",
+      "source": "https://conwaylife.com/wiki/BNE14T30"
+    },
+    {
+      "article": "brx46b",
+      "source": "https://conwaylife.com/wiki/BRx46B"
+    },
+    {
+      "article": "ocellus",
+      "source": "https://conwaylife.com/wiki/Ocellus"
+    },
+    {
+      "article": "remini",
+      "source": "https://conwaylife.com/wiki/Remini"
+    },
+    {
+      "article": "simkins-p60",
+      "source": "https://conwaylife.com/wiki/Simkin%27s_p60"
+    },
+    {
+      "article": "simkin-glider-gun",
+      "source": "https://conwaylife.com/wiki/Simkin_glider_gun"
+    },
+    {
+      "article": "caterloopilar",
+      "source": "https://conwaylife.com/wiki/Caterloopillar"
+    }
+  ]
+}

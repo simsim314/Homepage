@@ -1,0 +1,151 @@
+---
+import { href } from '../lib/content';
+interface Props {
+  id: string;
+  kind: string;
+}
+const { id, kind } = Astro.props;
+const supported = [
+  'high-dimensional-sphere-packing',
+  'tqrng-webcam',
+  'chess960x960',
+  'mandelbrot-cuda',
+];
+if (!supported.includes(id))
+  throw new Error(`Article ${id} needs a unique image, or showPreview: false.`);
+const sphereShade = 'sphere-shade-3d';
+const packedSpheres = [];
+for (let x = 0; x < 4; x++)
+  for (let y = 0; y < 4; y++)
+    for (let z = 0; z < 3; z++)
+      if ((x + y + z) % 2 === 0)
+        packedSpheres.push({
+          cx: 200 + (x - y) * 34,
+          cy: 104 + (x + y) * 14 - z * 36,
+          depth: x + y + z,
+        });
+packedSpheres.sort((a, b) => a.depth - b.depth);
+---
+
+<div data-visual-key={`article-${id}`} class:list={['visual', `visual-${kind}`, 'article-diagram']}>
+  {
+    id === 'mandelbrot-cuda' ? (
+      <img
+        src={href('images/mandelbrot.png')}
+        alt="Computed Mandelbrot set with colored escape-time bands."
+        width="800"
+        height="440"
+        loading="lazy"
+      />
+    ) : (
+      <svg
+        viewBox="0 0 400 220"
+        role="img"
+        aria-label={
+          id === 'high-dimensional-sphere-packing'
+            ? 'A shaded three-dimensional sphere arrangement, illustrating the subject.'
+            : id === 'tqrng-webcam'
+              ? 'A conceptual diagram of photon arrivals and irregular sensor detections.'
+              : 'Asymmetric Chess960 starting ranks.'
+        }
+      >
+        {id === 'high-dimensional-sphere-packing' && (
+          <>
+            <defs>
+              <radialGradient id={sphereShade} cx="30%" cy="24%" r="75%">
+                <stop offset="0" stop-color="#d9f2e7" />
+                <stop offset=".38" stop-color="#81b4a0" />
+                <stop offset=".75" stop-color="#3c7967" />
+                <stop offset="1" stop-color="#204b43" />
+              </radialGradient>
+            </defs>
+            <ellipse cx="200" cy="199" rx="134" ry="12" fill="#16323b" opacity=".12" />
+            {packedSpheres.map((p) => (
+              <circle
+                cx={p.cx}
+                cy={p.cy}
+                r="28"
+                fill={`url(#${sphereShade})`}
+                stroke="#e5f3ea"
+                stroke-width=".6"
+              />
+            ))}
+          </>
+        )}
+        {id === 'tqrng-webcam' && (
+          <>
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M25 84Q40 55 55 84T85 84T115 84T145 84" />
+              <path d="M166 55V130" />
+              <path
+                d="M193 125H374 M193 85V135 M238 85V135 M280 85V135 M338 85V135"
+                stroke-width=".7"
+                opacity=".35"
+              />
+            </g>
+            <g fill="currentColor">
+              <circle cx="124" cy="84" r="4" />
+              <circle cx="149" cy="84" r="4" />
+              {[201, 210, 247, 292, 302, 311, 351].map((x, i) => (
+                <rect
+                  x={x}
+                  y={125 - [23, 41, 17, 36, 28, 49, 20][i]}
+                  width="3"
+                  height={[23, 41, 17, 36, 28, 49, 20][i]}
+                />
+              ))}
+            </g>
+            <g fill="currentColor" font-size="11" text-anchor="middle">
+              <text x="78" y="165">
+                photon arrivals
+              </text>
+              <text x="165" y="165">
+                sensor
+              </text>
+              <text x="288" y="165">
+                irregular detections
+              </text>
+              <text x="200" y="202" font-size="10">
+                conceptual noise model · not a validation of quantum entropy
+              </text>
+            </g>
+          </>
+        )}
+        {id === 'chess960x960' && (
+          <>
+            {Array.from({ length: 64 }, (_, i) => (
+              <rect
+                x={104 + (i % 8) * 24}
+                y={14 + Math.floor(i / 8) * 24}
+                width="24"
+                height="24"
+                fill="currentColor"
+                opacity={(i + Math.floor(i / 8)) % 2 ? '.2' : '.04'}
+              />
+            ))}
+            {['♝', '♞', '♜', '♚', '♞', '♜', '♛', '♝'].map((p, i) => (
+              <text x={107 + i * 24} y="35" font-size="23" fill="currentColor">
+                {p}
+              </text>
+            ))}
+            {Array.from({ length: 8 }, (_, i) => (
+              <>
+                <text x={107 + i * 24} y="59" font-size="23" fill="currentColor">
+                  ♟
+                </text>
+                <text x={107 + i * 24} y="179" font-size="23" fill="currentColor">
+                  ♙
+                </text>
+              </>
+            ))}
+            {['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'].map((p, i) => (
+              <text x={107 + i * 24} y="203" font-size="23" fill="currentColor">
+                {p}
+              </text>
+            ))}
+          </>
+        )}
+      </svg>
+    )
+  }
+</div>

@@ -1,0 +1,39 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getContent, href } from '../../lib/content';
+export async function getStaticPaths() {
+  const { interests } = await getContent();
+  return interests.map((interest) => ({ params: { id: interest.id }, props: { interest } }));
+}
+interface Props {
+  interest: CollectionEntry<'interests'>;
+}
+const { interest } = Astro.props;
+const { Content } = await render(interest);
+const { articles, interests } = await getContent();
+const related = articles.filter((a) => a.data.topics.includes(interest.id));
+---
+
+<Base title={interest.data.title} description={interest.data.description}
+  ><section class="container category-intro">
+    <div>
+      <a class="eyebrow" href={href('interests/')}>← All interests</a><h1>
+        {interest.data.title}
+      </h1><div class="prose"><Content /></div><span class="eyebrow"
+        >{related.length} connected articles</span
+      >
+    </div>
+  </section><section class="container section">
+    <div class="article-grid">{related.map((a) => <ArticleCard article={a} />)}</div>
+  </section><section class="container section">
+    <h2>Keep exploring.</h2><div class="topic-links">
+      {
+        interests
+          .filter((i) => i.id !== interest.id)
+          .map((i) => <a href={href(`interests/${i.id}/`)}>{i.data.title} ↗</a>)
+      }
+    </div>
+  </section></Base
+>

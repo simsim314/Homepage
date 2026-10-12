@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/content';
+---
+
+<Base title="Page not found"
+  ><section class="container page-intro section">
+    <span class="eyebrow">404</span><h1>A missing connection.</h1><p>
+      This page could not be found. The journal is a good place to start again.
+    </p><a class="button" href={href()}>Back to the journal ↗</a>
+  </section></Base
+>

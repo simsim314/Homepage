@@ -1,0 +1,42 @@
+---
+import type { Article } from '../lib/content';
+import ArticleVisual from './ArticleVisual.astro';
+import ProjectImage from './ProjectImage.astro';
+import { articleHref, statusLabels, formatDate } from '../lib/content';
+interface Props {
+  article: Article;
+  compact?: boolean;
+  preview?: boolean;
+}
+const { article, compact = false, preview = false } = Astro.props;
+const { data } = article;
+const hasPreview = preview && data.showPreview;
+---
+
+<article class:list={['article-card', { compact, 'has-preview': hasPreview }]}>
+  {
+    hasPreview && (
+      <a
+        class="card-image"
+        id={`preview-${article.id}`}
+        href={articleHref(article)}
+        aria-label={`Read ${data.title}`}
+      >
+        {data.image ? (
+          <ProjectImage src={data.image} alt={data.imageAlt || data.title} />
+        ) : (
+          <ArticleVisual id={article.id} kind={data.visual} />
+        )}
+      </a>
+    )
+  }
+  <div class="card-copy">
+    <div class="eyebrow">
+      <span>{data.type === 'research' ? 'Research' : 'Project'}</span><span
+        class={`status-dot status-${data.status}`}></span><span>{statusLabels[data.status]}</span>
+    </div>
+    <h3><a href={articleHref(article)}>{data.title}<span aria-hidden="true"> ↗</span></a></h3>
+    <p>{data.description}</p>
+    <time datetime={data.date.toISOString()}>{formatDate(data.date)}</time>
+  </div>
+</article>

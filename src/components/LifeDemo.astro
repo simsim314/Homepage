@@ -1,0 +1,168 @@
+---
+interface Props {
+  hero?: boolean;
+}
+import { href } from '../lib/content';
+const { hero = false } = Astro.props;
+---
+
+<section
+  class:list={['life-demo', { 'life-hero': hero }]}
+  data-autoplay={hero ? 'true' : 'false'}
+  data-visual-key="simkin-glider-gun"
+  aria-label="Interactive Simkin glider gun"
+>
+  <div class="demo-heading">
+    <span class="eyebrow">Conway’s Game of Life</span><span class="demo-badge">B3 / S23</span>
+  </div>
+  <a
+    class="life-pattern-link"
+    href={href('articles/simkin-glider-gun/')}
+    aria-label="Read about the Simkin Glider Gun"
+    ><canvas
+      width="660"
+      height="350"
+      aria-label="Animated Simkin glider gun evolved by Conway’s Game of Life. Use Play or Pause below."
+      role="img">The 29-cell, period-120 Simkin glider gun.</canvas
+    ></a
+  >
+  <div class="demo-controls">
+    <button type="button" data-action="play" aria-pressed="false">▶ Play</button><button
+      type="button"
+      data-action="step">Step</button
+    ><button type="button" data-action="reset">Reset</button><label class="speed-label"
+      >Speed <select aria-label="Glider gun speed"
+        ><option value="5">5 gen/s</option><option value="10" selected>10 gen/s</option><option
+          value="20">20 gen/s</option
+        ></select
+      ></label
+    ><span>Generation <output>0</output></span>
+  </div>
+  <div class="demo-caption">
+    <strong>Simkin Glider Gun</strong><span>29 cells · period 120 · discovered 2015</span>
+  </div>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('.life-demo').forEach((root) => {
+    const canvas = root.querySelector('canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    const output = root.querySelector('output')!;
+    const play = root.querySelector<HTMLButtonElement>('[data-action="play"]')!;
+    const speed = root.querySelector<HTMLSelectElement>('select')!;
+    const width = 66,
+      height = 35,
+      cell = 10;
+    let live = new Set<string>(),
+      generation = 0,
+      running = false,
+      timer: ReturnType<typeof setInterval> | undefined;
+    const rle = '2o5b2o$2o5b2o2$4b2o$4b2o5$22bo3bo$21bo4b2o$20b2o5b2o2b2o$21b2o4bo3b2o$22bo!';
+    const draw = () => {
+      ctx.fillStyle = '#102f39';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = '#22414a';
+      ctx.lineWidth = 0.5;
+      for (let x = 0; x <= width; x++) {
+        ctx.beginPath();
+        ctx.moveTo(x * cell, 0);
+        ctx.lineTo(x * cell, height * cell);
+        ctx.stroke();
+      }
+      for (let y = 0; y <= height; y++) {
+        ctx.beginPath();
+        ctx.moveTo(0, y * cell);
+        ctx.lineTo(width * cell, y * cell);
+        ctx.stroke();
+      }
+      ctx.fillStyle = '#a1ddcb';
+      for (const key of live) {
+        const [x, y] = key.split(',').map(Number);
+        ctx.fillRect(x * cell + 1, y * cell + 1, 8, 8);
+      }
+      output.value = String(generation);
+    };
+    const step = () => {
+      const counts = new Map<string, number>();
+      for (const key of live) {
+        const [x, y] = key.split(',').map(Number);
+        for (let dx = -1; dx <= 1; dx++)
+          for (let dy = -1; dy <= 1; dy++)
+            if (dx || dy) {
+              const nx = x + dx,
+                ny = y + dy;
+              if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
+              const k = `${nx},${ny}`;
+              counts.set(k, (counts.get(k) || 0) + 1);
+            }
+      }
+      const next = new Set<string>();
+      for (const [k, n] of counts) if (n === 3 || (n === 2 && live.has(k))) next.add(k);
+      live = next;
+      generation++;
+      draw();
+    };
+    const stop = () => {
+      running = false;
+      clearInterval(timer);
+      play.textContent = '▶ Play';
+      play.setAttribute('aria-pressed', 'false');
+    };
+    const reset = () => {
+      stop();
+      live.clear();
+      generation = 0;
+      let x = 13,
+        y = 10,
+        digits = '';
+      for (const c of rle) {
+        if (/\d/.test(c)) {
+          digits += c;
+          continue;
+        }
+        const n = Number(digits || 1);
+        digits = '';
+        if (c === 'o') {
+          for (let i = 0; i < n; i++) live.add(`${x + i},${y}`);
+          x += n;
+        } else if (c === 'b') x += n;
+        else if (c === '$') {
+          y += n;
+          x = 13;
+        }
+      }
+      draw();
+    };
+    const start = () => {
+      running = true;
+      play.textContent = 'Ⅱ Pause';
+      play.setAttribute('aria-pressed', 'true');
+      timer = setInterval(step, 1000 / Number(speed.value));
+    };
+    play.addEventListener('click', () => {
+      if (running) stop();
+      else start();
+    });
+    speed.addEventListener('change', () => {
+      if (running) {
+        stop();
+        start();
+      }
+    });
+    root.querySelector('[data-action="step"]')!.addEventListener('click', () => {
+      stop();
+      step();
+    });
+    root.querySelector('[data-action="reset"]')!.addEventListener('click', reset);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop();
+    });
+    new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) stop();
+    }).observe(root);
+    reset();
+    if (root.dataset.autoplay === 'true' && !matchMedia('(prefers-reduced-motion: reduce)').matches)
+      start();
+  });
+</script>

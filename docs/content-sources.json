@@ -1,0 +1,144 @@
+{
+  "reviewed": "2026-10-12",
+  "articleDateMeaning": "Publication of website text, not the original project date",
+  "repositories": [
+    {
+      "name": "CryptoHanko",
+      "url": "https://github.com/simsim314/CryptoHanko",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "CryptoCash",
+      "url": "https://github.com/simsim314/CryptoCash",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "Chess960x960",
+      "url": "https://github.com/simsim314/Chess960x960",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "Deep-Formix",
+      "url": "https://github.com/simsim314/Deep-Formix",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "mandelbrot-cuda",
+      "url": "https://github.com/simsim314/mandelbrot-cuda",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "CGOL_Virtual_Museum",
+      "url": "https://github.com/simsim314/CGOL_Virtual_Museum",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "NeauralCA_MNIST",
+      "url": "https://github.com/simsim314/NeauralCA_MNIST",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "TQRNG_WebCam",
+      "url": "https://github.com/simsim314/TQRNG_WebCam",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "Multilayer-Mutilated-Gear",
+      "url": "https://github.com/simsim314/Multilayer-Mutilated-Gear",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "QR-Wifi-Password",
+      "url": "https://github.com/simsim314/QR-Wifi-Password",
+      "branch": "main",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "Caterloopilar",
+      "url": "https://github.com/simsim314/Caterloopilar",
+      "branch": "master",
+      "evidence": "RLE patterns and construction scripts; no root README"
+    },
+    {
+      "name": "LifeAPI",
+      "url": "https://github.com/simsim314/LifeAPI",
+      "branch": "master",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "CatForce",
+      "url": "https://github.com/simsim314/CatForce",
+      "branch": "master",
+      "evidence": "Public README and repository tree"
+    },
+    {
+      "name": "math-proof-commitments",
+      "url": "https://github.com/simsim314/math-proof-commitments",
+      "branch": "main",
+      "evidence": "Public README; sphere-packing subfolder README also reviewed"
+    }
+  ],
+  "externalEvidence": [
+    {
+      "url": "https://conwaylife.com/wiki/Simkin_glider_gun",
+      "evidence": "Pattern RLE, population, period, attribution, date"
+    },
+    {
+      "url": "https://conwaylife.com/forums/viewtopic.php?f=2&t=2151",
+      "evidence": "Initial Caterloopillar construction and reading heads"
+    },
+    {
+      "url": "https://conwaylife.com/forums/viewtopic.php?p=30110",
+      "evidence": "Construction constraints and supplied patterns"
+    },
+    {
+      "url": "https://conwaylife.com/forums/viewtopic.php?p=205731",
+      "evidence": "MMG development posts: binary adder, staged folding proposal, delayed wire and OR gates"
+    },
+    {
+      "url": "https://conwaylife.com/forums/viewtopic.php?p=172492",
+      "evidence": "Cribbage p19 discovery by Mitchell Riley using symmetric CatForce"
+    },
+    {
+      "url": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+      "evidence": "Actual Caterloopillar schematic and upload history: dvgrn, April 2, 2019"
+    }
+  ],
+  "authorEvidence": "See editorial-guide.md",
+  "additionalForumDiscoveries": [
+    {
+      "article": "serizawa-geminoid",
+      "sources": [
+        "https://conwaylife.com/forums/viewtopic.php?p=11354#p11354",
+        "https://conwaylife.com/forums/viewtopic.php?t=1346"
+      ],
+      "note": "Working self-constructor; preserve puffer/replicator/spaceship terminology distinction."
+    },
+    {
+      "article": "serizawa-quadratic-growth",
+      "sources": [
+        "https://conwaylife.com/forums/viewtopic.php?p=12135#p12135",
+        "https://conwaylife.com/forums/viewtopic.php?p=12152#p12152"
+      ],
+      "note": "Five-cell initial result followed by clear four-cell example."
+    },
+    {
+      "article": "live-free-or-die-c3-spaceship",
+      "sources": [
+        "https://conwaylife.com/forums/viewtopic.php?p=13652#p13652",
+        "https://conwaylife.com/forums/viewtopic.php?p=12513#p12513",
+        "https://conwaylife.com/forums/viewtopic.php?p=13814#p13814"
+      ],
+      "note": "Prize verified; amount and recalled Bitcoin arrangement omitted pending clarification."
+    }
+  ]
+}

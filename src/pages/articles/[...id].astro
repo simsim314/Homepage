@@ -1,0 +1,146 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Embed from '../../components/Embed.astro';
+import {
+  getContent,
+  href,
+  previewHref,
+  formatDate,
+  relatedArticles,
+  statusLabels,
+  type Article,
+} from '../../lib/content';
+export async function getStaticPaths() {
+  const { articles } = await getContent();
+  return articles.map((article) => ({ params: { id: article.id }, props: { article } }));
+}
+interface Props {
+  article: Article;
+}
+const { article } = Astro.props;
+const { data } = article;
+const { Content, headings } = await render(article);
+const { articles, interests } = await getContent();
+const related = relatedArticles(article, articles);
+---
+
+<Base title={data.title} description={data.description}>
+  <article class="container article-page">
+    <header class="article-header">
+      <a class="eyebrow" href={href('#articles')}>← The journal</a><div class="article-topics">
+        {
+          data.topics.map((t) => (
+            <a href={href(`interests/${t}/`)}>{interests.find((i) => i.id === t)!.data.title}</a>
+          ))
+        }
+      </div><h1>{data.title}</h1><p class="article-deck">{data.description}</p><div
+        class="article-meta"
+      >
+        <span class={`status status-${data.status}`}>{statusLabels[data.status]}</span><span
+          >Published <time datetime={data.date.toISOString()}>{formatDate(data.date)}</time></span
+        >{
+          data.updated && (
+            <span>
+              Updated <time datetime={data.updated.toISOString()}>{formatDate(data.updated)}</time>
+            </span>
+          )
+        }
+      </div>
+    </header>
+    {
+      data.showPreview && (
+        <p class="visual-caption">
+          <a href={previewHref(article)}>
+            View the {article.id === 'simkin-glider-gun' ? 'animated pattern' : 'visual preview'} on
+            the homepage ↗
+          </a>
+          {data.imageCredit && <span> · {data.imageCredit}</span>}
+          {data.imageSource && <a href={data.imageSource}> Source ↗</a>}
+        </p>
+      )
+    }
+    <div class="reading-layout">
+      <aside class="article-toc">
+        <span class="eyebrow">On this page</span><nav aria-label="Article contents">
+          {headings.filter((h) => h.depth === 2).map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}<a
+            href="#sources">Sources & links</a
+          >
+        </nav>
+      </aside><div>
+        <div class="prose article-body"><Content /></div>
+        {
+          data.demo && article.id !== 'tqrng-webcam' && (
+            <Embed url={data.demo} title={`${data.title} demonstration`} note={data.demoNote} />
+          )
+        }
+        {
+          data.demo && article.id === 'tqrng-webcam' && (
+            <p class="demo-external">
+              <>
+                <a class="button" href={data.demo} target="_blank" rel="noopener noreferrer">
+                  Open webcam experiment ↗
+                </a>
+                <span>The original demo requests camera access when you press Start RNG.</span>
+              </>
+            </p>
+          )
+        }
+        <section class="source-panel" id="sources">
+          <h2>Sources & links</h2>{
+            data.github && (
+              <a class="source-primary" href={data.github}>
+                Explore the source code on GitHub ↗
+              </a>
+            )
+          }<ul>
+            {
+              data.sources.map((s) => (
+                <li>
+                  <a href={s.url}>{s.label} ↗</a>
+                </li>
+              ))
+            }
+          </ul><p>
+            Source-based article prepared on {formatDate(data.date)}.{
+              data.type === 'research' && data.status === 'candidate'
+                ? ' A public commitment records a version of a claim; it does not establish its correctness.'
+                : ''
+            }
+          </p>
+        </section>
+        {
+          data.tags.length > 0 && (
+            <div class="tag-list" aria-label="Article tags">
+              {data.tags.map((t) => (
+                <a href={href(`search/?q=${encodeURIComponent(t)}`)}>#{t}</a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </article>
+  {
+    related.length > 0 && (
+      <section class="container section related-section">
+        <>
+          <div class="section-heading">
+            <div>
+              <>
+                <span class="eyebrow">Follow the connections</span>
+                <h2>Related articles.</h2>
+              </>
+            </div>
+          </div>
+          <div class="article-grid">
+            {related.map((a) => (
+              <ArticleCard article={a} />
+            ))}
+          </div>
+        </>
+      </section>
+    )
+  }
+</Base>

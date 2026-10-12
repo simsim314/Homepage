@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/content';
+---
+
+<Base title="Search articles"
+  ><section class="container page-intro">
+    <span class="eyebrow">Explore / Search</span><h1>Find a connection.</h1><p>
+      Search article titles, explanations, interests, and tags.
+    </p><form
+      class="search-form"
+      id="search-form"
+      role="search"
+      data-index={href('search-index.json')}
+    >
+      <label for="search-query">Search the journal</label><input
+        id="search-query"
+        type="search"
+        name="q"
+        placeholder="Try catalysts, sphere packing, or CUDA…"
+        autocomplete="off"
+      /><noscript
+        ><p>
+          Interactive search needs JavaScript. <a href={href('#articles')}
+            >Browse all articles on the homepage</a
+          >.
+        </p></noscript
+      >
+    </form><p id="search-status" role="status">Type to search the articles.</p>
+  </section><section
+    class="container section search-results"
+    id="search-results"
+    aria-label="Search results"
+  >
+  </section></Base
+>
+<script>
+  type Entry = {
+    title: string;
+    description: string;
+    url: string;
+    text: string;
+    topics: string[];
+    tags: string[];
+  };
+  const form = document.querySelector<HTMLFormElement>('#search-form')!;
+  const input = document.querySelector<HTMLInputElement>('#search-query')!;
+  const results = document.querySelector('#search-results')!;
+  const status = document.querySelector('#search-status')!;
+  let entries: Entry[] = [];
+  let ready = false;
+  const search = () => {
+    const query = input.value.trim();
+    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    results.replaceChildren();
+    if (!ready) return;
+    const matches = entries.filter((e) =>
+      terms.every((t) =>
+        `${e.title} ${e.description} ${e.text} ${e.topics.join(' ')} ${e.tags.join(' ')}`
+          .toLowerCase()
+          .includes(t),
+      ),
+    );
+    status.textContent = terms.length
+      ? `${matches.length} ${matches.length === 1 ? 'article' : 'articles'} found for “${query}”.`
+      : `All ${entries.length} articles. Type to narrow the collection.`;
+    for (const e of matches) {
+      const article = document.createElement('article');
+      article.className = 'search-result';
+      const heading = document.createElement('h2');
+      const a = document.createElement('a');
+      a.href = e.url;
+      a.textContent = e.title + ' ↗';
+      heading.append(a);
+      const p = document.createElement('p');
+      p.textContent = e.description;
+      article.append(heading, p);
+      results.append(article);
+    }
+    if (!matches.length) {
+      const p = document.createElement('p');
+      p.className = 'empty-message';
+      p.textContent =
+        'No matching articles. Try a broader phrase or an interest such as chess or mathematics.';
+      results.append(p);
+    }
+  };
+  input.value = new URLSearchParams(location.search).get('q') || '';
+  input.addEventListener('input', search);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const url = new URL(location.href);
+    input.value ? url.searchParams.set('q', input.value) : url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+    search();
+  });
+  fetch(form.dataset.index!)
+    .then((r) => {
+      if (!r.ok) throw new Error('Search index unavailable');
+      return r.json();
+    })
+    .then((data) => {
+      entries = data;
+      ready = true;
+      search();
+    })
+    .catch(() => {
+      status.textContent = 'Search could not load. Browse the articles from Home or Interests.';
+    });
+</script>
