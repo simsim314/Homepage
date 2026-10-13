@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="1010" viewBox="0 0 1340 1010" role="img">
+<title>Eight orange tile input and output port layouts</title>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}</style>
+<rect width="100%" height="100%" fill="#f6f5ef"/>
+<text x="32" y="43" font-size="27" font-weight="bold" fill="#233c43">Orange tiles — all eight bottom/top port layouts</text>
+<text x="32" y="79" font-size="16" font-weight="normal" fill="#233c43">Circle = 0. Plus = 1. C0/C1 preserves the repeated middle input using a separate connector type.</text>
+<text x="32" y="110" font-size="15" font-weight="normal" fill="#233c43">Both faces shown in assembly coordinates from above: port positions align vertically; the underside is not mirrored.</text>
+<text x="35" y="161" font-size="19" font-weight="bold" fill="#233c43">O0: (0, 0, 0, 0)</text>
+<text x="35" y="190" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="359" y="190" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="35" y="205" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="64.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="93" y1="205" x2="93" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="122.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="151" y1="205" x2="151" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="180.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="209" y1="205" x2="209" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="238.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="284" y1="234" x2="335" y2="234" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="229" x2="335" y2="234" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="239" x2="335" y2="234" stroke="#233c43" stroke-width="2"/>
+<rect x="359" y="205" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="388.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="417" y1="205" x2="417" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="446.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="475" y1="205" x2="475" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="504.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="533" y1="205" x2="533" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="549.24" y="240.0" font-size="17" font-weight="bold" fill="#ad6b23">C0</text>
+<text x="35" y="290" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 0; carry C0.</text>
+<text x="700" y="161" font-size="19" font-weight="bold" fill="#233c43">O1: (0, 0, 0, 1)</text>
+<text x="700" y="190" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="1024" y="190" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="700" y="205" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="729.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="758" y1="205" x2="758" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="787.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="816" y1="205" x2="816" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="845.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="874" y1="205" x2="874" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="894.3" y1="234.0" x2="911.7" y2="234.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="903.0" y1="225.3" x2="903.0" y2="242.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="949" y1="234" x2="1000" y2="234" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="229" x2="1000" y2="234" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="239" x2="1000" y2="234" stroke="#233c43" stroke-width="2"/>
+<rect x="1024" y="205" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="1044.3" y1="234.0" x2="1061.7" y2="234.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1053.0" y1="225.3" x2="1053.0" y2="242.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1082" y1="205" x2="1082" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1111.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1140" y1="205" x2="1140" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1169.0" cy="234.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1198" y1="205" x2="1198" y2="263" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="1214.24" y="240.0" font-size="17" font-weight="bold" fill="#ad6b23">C0</text>
+<text x="700" y="290" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 1; carry C0.</text>
+<text x="35" y="340" font-size="19" font-weight="bold" fill="#233c43">O2: (0, 1, 1, 0)</text>
+<text x="35" y="369" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="359" y="369" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="35" y="384" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="64.0" cy="413.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="93" y1="384" x2="93" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="113.3" y1="413.0" x2="130.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="122.0" y1="404.3" x2="122.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="151" y1="384" x2="151" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="171.3" y1="413.0" x2="188.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="180.0" y1="404.3" x2="180.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="209" y1="384" x2="209" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="238.0" cy="413.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="284" y1="413" x2="335" y2="413" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="408" x2="335" y2="413" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="418" x2="335" y2="413" stroke="#233c43" stroke-width="2"/>
+<rect x="359" y="384" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="379.3" y1="413.0" x2="396.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="388.0" y1="404.3" x2="388.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="417" y1="384" x2="417" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="446.0" cy="413.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="475" y1="384" x2="475" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="504.0" cy="413.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="533" y1="384" x2="533" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="549.24" y="419.0" font-size="17" font-weight="bold" fill="#ad6b23">C1</text>
+<text x="35" y="469" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 1; carry C1.</text>
+<text x="700" y="340" font-size="19" font-weight="bold" fill="#233c43">O3: (0, 1, 1, 1)</text>
+<text x="700" y="369" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="1024" y="369" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="700" y="384" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="729.0" cy="413.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="758" y1="384" x2="758" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="778.3" y1="413.0" x2="795.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="787.0" y1="404.3" x2="787.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="816" y1="384" x2="816" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="836.3" y1="413.0" x2="853.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="845.0" y1="404.3" x2="845.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="874" y1="384" x2="874" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="894.3" y1="413.0" x2="911.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="903.0" y1="404.3" x2="903.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="949" y1="413" x2="1000" y2="413" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="408" x2="1000" y2="413" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="418" x2="1000" y2="413" stroke="#233c43" stroke-width="2"/>
+<rect x="1024" y="384" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="1044.3" y1="413.0" x2="1061.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1053.0" y1="404.3" x2="1053.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1082" y1="384" x2="1082" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1102.3" y1="413.0" x2="1119.7" y2="413.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1111.0" y1="404.3" x2="1111.0" y2="421.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1140" y1="384" x2="1140" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1169.0" cy="413.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1198" y1="384" x2="1198" y2="442" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="1214.24" y="419.0" font-size="17" font-weight="bold" fill="#ad6b23">C1</text>
+<text x="700" y="469" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 2; carry C1.</text>
+<text x="35" y="519" font-size="19" font-weight="bold" fill="#233c43">O4: (1, 0, 0, 0)</text>
+<text x="35" y="548" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="359" y="548" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="35" y="563" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="55.3" y1="592.0" x2="72.7" y2="592.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="64.0" y1="583.3" x2="64.0" y2="600.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="93" y1="563" x2="93" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="122.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="151" y1="563" x2="151" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="180.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="209" y1="563" x2="209" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="238.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="284" y1="592" x2="335" y2="592" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="587" x2="335" y2="592" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="597" x2="335" y2="592" stroke="#233c43" stroke-width="2"/>
+<rect x="359" y="563" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="379.3" y1="592.0" x2="396.7" y2="592.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="388.0" y1="583.3" x2="388.0" y2="600.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="417" y1="563" x2="417" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="446.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="475" y1="563" x2="475" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="504.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="533" y1="563" x2="533" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="549.24" y="598.0" font-size="17" font-weight="bold" fill="#ad6b23">C0</text>
+<text x="35" y="648" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 1; carry C0.</text>
+<text x="700" y="519" font-size="19" font-weight="bold" fill="#233c43">O5: (1, 0, 0, 1)</text>
+<text x="700" y="548" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="1024" y="548" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="700" y="563" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="720.3" y1="592.0" x2="737.7" y2="592.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="729.0" y1="583.3" x2="729.0" y2="600.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="758" y1="563" x2="758" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="787.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="816" y1="563" x2="816" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="845.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="874" y1="563" x2="874" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="894.3" y1="592.0" x2="911.7" y2="592.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="903.0" y1="583.3" x2="903.0" y2="600.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="949" y1="592" x2="1000" y2="592" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="587" x2="1000" y2="592" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="597" x2="1000" y2="592" stroke="#233c43" stroke-width="2"/>
+<rect x="1024" y="563" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="1044.3" y1="592.0" x2="1061.7" y2="592.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1053.0" y1="583.3" x2="1053.0" y2="600.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1082" y1="563" x2="1082" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1102.3" y1="592.0" x2="1119.7" y2="592.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1111.0" y1="583.3" x2="1111.0" y2="600.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1140" y1="563" x2="1140" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1169.0" cy="592.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1198" y1="563" x2="1198" y2="621" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="1214.24" y="598.0" font-size="17" font-weight="bold" fill="#ad6b23">C0</text>
+<text x="700" y="648" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 2; carry C0.</text>
+<text x="35" y="698" font-size="19" font-weight="bold" fill="#233c43">O6: (1, 1, 1, 0)</text>
+<text x="35" y="727" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="359" y="727" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="35" y="742" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="55.3" y1="771.0" x2="72.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="64.0" y1="762.3" x2="64.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="93" y1="742" x2="93" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="113.3" y1="771.0" x2="130.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="122.0" y1="762.3" x2="122.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="151" y1="742" x2="151" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="171.3" y1="771.0" x2="188.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="180.0" y1="762.3" x2="180.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="209" y1="742" x2="209" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="238.0" cy="771.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="284" y1="771" x2="335" y2="771" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="766" x2="335" y2="771" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="776" x2="335" y2="771" stroke="#233c43" stroke-width="2"/>
+<rect x="359" y="742" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="379.3" y1="771.0" x2="396.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="388.0" y1="762.3" x2="388.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="417" y1="742" x2="417" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="437.3" y1="771.0" x2="454.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="446.0" y1="762.3" x2="446.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="475" y1="742" x2="475" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="504.0" cy="771.0" r="8.7" fill="none" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="533" y1="742" x2="533" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="549.24" y="777.0" font-size="17" font-weight="bold" fill="#ad6b23">C1</text>
+<text x="35" y="827" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 2; carry C1.</text>
+<text x="700" y="698" font-size="19" font-weight="bold" fill="#233c43">O7: (1, 1, 1, 1)</text>
+<text x="700" y="727" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · recessed</text>
+<text x="1024" y="727" font-size="14" font-weight="bold" fill="#233c43">TOP · raised</text>
+<rect x="700" y="742" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="720.3" y1="771.0" x2="737.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="729.0" y1="762.3" x2="729.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="758" y1="742" x2="758" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="778.3" y1="771.0" x2="795.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="787.0" y1="762.3" x2="787.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="816" y1="742" x2="816" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="836.3" y1="771.0" x2="853.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="845.0" y1="762.3" x2="845.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="874" y1="742" x2="874" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="894.3" y1="771.0" x2="911.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="903.0" y1="762.3" x2="903.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="949" y1="771" x2="1000" y2="771" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="766" x2="1000" y2="771" stroke="#233c43" stroke-width="2"/>
+<line x1="992" y1="776" x2="1000" y2="771" stroke="#233c43" stroke-width="2"/>
+<rect x="1024" y="742" width="232" height="58" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<line x1="1044.3" y1="771.0" x2="1061.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1053.0" y1="762.3" x2="1053.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1082" y1="742" x2="1082" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1102.3" y1="771.0" x2="1119.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1111.0" y1="762.3" x2="1111.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1140" y1="742" x2="1140" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1160.3" y1="771.0" x2="1177.7" y2="771.0" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1169.0" y1="762.3" x2="1169.0" y2="779.7" stroke="#5188b4" stroke-width="3.0449999999999995"/>
+<line x1="1198" y1="742" x2="1198" y2="800" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="1214.24" y="777.0" font-size="17" font-weight="bold" fill="#ad6b23">C1</text>
+<text x="700" y="827" font-size="15" font-weight="normal" fill="#233c43">Count x+y+z = 3; carry C1.</text>
+<text x="32" y="895" font-size="21" font-weight="bold" fill="#233c43">Position geometry derived from the blue face</text>
+<text x="32" y="930" font-size="16" font-weight="normal" fill="#233c43">Proposed body: 4L/5 × L/5. Port pitch: L/5. End margins: L/10. Four ports centred across the width.</text>
+<text x="32" y="961" font-size="16" font-weight="normal" fill="#233c43">Local port centres along length: L/10, 3L/10, 5L/10, 7L/10. All lie on the midline L/10.</text>
+<text x="32" y="991" font-size="14" font-weight="normal" fill="#233c43">C0/C1 are labels here: their actual raised/recessed profiles and channel heights still need to be drawn.</text>
+</svg>

@@ -1,0 +1,676 @@
+{
+  "engine": "Golly 3.3 / RuleLoader",
+  "source": "research/ca-visuals/GeminoidParticles.rle",
+  "source_sha256": "a6f583bb92101810d45cc7464cde27fa64f7ba259854da2be8b07ee607aad56d",
+  "rule": "GeminoidParticles",
+  "generations": [
+    0,
+    24576
+  ],
+  "viewport": [
+    -20,
+    -155,
+    390,
+    155
+  ],
+  "dimensions": [
+    800,
+    660
+  ],
+  "first_complete_stable_head": 17856,
+  "head_translation": [
+    148,
+    -112
+  ],
+  "reference": "Static head cells common to generations 0,128,256,384,480; exact states match at the reported translated location. Arms, input tape and transient cells are separate from this head-circuitry check.",
+  "full_source_comparison_generation": 18432,
+  "full_source_comparison": "All displayed cell states agree with independent full-source Golly evolution.",
+  "rendering": "Fixed framing; exact cells with enlarged circular marks; boxes label head regions. No invented connecting circuitry.",
+  "frames": [
+    {
+      "generation": 0,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 192,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 384,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 576,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 768,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 960,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 1152,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 1344,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 1536,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 1728,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 1920,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 2112,
+      "stable_head_matches": 2,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 2304,
+      "stable_head_matches": 2,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 2496,
+      "stable_head_matches": 3,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 2688,
+      "stable_head_matches": 4,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 2880,
+      "stable_head_matches": 6,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 3072,
+      "stable_head_matches": 6,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 3264,
+      "stable_head_matches": 7,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 3456,
+      "stable_head_matches": 8,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 3648,
+      "stable_head_matches": 10,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 3840,
+      "stable_head_matches": 11,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 4032,
+      "stable_head_matches": 13,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 4224,
+      "stable_head_matches": 13,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 4416,
+      "stable_head_matches": 16,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 4608,
+      "stable_head_matches": 16,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 4800,
+      "stable_head_matches": 17,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 4992,
+      "stable_head_matches": 18,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 5184,
+      "stable_head_matches": 19,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 5376,
+      "stable_head_matches": 20,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 5568,
+      "stable_head_matches": 21,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 5760,
+      "stable_head_matches": 22,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 5952,
+      "stable_head_matches": 24,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 6144,
+      "stable_head_matches": 25,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 6336,
+      "stable_head_matches": 26,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 6528,
+      "stable_head_matches": 26,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 6720,
+      "stable_head_matches": 27,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 6912,
+      "stable_head_matches": 27,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 7104,
+      "stable_head_matches": 29,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 7296,
+      "stable_head_matches": 29,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 7488,
+      "stable_head_matches": 30,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 7680,
+      "stable_head_matches": 32,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 7872,
+      "stable_head_matches": 32,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 8064,
+      "stable_head_matches": 34,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 8256,
+      "stable_head_matches": 36,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 8448,
+      "stable_head_matches": 38,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 8640,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 8832,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 9024,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 9216,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 9408,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 9600,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 9792,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 9984,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 10176,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 10368,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 10560,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 10752,
+      "stable_head_matches": 40,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 10944,
+      "stable_head_matches": 42,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 11136,
+      "stable_head_matches": 43,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 11328,
+      "stable_head_matches": 43,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 11520,
+      "stable_head_matches": 43,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 11712,
+      "stable_head_matches": 44,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 11904,
+      "stable_head_matches": 47,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 12096,
+      "stable_head_matches": 47,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 12288,
+      "stable_head_matches": 47,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 12480,
+      "stable_head_matches": 47,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 12672,
+      "stable_head_matches": 48,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 12864,
+      "stable_head_matches": 48,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 13056,
+      "stable_head_matches": 48,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 13248,
+      "stable_head_matches": 48,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 13440,
+      "stable_head_matches": 49,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 13632,
+      "stable_head_matches": 49,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 13824,
+      "stable_head_matches": 49,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 14016,
+      "stable_head_matches": 49,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 14208,
+      "stable_head_matches": 50,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 14400,
+      "stable_head_matches": 50,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 14592,
+      "stable_head_matches": 50,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 14784,
+      "stable_head_matches": 50,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 14976,
+      "stable_head_matches": 51,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 15168,
+      "stable_head_matches": 53,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 15360,
+      "stable_head_matches": 55,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 15552,
+      "stable_head_matches": 57,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 15744,
+      "stable_head_matches": 60,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 15936,
+      "stable_head_matches": 62,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 16128,
+      "stable_head_matches": 63,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 16320,
+      "stable_head_matches": 66,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 16512,
+      "stable_head_matches": 68,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 16704,
+      "stable_head_matches": 70,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 16896,
+      "stable_head_matches": 72,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 17088,
+      "stable_head_matches": 73,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 17280,
+      "stable_head_matches": 75,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 17472,
+      "stable_head_matches": 77,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 17664,
+      "stable_head_matches": 78,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 17856,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 18048,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 18240,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 18432,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 18624,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 18816,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 19008,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 19200,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 19392,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 19584,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 19776,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 19968,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 20160,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 20352,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 20544,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 20736,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 20928,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 21120,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 21312,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 21504,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 21696,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 21888,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 22080,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 22272,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 22464,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 22656,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 22848,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 23040,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 23232,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 23424,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 23616,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 23808,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 24000,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 24192,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 24384,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    },
+    {
+      "generation": 24576,
+      "stable_head_matches": 80,
+      "stable_head_reference_cells": 80
+    }
+  ]
+}

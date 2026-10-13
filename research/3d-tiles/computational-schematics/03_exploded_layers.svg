@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="980" viewBox="0 0 1100 980" role="img">
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}</style>
+<rect width="100%" height="100%" fill="#f6f5ef"/>
+<text x="35" y="46" fill="#233c43" font-size="27" font-weight="bold" text-anchor="start">Five computational layers · exploded logical schematic</text>
+<text x="35" y="79" fill="#233c43" font-size="14" font-weight="normal" text-anchor="start">The second orange pass is perpendicular to the first. The original centre travels separately to the rule layer.</text>
+<polygon points="220.00,835.00 530.00,785.40 660.00,849.40 350.00,899.00" fill="#edf0ea" stroke="#62747c"/>
+<polygon points="220.00,835.00 297.50,822.60 330.00,838.60 252.50,851.00" fill="#fffefa" stroke="#62747c"/>
+<text x="275.0" y="841.8" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="297.50,822.60 375.00,810.20 407.50,826.20 330.00,838.60" fill="#5188b4" stroke="#62747c"/>
+<text x="352.5" y="829.4" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="375.00,810.20 452.50,797.80 485.00,813.80 407.50,826.20" fill="#5188b4" stroke="#62747c"/>
+<text x="430.0" y="817.0" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="452.50,797.80 530.00,785.40 562.50,801.40 485.00,813.80" fill="#fffefa" stroke="#62747c"/>
+<text x="507.5" y="804.6" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="252.50,851.00 330.00,838.60 362.50,854.60 285.00,867.00" fill="#5188b4" stroke="#62747c"/>
+<text x="307.5" y="857.8" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="330.00,838.60 407.50,826.20 440.00,842.20 362.50,854.60" fill="#5188b4" stroke="#62747c"/>
+<text x="385.0" y="845.4" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="407.50,826.20 485.00,813.80 517.50,829.80 440.00,842.20" fill="#5188b4" stroke="#62747c"/>
+<text x="462.5" y="833.0" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="485.00,813.80 562.50,801.40 595.00,817.40 517.50,829.80" fill="#fffefa" stroke="#62747c"/>
+<text x="540.0" y="820.6" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="285.00,867.00 362.50,854.60 395.00,870.60 317.50,883.00" fill="#5188b4" stroke="#62747c"/>
+<text x="340.0" y="873.8" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="362.50,854.60 440.00,842.20 472.50,858.20 395.00,870.60" fill="#5188b4" stroke="#62747c"/>
+<text x="417.5" y="861.4" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="440.00,842.20 517.50,829.80 550.00,845.80 472.50,858.20" fill="#5188b4" stroke="#62747c"/>
+<text x="495.0" y="849.0" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="517.50,829.80 595.00,817.40 627.50,833.40 550.00,845.80" fill="#fffefa" stroke="#62747c"/>
+<text x="572.5" y="836.6" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="317.50,883.00 395.00,870.60 427.50,886.60 350.00,899.00" fill="#fffefa" stroke="#62747c"/>
+<text x="372.5" y="889.8" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="395.00,870.60 472.50,858.20 505.00,874.20 427.50,886.60" fill="#fffefa" stroke="#62747c"/>
+<text x="450.0" y="877.4" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="472.50,858.20 550.00,845.80 582.50,861.80 505.00,874.20" fill="#fffefa" stroke="#62747c"/>
+<text x="527.5" y="865.0" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="550.00,845.80 627.50,833.40 660.00,849.40 582.50,861.80" fill="#5188b4" stroke="#62747c"/>
+<text x="605.0" y="852.6" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<text x="700" y="850" fill="#233c43" font-size="17" font-weight="bold" text-anchor="start">1  Blue: gather</text>
+<polygon points="220.00,678.00 530.00,628.40 660.00,692.40 350.00,742.00" fill="#edf0ea" stroke="#62747c"/>
+<polygon points="220.00,678.00 297.50,665.60 330.00,681.60 252.50,694.00" fill="#d7a15c" stroke="#62747c"/>
+<text x="275.0" y="684.8" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="297.50,665.60 375.00,653.20 407.50,669.20 330.00,681.60" fill="#fffefa" stroke="#62747c"/>
+<text x="352.5" y="672.4" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="375.00,653.20 452.50,640.80 485.00,656.80 407.50,669.20" fill="#fffefa" stroke="#62747c"/>
+<text x="430.0" y="660.0" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="452.50,640.80 530.00,628.40 562.50,644.40 485.00,656.80" fill="#fffefa" stroke="#62747c"/>
+<text x="507.5" y="647.6" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">C1</text>
+<polygon points="252.50,694.00 330.00,681.60 362.50,697.60 285.00,710.00" fill="#d7a15c" stroke="#62747c"/>
+<text x="307.5" y="700.8" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="330.00,681.60 407.50,669.20 440.00,685.20 362.50,697.60" fill="#d7a15c" stroke="#62747c"/>
+<text x="385.0" y="688.4" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="407.50,669.20 485.00,656.80 517.50,672.80 440.00,685.20" fill="#fffefa" stroke="#62747c"/>
+<text x="462.5" y="676.0" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="485.00,656.80 562.50,644.40 595.00,660.40 517.50,672.80" fill="#fffefa" stroke="#62747c"/>
+<text x="540.0" y="663.6" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">C1</text>
+<polygon points="285.00,710.00 362.50,697.60 395.00,713.60 317.50,726.00" fill="#d7a15c" stroke="#62747c"/>
+<text x="340.0" y="716.8" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="362.50,697.60 440.00,685.20 472.50,701.20 395.00,713.60" fill="#d7a15c" stroke="#62747c"/>
+<text x="417.5" y="704.4" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="440.00,685.20 517.50,672.80 550.00,688.80 472.50,701.20" fill="#fffefa" stroke="#62747c"/>
+<text x="495.0" y="692.0" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="517.50,672.80 595.00,660.40 627.50,676.40 550.00,688.80" fill="#fffefa" stroke="#62747c"/>
+<text x="572.5" y="679.6" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">C1</text>
+<polygon points="317.50,726.00 395.00,713.60 427.50,729.60 350.00,742.00" fill="#d7a15c" stroke="#62747c"/>
+<text x="372.5" y="732.8" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="395.00,713.60 472.50,701.20 505.00,717.20 427.50,729.60" fill="#fffefa" stroke="#62747c"/>
+<text x="450.0" y="720.4" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="472.50,701.20 550.00,688.80 582.50,704.80 505.00,717.20" fill="#fffefa" stroke="#62747c"/>
+<text x="527.5" y="708.0" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="550.00,688.80 627.50,676.40 660.00,692.40 582.50,704.80" fill="#fffefa" stroke="#62747c"/>
+<text x="605.0" y="695.6" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">C0</text>
+<text x="700" y="693" fill="#233c43" font-size="17" font-weight="bold" text-anchor="start">2  Orange: pack rows</text>
+<text x="700" y="721" fill="#233c43" font-size="13" font-weight="normal" text-anchor="start">C ports are separate state channels</text>
+<polygon points="220.00,521.00 530.00,471.40 660.00,535.40 350.00,585.00" fill="#edf0ea" stroke="#62747c"/>
+<polygon points="220.00,521.00 323.33,504.47 366.67,525.80 263.33,542.33" fill="#fffefa" stroke="#62747c"/>
+<text x="293.33333333333337" y="528.4" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="323.33,504.47 426.67,487.93 470.00,509.27 366.67,525.80" fill="#fffefa" stroke="#62747c"/>
+<text x="396.6666666666667" y="511.8666666666666" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="426.67,487.93 530.00,471.40 573.33,492.73 470.00,509.27" fill="#d7a15c" stroke="#62747c"/>
+<text x="500.0" y="495.3333333333333" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="263.33,542.33 366.67,525.80 410.00,547.13 306.67,563.67" fill="#fffefa" stroke="#62747c"/>
+<text x="336.6666666666667" y="549.7333333333333" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="366.67,525.80 470.00,509.27 513.33,530.60 410.00,547.13" fill="#fffefa" stroke="#62747c"/>
+<text x="440.0" y="533.2" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="470.00,509.27 573.33,492.73 616.67,514.07 513.33,530.60" fill="#d7a15c" stroke="#62747c"/>
+<text x="543.3333333333333" y="516.6666666666667" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="306.67,563.67 410.00,547.13 453.33,568.47 350.00,585.00" fill="#fffefa" stroke="#62747c"/>
+<text x="380.0" y="571.0666666666667" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="410.00,547.13 513.33,530.60 556.67,551.93 453.33,568.47" fill="#d7a15c" stroke="#62747c"/>
+<text x="483.33333333333337" y="554.5333333333334" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="513.33,530.60 616.67,514.07 660.00,535.40 556.67,551.93" fill="#d7a15c" stroke="#62747c"/>
+<text x="586.6666666666666" y="538.0" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<text x="700" y="536" fill="#233c43" font-size="17" font-weight="bold" text-anchor="start">3  Orange: pack columns (90°)</text>
+<text x="700" y="564" fill="#233c43" font-size="13" font-weight="normal" text-anchor="start">C ports are separate state channels</text>
+<polygon points="220.00,364.00 530.00,314.40 660.00,378.40 350.00,428.00" fill="#edf0ea" stroke="#62747c"/>
+<polygon points="220.00,364.00 323.33,347.47 366.67,368.80 263.33,385.33" fill="#fffefa" stroke="#62747c"/>
+<text x="293.33333333333337" y="371.40000000000003" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="323.33,347.47 426.67,330.93 470.00,352.27 366.67,368.80" fill="#fffefa" stroke="#62747c"/>
+<text x="396.6666666666667" y="354.8666666666667" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="426.67,330.93 530.00,314.40 573.33,335.73 470.00,352.27" fill="#ac88be" stroke="#62747c"/>
+<text x="500.0" y="338.33333333333337" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="263.33,385.33 366.67,368.80 410.00,390.13 306.67,406.67" fill="#fffefa" stroke="#62747c"/>
+<text x="336.6666666666667" y="392.73333333333335" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="366.67,368.80 470.00,352.27 513.33,373.60 410.00,390.13" fill="#fffefa" stroke="#62747c"/>
+<text x="440.0" y="376.2" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="470.00,352.27 573.33,335.73 616.67,357.07 513.33,373.60" fill="#ac88be" stroke="#62747c"/>
+<text x="543.3333333333333" y="359.6666666666667" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="306.67,406.67 410.00,390.13 453.33,411.47 350.00,428.00" fill="#fffefa" stroke="#62747c"/>
+<text x="380.0" y="414.0666666666667" fill="#233c43" font-size="17" font-weight="normal" text-anchor="middle">0</text>
+<polygon points="410.00,390.13 513.33,373.60 556.67,394.93 453.33,411.47" fill="#ac88be" stroke="#62747c"/>
+<text x="483.33333333333337" y="397.53333333333336" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<polygon points="513.33,373.60 616.67,357.07 660.00,378.40 556.67,394.93" fill="#ac88be" stroke="#62747c"/>
+<text x="586.6666666666666" y="381.00000000000006" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<text x="700" y="379" fill="#233c43" font-size="17" font-weight="bold" text-anchor="start">4  Purple: P4a, category 4</text>
+<polygon points="220.00,207.00 530.00,157.40 660.00,221.40 350.00,271.00" fill="#edf0ea" stroke="#62747c"/>
+<polygon points="220.00,207.00 530.00,157.40 660.00,221.40 350.00,271.00" fill="#233c43" stroke="#62747c"/>
+<text x="440.0" y="219.2" fill="white" font-size="17" font-weight="normal" text-anchor="middle">1</text>
+<text x="700" y="222" fill="#233c43" font-size="17" font-weight="bold" text-anchor="start">5  Black/white: next state 1</text>
+<line x1="670" y1="714" x2="670" y2="222" stroke="#d7a15c" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="688" y="469" fill="#d7a15c" font-size="18" font-weight="bold" text-anchor="start">C1</text>
+<text x="35" y="944" fill="#657477" font-size="14" font-weight="normal" text-anchor="start">Planes illustrate computation and channel flow. They are not CAD of the actual interlocking piece shapes.</text>
+</svg>

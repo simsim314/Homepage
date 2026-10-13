@@ -1,0 +1,141 @@
+{
+  "source": "https://conwaylife.com/forums/viewtopic.php?p=73650#p73650",
+  "sourceSha256": "8ca1e6ded046aa4ac135cb98591b90f0e4d3901095ce5c1d83e9771130ac0e09",
+  "originalCoreSize": 10,
+  "exportScale": 3,
+  "matingTopHeight": 39,
+  "units": "mm",
+  "status": "Historical CAD reconstruction; physical fit has not been tested.",
+  "parts": [
+    {
+      "id": "side-plain",
+      "name": "Plain side",
+      "family": "side",
+      "file": "side-plain.stl",
+      "sourceBounds": [
+        [0.09, 0.09, 0],
+        [39, 29.910000000000004, 8.820000000000004]
+      ],
+      "dimensions": [38.91, 29.82, 8.82],
+      "triangles": 684,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "side-connecting",
+      "name": "Connecting side",
+      "family": "side",
+      "file": "side-connecting.stl",
+      "sourceBounds": [
+        [0.09, 0.09, 0],
+        [39, 29.910000000000004, 13.740000000000006]
+      ],
+      "dimensions": [38.91, 29.82, 13.74],
+      "triangles": 1516,
+      "removedFlatTriangles": 2
+    },
+    {
+      "id": "top-plain",
+      "name": "Plain top",
+      "family": "top",
+      "file": "top-plain.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 8.91]
+      ],
+      "dimensions": [48, 48, 8.91],
+      "triangles": 684,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "top-attachment",
+      "name": "Attachment top",
+      "family": "top",
+      "file": "top-attachment.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 13.830000000000004]
+      ],
+      "dimensions": [48, 48, 13.83],
+      "triangles": 1676,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "top-zero",
+      "name": "Zero top",
+      "family": "top",
+      "file": "top-zero.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 14.610000000000003]
+      ],
+      "dimensions": [48, 48, 14.61],
+      "triangles": 1072,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "top-one",
+      "name": "One top",
+      "family": "top",
+      "file": "top-one.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 14.610000000000003]
+      ],
+      "dimensions": [48, 48, 14.61],
+      "triangles": 758,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "bottom-attachment",
+      "name": "Attachment base",
+      "family": "base",
+      "file": "bottom-attachment.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 43.92000000000003]
+      ],
+      "dimensions": [48, 48, 43.92],
+      "triangles": 5636,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "bottom-one",
+      "name": "One base",
+      "family": "base",
+      "file": "bottom-one.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 43.92000000000003]
+      ],
+      "dimensions": [48, 48, 43.92],
+      "triangles": 5046,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "bottom-zero",
+      "name": "Zero base",
+      "family": "base",
+      "file": "bottom-zero.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 43.92000000000003]
+      ],
+      "dimensions": [48, 48, 43.92],
+      "triangles": 5352,
+      "removedFlatTriangles": 0
+    },
+    {
+      "id": "bottom-either",
+      "name": "Either-value base",
+      "family": "base",
+      "file": "bottom-either.stl",
+      "sourceBounds": [
+        [0, 0, 0],
+        [48, 48, 43.92000000000003]
+      ],
+      "dimensions": [48, 48, 43.92],
+      "triangles": 5478,
+      "removedFlatTriangles": 0
+    }
+  ]
+}

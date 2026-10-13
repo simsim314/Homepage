@@ -1,0 +1,35 @@
+Title: Construction pieces for making CA tiles — original 2019 OpenJSCAD design
+
+These ten parts are basic construction pieces for making tiles. A core, sides
+and input/output faces make configurable cubes; cubes are combined into actual
+tiles that encode local computational rules. I developed the design in the 2019 ConwayLife
+discussion "Realizing CGOL a 3d tiling", alongside work by Paul Callahan and
+Adam Goucher on physical tiling and cellular automata.
+
+The base contains the central core. Side panels and a top attach around it.
+Different inputs and outputs provide zero, one, either-value and attachment
+connections. The supplied CAD source allows the pieces to be inspected and
+modified.
+
+This is the modular kit, not a ready-made set of the 26 Life tiles. The Life
+construction, its diagrams and reductions are described separately in the thread.
+
+The STL exports are at 3x the original code's scale, with a 30 mm core, and use
+millimetres. They have closed, consistently wound meshes. One detached flat
+fragment in the legacy export was removed without changing the solid part.
+
+Experimental design: print and fit have not been newly tested. Start with a
+base, a top and a plain side before printing more. The original clearances may
+need adjustment for your printer. See PRINT-NOTES.txt for scale, limitations and
+the full file list. Source and digital mesh-check results are included.
+
+Original CAD post:
+https://conwaylife.com/forums/viewtopic.php?p=73650#p73650
+
+Full Life-tiling thread:
+https://conwaylife.com/forums/viewtopic.php?t=3884
+
+Tags: cellular automata, Game of Life, computation, tiles, puzzle, modular
+
+Category suggestion: Learning / Math
+License: Awaiting Michael Simkin's choice.

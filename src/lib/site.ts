@@ -1,13 +1,13 @@
 export const site = {
   name: 'Michael Simkin',
   location: 'Tbilisi, Georgia',
-  profession: 'Independent AI researcher',
+  profession: 'Independent researcher',
   introduction:
-    'I’m Michael Simkin, an independent AI researcher based in Tbilisi, Georgia. I’ve spent many years working in computer vision. As AI has evolved, my research has broadened; recently, it has included AI-assisted mathematical proofs.',
+    'I’m Michael Simkin, an independent researcher based in Tbilisi, Georgia. Research is both my profession and my hobby; my focus shifts over time.',
   description:
-    'Michael Simkin is an independent AI researcher in Tbilisi, Georgia, with years of work in computer vision and recent interests in AI-assisted mathematical proofs.',
+    'Michael Simkin’s personal research journal: discoveries, projects, and computational experiments.',
   github: 'https://github.com/simsim314',
   // Add verified public contact URLs here when supplied by the author.
-  email: '',
+  email: 'simsim314@gmail.com',
   arxiv: '',
 };

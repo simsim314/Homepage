@@ -1,0 +1,187 @@
+{
+  "posts": [
+    {
+      "code": [],
+      "id": "p4670",
+      "text": "ssaamm wrote:What about this 3-cell rake parent?\n\nx = 3, y = 3, rule = serizawa\n2.A2$B.B!\n\nThat one is the same as the 3-cell pattern I posted yesterday (rotated 180 degrees)."
+    },
+    {
+      "code": [
+        "x = 29, y = 15, rule = Serizawa\n5.A2.A$.B2.AB2ABA2.B$A.A8.A.A$4.B.2A.B8$20.A2.A$16.B2.AB2ABA2.B$15.A.\nA8.A.A$19.B.2A.B!\n"
+      ],
+      "id": "p4671",
+      "text": "A slight modification of the best previous known quadratic growth pattern fits in the same bounding box (29 by 15) but has 4 fewer cells\nCode: Select all / Show in Viewerx = 29, y = 15, rule = Serizawa\n5.A2.A$.B2.AB2ABA2.B$A.A8.A.A$4.B.2A.B8$20.A2.A$16.B2.AB2ABA2.B$15.A.\nA8.A.A$19.B.2A.B!\n\n\nI have thought of another way to compare pattern size: total cell value.  The quadratic pattern I just posted is also the smallest known in total cell value.\n\nFor infinite linear growth, the smallest known is 5 (the 3x3 pattern with 3 cells).\n\nOf course, we have arbitrarily selected one state to be \"1\" and the other to be \"2\", rendering this almost meaningless.  It has slightly more meaning for totalistic rules, or any rule in which the numerical value of the cell is used in the step function."
+    },
+    {
+      "code": [
+        "x = 20, y = 10, rule = Serizawa\n.B2.B$A.2B.A7$15.B2.B$14.A.2B.A!\n"
+      ],
+      "id": "p4673",
+      "text": "Further reduction of quadratic growth pattern:\nCode: Select all / Show in Viewerx = 20, y = 10, rule = Serizawa\n.B2.B$A.2B.A7$15.B2.B$14.A.2B.A!\n\n\nIt's only 12 cells in a 20x10 bounding box."
+    },
+    {
+      "code": [
+        "x = 12, y = 3, rule = Serizawa\n9.2A$A2BA4.B2.B$9.2A!\n",
+        "x = 19, y = 1, rule = Serizawa\nA2BA3.A2BA4.A2BA!\n"
+      ],
+      "id": "p4687",
+      "text": "10-cell quadratic, 12 x 3 bounding box:\nCode: Select all / Show in Viewerx = 12, y = 3, rule = Serizawa\n9.2A$A2BA4.B2.B$9.2A!\n\n\none cell wide quadratic is 12 cells, 19 x 1 bounding box:\nCode: Select all / Show in Viewerx = 19, y = 1, rule = Serizawa\nA2BA3.A2BA4.A2BA!\n"
+    },
+    {
+      "code": [
+        "x = 27, y = 15, rule = Serizawa\nA.A$.B22.A.A$25.B8$3.A18.A$2.A.A16.A.A$.A18.A$2.A.A16.A.A$3.A18.A!",
+        "x = 92, y = 38, rule = Serizawa\n20.A$19.A.A$18.A3.A$3.A.A11.A.A.A.A13.A51.A$2.A.B.A9.A.A3.A.A11.3A16.\nA2.A2.A2.A2.A2.A17.2AB$3.B.B9.A9.A12.2A14.AB2AB2AB2AB2AB2ABA17.A.B$2.\nA.B.A9.A.A3.A.A11.3A14.A18.A17.B$3.A.A11.A.A.A.A13.A16.A.2A.8A.2A.A\n18.B$18.A3.A68.B$19.A.A68.A$20.A3$89.A$19.A.A68.B$20.B15.A.A50.A$3.A.\nA31.B$3.ABA$4.A14.A.A$A7.A5.A3.A.B.A3.A7.A$.B5.B7.B3.B.B3.B6.A2.A11.A\n7.A2BA2.A2BA2.A2BA7.A$A7.A5.A3.A.B.A3.A$4.A14.A.A67.A$3.ABA82.2AB$3.A\n.A83.A.B$20.B69.B$19.A.A68.B$89.A.B$90.B$90.B$91.B$90.B$90.B$91.B$90.\nB$90.B$88.A2.B$89.2A!",
+        "x = 92, y = 5, rule = Serizawa\n.B5.A8.B7.B3.B6.B2.B7.B2.B2.B7.B2.B2.B2.B7.B2.B2.B2.B2.B$A.A3.ABA5.AB\n.BA4.A.B.B.A4.B.2B.B5.B.2B.2B.B5.B.2B.2B.2B.B5.B.2B.2B.2B.2B.B$6.A2.A\n3.A5.A4.A.B.A4.3A2.3A3.3A5.3A3.3A8.3A3.3A11.3A$8.A5.A3.A6.A.A6.A4.A5.\nA7.A5.A10.A5.A13.A$26.A!"
+      ],
+      "id": "p4691",
+      "text": "Some interesting results with a collision between a p3 oscillator and a glider:\nCode: Select all / Show in Viewerx = 27, y = 15, rule = Serizawa\nA.A$.B22.A.A$25.B8$3.A18.A$2.A.A16.A.A$.A18.A$2.A.A16.A.A$3.A18.A!\n\nSome patterns and syntheses:\nCode: Select all / Show in Viewerx = 92, y = 38, rule = Serizawa\n20.A$19.A.A$18.A3.A$3.A.A11.A.A.A.A13.A51.A$2.A.B.A9.A.A3.A.A11.3A16.\nA2.A2.A2.A2.A2.A17.2AB$3.B.B9.A9.A12.2A14.AB2AB2AB2AB2AB2ABA17.A.B$2.\nA.B.A9.A.A3.A.A11.3A14.A18.A17.B$3.A.A11.A.A.A.A13.A16.A.2A.8A.2A.A\n18.B$18.A3.A68.B$19.A.A68.A$20.A3$89.A$19.A.A68.B$20.B15.A.A50.A$3.A.\nA31.B$3.ABA$4.A14.A.A$A7.A5.A3.A.B.A3.A7.A$.B5.B7.B3.B.B3.B6.A2.A11.A\n7.A2BA2.A2BA2.A2BA7.A$A7.A5.A3.A.B.A3.A$4.A14.A.A67.A$3.ABA82.2AB$3.A\n.A83.A.B$20.B69.B$19.A.A68.B$89.A.B$90.B$90.B$91.B$90.B$90.B$91.B$90.\nB$90.B$88.A2.B$89.2A!\n\nEDIT: Spaceship collections:\nCode: Select all / Show in Viewerx = 92, y = 5, rule = Serizawa\n.B5.A8.B7.B3.B6.B2.B7.B2.B2.B7.B2.B2.B2.B7.B2.B2.B2.B2.B$A.A3.ABA5.AB\n.BA4.A.B.B.A4.B.2B.B5.B.2B.2B.B5.B.2B.2B.2B.B5.B.2B.2B.2B.2B.B$6.A2.A\n3.A5.A4.A.B.A4.3A2.3A3.3A5.3A3.3A8.3A3.3A11.3A$8.A5.A3.A6.A.A6.A4.A5.\nA7.A5.A10.A5.A13.A$26.A!"
+    },
+    {
+      "code": [
+        "x = 72, y = 33, rule = Serizawa\n10.A3.B13.B3.B3.B$9.ABA.A.A11.B.A.A.A.A.B$9.A.A.A12.3A2.A.A2.3A$13.A\n13.A3.A.A3.A7$6.B3.A3.B15.A3.A3.B16.A5.B2.B5.A$5.A.A.ABA.A.A10.B2.ABA\n.ABA.B.A14.ABA3.B.2B.B3.ABA$7.A.A.A.A11.A.A3.A.A.A2.A15.A2.A2.A4.A2.A\n2.A$7.A5.A42.A12.A$61.A2.A9$.A15.A$ABA2.A10.ABA2.A$A.A.ABA9.A.A.ABA$\n3.A3.A11.A2.A$6.A13.2BA12.B3.A3.B$34.A.A.ABA.A.A3$37.A.A.A$38.BAB!\n",
+        "x = 18, y = 8, rule = Serizawa\n.A5.A2.A5.A$ABA3.AB2ABA3.ABA$A2.A.A6.A.A2.A$2.A3.A.2A.A3.A$6.B4.B2$4.\nA8.A$5.A6.A!\n"
+      ],
+      "id": "p4744",
+      "text": "Other spaceships including two that output \"puffs of smoke\":\nCode: Select all / Show in Viewerx = 72, y = 33, rule = Serizawa\n10.A3.B13.B3.B3.B$9.ABA.A.A11.B.A.A.A.A.B$9.A.A.A12.3A2.A.A2.3A$13.A\n13.A3.A.A3.A7$6.B3.A3.B15.A3.A3.B16.A5.B2.B5.A$5.A.A.ABA.A.A10.B2.ABA\n.ABA.B.A14.ABA3.B.2B.B3.ABA$7.A.A.A.A11.A.A3.A.A.A2.A15.A2.A2.A4.A2.A\n2.A$7.A5.A42.A12.A$61.A2.A9$.A15.A$ABA2.A10.ABA2.A$A.A.ABA9.A.A.ABA$\n3.A3.A11.A2.A$6.A13.2BA12.B3.A3.B$34.A.A.ABA.A.A3$37.A.A.A$38.BAB!\n\n\nEDIT:\n\nA nice double backrake that produces clean big gliders:\nCode: Select all / Show in Viewerx = 18, y = 8, rule = Serizawa\n.A5.A2.A5.A$ABA3.AB2ABA3.ABA$A2.A.A6.A.A2.A$2.A3.A.2A.A3.A$6.B4.B2$4.\nA8.A$5.A6.A!\n"
+    },
+    {
+      "code": [
+        "x = 31, y = 31, rule = Serizawa\n.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.\nB3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.\nB3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A\n.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A\n.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B\n3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B\n3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B\n3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B\n3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.\nA.A$.B3.B3.B3.B3.B3.B3.B3.B!\n",
+        "x = 4, y = 4, rule = Serizawa:T4,4\n.B$A.A$.B!\n"
+      ],
+      "id": "p5861",
+      "text": "p12 agar\nCode: Select all / Show in Viewerx = 31, y = 31, rule = Serizawa\n.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.\nB3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.\nB3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A\n.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A\n.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B\n3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B3.B2$.B3.B3.B\n3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B3.B3.B3.B3.B\n3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A$.B3.B3.B\n3.B3.B3.B3.B3.B2$.B3.B3.B3.B3.B3.B3.B3.B$A.A.A.A.A.A.A.A.A.A.A.A.A.A.\nA.A$.B3.B3.B3.B3.B3.B3.B3.B!\n\nUnit cell on torus\nCode: Select all / Show in Viewerx = 4, y = 4, rule = Serizawa:T4,4\n.B$A.A$.B!\n"
+    },
+    {
+      "code": [
+        "x = 34, y = 21, rule = Serizawa\n16.A5.A2.A5.A$15.ABA3.AB2ABA3.ABA$15.A2.A.A6.A.A2.A$17.A3.A.2A.A3.A$\n21.B4.B2$19.A8.A$20.A6.A6$32.B$31.A.A2$.A5.B2.B16.A$ABA3.B.2B.B$A2.A\n2.A4.A$2.A$7.A2.A!\n",
+        "x = 34, y = 17, rule = Serizawa\n16.A5.A2.A5.A$15.ABA3.AB2ABA3.ABA$15.A2.A.A6.A.A2.A$17.A3.A.2A.A3.A$\n21.B4.B2$19.A8.A$20.A6.A5$.A5.B2.B$ABA3.B.2B.B20.B$A2.A2.A4.A19.A.A$\n2.A$7.A2.A16.A!\n"
+      ],
+      "id": "p10794",
+      "text": "This quadratic is not chaotic, it is a nice triangular array of gliders.\nCode: Select all / Show in Viewerx = 34, y = 21, rule = Serizawa\n16.A5.A2.A5.A$15.ABA3.AB2ABA3.ABA$15.A2.A.A6.A.A2.A$17.A3.A.2A.A3.A$\n21.B4.B2$19.A8.A$20.A6.A6$32.B$31.A.A2$.A5.B2.B16.A$ABA3.B.2B.B$A2.A\n2.A4.A$2.A$7.A2.A!\n\nFurther optimization is possible, to clean up extra \"dots\".\n\nEDIT:\nThis one has glider arrays moving both left and right:\nCode: Select all / Show in Viewerx = 34, y = 17, rule = Serizawa\n16.A5.A2.A5.A$15.ABA3.AB2ABA3.ABA$15.A2.A.A6.A.A2.A$17.A3.A.2A.A3.A$\n21.B4.B2$19.A8.A$20.A6.A5$.A5.B2.B$ABA3.B.2B.B20.B$A2.A2.A4.A19.A.A$\n2.A$7.A2.A16.A!\n"
+    },
+    {
+      "code": [
+        "x = 24, y = 30, rule = Serizawa\n5$12.B3.B$11.A.3A.A$14.A$13.3A$8.B11.B$7.A.A9.A.A$14.A2$14.A$13.A.A$\n14.A$13.A.A$13.A.A$12.A3.A$11.2A3.2A$6.B3.AB5.BA$5.A.A3.7A$13.3A$14.A!",
+        "x = 60, y = 64, rule = Serizawa\n7$13.B3.B$12.A.3A.A$15.A$14.3A$9.B11.B$8.A.A.ABA.ABA.A.A$14.3A$15.B$\n14.BAB$15.B3$15.A3$7.B$6.A.A4$11.A11.2A$10.ABA11.BA$9.ABA11.2A$10.A9$\n35.2A$36.BA$35.2A10$47.2A$48.BA$47.2A2$53.B$52.A.A!\n",
+        "x = 75, y = 73, rule = Serizawa\n3$14.B3.B$13.A.A.A.A2$14.A3BA$10.B5.A5.B$9.A.A3.A.A3.A.A$15.ABA2$16.A\n7$8.B$7.A.A.2A7.2A$11.B9.BA$11.2A7.2A10$32.2A$33.BA$32.2A10$44.2A$45.\nBA$44.2A$49.B$48.A.A2$41.A$40.ABA$40.A.A6$55.A$56.B$43.A11.A6.A$42.B\n18.ABA$36.A6.A17.A.A$35.ABA$35.A.A2$47.A.A$48.B!\n",
+        "x = 112, y = 200, rule = Serizawa\n23$45.B$41.B2.A.A$40.A.BA$41.B.A$40.A2.A$40.3A$39.ABA.A52.B$40.AB50.B\n2.A.A$40.A.BA47.A.BA$41.ABA48.B.A$39.A2.A48.A2.A$38.A4.A47.3A$90.ABA.\nA$91.AB$91.A.BA$39.A.A5.A44.ABA$40.A.A5.B41.A2.A$38.A2.A.A3.A41.A4.A$\n40.A.A$41.A2$53.A36.A.A5.A$54.B36.A.A5.B$38.A14.A35.A2.A.A3.A$40.A50.\nA.A$92.A2$59.A44.A$60.B44.B$38.A20.A29.A14.A$40.A50.A3$65.A44.A$66.B\n44.B$38.A26.A23.A20.A$40.A50.A3$71.A$72.B$38.A32.A17.A$40.A50.A3$77.A\n$78.B$38.A38.A11.A$40.A50.A3$83.A$84.B$38.A44.A5.A$40.A50.A4$87.2A$\n38.A47.AB.A$40.A46.ABA.A$88.A3$81.2A$38.A41.AB$40.A40.2A8.A4$75.2A$\n38.A35.AB11.A.A$40.A34.2A10.ABA.A$88.A3$69.2A$38.A29.AB$40.A28.2A20.A\n4$63.2A$38.A23.AB23.A.A$40.A22.2A22.ABA.A$88.A3$57.2A$38.A17.AB$40.A\n16.2A32.A4$51.2A$38.A11.AB35.A.A$40.A10.2A34.ABA.A$88.A3$45.2A$38.A5.\nAB$40.A4.2A44.A5$38.A3.A44.A.A$43.B43.ABA.A$40.A.A45.A$41.B3$38.A9.A$\n49.B41.A$48.A$89.B$88.A.A$91.B$38.A15.A35.A$55.B$40.A.A11.A$41.B$96.A\n$97.B$38.A21.A35.A$61.B$60.A2$102.A$103.B$38.A27.A35.A6.A$67.B40.ABA$\n40.A.A23.A41.A.A$41.B$105.A$104.A$38.A33.A32.A.A$73.B32.A$72.A4$38.A\n39.A$79.B$40.A.A35.A$41.B3$38.A45.A$85.B$84.A4$38.A51.A$91.B$40.A.A\n47.A6.A$41.B54.ABA$96.A.A$40.A$41.A51.A$41.A50.A$93.A.A$36.2A56.A$35.\nAB$36.2A$29.B$28.A.A2$32.A$31.2AB$32.B2$33.A$33.2A$35.A!\n",
+        "x = 24, y = 24, rule = Serizawa\n3$10.B3.B$9.B.B.A.A$8.3A$9.A$12.A2.A$11.A2.ABA$11.2B.A.A$10.AB$11.ABA\n$12.A2$11.A$17.A$10.3A3.A.A$18.BA$4.B3.A8.2A$3.A.A.B$8.A!\n"
+      ],
+      "id": "p11305",
+      "text": "Single Directional Side Rake: \n\nA p24 side-rake taken from the double rake (by 137ben) and one side cleaned with glider. \n\nCode: Select all / Show in Viewerx = 24, y = 30, rule = Serizawa\n5$12.B3.B$11.A.3A.A$14.A$13.3A$8.B11.B$7.A.A9.A.A$14.A2$14.A$13.A.A$\n14.A$13.A.A$13.A.A$12.A3.A$11.2A3.2A$6.B3.AB5.BA$5.A.A3.7A$13.3A$14.A!\n\nA splitter that sits on rake \nCode: Select all / Show in Viewerx = 60, y = 64, rule = Serizawa\n7$13.B3.B$12.A.3A.A$15.A$14.3A$9.B11.B$8.A.A.ABA.ABA.A.A$14.3A$15.B$\n14.BAB$15.B3$15.A3$7.B$6.A.A4$11.A11.2A$10.ABA11.BA$9.ABA11.2A$10.A9$\n35.2A$36.BA$35.2A10$47.2A$48.BA$47.2A2$53.B$52.A.A!\n\n\nAs mentioned before one can eliminate all the side tracks (or any specific by choise): \n\nCode: Select all / Show in Viewerx = 75, y = 73, rule = Serizawa\n3$14.B3.B$13.A.A.A.A2$14.A3BA$10.B5.A5.B$9.A.A3.A.A3.A.A$15.ABA2$16.A\n7$8.B$7.A.A.2A7.2A$11.B9.BA$11.2A7.2A10$32.2A$33.BA$32.2A10$44.2A$45.\nBA$44.2A$49.B$48.A.A2$41.A$40.ABA$40.A.A6$55.A$56.B$43.A11.A6.A$42.B\n18.ABA$36.A6.A17.A.A$35.ABA$35.A.A2$47.A.A$48.B!\n\n\nAnd finally two puffers that clean each other to create a side-rake \n\nCode: Select all / Show in Viewerx = 112, y = 200, rule = Serizawa\n23$45.B$41.B2.A.A$40.A.BA$41.B.A$40.A2.A$40.3A$39.ABA.A52.B$40.AB50.B\n2.A.A$40.A.BA47.A.BA$41.ABA48.B.A$39.A2.A48.A2.A$38.A4.A47.3A$90.ABA.\nA$91.AB$91.A.BA$39.A.A5.A44.ABA$40.A.A5.B41.A2.A$38.A2.A.A3.A41.A4.A$\n40.A.A$41.A2$53.A36.A.A5.A$54.B36.A.A5.B$38.A14.A35.A2.A.A3.A$40.A50.\nA.A$92.A2$59.A44.A$60.B44.B$38.A20.A29.A14.A$40.A50.A3$65.A44.A$66.B\n44.B$38.A26.A23.A20.A$40.A50.A3$71.A$72.B$38.A32.A17.A$40.A50.A3$77.A\n$78.B$38.A38.A11.A$40.A50.A3$83.A$84.B$38.A44.A5.A$40.A50.A4$87.2A$\n38.A47.AB.A$40.A46.ABA.A$88.A3$81.2A$38.A41.AB$40.A40.2A8.A4$75.2A$\n38.A35.AB11.A.A$40.A34.2A10.ABA.A$88.A3$69.2A$38.A29.AB$40.A28.2A20.A\n4$63.2A$38.A23.AB23.A.A$40.A22.2A22.ABA.A$88.A3$57.2A$38.A17.AB$40.A\n16.2A32.A4$51.2A$38.A11.AB35.A.A$40.A10.2A34.ABA.A$88.A3$45.2A$38.A5.\nAB$40.A4.2A44.A5$38.A3.A44.A.A$43.B43.ABA.A$40.A.A45.A$41.B3$38.A9.A$\n49.B41.A$48.A$89.B$88.A.A$91.B$38.A15.A35.A$55.B$40.A.A11.A$41.B$96.A\n$97.B$38.A21.A35.A$61.B$60.A2$102.A$103.B$38.A27.A35.A6.A$67.B40.ABA$\n40.A.A23.A41.A.A$41.B$105.A$104.A$38.A33.A32.A.A$73.B32.A$72.A4$38.A\n39.A$79.B$40.A.A35.A$41.B3$38.A45.A$85.B$84.A4$38.A51.A$91.B$40.A.A\n47.A6.A$41.B54.ABA$96.A.A$40.A$41.A51.A$41.A50.A$93.A.A$36.2A56.A$35.\nAB$36.2A$29.B$28.A.A2$32.A$31.2AB$32.B2$33.A$33.2A$35.A!\n\n\nAnd here is large glider rake: \n\nCode: Select all / Show in Viewerx = 24, y = 24, rule = Serizawa\n3$10.B3.B$9.B.B.A.A$8.3A$9.A$12.A2.A$11.A2.ABA$11.2B.A.A$10.AB$11.ABA\n$12.A2$11.A$17.A$10.3A3.A.A$18.BA$4.B3.A8.2A$3.A.A.B$8.A!\n"
+    },
+    {
+      "code": [
+        "x = 0, y = 0, rule = Serizawa\nB2$3.B2$B15$52.AB!\n"
+      ],
+      "id": "p12135",
+      "text": "Here is 5 cells quadratic: \n\nCode: Select all / Show in Viewerx = 0, y = 0, rule = Serizawa\nB2$3.B2$B15$52.AB!\n"
+    },
+    {
+      "code": [
+        "x = 35, y = 1219, rule = Serizawa\nB.B$7.B85$3.B$6.B$3.B75$5.B2$8.B2$5.B116$4.B$7.B$3.B113$9.B2$9.B.A\n109$6.B$2.B3$6.A149$10.B$7.B7$9.A130$18.B$21.A2$17.B156$17.A3$17.B$\n13.B123$32.B.A3$31.A124$34.A3$29.B2$29.A!\n"
+      ],
+      "id": "p12136",
+      "text": "And here is a collection of 3 cells infinite growth: \n\nCode: Select all / Show in Viewerx = 35, y = 1219, rule = Serizawa\nB.B$7.B85$3.B$6.B$3.B75$5.B2$8.B2$5.B116$4.B$7.B$3.B113$9.B2$9.B.A\n109$6.B$2.B3$6.A149$10.B$7.B7$9.A130$18.B$21.A2$17.B156$17.A3$17.B$\n13.B123$32.B.A3$31.A124$34.A3$29.B2$29.A!\n"
+    },
+    {
+      "code": [
+        "x = 30, y = 16, rule = Serizawa\nB2$3.B2$B11$29.A!",
+        "x = 30, y = 28, rule = Serizawa\nB2$3.B2$B23$29.A!",
+        "#C 4-cell Serizawa quadratic-growth candidate --\n#C moving the key cell by (2,1) appears to have the same effect\nx = 32, y = 24, rule = Serizawa\nB2$3.B2$B19$31.A!"
+      ],
+      "id": "p12145",
+      "text": "simsim314 wrote:Here is 5 cells quadratic...\nI take it you've done some searching for 4-cell quadratic-growth patterns, without finding anything?  It looks like there's some hope for such a search, but it isn't trivial to decide which patterns will end up with quadratic growth.\n\nFor example, here's a 4-cell infinite-growth pattern that doesn't stop producing novel reactions until about 2.185 million ticks:\n\nCode: Select all / Show in Viewerx = 30, y = 16, rule = Serizawa\nB2$3.B2$B11$29.A!\nAny of probably hundreds of similar slow-to-settle patterns might end up in a stable rake-building orbit; no way to tell for sure without running each one until the novelty works its way out.  Another 4-cell with good novelty potential early on is\n\nCode: Select all / Show in Viewerx = 30, y = 28, rule = Serizawa\nB2$3.B2$B23$29.A!\nEDIT: Yikes!  Here's one with a series of false alarms early on, but then it starts doing really interesting quadratic-growth stuff around 3.5M ticks.  It's hard to run this one far enough to see if the expanding region will be able to escape from the box that it starts in:\n\nCode: Select all / Show in Viewer#C 4-cell Serizawa quadratic-growth candidate --\n#C moving the key cell by (2,1) appears to have the same effect\nx = 32, y = 24, rule = Serizawa\nB2$3.B2$B19$31.A!\n\n\nBy 3.74 million ticks the rake-making region seems to be strictly bounded -- as many rakes are being destroyed as created, so no long-term quadratic growth after all.  Of course it's quite possible that another quadratic-growth region will start up somewhere in this monster -- novelty clearly isn't exhausted yet -- but it may make sense to look for a simpler example of 4-cell quadratic growth...!"
+    },
+    {
+      "code": [
+        "x = 35, y = 20, rule = Serizawa\nB2$3.B2$B15$34.A!"
+      ],
+      "id": "p12150",
+      "text": "dvgrn wrote:... it may make sense to look for a simpler example of 4-cell quadratic growth.\nFound one, with a slightly-revised search script -- originally I was only looking 16K ticks ahead, not nearly far enough to catch late novelty appearances.  Now I'm waiting to see if it looks quadratic at 2 million ticks.  Even that may not be enough in a few cases, but for the most part Hashlife is happily running away with the pattern by T=2M.\n\nCode: Select all / Show in Viewerx = 35, y = 20, rule = Serizawa\nB2$3.B2$B15$34.A!\nDon't expect anything interesting to happen until 44K ticks, when the rake-making puffer appears more or less out of nowhere.  Unfortunately this is still not an entirely predictable quadratic growth rate, because of a secondary puffer that shows up at 77K and starts transforming the output of the first puffer in unpredictable ways.  The search for simplicity continues..."
+    },
+    {
+      "code": [],
+      "id": "p12151",
+      "text": "dvgrn wrote:Found one\n\nWOW! Yes I was definitely searching for 4 cell quadratics in two ways \n\n1. Randomized small box.\n2. The way you did, adding single stable cell to the 3 cell infinite linear growth. \n\nAnd yes I totally missed the 2M novelty case. I run up to 8K and suspected it to be enough... \n\nWell every search has to make assumptions...\n\n-----\n\nFor now I suspect it would be pretty hard to prove that the quadratic pattern you found is actually a quadratic one, due to the chaos introduced later (as you mentioned). My 5 cell pattern is a clear cut. \n\nWell let's hope to find some more clear cut 4 cell quadratic."
+    },
+    {
+      "code": [
+        "x = 125, y = 18, rule = Serizawa\nA13$121.B2$124.B2$121.B!\n",
+        "x = 373, y = 17, rule = Serizawa\n372.A12$B2$3.B2$B!"
+      ],
+      "id": "p12152",
+      "text": "Found it! Very clear 4 cell quadratic:\n\nCode: Select all / Show in Viewerx = 125, y = 18, rule = Serizawa\nA13$121.B2$124.B2$121.B!\n\n\nHere is another one with late ignition (starts after 600K): \n\nCode: Select all / Show in Viewerx = 373, y = 17, rule = Serizawa\n372.A12$B2$3.B2$B!\n\nIt has \"twin\" moving the static cell six units to the left."
+    },
+    {
+      "code": [],
+      "id": "p12153",
+      "text": "simsim314 wrote:Found it! Very clear 4 cell quadratic...\nAh, good -- congratulations!  Now I won't be distracted by this search any longer.\n\nI looked at lots of false positives, mostly within 60 cells of the 3-cell.  The odds of interesting novelty seemed to go down significantly, about 40 cells from the 3-cell, and cells to the right seemed to give better results on average than cells to the left, so I hadn't tried running a search that far out yet.\n\nThe complex maybe-quadratic \"novelty generators\" that I posted above remind me of some of Bill Gosper's experiments in Conway's Life from a few years ago.  Different types of puffers and rakes have different large-scale signatures in a long-running pattern.  It might be possible to find a few new rakes or puffers in Serizawa by looking for unfamiliar fingerprints in these patterns, in the same way that you can recognize switch engines in a zoomed-out Life pattern.\n\nsimsim314 wrote:Here is another one with late ignition (starts after 600K):...\nThis seems to be a copy of the previous pattern."
+    },
+    {
+      "code": [],
+      "id": "p12154",
+      "text": "dvgrn wrote:This seems to be a copy of the previous pattern.\n\nOops copy-paste bug...now fixed."
+    },
+    {
+      "code": [
+        "x = 464, y = 14, rule = Serizawa\n463.A9$B2$3.B2$B!\n"
+      ],
+      "id": "p12155",
+      "text": "Yes there is a lot of \"quadratic mess\". Here is an example of something which I couldn't even figure out if it quadratic or not, because it's so messy, and it's simply stuck golly before the growth rate is clear: \n\nCode: Select all / Show in Viewerx = 464, y = 14, rule = Serizawa\n463.A9$B2$3.B2$B!\n \n\nAnyway we also should prove that quadratic is impossible with 3. Probably some kind of brute force.\n\nEDIT\n\nI was thinking of GOL quadratic search, and the problem is that linear growth is so much rear in life unlike in Serizawa where it's pretty common. This makes the quadratic patterns in Life even more rear, so the current 26 cells record can't be so simply beaten. The current search in Serizawa with minor optimization took me an hour or two, in GOL it would probably take weeks even months."
+    },
+    {
+      "code": [],
+      "id": "p12157",
+      "text": "simsim314 wrote:Yes there is a lot of \"quadratic mess\". Here is an example of something which I couldn't even figure out if it quadratic or not, because it's so messy, and it's simply stuck golly before the growth rate is clear...\nWow, that's an impressive one.  By 1.5M ticks it seems to have decided to go quadratic in the first and third quadrants, anyway.\n\nThe second quadrant is prolific enough that it will also contribute significantly to the population count.  Probably the vertical bars will continue to appear irregularly, or they might settle into periodicity eventually... there's some fairly complicated recursive math happening there, with gliders from lower down bubbling up unpredictably to start new northward puffers.  Anyway, it's certainly not clear that even an approximate growth rate can be calculated without running this one a lot farther.\n\nNot bad for a four-cell starting pattern!"
+    },
+    {
+      "code": [
+        "x = 60, y = 120, rule = Serizawa\n34.A$42.A3$34.B6.A.A$30.A2.B13.A$34.B7$43.A$29.A16.A$33.A.A7.A3$34.A\n12$41.A.A$42.B8$5.A$14.A3$4.A8.A.A13.2A$.A28.BA$4.A24.2A6$4.A.A8.A$A\n3.ABA11.A$4.3A8.A3$5.A40.B$14.A30.A.A6$36.A$35.ABA$35.A.A11$28.A3$27.\nA.A7.A$23.A16.A$37.A7$27.3A16.B$24.A2.AB12.A3.A.A$27.3A5.A.A3$36.A$\n28.A7$54.A3$45.A7.A.A$42.A16.A$45.A7$54.B$41.A13.B2.A$45.A.A6.B3$46.A\n$54.A!\n"
+      ],
+      "id": "p12715",
+      "text": "I have been searching for a reaction to make a simple \"big glider\" gun.\nThis p64 \"big glider\" gun uses a 4-glider reaction I found:\nCode: Select all / Show in Viewerx = 60, y = 120, rule = Serizawa\n34.A$42.A3$34.B6.A.A$30.A2.B13.A$34.B7$43.A$29.A16.A$33.A.A7.A3$34.A\n12$41.A.A$42.B8$5.A$14.A3$4.A8.A.A13.2A$.A28.BA$4.A24.2A6$4.A.A8.A$A\n3.ABA11.A$4.3A8.A3$5.A40.B$14.A30.A.A6$36.A$35.ABA$35.A.A11$28.A3$27.\nA.A7.A$23.A16.A$37.A7$27.3A16.B$24.A2.AB12.A3.A.A$27.3A5.A.A3$36.A$\n28.A7$54.A3$45.A7.A.A$42.A16.A$45.A7$54.B$41.A13.B2.A$45.A.A6.B3$46.A\n$54.A!\n\nI havn't found a good 3-glider reaction that doesn't require excessive cleanup.\nExtraneous gliders tend to interfere with the next synthesis."
+    },
+    {
+      "code": [
+        "x = 109, y = 167, rule = Serizawa\n11$60.A$88.A3$59.A11.A15.A.A$56.A13.B22.A$59.A11.A6$59.A.A$60.B28.A$\n55.A36.A$59.A.A27.A3$60.A20$32.A$23.A63.A.A$87.ABA$88.A$22.A.A2.A5.A$\n18.A9.B7.A$27.A5.A$23.A$22.ABA$23.A5$23.A$22.ABA$22.A.A3$31.A.A53.A.A\n$31.ABA54.B$32.A7$83.A$92.A$85.A2$22.A35.A13.A$19.A39.B13.B$22.A8.A.A\n24.A13.A3$32.A53.A$23.A24$92.A$91.ABA$91.A.A21$64.A3$63.A.A27.A$59.A\n36.A$93.A7$63.A11.A$60.A13.B22.A$63.A11.A15.A.A3$92.A$64.A!\n"
+      ],
+      "id": "p13323",
+      "text": "knightlife wrote:This p64 \"big glider\" gun uses a 4-glider reaction I found:\n\nIt's possible to reduce it to three \"glider gun loops\": \n\nCode: Select all / Show in Viewerx = 109, y = 167, rule = Serizawa\n11$60.A$88.A3$59.A11.A15.A.A$56.A13.B22.A$59.A11.A6$59.A.A$60.B28.A$\n55.A36.A$59.A.A27.A3$60.A20$32.A$23.A63.A.A$87.ABA$88.A$22.A.A2.A5.A$\n18.A9.B7.A$27.A5.A$23.A$22.ABA$23.A5$23.A$22.ABA$22.A.A3$31.A.A53.A.A\n$31.ABA54.B$32.A7$83.A$92.A$85.A2$22.A35.A13.A$19.A39.B13.B$22.A8.A.A\n24.A13.A3$32.A53.A$23.A24$92.A$91.ABA$91.A.A21$64.A3$63.A.A27.A$59.A\n36.A$93.A7$63.A11.A$60.A13.B22.A$63.A11.A15.A.A3$92.A$64.A!\n\n\nAlthough it contains more circulating gliders it has only three gun loops."
+    },
+    {
+      "code": [
+        "x = 122, y = 70, rule = Serizawa\nB2$3.B2$B62$119.B3$117.B3.B!\n",
+        "x = 72, y = 111, rule = Serizawa\n27.B3.B$26.A.B.B.A$27.A3.A2$27.A3.A$26.ABA.ABA$27.A.A.A$27.5A$28.B.B\n2$28.B.B$27.B3.B$27.2A.2A$28.ABA$27.2B.2B2$17.A23.A$16.B5.A.2A7.2A.A\n5.B$17.A6.4A3.4A6.A$23.3A2.B.B2.3A$25.A.A3.A.A$26.B2.A2.B2$29.A6$29.A\n2$27.A3.A3$8.A20.A20.A$7.B43.B$8.A20.A20.A4$65.A$66.B$65.A2$24.2A7.2A\n$25.BA5.AB$5.A19.A7.A19.A$4.B49.B$5.A23.A23.A3$27.A3.A2$15.A6.B.2B7.\n2B.B6.A$14.B6.B2.B9.B2.B6.B$15.A8.3B5.3B8.A$23.B11.B2$21.B7.A$20.A.A$\n29.A5$25.A.A3.A.A$23.A2.B5.B8$21.A8.A2$18.A21.A$26.A31.2A7.A$16.A22.A\n19.BA7.B$2.2A54.2A7.A$.AB11.A7.A$2.2A20.A9.A$29.A2$29.A4$10.A.A$10.AB\nA$11.A23.A8$37.A$21.A.A2.A$18.A2.ABA16.A$22.A9.A$19.A22.A2$36.A7.A$\n24.A9.A$29.A2$29.A!\n"
+      ],
+      "id": "p171591",
+      "text": "just casually posting this so the thread appears on top and maybe, more interesting things, like smaller self constructing spaceships, could be posted here much more easily\n\nLike this small novelty generator, which stabilizes after ~3.2M generations\nCode: Select all / Show in Viewerx = 122, y = 70, rule = Serizawa\nB2$3.B2$B62$119.B3$117.B3.B!\n\n\nAnd this alternating puffer:\nCode: Select all / Show in Viewerx = 72, y = 111, rule = Serizawa\n27.B3.B$26.A.B.B.A$27.A3.A2$27.A3.A$26.ABA.ABA$27.A.A.A$27.5A$28.B.B\n2$28.B.B$27.B3.B$27.2A.2A$28.ABA$27.2B.2B2$17.A23.A$16.B5.A.2A7.2A.A\n5.B$17.A6.4A3.4A6.A$23.3A2.B.B2.3A$25.A.A3.A.A$26.B2.A2.B2$29.A6$29.A\n2$27.A3.A3$8.A20.A20.A$7.B43.B$8.A20.A20.A4$65.A$66.B$65.A2$24.2A7.2A\n$25.BA5.AB$5.A19.A7.A19.A$4.B49.B$5.A23.A23.A3$27.A3.A2$15.A6.B.2B7.\n2B.B6.A$14.B6.B2.B9.B2.B6.B$15.A8.3B5.3B8.A$23.B11.B2$21.B7.A$20.A.A$\n29.A5$25.A.A3.A.A$23.A2.B5.B8$21.A8.A2$18.A21.A$26.A31.2A7.A$16.A22.A\n19.BA7.B$2.2A54.2A7.A$.AB11.A7.A$2.2A20.A9.A$29.A2$29.A4$10.A.A$10.AB\nA$11.A23.A8$37.A$21.A.A2.A$18.A2.ABA16.A$22.A9.A$19.A22.A2$36.A7.A$\n24.A9.A$29.A2$29.A!\n"
+    },
+    {
+      "code": [
+        "x = 27, y = 27, rule = Serizawa\n5.A15.A4$4.A4.A7.A2.A.A$A7.B7.B$4.A4.A7.A2$21.B$4.A.A13.A.A$5.B6$21.B\n$4.A.A13.A.A$5.B2$9.A7.A4.A$A9.B7.B7.A$4.A.A2.A7.A4.A4$5.A15.A!"
+      ],
+      "id": "p171641",
+      "text": "P15 gun:Code: Select all / Show in Viewerx = 27, y = 27, rule = Serizawa\n5.A15.A4$4.A4.A7.A2.A.A$A7.B7.B$4.A4.A7.A2$21.B$4.A.A13.A.A$5.B6$21.B\n$4.A.A13.A.A$5.B2$9.A7.A4.A$A9.B7.B7.A$4.A.A2.A7.A4.A4$5.A15.A!"
+    },
+    {
+      "code": [
+        "x = 33, y = 39, rule = Serizawa\n3$16.B2.B$4.A2.A7.B.2B.A5.B2.B$3.AB2ABA5.3A3.A4.A.2B.B$2.A4.BA6.A3.A\n9.3A$3.A.2A23.A$10.A$9.2AB$10.A.B$11.B$11.B$12.B$11.A5$11.2A$10.A2.B$\n12.B$12.B$11.A.B$10.2AB$11.A6$10.2A$10.2BA$9.A.A$9.A.A$11.BA$9.A.A$\n10.A!",
+        "x = 219, y = 246, rule = Serizawa\n2$70.A13$191.B2$194.B2$191.B203$195.B2$198.B2$195.B13$74.A!",
+        "x = 19, y = 37, rule = B3/S23\n13b3o$12b4o$11b2obobo$13bobo$15bo12$10b2o$bobo7bobo$o7b2o3b2o$o3bo2b3o\n3bo$o6b4obo$o2bo7bo$3o12bobo$18bo$14bo3bo$14bo3bo$18bo$9bo5bo2bo$8b3o\n5b3o2$10bo$2bobo4b2o$5bo2b3o$5bo2b3o$2bo2bo2b2obo$3b3o3b3o$10bo!"
+      ],
+      "id": "p171692",
+      "text": "pure chaos\n\nCode: Select all / Show in Viewerx = 33, y = 39, rule = Serizawa\n3$16.B2.B$4.A2.A7.B.2B.A5.B2.B$3.AB2ABA5.3A3.A4.A.2B.B$2.A4.BA6.A3.A\n9.3A$3.A.2A23.A$10.A$9.2AB$10.A.B$11.B$11.B$12.B$11.A5$11.2A$10.A2.B$\n12.B$12.B$11.A.B$10.2AB$11.A6$10.2A$10.2BA$9.A.A$9.A.A$11.BA$9.A.A$\n10.A!\n\nEdit: 8-cell novelty generator thing\n\nCode: Select all / Show in Viewerx = 219, y = 246, rule = Serizawa\n2$70.A13$191.B2$194.B2$191.B203$195.B2$198.B2$195.B13$74.A!"
+    },
+    {
+      "code": [
+        "# A delay of 27 timesteps.\n#\nx = 30, y = 27, rule = Serizawa\n8.A$15.A7.A4$7.A.A6.A7.A$3.A25.A$16.A7.A6$A8.A$.B13.A$A8.A12.A.A3$23.\nA$8.A5$A$.B$A!\n",
+        "x = 31, y = 27, rule = Serizawa\n8.A$16.A7.A4$7.A.A7.A7.A$3.A26.A$17.A7.A6$A8.A$.B14.A$A8.A13.A.A3$24.\nA$8.A5$A$.B$A!\n"
+      ],
+      "id": "p193505",
+      "text": "The supplied pattern \"Delay27.rle\" doesn't work with the supplied ruletable \"Serizawa.rule\" (the device is damaged after one use, and doesn't work second time):\n\nCode:\n            Select all / Show in Viewer# A delay of 27 timesteps.\n#\nx = 30, y = 27, rule = Serizawa\n8.A$15.A7.A4$7.A.A6.A7.A$3.A25.A$16.A7.A6$A8.A$.B13.A$A8.A12.A.A3$23.\nA$8.A5$A$.B$A!\n\n\nI double-checked whether the supplied ruletable defines the exact same rules as Figure 1 in the paper in \"Serizawa86.pdf\". The ruletable appears to match the paper correctly.\n\nFigure 8b in the same paper shows the delay device, and that looks roughly the same way as the above pattern, but there are no visible gridlines, so it is hard to tell whether all the cells are placed correctly.\n\nOne possible way to fix the device is to translate the rightmost 11 nonzero cells to the right:\n\nCode:\n            Select all / Show in Viewerx = 31, y = 27, rule = Serizawa\n8.A$16.A7.A4$7.A.A7.A7.A$3.A26.A$17.A7.A6$A8.A$.B14.A$A8.A13.A.A3$24.\nA$8.A5$A$.B$A!\n\n\n\n\n\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\tFigure 1 from \"Serizawa86.pdf\"\t\t\tserizawa-figure-1.png (98.78 KiB) Viewed 775 times\n\t\t\n\t\t\n\t\t\n\t\t\t\n\n\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\n\t\t\tFigure 8b from \"Serizawa86.pdf\"\t\t\tserizawa-figure-8b.png (37.82 KiB) Viewed 775 times\n\t\t\n\t\t\n\t\t\n\t\t\t"
+    }
+  ],
+  "url": "https://conwaylife.com/forums/viewtopic.php?p=12152#p12152"
+}

@@ -6,8 +6,9 @@ const { articles } = await getContent();
 
 <Base title="Image placement review"
   ><section class="container page-intro">
-    <span class="eyebrow">Editorial review</span><h1>One image. One place.</h1><p>
-      Each visual appears once on the homepage. These links lead to those unique placements.
+    <span class="eyebrow">Editorial review</span><h1>Distinct articles. Distinct visuals.</h1><p>
+      Each visual belongs to one article. Topic cards feature named work from their own collection,
+      and article previews repeat that work’s image wherever the article appears.
     </p>
   </section><section class="container section search-results">
     {
@@ -21,7 +22,7 @@ const { articles } = await getContent();
               </h2>
               <p>
                 {a.id === 'simkin-glider-gun'
-                  ? 'Homepage animation with Play/Pause.'
+                  ? 'Article animation with Play/Pause, Step, Reset, and speed controls.'
                   : a.id === 'lifeapi'
                     ? 'Static syntax-colored code image without scrollbars.'
                     : a.id === 'high-dimensional-sphere-packing'

@@ -1,0 +1,21 @@
+{
+  "source": "https://github.com/simsim314/GreyGooTheory/blob/master/P30Gemini/Remini.mc",
+  "sha256": "ebf4a6fec7f70f693e7143150943fcf1d45207375679fa9aad439d83da2147f4",
+  "rule": "B3/S23",
+  "generation": 0,
+  "population": 779984,
+  "full_bounds": [
+    -66,
+    -233,
+    1941921,
+    1941973
+  ],
+  "crop": [
+    990680,
+    990280,
+    991120,
+    990720
+  ],
+  "visible_cells": 652,
+  "description": "Exact static constructor-area detail. Most of the recipe tape is outside the crop."
+}

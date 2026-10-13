@@ -30,31 +30,45 @@ for (const page of pages) {
   );
   assert.equal(ids.length, new Set(ids).size, `Duplicate element IDs: ${relative(root, page)}`);
   assert(!html.includes('katex-error'), `Invalid equation: ${page}`);
-  assert.equal(nodes.filter((n) => n.tagName === 'h1').length, 1, `Expected one h1: ${page}`);
+  const redirect = nodes.some(
+    (n) =>
+      n.tagName === 'meta' &&
+      n.attrs?.some((a) => a.name === 'http-equiv' && a.value === 'refresh'),
+  );
+  if (!redirect)
+    assert.equal(nodes.filter((n) => n.tagName === 'h1').length, 1, `Expected one h1: ${page}`);
   docs.set(page, { nodes, ids: new Set(ids), html });
 }
-// Content visuals get one placement across the entire generated site.
+// A visual belongs to one article. Homepage previews may repeat it on that same article.
 const visualLocations = new Map();
 const imageDigests = new Map();
 const diagramDigests = new Map();
 const attributes = (n) => Object.fromEntries((n.attrs || []).map((a) => [a.name, a.value]));
+const recordVisual = (registry, key, owner, page) => {
+  const previous = registry.get(key);
+  assert(
+    !previous || (owner && previous.owner === owner),
+    `Visual reused by different articles/topics: ${key} in ${previous?.pages.join(', ')} and ${page}`,
+  );
+  if (previous) previous.pages.push(page);
+  else registry.set(key, { owner, pages: [page] });
+};
 for (const [page, { nodes }] of docs) {
   const main = nodes.find((n) => n.tagName === 'main');
   const contentNodes = [];
-  const collect = (n) => {
+  const owners = new WeakMap();
+  const collect = (n, inheritedOwner) => {
+    const owner = attributes(n)['data-article-id'] || inheritedOwner;
+    owners.set(n, owner);
     contentNodes.push(n);
-    n.childNodes?.forEach(collect);
+    n.childNodes?.forEach((child) => collect(child, owner));
   };
   if (main) collect(main);
   for (const n of contentNodes) {
     const attrs = attributes(n);
     if (attrs['data-visual-key']) {
       const key = attrs['data-visual-key'];
-      assert(
-        !visualLocations.has(key),
-        `Repeated content visual ${key}: ${visualLocations.get(key)} and ${page}`,
-      );
-      visualLocations.set(key, page);
+      recordVisual(visualLocations, key, owners.get(n), page);
     }
     if (n.tagName === 'img' && attrs.src?.startsWith(base)) {
       const file = resolve(root, decodeURIComponent(attrs.src.slice(base.length)));
@@ -66,22 +80,14 @@ for (const [page, { nodes }] of docs) {
       const digest = createHash('sha256')
         .update(await readFile(file))
         .digest('hex');
-      assert(
-        !imageDigests.has(digest),
-        `Image displayed twice: ${attrs.src} in ${imageDigests.get(digest)} and ${page}`,
-      );
-      imageDigests.set(digest, page);
+      recordVisual(imageDigests, digest, owners.get(n), page);
     }
     if (n.tagName === 'svg') {
       const normalized = serializeOuter(n)
         .replace(/id="[^"]*"/g, 'id="reference"')
         .replace(/url\(#[^)]+\)/g, 'url(#reference)');
       const digest = createHash('sha256').update(normalized).digest('hex');
-      assert(
-        !diagramDigests.has(digest),
-        `Diagram displayed twice in ${diagramDigests.get(digest)} and ${page}`,
-      );
-      diagramDigests.set(digest, page);
+      recordVisual(diagramDigests, digest, owners.get(n), page);
     }
   }
 }
@@ -130,14 +136,281 @@ assert.equal(
   'Duplicate canonical articles',
 );
 const home = docs.get(join(root, 'index.html')).html;
+const descendants = (node) => {
+  const result = [];
+  const visit = (n) => {
+    result.push(n);
+    n.childNodes?.forEach(visit);
+  };
+  visit(node);
+  return result;
+};
+// Topic tiles open collections; their explicit example captions still open articles.
+for (const page of [join(root, 'index.html'), join(root, 'interests/index.html')]) {
+  const cards = docs
+    .get(page)
+    .nodes.filter((n) => attributes(n).class?.split(' ').includes('interest-card'));
+  assert.equal(cards.length, 6, 'Six main topic cards must remain');
+  for (const card of cards) {
+    const nodes = descendants(card);
+    const titleLink = nodes
+      .find((n) => n.tagName === 'h3')
+      ?.childNodes.find((n) => n.tagName === 'a');
+    const imageLink = nodes.find((n) => attributes(n).class === 'interest-image');
+    assert.equal(
+      attributes(imageLink).href,
+      attributes(titleLink).href,
+      'Topic image must open its collection',
+    );
+    const example = nodes.find((n) => n.tagName === 'figure');
+    const captionLink = descendants(example)
+      .find((n) => n.tagName === 'figcaption')
+      ?.childNodes.find((n) => n.tagName === 'a');
+    assert.equal(
+      attributes(captionLink).href,
+      `${base}articles/${attributes(example)['data-article-id']}/`,
+      'Named example must retain its own article link',
+    );
+  }
+}
+// Each topic/subtopic page lists every matching canonical article exactly once.
+for (const [page, { nodes }] of docs) {
+  const collection = nodes.find((n) => attributes(n)['data-topic-collection']);
+  if (!collection) continue;
+  const topic = attributes(collection)['data-topic-collection'];
+  const introduction = nodes.find((n) => attributes(n)['data-topic-introduction'] === topic);
+  assert(introduction, `Missing thematic introduction: ${topic}`);
+  assert(
+    nodes.indexOf(introduction) < nodes.indexOf(collection),
+    `Introduction must lead ${topic}`,
+  );
+  let ancestor = introduction.parentNode;
+  while (ancestor) {
+    assert(ancestor.tagName !== 'details', `Thematic introduction must be visible: ${topic}`);
+    ancestor = ancestor.parentNode;
+  }
+  const actual = descendants(collection)
+    .filter((n) => n.tagName === 'article' && attributes(n)['data-article-id'])
+    .map((n) => `${base}articles/${attributes(n)['data-article-id']}/`);
+  if (topic === 'game-of-life') {
+    assert.deepEqual(
+      actual.slice(0, 2),
+      [`${base}articles/remini/`, `${base}articles/caterloopilar/`],
+      'Life reading order must begin with the main constructions',
+    );
+    assert(
+      actual.indexOf(`${base}articles/life-in-3d-tiles/`) >
+        actual.indexOf(`${base}articles/lifeapi/`),
+      'Physical tiles must follow the Life research/tools',
+    );
+  }
+  const expected = entries
+    .filter((e) => e.topics.some((t) => t.startsWith(`${topic} `)))
+    .map((e) => e.url);
+  assert.deepEqual(actual.sort(), expected.sort(), `Incorrect topic collection: ${topic}`);
+  assert.equal(new Set(actual).size, actual.length, `Duplicate articles in topic: ${topic}`);
+  const navigation = nodes.find((n) => attributes(n)['aria-label'] === 'Browse by topic');
+  assert(
+    descendants(navigation).some(
+      (n) =>
+        attributes(n)['aria-current'] === 'page' &&
+        attributes(n).href === `${base}interests/${topic}/`,
+    ),
+    `Current topic missing from sidebar: ${topic}`,
+  );
+}
+for (const page of articlePages) {
+  const { nodes } = docs.get(page);
+  assert(
+    nodes.some((n) => attributes(n)['aria-label'] === 'Browse by topic'),
+    `Missing article topic navigation: ${page}`,
+  );
+  assert(
+    nodes.some((n) => attributes(n)['aria-label'] === 'Article contents'),
+    `Missing in-page article navigation: ${page}`,
+  );
+}
+const homepageOccurrences = new Map();
+for (const node of docs.get(join(root, 'index.html')).nodes) {
+  const owner = node.attrs?.find((a) => a.name === 'data-article-id')?.value;
+  if (!owner) continue;
+  let parent = node.parentNode;
+  let nestedInSameArticle = false;
+  while (parent) {
+    if (parent.attrs?.some((a) => a.name === 'data-article-id' && a.value === owner)) {
+      nestedInSameArticle = true;
+      break;
+    }
+    parent = parent.parentNode;
+  }
+  if (!nestedInSameArticle)
+    homepageOccurrences.set(owner, (homepageOccurrences.get(owner) || 0) + 1);
+}
+for (const [owner, count] of homepageOccurrences) {
+  assert(count <= 2, `Article appears a third time on the homepage: ${owner}`);
+}
+assert(
+  home.indexOf('id="interests"') < home.indexOf('id="articles"'),
+  'Interest themes must lead the homepage; recent articles follow them',
+);
+const textContent = (node) =>
+  node.nodeName === '#text' ? node.value : (node.childNodes || []).map(textContent).join('');
+const aboutText = textContent(
+  docs.get(join(root, 'about/index.html')).nodes.find((n) => n.tagName === 'main'),
+).replace(/\s+/g, ' ');
+for (const phrase of [
+  'original Gemini',
+  'was Serizawa Geminoid',
+  'built Geminoid Particles',
+  'Glider Gun, Caterloopillar, Remini, and switch-engine ping-pong',
+]) {
+  assert(aboutText.includes(phrase), `Missing spaces around About links: ${phrase}`);
+}
+
+const caterloopillarPage = docs.get(join(root, 'articles/caterloopilar/index.html'));
+const mechanismSteps = caterloopillarPage.nodes.filter((n) => attributes(n)['data-mechanism-step']);
+assert(
+  mechanismSteps.map((n) => attributes(n)['data-mechanism-step']).join(',') ===
+    Array.from({ length: 17 }, (_, i) => i + 1).join(','),
+  'Caterloopillar must build from small components to the whole loop',
+);
+assert(
+  !caterloopillarPage.nodes.some((n) =>
+    (attributes(n).class || '').split(' ').includes('article-preview'),
+  ),
+  'Do not reveal the whole Caterloopillar tour before its components',
+);
+assert(
+  descendants(mechanismSteps[16]).some(
+    (n) => n.tagName === 'img' && attributes(n).src.endsWith('caterloopillar-architecture.png'),
+  ),
+  'The complete architecture must remain available in the final stage on mobile and without JavaScript',
+);
+const caterloopillarStageTitles = mechanismSteps.map((step) =>
+  textContent(descendants(step).find((n) => n.tagName === 'h2')),
+);
+assert(
+  caterloopillarStageTitles[0].includes('reflector') &&
+    caterloopillarStageTitles[2].includes('one reading head') &&
+    caterloopillarStageTitles[8].includes('Encode a command') &&
+    caterloopillarStageTitles[9].includes('slow salvo') &&
+    caterloopillarStageTitles[12].includes('entire new reading head'),
+  'Do not skip the reflector, assembled head, encoding, salvo and whole-head construction bridges',
+);
+assert(
+  caterloopillarPage.nodes.some((n) => attributes(n)['data-head-explorer'] !== undefined),
+  'Show an inspectable assembled reading head before explaining how it reads',
+);
+for (const clip of [
+  'basic-reflector',
+  'reading-head',
+  'command-offsets',
+  'tape-to-salvo',
+  'whole-head-construction',
+  'whole-head-erasure',
+  'whole-tail-erasure',
+  'working-reader',
+  'glider-reversal',
+  'signal-routing',
+  'inner-reflector',
+  'tape-rebuild',
+  'insertion-clearance-failure',
+  'mwss-beside-hwss',
+  'forward-inserter',
+  'backward-inserter',
+]) {
+  assert(
+    caterloopillarPage.html.includes(`${base}images/caterloopillar-${clip}.gif`),
+    `Missing Caterloopillar mechanism: ${clip}`,
+  );
+}
+assert(
+  !caterloopillarPage.html.includes('The idea I initially thought would fail'),
+  'Do not inflate the early bug into a breakthrough narrative',
+);
+const assemblyExplorer = docs
+  .get(join(root, 'articles/life-in-3d-tiles/index.html'))
+  .nodes.find((n) => attributes(n)['data-assembly'] === 'true');
+assert(
+  descendants(assemblyExplorer).some((n) => n.tagName === 'img'),
+  'Assembly must retain a visible preview when WebGL cannot load',
+);
+assert(
+  descendants(assemblyExplorer).some(
+    (n) => n.tagName === 'button' && textContent(n).includes('Retry 3D view'),
+  ),
+  'Assembly load failure must offer a retry',
+);
+
+const caResearch = docs.get(join(root, 'interests/cellular-automata/index.html')).html;
+const lifeCategory = docs.get(join(root, 'interests/game-of-life/index.html')).html;
+for (const id of [
+  'b60',
+  'bne14t30',
+  'brx46b',
+  'ocellus',
+  'simkins-p60',
+  '24-cell-quadratic-growth',
+  '25-cell-quadratic-growth',
+  'switch-engine-ping-pong',
+  'still-life-tiles',
+  'life-in-3d-tiles',
+  'multilayer-mutilated-gear',
+]) {
+  assert(
+    !caResearch.includes(`${base}articles/${id}/`),
+    `Conway result incorrectly listed under CA Research: ${id}`,
+  );
+  assert(
+    lifeCategory.includes(`${base}articles/${id}/`),
+    `Conway result missing from Conway's Life: ${id}`,
+  );
+}
+assert(
+  caResearch.includes(`${base}articles/neural-ca-mnist/`),
+  'Neural CA must appear in CA Research',
+);
+assert(
+  lifeCategory.includes(`${base}articles/simkin-glider-gun/`) &&
+    !lifeCategory.includes(`${base}articles/neural-ca-mnist/`),
+  'Conway’s Life must retain its dedicated construction/tool collection',
+);
+for (const entry of entries.filter(
+  (e) =>
+    e.topics.some((t) => /^(game-of-life|cellular-automata) /.test(t)) &&
+    !['LifeAPI', 'Making Still-Life Tiles Physical', 'Conway’s Life in 3D Tiles'].includes(e.title),
+)) {
+  const page = join(root, entry.url.slice(base.length), 'index.html');
+  const { nodes } = docs.get(page);
+  assert(
+    nodes.some((n) => n.tagName === 'img' && /\.gif$/.test(attributes(n).src || '')),
+    `CA/Life article must include its animation: ${entry.title}`,
+  );
+}
+assert(
+  !home.includes(`${base}interests/artificial-intelligence/`),
+  'The removed AI topic must not appear in homepage navigation or filters',
+);
+assert(
+  visualLocations
+    .get('simkin-glider-gun')
+    ?.pages.includes(join(root, 'articles/simkin-glider-gun/index.html')),
+  'Gun animation must appear on its article',
+);
+assert(
+  home.includes(`${base}articles/simkin-glider-gun/#glider-gun`),
+  'Homepage gun exhibit must link to the article animation',
+);
+assert(
+  visualLocations.get('simkin-glider-gun')?.pages.includes(join(root, 'index.html')),
+  'Original gun hero must remain on the homepage',
+);
 for (const e of entries) {
   assert(home.includes(e.url), `Article missing from homepage: ${e.title}`);
   await access(join(root, e.url.slice(base.length), 'index.html'));
 }
 assert(
-  docs
-    .get(join(root, 'articles/high-dimensional-sphere-packing/index.html'))
-    .html.includes('katex-display'),
+  docs.get(join(root, 'articles/neural-ca-mnist/index.html')).html.includes('katex-display'),
   'Markdown equations must render',
 );
 assert(
@@ -162,5 +435,5 @@ for (const file of await readdir(join(root, '_astro')))
     }
   }
 console.log(
-  `Verified ${pages.length} HTML pages, ${entries.length} canonical articles, ${checked} internal links/assets, Markdown/MDX equations, search index, sitemap, and unique visual placements.`,
+  `Verified ${pages.length} HTML pages, ${entries.length} canonical articles, ${checked} internal links/assets, Markdown/MDX equations, search index, sitemap, and visual ownership by article.`,
 );

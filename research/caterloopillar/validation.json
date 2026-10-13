@@ -1,0 +1,15 @@
+{
+  "source": "https://raw.githubusercontent.com/simsim314/Caterloopilar/master/Caterloopillar_c8.rle",
+  "sha256": "bc55a5df6f46bdf87fee2ab476ba828b63b8c5a8d57fed3b20662046e28ed420",
+  "engine": "Golly 3.3 / HashLife",
+  "generations": [
+    0,
+    2000
+  ],
+  "population": 238189,
+  "translation": [
+    0,
+    -250
+  ],
+  "validation": "Every live cell at generation 2000 equals the initial pattern translated by 250 cells, confirming this supplied c/8 ship."
+}

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="910" viewBox="0 0 1500 910" role="img">
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}</style>
+<rect width="100%" height="100%" fill="#f6f5ef"/>
+<text x="32" y="43" fill="#233c43" font-size="28" font-weight="bold" text-anchor="start">26 tiles: the connections after blue</text>
+<text x="32" y="78" fill="#233c43" font-size="17" font-weight="normal" text-anchor="start">Example: a live glider cell with three live neighbours. The total INCLUDING the centre is 4.</text>
+<text x="35" y="128" fill="#233c43" font-size="20" font-weight="bold" text-anchor="start">Blue: gather around ONE Life cell</text>
+<rect x="35" y="158" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="64.5" y="197.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="97" y="158" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="126.5" y="197.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="159" y="158" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="188.5" y="197.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="221" y="158" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="250.5" y="197.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="35" y="220" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="64.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="97" y="220" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="126.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="159" y="220" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="188.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="221" y="220" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="250.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="35" y="282" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="64.5" y="321.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="97" y="282" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="126.5" y="321.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="159" y="282" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="188.5" y="321.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="221" y="282" width="59" height="59" rx="3" fill="#5188b4" stroke="#ccd3ce"/>
+<text x="250.5" y="321.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="35" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="64.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="97" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="126.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="159" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="188.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="221" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="250.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<line x1="327" y1="278" x2="466" y2="278" stroke="#233c43" stroke-width="2"/>
+<polygon points="466.00,278.00 458.00,274.00 458.00,282.00" fill="#233c43" stroke="#233c43"/>
+<text x="525" y="128" fill="#233c43" font-size="20" font-weight="bold" text-anchor="start">Orange 1: four horizontal pieces</text>
+<rect x="525" y="158" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="554.5" y="197.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="587" y="158" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="616.5" y="197.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="649" y="158" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="678.5" y="197.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="711" y="158" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="740.5" y="197.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C0</text>
+<rect x="525" y="220" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="554.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="587" y="220" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="616.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="649" y="220" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="678.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="711" y="220" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="740.5" y="259.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C1</text>
+<rect x="525" y="282" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="554.5" y="321.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="587" y="282" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="616.5" y="321.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="649" y="282" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="678.5" y="321.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="711" y="282" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="740.5" y="321.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C1</text>
+<rect x="525" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="554.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="587" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="616.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="649" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="678.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="711" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="740.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C0</text>
+<line x1="817" y1="278" x2="956" y2="278" stroke="#233c43" stroke-width="2"/>
+<polygon points="956.00,278.00 948.00,274.00 948.00,282.00" fill="#233c43" stroke="#233c43"/>
+<text x="1015" y="128" fill="#233c43" font-size="20" font-weight="bold" text-anchor="start">Orange 2: three vertical pieces</text>
+<rect x="1015" y="158" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="1044.5" y="197.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="1077" y="158" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="1106.5" y="197.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="1139" y="158" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="1168.5" y="197.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="1201" y="158" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="1230.5" y="197.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C0</text>
+<rect x="1015" y="220" width="59" height="59" rx="3" fill="#d7a15c" stroke="#ccd3ce"/>
+<text x="1044.5" y="259.68" fill="white" font-size="26.66" font-weight="normal" text-anchor="middle">1</text>
+<rect x="1077" y="220" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1106.5" y="259.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="1139" y="220" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1168.5" y="259.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="1201" y="220" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="1230.5" y="259.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C1</text>
+<rect x="1015" y="282" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1044.5" y="321.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="1077" y="282" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1106.5" y="321.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="1139" y="282" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1168.5" y="321.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">0</text>
+<rect x="1201" y="282" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="1230.5" y="321.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C1</text>
+<rect x="1015" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1044.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">A1</text>
+<rect x="1077" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1106.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">A1</text>
+<rect x="1139" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#ccd3ce"/>
+<text x="1168.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="normal" text-anchor="middle">A1</text>
+<rect x="1201" y="344" width="59" height="59" rx="3" fill="#fffefa" stroke="#315d5e"/>
+<text x="1230.5" y="383.68" fill="#233c43" font-size="26.66" font-weight="bold" text-anchor="middle">C0</text>
+<text x="35" y="457" fill="#233c43" font-size="18" font-weight="normal" text-anchor="start">Each row is (x, y, y, z).</text>
+<text x="35" y="488" fill="#233c43" font-size="17" font-weight="normal" text-anchor="start">The middle two rows also agree.</text>
+<text x="525" y="457" fill="#233c43" font-size="18" font-weight="normal" text-anchor="start">Each piece: unary(x+y+z), C_y.</text>
+<text x="525" y="488" fill="#233c43" font-size="16" font-weight="normal" text-anchor="start">Right edge: C_N, C_centre, C_centre, C_S.</text>
+<text x="1015" y="457" fill="#233c43" font-size="18" font-weight="normal" text-anchor="start">Top-left 3×3: packed total = 4.</text>
+<text x="1015" y="488" fill="#233c43" font-size="16" font-weight="normal" text-anchor="start">Right edge: preserved from orange 1.</text>
+<text x="1015" y="519" fill="#233c43" font-size="16" font-weight="normal" text-anchor="start">Bottom A ports: auxiliary C-shaped outputs.</text>
+<text x="1015" y="546" fill="#233c43" font-size="14" font-weight="normal" text-anchor="start">A is a label here, NOT a new connector type.</text>
+<text x="32" y="594" fill="#233c43" font-size="23" font-weight="bold" text-anchor="start">Connections to the last two layers</text>
+<text x="35" y="638" fill="#233c43" font-size="19" font-weight="bold" text-anchor="start">Packed 3×3</text>
+<line x1="205" y1="631" x2="290" y2="631" stroke="#233c43" stroke-width="2"/>
+<polygon points="290.00,631.00 282.00,627.00 282.00,635.00" fill="#233c43" stroke="#233c43"/>
+<text x="314" y="638" fill="#233c43" font-size="19" font-weight="bold" text-anchor="start">Purple: output category 4</text>
+<line x1="642" y1="631" x2="745" y2="631" stroke="#233c43" stroke-width="2"/>
+<polygon points="745.00,631.00 737.00,627.00 737.00,635.00" fill="#233c43" stroke="#233c43"/>
+<text x="767" y="638" fill="#233c43" font-size="19" font-weight="bold" text-anchor="start">B/W: (4, C1) → live</text>
+<text x="35" y="689" fill="#233c43" font-size="19" font-weight="bold" text-anchor="start">Original centre C1</text>
+<line x1="257" y1="682" x2="699" y2="682" stroke="#d7a15c" stroke-width="2"/>
+<line x1="699" y1="682" x2="699" y2="656" stroke="#d7a15c" stroke-width="2"/>
+<line x1="699" y1="656" x2="745" y2="656" stroke="#d7a15c" stroke-width="2"/>
+<polygon points="745.00,656.00 737.00,652.00 737.00,660.00" fill="#d7a15c" stroke="#d7a15c"/>
+<text x="35" y="731" fill="#233c43" font-size="17" font-weight="normal" text-anchor="start">The original centre bypasses counting. Other C ports must be ignored safely by the final piece.</text>
+<text x="35" y="773" fill="#233c43" font-size="16" font-weight="normal" text-anchor="start">The purple masks are oriented bottom/right in the post; this drawing packs top/left (a 180° rotation).</text>
+<text x="35" y="822" fill="#233c43" font-size="17" font-weight="normal" text-anchor="start">20% blue separator: nine fixed raised X blockers per blue tile. They carry no logical signal.</text>
+<text x="35" y="863" fill="#233c43" font-size="16" font-weight="normal" text-anchor="start">Remaining physical work: centre-channel height bridges, orientation enforcement, and wildcard socket geometry.</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="850" viewBox="0 0 1220 850" role="img">
+<title>Empty separator versus a raised registration blocker</title>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}</style>
+<rect width="100%" height="100%" fill="#f6f5ef"/>
+<text x="30" y="43" font-size="28" font-weight="bold" fill="#233c43">What the blue separator enforces</text>
+<text x="30" y="78" font-size="17" font-weight="normal" fill="#233c43">Top view of one row across TWO neighbouring blue tiles. All data values are 0.</text>
+<text x="30" y="142" font-size="21" font-weight="bold" fill="#233c43">Correct placement</text>
+<rect x="450" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="485.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="520" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="555.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="590" y="117" width="70" height="70" fill="#f6f5ef" stroke="#b7c7cd"/>
+<rect x="660" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="695.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="730" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="765.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="800" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="835.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="870" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="905.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="940" y="117" width="70" height="70" fill="#f6f5ef" stroke="#b7c7cd"/>
+<rect x="1010" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="1045.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="1080" y="117" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="1115.0" cy="152" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<line x1="800" y1="117" x2="800" y2="187" stroke="#233c43" stroke-width="3"/>
+<rect x="660" y="117" width="280" height="70" fill="none" stroke="#b87930" stroke-width="4"/>
+<circle cx="695.0" cy="152" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="765.0" cy="152" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="835.0" cy="152" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="905.0" cy="152" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="30" y="232" font-size="17" font-weight="normal" fill="#233c43">Four recesses engage four outputs across the blue-tile boundary.</text>
+<text x="30" y="266" font-size="15" font-weight="normal" fill="#233c43">Orange outline = one 4-input piece. Dashed rings = its recesses.</text>
+<text x="30" y="358" font-size="21" font-weight="bold" fill="#233c43">Wrong placement, empty separator</text>
+<rect x="450" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="485.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="520" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="555.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="590" y="333" width="70" height="70" fill="#f6f5ef" stroke="#b7c7cd"/>
+<rect x="660" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="695.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="730" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="765.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="800" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="835.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="870" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="905.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="940" y="333" width="70" height="70" fill="#f6f5ef" stroke="#b7c7cd"/>
+<rect x="1010" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="1045.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="1080" y="333" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="1115.0" cy="368" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<line x1="800" y1="333" x2="800" y2="403" stroke="#233c43" stroke-width="3"/>
+<rect x="450" y="333" width="280" height="70" fill="none" stroke="#b87930" stroke-width="4"/>
+<circle cx="485.0" cy="368" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="555.0" cy="368" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="625.0" cy="368" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="695.0" cy="368" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="30" y="448" font-size="17" font-weight="normal" fill="#233c43">Three recesses engage; one faces empty space. The solid can still seat.</text>
+<text x="30" y="574" font-size="21" font-weight="bold" fill="#233c43">Same wrong placement, raised X</text>
+<rect x="450" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="485.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="520" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="555.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="590" y="549" width="70" height="70" fill="#f6f5ef" stroke="#b7c7cd"/>
+<line x1="613.0" y1="572" x2="637.0" y2="596" stroke="#6c648f" stroke-width="4"/>
+<line x1="613.0" y1="596" x2="637.0" y2="572" stroke="#6c648f" stroke-width="4"/>
+<rect x="660" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="695.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="730" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="765.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="800" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="835.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="870" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="905.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="940" y="549" width="70" height="70" fill="#f6f5ef" stroke="#b7c7cd"/>
+<line x1="963.0" y1="572" x2="987.0" y2="596" stroke="#6c648f" stroke-width="4"/>
+<line x1="963.0" y1="596" x2="987.0" y2="572" stroke="#6c648f" stroke-width="4"/>
+<rect x="1010" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="1045.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<rect x="1080" y="549" width="70" height="70" fill="#e5eff5" stroke="#b7c7cd"/>
+<circle cx="1115.0" cy="584" r="12" fill="none" stroke="#5188b4" stroke-width="4.199999999999999"/>
+<line x1="800" y1="549" x2="800" y2="619" stroke="#233c43" stroke-width="3"/>
+<rect x="450" y="549" width="280" height="70" fill="none" stroke="#b87930" stroke-width="4"/>
+<circle cx="485.0" cy="584" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="555.0" cy="584" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="625.0" cy="584" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="695.0" cy="584" r="20" fill="none" stroke="#b87930" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="30" y="664" font-size="17" font-weight="normal" fill="#233c43">The raised X collides with the circular recess and blocks seating.</text>
+<text x="30" y="789" font-size="15" font-weight="normal" fill="#233c43">This demonstrates one wrong placement and a blocker for it. It is not yet a proof covering every translation and rotation.</text>
+</svg>

@@ -1,0 +1,6 @@
+x = 17, y = 22, rule = B3/S23
+11b2o$11bobo$13bo$7b2o3bob2o$8bo3bo3bo$8bob2ob2obo$9bobobobo7$2o$b2o$
+2o$o4$2o$2o!
+#C [[ THUMBSIZE 2 THEME 6 GRID GRIDMAJOR 0 SUPPRESS THUMBLAUNCH ]]
+#C [[ AUTOSTART ]]
+#C [[ THUMBSIZE 2 ZOOM 12 HEIGHT 400 GPS 10 PAUSE 2 LOOP 144 ]]

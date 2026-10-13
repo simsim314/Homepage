@@ -1,0 +1,344 @@
+---
+import catalogue from '../data/life-tile-catalogue.json';
+import { href } from '../lib/content';
+import { Image } from 'astro:assets';
+import assemblyPreview from '../assets/images/life-tiles-assembly.png';
+interface Props {
+  tileName?: string;
+  assembly?: boolean;
+}
+const { tileName, assembly = false } = Astro.props;
+const tile = catalogue.find((t) => t.name === tileName);
+const label = assembly ? 'Complete glider assembly' : tile!.label;
+---
+
+<div
+  class="tile-explorer"
+  data-assembly={String(assembly)}
+  data-tile={assembly ? 'assembly' : tileName}
+  data-model-url={href('models/life-tiles/all-32-tiles.glb')}
+  data-assembly-url={href('models/life-tiles/assembly.json')}
+>
+  {
+    assembly ? (
+      <button class="button tile-choice" type="button" aria-expanded="false">
+        Rotate the complete glider assembly
+      </button>
+    ) : (
+      <h4>{label}</h4>
+    )
+  }
+  <div class="explorer-panel" hidden={assembly}>
+    {
+      assembly && (
+        <label class="spacing-control">
+          Layer spacing <output>40 mm</output>
+          <input type="range" min="0" max="200" step="1" value="40" aria-label="Layer spacing" />
+          <span>0 = assembled · increase to see between layers</span>
+        </label>
+      )
+    }
+    <div class="explorer-toolbar" role="group" aria-label={`${label} view controls`}>
+      {
+        assembly && (
+          <button type="button" data-view="top">
+            Top
+          </button>
+        )
+      }
+      {
+        assembly && (
+          <button type="button" data-view="bottom">
+            Underside
+          </button>
+        )
+      }
+      <button type="button" data-view="reset">{assembly ? 'Reset view' : 'Reset both views'}</button
+      >
+      <button type="button" data-view="in" aria-label="Zoom in">+</button>
+      <button type="button" data-view="out" aria-label="Zoom out">−</button>
+      {
+        assembly && (
+          <button type="button" data-view="close">
+            Close
+          </button>
+        )
+      }
+    </div>
+    <div class="explorer-stage" aria-label={label}>
+      {
+        assembly && (
+          <Image
+            class="tile-fallback"
+            src={assemblyPreview}
+            alt="Complete glider assembly preview. Open the 3D view to rotate its layers."
+            width={800}
+            format="webp"
+            loading="lazy"
+          />
+        )
+      }
+      {
+        tile && (
+          <img
+            class="tile-fallback"
+            src={href(tile.image)}
+            alt={`${label}: top and underside. The interactive view loads when visible.`}
+            width="720"
+            height="300"
+            loading="lazy"
+          />
+        )
+      }
+    </div>
+    <p class="explorer-help">
+      {
+        assembly
+          ? 'Drag to rotate and turn over;'
+          : 'One example, shown from both sides. Drag either view independently;'
+      } scroll or pinch to zoom. Arrow keys rotate; + and − zoom.
+    </p>
+  </div>
+  <p class="explorer-status" role="status"></p>
+  <button class="button explorer-retry" type="button" hidden>Retry 3D view</button>
+</div>
+<style>
+  .tile-explorer {
+    margin: 1rem 0 1.7rem;
+    font: 0.8rem/1.6 var(--sans);
+  }
+  .explorer-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+  }
+  .tile-choices span {
+    color: var(--muted);
+    margin-right: 0.2rem;
+  }
+  .explorer-toolbar button {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid #a8b5ae;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+  }
+  .tile-choices button[aria-pressed='true'] {
+    background: #236c60;
+    color: white;
+    border-color: #236c60;
+  }
+  button:focus-visible,
+  input:focus-visible {
+    outline: 3px solid #277f70;
+    outline-offset: 3px;
+  }
+  .explorer-panel {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #d5ddd5;
+  }
+  .explorer-stage {
+    height: 300px;
+    margin-top: 0.6rem;
+    background: #f3f3ec;
+  }
+  [data-assembly='true'] .explorer-stage {
+    height: 440px;
+    background: #191918;
+  }
+  .explorer-stage :global(canvas) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  .explorer-stage :global(canvas:focus-visible) {
+    outline: 3px solid #277f70;
+    outline-offset: -3px;
+  }
+  .explorer-help,
+  .explorer-status {
+    font: 0.75rem/1.6 var(--sans);
+    color: var(--muted);
+    margin: 0.6rem 0 0;
+  }
+  .spacing-control {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.25rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .spacing-control input,
+  .spacing-control span {
+    grid-column: 1/-1;
+    width: 100%;
+  }
+  .spacing-control input {
+    accent-color: #277f70;
+  }
+  .spacing-control span {
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+  h4 {
+    margin: 0 0 0.5rem;
+    font: 600 0.8rem/1.5 var(--sans);
+  }
+  .tile-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
+  }
+  [data-assembly='false'] .explorer-panel {
+    padding: 0.6rem;
+    margin: 0;
+  }
+  [data-assembly='false'] .explorer-toolbar {
+    gap: 0.25rem;
+  }
+  [data-assembly='false'] .explorer-toolbar button {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.4rem;
+  }
+  .explorer-stage :global(.tile-face-pair) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 100%;
+    gap: 0.6rem;
+  }
+  .explorer-stage :global(.tile-face) {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    min-height: 0;
+    min-width: 0;
+  }
+  .explorer-stage :global(.tile-face-label) {
+    margin: 0;
+    padding: 0.4rem;
+    font: 600 0.75rem/1.5 var(--sans);
+    text-align: center;
+  }
+  .explorer-stage :global(.tile-face-stage) {
+    height: 100%;
+    margin: 0;
+    min-height: 0;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  @media (max-width: 580px) {
+    .explorer-panel {
+      padding: 0.6rem;
+    }
+    .explorer-stage {
+      height: 520px;
+    }
+    .explorer-stage :global(.tile-face-pair) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+    }
+    [data-assembly='true'] .explorer-stage {
+      height: 320px;
+    }
+  }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>('.tile-explorer').forEach((root) => {
+    const panel = root.querySelector<HTMLElement>('.explorer-panel')!;
+    const stage = root.querySelector<HTMLElement>('.explorer-stage')!;
+    const fallback = stage.querySelector('img')?.cloneNode(true);
+    const status = root.querySelector<HTMLElement>('.explorer-status')!;
+    const assembly = root.dataset.assembly === 'true';
+    const button = root.querySelector<HTMLButtonElement>('.tile-choice');
+    const retry = root.querySelector<HTMLButtonElement>('.explorer-retry')!;
+    let moduleFailed = false;
+    let viewer:
+      | Awaited<ReturnType<(typeof import('../scripts/life-tile-set'))['mountLifeTileExplorer']>>
+      | undefined;
+    let saved: { views: { position: number[]; zoom: number }[] } | undefined;
+    let pending = false;
+    let wanted = false;
+    function release() {
+      if (!viewer) return;
+      saved = viewer.getState();
+      viewer.dispose();
+      viewer = undefined;
+      stage.replaceChildren(...(fallback ? [fallback.cloneNode(true)] : []));
+      root.dataset.ready = 'false';
+    }
+    async function activate() {
+      if (pending || viewer || !wanted) return;
+      pending = true;
+      retry.hidden = true;
+      status.textContent = 'Loading 3D model…';
+      try {
+        const { mountLifeTileExplorer } = await import('../scripts/life-tile-set');
+        viewer = await mountLifeTileExplorer(root);
+        viewer.show(root.dataset.tile!);
+        if (saved) viewer.setState(saved);
+        root.dataset.ready = 'true';
+        moduleFailed = false;
+        status.textContent = assembly
+          ? '286 pieces · six layers. Blue overhangs by half a cell; the final state returns to 5×5.'
+          : '';
+        if (!wanted) release();
+      } catch (error) {
+        release();
+        stage.replaceChildren(...(fallback ? [fallback.cloneNode(true)] : []));
+        root.dataset.ready = 'false';
+        moduleFailed = error instanceof TypeError && /import|fetch/i.test(error.message);
+        retry.hidden = false;
+        status.textContent =
+          'The 3D view could not load. The preview and model downloads are available; retry to open it.';
+        console.error(error);
+      } finally {
+        pending = false;
+      }
+    }
+    function updateVisibility() {
+      const bounds = stage.getBoundingClientRect();
+      wanted = !panel.hidden && bounds.bottom >= -120 && bounds.top <= window.innerHeight + 120;
+      if (wanted) void activate();
+      else release();
+    }
+    let scheduled = false;
+    function scheduleVisibility() {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(() => {
+        scheduled = false;
+        updateVisibility();
+      });
+    }
+    window.addEventListener('scroll', scheduleVisibility, { passive: true });
+    window.addEventListener('resize', scheduleVisibility, { passive: true });
+    root.addEventListener('focusin', scheduleVisibility);
+    updateVisibility();
+    retry.addEventListener('click', () => {
+      // A failed ES-module dependency is cached by the browser until reload.
+      if (moduleFailed) window.location.reload();
+      else {
+        wanted = true;
+        void activate();
+      }
+    });
+    button?.addEventListener('click', () => {
+      panel.hidden = false;
+      wanted = true;
+      button.setAttribute('aria-expanded', 'true');
+      void activate();
+    });
+    root.querySelector('[data-view="close"]')?.addEventListener('click', () => {
+      panel.hidden = true;
+      wanted = false;
+      release();
+      button?.setAttribute('aria-expanded', 'false');
+      button?.focus();
+    });
+  });
+</script>

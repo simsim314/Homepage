@@ -1,0 +1,7 @@
+26 transition types: 6 blue + 8 orange + 8 purple + 4 black/white.
+Units: nominal millimetres; Life pitch 60; computation body height 6; keys 2 high.
+C0 square ring; C1 diamond ring; C* union cavity. Purple classes 3/4/other use annular keys
+with centreline radii 4.2/6.4/8.6 and wall width 1.1, proposed for this prototype.
+All inputs inward; outputs outward. Assembly requires completed previous layers, no bridging.
+STLs have zero mating clearance. Calibrate before fabrication. No print-fit certification.
+The finite demonstration computes the inner 3x3 of a padded 5x5 glider; border extension is not included.

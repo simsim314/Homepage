@@ -1,0 +1,529 @@
+import golly as g
+
+class Particle:
+	def __init__(self, x, y, dx, dy, gen, particleName):
+		self.x = x
+		self.y = y
+		self.gen = gen
+		self.particleName = particleName 
+		self.dx = dx
+		self.dy = dy
+	  
+	def Place(self):
+		particle = "A"
+		
+		if self.dx == 0:
+			gld = g.parse(self.particleName + "$A!", 0, 0, 1, 0, 0, self.dy)
+		else:
+			gld = g.parse("A" + self.particleName + "!", 0, 0, self.dx, 0, 0, 1)
+		
+		
+		g.putcells(gld, self.x, self.y - self.dy)
+
+
+class Block:
+	def __init__(self, particle, dist, isTemp):
+		self.x = particle.x + dist * particle.dx
+		self.y = particle.y - dist * particle.dy
+		self.isTemp = isTemp
+	def Place(self):	
+		str = "F!"
+		
+		if self.isTemp: 
+			str = "E!"
+		
+		block = g.parse(str, 0, 0, 1, 0, 0, 1)
+		g.putcells(block, self.x, self.y)
+	
+	def Register(self, data):
+		str = "F"
+		
+		if self.isTemp: 
+			str = "E"
+		
+		data.append([self.x , self.y, str])
+		
+	def RegisterSelfDestruct(self, data):
+		tempData = []
+		self.Register(tempData)
+		tempData[0].append(1)
+		data.append(tempData[0])
+		
+class Splitter:
+	def __init__(self, particle, dist, isRight, isTemp):
+		self.x = particle.x + dist * particle.dx
+		self.y = particle.y - dist * particle.dy
+		self.IsRight = isRight
+		self.isTemp = isTemp
+		self.particle = particle
+		
+		if self.IsRight and self.particle.dx == 0 and self.particle.dy == 1: 
+			self.ref = Particle(self.x , self.y + 1, 1, 0, particle.gen + dist + 1, particle.particleName)
+		if not self.IsRight and self.particle.dx == 0 and self.particle.dy == 1: 
+			self.ref = Particle(self.x , self.y + 1, -1, 0, particle.gen + dist + 1, particle.particleName)
+		
+		if self.IsRight and self.particle.dx == 0 and self.particle.dy == -1: 
+			self.ref = Particle(self.x , self.y - 1, -1, 0, particle.gen + dist + 1, particle.particleName)
+		if not self.IsRight and self.particle.dx == 0 and self.particle.dy == -1: 
+			self.ref = Particle(self.x , self.y - 1, 1, 0, particle.gen + dist + 1, particle.particleName)
+		
+		if self.IsRight and self.particle.dx == 1 and self.particle.dy == 0: 
+			self.ref = Particle(self.x - 1, self.y, 0, -1, particle.gen + dist + 1, particle.particleName)
+		if not self.IsRight and self.particle.dx == 1 and self.particle.dy == 0: 
+			self.ref = Particle(self.x - 1, self.y, 0, 1, particle.gen + dist + 1, particle.particleName)
+		
+		if self.IsRight and self.particle.dx == -1 and self.particle.dy == 0: 
+			self.ref = Particle(self.x + 1 , self.y, 0, 1, particle.gen + dist + 1, particle.particleName)
+		if not self.IsRight and self.particle.dx == -1 and self.particle.dy == 0: 
+			self.ref = Particle(self.x + 1 , self.y, 0, -1, particle.gen + dist + 1, particle.particleName)
+		
+		
+	def Place(self):
+		str = "F!"
+		
+		if self.isTemp: 
+			str = "E!"
+		
+		block = g.parse(str, 0, 0, 1, 0, 0, 1)
+		
+		if self.IsRight and self.particle.dx == 0 and self.particle.dy == 1: 
+			g.putcells(block, self.x + 1, self.y)
+		if not self.IsRight and self.particle.dx == 0 and self.particle.dy == 1: 
+			g.putcells(block, self.x - 1, self.y)
+		
+		if self.IsRight and self.particle.dx == 0 and self.particle.dy == -1: 
+			g.putcells(block, self.x - 1, self.y)
+		if not self.IsRight and self.particle.dx == 0 and self.particle.dy == -1: 
+			g.putcells(block, self.x + 1, self.y)
+		
+		if self.IsRight and self.particle.dx == 1 and self.particle.dy == 0: 
+			g.putcells(block, self.x, self.y + 1)
+		if not self.IsRight and self.particle.dx == 1 and self.particle.dy == 0: 
+			g.putcells(block, self.x, self.y - 1)
+		
+		if self.IsRight and self.particle.dx == -1 and self.particle.dy == 0: 
+			g.putcells(block, self.x, self.y - 1)
+		if not self.IsRight and self.particle.dx == -1 and self.particle.dy == 0: 
+			g.putcells(block, self.x, self.y + 1)
+			
+	def Register(self, data):
+		str = "F"
+		
+		if self.isTemp: 
+			str = "E"
+		
+		if self.IsRight and self.particle.dx == 0 and self.particle.dy == 1: 
+			data.append([self.x + 1 , self.y, str])
+		if not self.IsRight and self.particle.dx == 0 and self.particle.dy == 1: 
+			data.append([self.x - 1 , self.y, str])
+		
+		if self.IsRight and self.particle.dx == 0 and self.particle.dy == -1: 
+			data.append([self.x - 1 , self.y, str])
+		if not self.IsRight and self.particle.dx == 0 and self.particle.dy == -1: 
+			data.append([self.x + 1 , self.y, str])
+		
+		if self.IsRight and self.particle.dx == 1 and self.particle.dy == 0: 
+			data.append([self.x , self.y + 1, str])
+		if not self.IsRight and self.particle.dx == 1 and self.particle.dy == 0: 
+			data.append([self.x , self.y - 1, str])
+		
+		if self.IsRight and self.particle.dx == -1 and self.particle.dy == 0: 
+			data.append([self.x , self.y - 1, str])
+		if not self.IsRight and self.particle.dx == -1 and self.particle.dy == 0: 
+			data.append([self.x , self.y + 1, str])
+	
+	def RegisterSelfDestruct(self, data):
+		tempData = []
+		self.Register(tempData)
+		tempData[0].append(1)
+		data.append(tempData[0])
+		
+class Mirror:		
+	def __init__(self, particle, dist, isRight, isTemp):
+			self.splt = Splitter(particle, dist, isRight, isTemp)
+			
+			if isTemp:
+				self.blck = Block(particle, dist + 3, isTemp)
+			else:
+				self.blck = Block(particle, dist + 5, isTemp)
+			self.ref = self.splt.ref
+	def Place(self):
+		self.splt.Place()
+		self.blck.Place()
+	def  Register(self, data):
+		self.splt.Register(data)
+		self.blck.Register(data)
+	def RegisterSelfDestruct(self, data):
+		self.splt.RegisterSelfDestruct(data)
+		self.blck.RegisterSelfDestruct(data)
+		
+class Construct: 
+	def __init__(self, particle, dist, isRight):
+		self.dist = dist
+		self.isRight = isRight
+		self.particle = particle
+	
+	def Place(self):
+		data = []
+		splt = Splitter(self.particle, self.dist, not self.isRight, True)
+		splt.Register(data)
+		block = g.parse("G!", 0, 0, 1, 0, 0, 1)
+		g.putcells(block, data[0][0], data[0][1])
+	
+	def Register(self, dataFull):
+		data = []
+		splt = Splitter(self.particle, self.dist, not self.isRight, True)
+		splt.Register(data)
+		block = g.parse("G!", 0, 0, 1, 0, 0, 1)
+		dataFull.append([data[0][0], data[0][1] - 10, "G"])
+	
+'''
+parts = [("B", "B"), ("B", "B"), ("B", "B"), ("D", "D")]
+idx = 0 
+
+for pairs in parts:
+	
+	dy = 0
+	if pairs[1] == "D":
+		dy = 13
+		
+	pL = Particle(0,idx * 9,0,1,0,pairs[0])	
+	pR = Particle(4,idx * 9 + dy,0,1,0,pairs[1])
+
+	pL.Place()
+	pR.Place()
+	
+	#pL = Particle(0,-70 - idx * 9 - dy,0,-1,0,pairs[0])
+	#pR = Particle(4,-70 - idx * 9,0,-1,0,pairs[1])
+	
+	#pL.Place()
+	#pR.Place()
+	
+'''
+
+def InterpreterData(data, dy, distFull):
+
+	pL = Particle(0,0,0,1,0,"B")
+	pR = Particle(4,0,0,1,0,"B")
+
+	dist = distFull
+
+	
+	splt = Splitter(pL, 0, True, False)
+	splt.Register(data)
+
+	splt = Mirror(splt.ref, dist + 4, True, False)
+	splt.Register(data)
+
+	splt = Mirror(pL, 4, False, False)
+	splt.Register(data)
+
+	splt = Mirror(splt.ref, 7, True, False)
+	splt.Register(data)
+
+	splt = Construct(splt.ref, dy + 40, True)
+	splt.Register(data)
+
+	splt = Mirror(pR, 4, True, False)
+	splt.Register(data)
+
+	cnst = Construct(splt.ref, 19 + dist, False)
+	cnst.Register(data)
+
+	splt = Splitter(splt.ref, dist - 4, True, False)
+	splt.Register(data)
+
+	pL = Particle(-1,-30 - dy,0,-1,0,"B")
+	pR = Particle(3,-30 - dy,0,-1,0,"B")
+
+	dist -= 4
+	splt = Mirror(pL, 0, False, False)
+	splt.Register(data)
+
+	cnst = Construct(splt.ref, dist + 28, False)
+	cnst.Register(data)
+
+	splt = Splitter(splt.ref, dist + 8, False, False)
+	splt.Register(data)
+
+	splt = Mirror(pR, 0 + 4, False, False)
+	splt.Register(data)
+
+	pL = splt.ref
+
+	splt = Splitter(splt.ref, dist, False, False)
+	splt.Register(data)
+
+	splt = Mirror(pL, dist + 20, False, False)
+	splt.Register(data)
+
+	splt = Mirror(splt.ref, 8, False, False)
+	splt.Register(data)
+
+
+	splt = Mirror(splt.ref, 6, True, False)
+	splt.Register(data)
+
+	cnst = Construct(splt.ref, 9, True)
+	cnst.Register(data)
+
+def PlaceData(data, dx, dy):
+	for d in data:
+		delta = 0 
+		
+		if d[2] == "G":
+			delta += 10
+			
+		block = g.parse(d[2] + "!", 0, 0, 1, 0, 0, 1)
+		g.putcells(block, dx + d[0], dy + d[1] + delta)
+	
+class CommandPlacer:
+	def __init__(self):
+		self.loc = 30
+		self.cellLoc = [0, 0]
+		
+	def Goto(self, x, y):
+		
+		commands = []
+		
+		while (self.cellLoc[0] != y or self.cellLoc[1] != x):
+			
+			#g.getstring(str(commands))
+				
+			strX = self.StrByD(y, self.cellLoc[0])
+			self.cellLoc[0] = self.DeltaByD(y, self.cellLoc[0])
+			
+			strY = self.StrByD(x, self.cellLoc[1])
+			self.cellLoc[1] = self.DeltaByD(x, self.cellLoc[1])
+			
+			commands.append([strX, strY])
+			
+		self.PlaceCommands(commands)
+		
+	def StrByD(self, val, cellVal):
+		if cellVal < val:
+			return "B"
+		if cellVal > val:
+			return "C"
+		
+		return ""
+	
+	def DeltaByD(self, val, cellVal):
+		if cellVal < val:
+			return cellVal + 1
+		if cellVal > val:
+			return cellVal - 1
+		
+		return cellVal
+	
+	
+	def Set0(self, x0, y0):
+		self.Goto(x0, y0)
+		self.cellLoc = [0, 0]
+		
+		
+	def PlaceCommands(self, commands):
+		
+		for command in commands:
+			if command[0] == "" or command[0] == "B" or command[0] == "C" or command[0] == "D" :
+				if command[0] != "":
+					pL = Particle(0,self.loc,0,1,0,command[0])	
+					pL.Place()
+					
+				if command[1] == "B" or command[1] == "C" or command[1] == "D":
+					pR = Particle(4,self.loc,0,1,0,command[1] )	
+					pR.Place()
+				
+				self.loc += 9
+				
+			if command[0] == "E":
+				pL = Particle(0,self.loc,0,1,0,"D")	
+				pL.Place()
+				self.loc += 17
+				pL = Particle(4,self.loc,0,1,0,"D")	
+				pL.Place()
+				self.loc += 9
+			
+			if command[0] == "F":
+				pL = Particle(0,self.loc,0,1,0,"D")	
+				pL.Place()
+				self.loc += 18
+				pL = Particle(4,self.loc,0,1,0,"D")	
+				pL.Place()
+				self.loc += 9
+			
+			if command[0] == "G":
+				self.Goto(self.cellLoc[1] + 4, self.cellLoc[0] - 6)
+				self.PlaceCommands(["E"])
+				self.Goto(self.cellLoc[1] - 3, self.cellLoc[0] - 1)
+				self.PlaceCommands(["E"])
+				self.Goto(self.cellLoc[1] - 1, self.cellLoc[0] + 1)
+				pL = Particle(0,self.loc,0,1,0,"D")	
+				pL.Place()
+				self.loc += 25
+				pL = Particle(4,self.loc,0,1,0,"D")	
+				pL.Place()
+				self.loc += 9
+				
+	def PlaceData(self, data):
+		
+		maxXY = -100000
+		minXY = 100000
+		
+		for d in data:
+			if maxXY < d[0] - d[1]:
+				maxXY = d[0] - d[1]
+				
+			if minXY > d[0] - d[1]:
+				minXY = d[0] - d[1]
+		
+		dXY = []
+
+		for i in xrange(minXY, maxXY + 1):
+			l = []
+			
+			for d in data:
+				if i == d[0] - d[1]:
+					l.append(d)
+			
+			dXY.append(l)
+		
+		g.show(str(dXY))
+		
+		for i in reversed(dXY):
+			for d in i:
+				
+				d0 = 0 
+				
+				if d[2] == "F":
+					d0 = -1
+				
+				#g.getstring(str(d))
+				
+				self.Goto(d[0], -d[1] - d0)
+				self.PlaceCommands([d[2]])
+				
+	
+	
+def AddSelfDestruct(data, y, dirY):
+	minX = 1000000000
+	maxX = -1
+	
+	dir = -1
+	
+	for d in data:
+		if len(d) < 4:
+			d.append(0)
+		
+		if (d[1] - y) * dirY > 0:		
+			if minX > d[0] - 10:
+				 minX = d[0] - 10
+			
+			if maxX < d[0] + 10:
+				 maxX = d[0] + 10
+		
+	l = []
+	
+	for i in xrange(minX, maxX):
+		l.append([0])
+
+	particle = Particle(maxX + 6, y + (-dirY - 1), dir, 0, 0, "D")
+	#particle.Place()
+	
+	g.show(str(data))
+	
+	changed = True
+	while changed:
+		changed = False
+		
+		for i in xrange(minX, maxX):
+			l[i - minX] = [False, 1000 * dirY, i, []]
+			
+		for d in data: 
+			if d[3] == 0 and (d[1] - y) * dirY > 0:
+				x = d[0]
+				changed = True
+				
+				for i in xrange(x - 3, x + 4):
+					if d[2] != "G":
+						if (l[i - minX][1] - d[1]) * dirY > 0:# or (l[i - minX][1] == d[1] and abs(i - dir - x) == 2):
+							l[i - minX][1] = d[1]
+							l[i - minX][0] = abs(i - dir - x) == 2
+							l[i - minX][2] = d[0]
+							l[i - minX][3] = d
+						
+					else: 
+						if (l[i - minX][1] - d[1] - 10) * dirY > 0:
+							l[i - minX][1] = d[1] + 10
+							l[i - minX][0] = abs(i - dir - x) == 0
+							l[i - minX][2] = d[0]
+							l[i - minX][3] = d
+		
+		
+		appended = False
+		lasti = -1
+		
+		for i in xrange(minX, maxX):
+			
+			idx = i
+			
+			if dir == -1:
+				idx = (maxX - i) + minX - 1
+			
+			
+			if l[idx - minX][0] and l[idx - minX][3][3] == 0 and i >= lasti:
+				
+				data.append([idx, y - 1, "E", 1])
+				lasti = i + 3
+				l[idx - minX][3][3] = 1
+				appended = True
+		
+		if changed:
+			mir = Mirror(particle, maxX - minX + 5, (dir == 1) ^  (dirY == 1), True)
+			mir.RegisterSelfDestruct(data)
+			
+			particle = mir.ref
+			
+			mir = Mirror(particle,9, (dir == 1) ^  (dirY == 1), True)
+			mir.RegisterSelfDestruct(data)
+			
+			particle = mir.ref
+			#changed = True
+		else: 
+			mir = Block(particle,4, True)
+			mir.RegisterSelfDestruct(data)
+			#changed = False
+			
+		dir = -dir
+		y -= 8 * dirY
+
+
+data = []
+dist = 75
+dy = 60 
+stepY = -50
+InterpreterData(data, dy, dist)
+AddSelfDestruct(data, -14, 1)
+AddSelfDestruct(data, -76, -1)
+
+particle = Particle(50, -dy - 48, 1, 0, 0, "D")
+mir = Mirror(particle, 60, True, True)
+mir.Register(data)
+particle = mir.ref
+mir = Splitter(particle, 33, True, True)
+mir.Register(data)
+mir = Mirror(particle, 93, True, True)
+mir.Register(data)
+
+PlaceData(data, 0, 0)
+placer = CommandPlacer()
+placer.Set0(dist - 24,stepY + dy)
+placer.PlaceData(data)
+placer.Set0(24 - dist,-stepY - dy)
+placer.Goto(0,6)
+placer.PlaceCommands([["D",""]])
+
+PlaceData(data, dist, int((placer.loc + 30)/2))
+
+#data = [[13, -20, "F"], [13, -30, "F"],[13, -25, "F"] ,[16, -20, "F"], [16, -30, "F"],[16, -25, "F"],[19, -20, "F"], [19, -30, "F"],[19, -25, "F"]]
+#data = [[19, -20, "E"]]

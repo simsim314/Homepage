@@ -1,0 +1,154 @@
+<div id="life-all-solids">
+  <div class="viz-controls">
+    <label class="form-label">Tile / assembly
+      <select class="form-select" id="life-solid-choice"></select>
+    </label>
+    <label class="form-label" id="life-gap-control" hidden>Layer separation <span id="life-gap-value" class="tabular-nums">12</span> mm
+      <input class="form-range" id="life-gap" type="range" min="0" max="30" value="12" step="1">
+    </label>
+  </div>
+  <div class="text-small" id="life-model-description" aria-live="polite"></div>
+  <div class="life-face-labels"><span>Top · raised outputs</span><span>Underside · recessed inputs</span></div>
+  <div class="life-solid-view" role="img" aria-label="Rotatable solid models of cellular automaton tile types and their layered glider assembly"></div>
+  <div class="text-small" id="life-solid-status" aria-live="polite">Loading solid models…</div>
+</div>
+<style>
+#life-all-solids .life-solid-view { width:100%; height:460px; touch-action:none; }
+#life-all-solids canvas { display:block; width:100%; height:100%; }
+#life-all-solids .life-face-labels { display:flex; justify-content:space-around; gap:12px; color:var(--foreground); margin-top:12px; }
+#life-all-solids .life-face-labels span { flex:1; text-align:center; }
+#life-all-solids [hidden] { display:none; }
+@media(max-width:520px) { #life-all-solids .life-solid-view { height:550px; } #life-all-solids .life-face-labels { flex-direction:column; gap:4px; } }
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const encoded='__COMPRESSED_GLB__';
+const data=__VIEWER_DATA__;
+const root=document.getElementById('life-all-solids');
+const host=root.querySelector('.life-solid-view');
+const status=root.querySelector('#life-solid-status');
+const desc=root.querySelector('#life-model-description');
+const choice=root.querySelector('#life-solid-choice');
+const slider=root.querySelector('#life-gap');
+const labels=root.querySelector('.life-face-labels');
+try {
+  function themeColor(token){
+    const probe=document.createElement('span');probe.style.color=`var(${token})`;probe.style.backgroundColor='var(--background)';root.appendChild(probe);
+    const css=getComputedStyle(probe).color,bg=getComputedStyle(probe).backgroundColor;probe.remove();
+    const c=document.createElement('canvas');c.width=c.height=1;
+    const ctx=c.getContext('2d');ctx.fillStyle=bg;ctx.fillRect(0,0,1,1);ctx.fillStyle=css;ctx.fillRect(0,0,1,1);
+    const rgb=ctx.getImageData(0,0,1,1).data;
+    return new THREE.Color().setRGB(rgb[0]/255,rgb[1]/255,rgb[2]/255,THREE.SRGBColorSpace);
+  }
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0,0);
+  renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  host.appendChild(renderer.domElement);
+  const scene=new THREE.Scene();
+  const camera=new THREE.OrthographicCamera(-85,85,53,-53,.1,3000);
+  camera.position.set(0,220,300);
+  const controls=new OrbitControls(camera,renderer.domElement);
+  controls.enableDamping=false;controls.enablePan=false;controls.minZoom=.6;controls.maxZoom=5;
+  controls.target.set(0,0,0);
+  scene.add(new THREE.AmbientLight(0xffffff,.9));
+  const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(-130,330,160);
+  light.castShadow=true;light.shadow.mapSize.set(2048,2048);
+  Object.assign(light.shadow.camera,{left:-240,right:240,top:240,bottom:-240,near:.1,far:900});
+  light.shadow.bias=-.00003;light.shadow.normalBias=.025;scene.add(light);
+  const fill=new THREE.DirectionalLight(0xffffff,.7);fill.position.set(200,130,-180);scene.add(fill);
+  const tokens={Blue:'--blue','Boundary blue':'--blue',Orange:'--orange',Purple:'--purple',live:'--muted-foreground',dead:'--muted'};
+  const materials={};
+  for(const [k,token] of Object.entries(tokens))materials[k]=new THREE.MeshStandardMaterial({color:themeColor(token),roughness:.7,flatShading:true});
+  function mat(name){
+    const t=data.types.find(t=>t.name===name);
+    if(name.startsWith('start-'))return materials[name==='start-1'?'live':'dead'];
+    if(t.family==='Black / white')return materials[(name==='final-0'||name==='final-2')?'live':'dead'];
+    return materials[t.family];
+  }
+  const container=new THREE.Group();scene.add(container);
+  const geometry=new Map();
+  let selected='assembly',gap=20;
+  const saved=window.openai?.widgetState?.modelContent;
+  if(saved&&(saved.tile==='assembly'||data.types.some(t=>t.name===saved.tile)))selected=saved.tile;
+  if(Number.isFinite(saved?.gap))gap=Math.max(0,Math.min(30,saved.gap));
+  const assemblyOption=document.createElement('option');assemblyOption.value='assembly';assemblyOption.textContent='Glider · all six physical layers';choice.appendChild(assemblyOption);
+  for(const family of [...new Set(data.types.map(t=>t.family))]){
+    const group=document.createElement('optgroup');group.label=family;
+    for(const t of data.types.filter(t=>t.family===family)){
+      const option=document.createElement('option');option.value=t.name;option.textContent=t.label;group.appendChild(option);
+    }
+    choice.appendChild(group);
+  }
+  function render(){renderer.render(scene,camera);}
+  function layout(){
+    const w=host.clientWidth,h=host.clientHeight,narrow=w<520;
+    labels.children[0].textContent=narrow?'Upper view · raised outputs':'Top · raised outputs';
+    labels.children[1].textContent=narrow?'Lower view · recessed inputs':'Underside · recessed inputs';
+    renderer.setSize(w,h,false);
+    if(selected!=='assembly'&&container.children.length===2){
+      container.children[0].position.set(narrow?0:-38,0,narrow?-42:0);
+      container.children[1].position.set(narrow?0:38,0,narrow?42:0);
+    }
+    const half=selected==='assembly'?Math.max(210,180*h/w):(narrow?87:Math.max(51,79*h/w));
+    camera.left=-half*w/h;camera.right=half*w/h;camera.top=half;camera.bottom=-half;
+    camera.updateProjectionMatrix();render();
+  }
+  function save(){window.openai?.setWidgetState?.({modelContent:{tile:selected,gap},privateContent:null}).catch(()=>{});}
+  function show(next,remember=false){
+    selected=next;choice.value=next;slider.value=String(gap);
+    root.querySelector('#life-gap-value').textContent=String(gap);
+    while(container.children.length)container.remove(container.children[0]);
+    root.querySelector('#life-gap-control').hidden=next!=='assembly';labels.hidden=next==='assembly';
+    if(next==='assembly'){
+      const assembly=new THREE.Group();assembly.rotation.x=-Math.PI/2;
+      for(const item of data.assembly){
+        const mesh=new THREE.Mesh(geometry.get(item.name),mat(item.name));
+        const matrix=new THREE.Matrix4().makeTranslation(item.xyz[0]-150,item.xyz[1]-150,item.xyz[2]+item.layer*gap-20-2.5*gap);
+        if(item.turns){
+          const [x,y,z]=item.centre;
+          matrix.multiply(new THREE.Matrix4().makeTranslation(x,y,z)).multiply(new THREE.Matrix4().makeRotationZ(item.turns*Math.PI/2)).multiply(new THREE.Matrix4().makeTranslation(-x,-y,-z));
+        }
+        mesh.applyMatrix4(matrix);mesh.castShadow=mesh.receiveShadow=true;assembly.add(mesh);
+      }
+      container.add(assembly);desc.textContent='Initial state → blue → orange horizontal → orange vertical → purple → black/white';
+      status.textContent=data.assemblyLabel||'122 pieces · padded glider · central 3 × 3 advanced one generation';
+    }else{
+      const source=geometry.get(next);source.computeBoundingBox();
+      const centre=source.boundingBox.getCenter(new THREE.Vector3());
+      for(let i=0;i<2;i++){
+        const group=new THREE.Group();
+        const mesh=new THREE.Mesh(source,mat(next));mesh.position.copy(centre).negate();mesh.castShadow=mesh.receiveShadow=true;
+        const orient=new THREE.Group();orient.add(mesh);orient.rotation.x=i?Math.PI/2:-Math.PI/2;group.add(orient);container.add(group);
+      }
+      const t=data.types.find(t=>t.name===next);desc.textContent=t.description;
+      status.textContent='Drag to rotate · scroll to zoom · two views of the same solid';
+    }
+    root.dataset.loaded='true';root.dataset.tile=next;layout();if(remember)save();
+  }
+  const compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
+  const writerStream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'));
+  const bytes=await new Response(writerStream).arrayBuffer();
+  const gltf=await new GLTFLoader().parseAsync(bytes,'');gltf.scene.updateMatrixWorld(true);
+  gltf.scene.traverse(obj=>{
+    if(!obj.isMesh)return;
+    const g=obj.geometry.clone();g.applyMatrix4(obj.matrixWorld);g.deleteAttribute('color');g.computeVertexNormals();geometry.set(obj.name,g);
+  });
+  if(geometry.size!==data.types.length+2)throw new Error(`Expected ${data.types.length} tile types + 2 initial cells; received ${geometry.size}`);
+  for(const t of data.types)if(!geometry.has(t.name))throw new Error(`Missing ${t.name}`);
+  show(selected);
+  choice.addEventListener('change',()=>{camera.zoom=1;camera.updateProjectionMatrix();show(choice.value,true);});
+  slider.addEventListener('input',()=>{gap=Number(slider.value);show('assembly');});slider.addEventListener('change',save);
+  controls.addEventListener('change',render);new ResizeObserver(layout).observe(host);
+  new MutationObserver(()=>{for(const [k,token] of Object.entries(tokens))materials[k].color.copy(themeColor(token));render();}).observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});
+  window.addEventListener('openai:set_globals',event=>{
+    const state=event.detail?.globals?.widgetState?.modelContent;
+    if(!state)return;
+    if(Number.isFinite(state.gap))gap=Math.max(0,Math.min(30,state.gap));
+    if(state.tile==='assembly'||data.types.some(t=>t.name===state.tile))show(state.tile);
+  });
+  controls.update();layout();
+}catch(error){status.textContent=`3D view could not load: ${error.message}`;status.setAttribute('role','alert');}
+</script>

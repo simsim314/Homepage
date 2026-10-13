@@ -1,0 +1,1259 @@
+{
+  "posts": [
+    {
+      "code": [
+        "import golly as g\n\nclass Glider:\n\tdef __init__(self, x, y, dx, dy, state, gen):\n\t\tself.x = x\n\t\tself.y = y\n\t\tself.gen = gen\n\t\tself.state = state \n\t\tself.dx = dx\n\t\tself.dy = dy\n\t\t\n\tdef Place(self):\n\t\tif self.dx == 0:\n\t\t\tgld = g.parse(\".B$A.A!\", -1, 0, 1, 0, 0, self.dy)\n\t\telse: \n\t\t\tgld = g.parse(\"A$.B$A!\", -self.dx, -1, self.dx, 0, 0, 1)\n\t\t\t\n\t\tgld = g.evolve(gld, self.state)\n\t\tg.putcells(gld, self.x, self.y)\n\nclass Stopper:\n\tdef __init__(self, gld, dist):\n\t\tself.x = gld.x + dist * gld.dx\n\t\tself.y = gld.y - dist * gld.dy\n\t\t\n\tdef Place(self):\n\t\tb = g.parse(\"A!\", 0, 0, 1, 0, 0, 1)\n\t\tg.putcells(b, self.x, self.y)\n\t\tself.Register(data)\n\t\t\n\tdef Register(self, data):\n\t\tdata.append([self.x, self.y, 0])\n\t\t\nclass TripleSplitter:\n\tdef __init__(self, gld, dist):\n\t\tself.dist = dist\n\t\tself.gld = gld\n\t\t\n\t\tself.x = gld.x + dist * gld.dx\n\t\tself.y = gld.y - dist * gld.dy\n\t\t\n\t\tself.fgld = Glider(self.x + 3 * gld.dx, self.y - 3 * gld.dy, gld.dx, gld.dy, 0, 5 + gld.gen + dist * 2 + gld.state)\n\t\tself.rgld = Glider(self.x + 4 * gld.dy - gld.dx, self.y + gld.dy + 4 * gld.dx, gld.dy, -gld.dx, 0, 5 + gld.gen + dist * 2 + gld.state)\n\t\tself.lgld = Glider(self.x - 4 * gld.dy - gld.dx, self.y + gld.dy - 4 * gld.dx, -gld.dy, gld.dx, 0, 5 + gld.gen + dist * 2 + gld.state)\n\t\t\n\tdef Place(self):\n\t\tb = g.parse(\"A.A2$A.A!\", 0, 0, self.gld.dy, 0, 0, self.gld.dx)\n\t\tg.putcells(b, self.x - self.gld.dy, self.y - self.gld.dx)\n\t\tself.Register(data)\n\t\t\n\tdef Register(self, data):\n\t\tif self.gld.dx == 0:\n\t\t\tdata.append([self.x + 1, self.y, 1])\n\t\telse: \n\t\t\tdata.append([self.x, self.y - 1, 2])\n\t\t\t\nclass Splitter:\n\tdef __init__(self, gld, dist, isRight):\n\t\t\n\t\tself.split = TripleSplitter(gld, dist)\n\n\t\tif isRight:\n\t\t\tself.refstop = Stopper(self.split.lgld, 1)\n\t\t\tself.refgld = self.split.rgld\n\t\telse:\n\t\t\tself.refstop = Stopper(self.split.rgld, 1)\n\t\t\tself.refgld = self.split.lgld\n\tdef Place(self):\n\t\n\t\tself.split.Place()\n\t\tself.refstop.Place()\n\t\t\n\t\t\n\tdef Register(self, data):\n\t\tself.split.Register(data)\n\t\tself.refstop.Register(data)\n\nclass Mirror(Splitter):\n\tdef __init__(self, gld, dist, isRight):\n\t\n\t\tSplitter.__init__(self, gld, dist, isRight)\n\t\tself.fstop = Stopper(self.split.fgld, 1)\n\t\n\tdef Place(self):\n\t\t\n\t\tSplitter.Place(self)\n\t\tself.fstop.Place()\n\t\t\n\t\t\n\tdef Register(self, data):\n\t\tSplitter.Register(self, data)\n\t\tself.fstop.Register(data)\n\ndef PlaceNegative():\n\ttotal = 10\n\tdist = 29\n\tdeltaX = 400\n\t\n\tfor i in xrange(0, total): \n\t\tgld = Glider(posx + i * dist, posy, 0, -1, 0, 0)\n\t\t#gld.Place()\n\t\tsplit = Mirror(gld, 10 + i * dist, False)\n\t\tsplit.Place()\n\t\n\t\tmir = Splitter(split.refgld, defaultDx + 2 * dist * (total - i), False)\n\t\tmir.Place()\n\t\t\n\t\tmir = Mirror(mir.split.fgld, 30 * 10, False)\n\t\tmir.Place()\n\t\t\n\t\t\ndef PlaceRef(dist, fact, toplace):\t\t\t\n\ttotal = 10\n\tdelta = [200, 200, 190, 190, 180]\n\t#ds = [[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0],[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0]]\n\t#ir = 11\n\t#d = 36 \n\tir = 1\n\td = 52 \n\tdeltaX = 400\n\t\n\tds = [[1,0,0,1,0,1,0,0,1,0],[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0], [1,0,0,1,0,1,0,0,1,0],[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0]]\n\t#placement = [[0,0,-1,-1,-1,-1,-1,-1,-1,-1], [0,4,-1,-1,-1,-1,-1,-1,-1,-1], [0,2,72,71,-1,-1,-1,-1,-1,-1], [0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,10,0,-1,-1,-1,-1,-1,-1], [37 ,41,7,0,51,-1,-1,-1,-1,-1]]\n\t#placement = [[-1,-1,-1,-1,-1,0,0,-1,-1,-1], [-1,-1,-1,-1,-1,0,4,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,0,2,52 + 2 * (dist - 19),51 + 2 * (dist - 19),-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,-1,-1,10,0,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,17 + 2 * (dist - 19),21 + 2 * (dist - 19),7,0,31 + 2 * (dist - 19),-1,-1,-1,-1,-1]]\n\tplacement = []\n\tplacement.extend([[-1,-1,-1,-1,-1,0,2,72,71,-1], [-1,-1,-1,-1,-1,0,0,-1,-1,-1], [-1,-1,-1,-1,-1,-1,-1,10,0,-1], [-1,-1,-1,-1,-1,37 ,41,7,0,-1]])\n\tplacement.extend([[0,2,72,71,-1,-1,-1,-1,-1,-1], [0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,10,0,-1,-1,-1,-1,-1,-1], [37 ,41,7,0,-1,-1,-1,-1,-1,-1]])\n\t#ds = [[1,0,1,0,0,0,0,0,0,0], [1,0,1,0,0,0,0,0,0,0]]\n\t#placement = [[0,4,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0]]\n\t\n\t#for i in xrange(0, 2): \t\n\t#\tplacement.extend(placement)\n\t#\tds.extend(ds)\n\t\t\n\tfor i in xrange(0, total): \n\t\n\t\tgld = Glider(posx + i * dist, posy, 0, 1, 0, 0)\n\t\tsplit = Splitter(gld, 10 + i * dist, True)\n\t\tmir = Mirror(split.refgld, defaultDx + 2 * dist * (total - i), True)\n\t\t\t\n\t\tif toplace: \n\n\t\t\tsplit.Place()\n\t\t\tmir.Place()\n\n\t\tif i >= total / 2:\n\t\t\tmir = Mirror(split.split.fgld, dist * total / 2, True)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld,10 + 60 * (10 - i), True)\n\t\t\tmir.Place()\n\t\t\tdelMir = 10\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, True)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 10, True)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, True)\n\t\t\tmir.Place()\n\t\t\t\n\t\tfor j in xrange(0, len(placement)):\n\t\t\tif placement[j][i] >= 0:\n\t\t\t\t#gld = Glider(posx + i * dist, posy + dist * j + i * fact + placement[j][i], 0, 1, ds[j][i], 0)\n\t\t\t\tgld = Glider(posx + i * dist, posy + total * dist * j + placement[j][i], 0, 1, ds[j][i], 0)\n\t\t\t\t#gld.Place()\n\t\tif i <= 4:\n\t\t\tgld = Glider(posx + i * dist, posy - delta[i], 0, 1, 0, 0)\n\t\telse:\n\t\t\tgld = Glider(posx + deltaX + 201, -157 + posy - i * dist, 1, 0, 0, 0)\n\t\t\t\n\t\tif i%5 == 0 or i%5 == 1: \n\t\t\tif i <= 4:\n\t\t\t\tgl = Glider(posx + i * dist, 50 + posy - delta[i], 0, 1, 0, 0)\n\t\t\telse:\n\t\t\t\tgl = Glider(posx + deltaX + 131, -157 + posy - i * dist, 1, 0, 0, 0)\n\t\t\t\n\t\t\tmir = Mirror(gl, 10, i > 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 6, i <= 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 10, i <= 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 6, i > 4)\n\t\t\tmir.Place()\n\t\t\n\t\tif i%5 == 4:\n\t\t\tif i <= 4:\n\t\t\t\tgl = Glider(posx + i * dist,  posy - delta[i], 0, 1, 0, 0)\n\t\t\telse:\n\t\t\t\tgl = Glider(posx + 471, -157 + posy - i * dist, 1, 0, 0, 0)\n\n\t\t\tmir = Mirror(gl, 0, i > 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 5, i <= 4)\n\t\t\tmir.Place()\n\t\t\t\n\t\tif i%5 ==0 or i%5 == 2: \n\t\t\tmir = Mirror(gld, 19, i <= 4)\n\t\t\tmir.Place()\n\t\t\n\t\t\tsp = Splitter(gld, 0, i > 4)\n\t\t\tsp.Place()\n\t\t\tmir = Mirror(sp.refgld, 6, i <= 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 6, i <= 4)\n\t\t\tmir.Place()\n\t\tif i%5 == 1 or i%5 == 3: \n\t\t\tmir = Mirror(gld, 19, i > 4)\n\t\t\tmir.Place()\n\t\t\n\tddX = 0\n\tddY = 0 \n\t\n\tif toplace: \n\t\tddX = 1031\n\t\tddY = 774\n\t\t\n\tb = g.parse(\"A!\")\n\tg.putcells(b, 11 + posx + (dist - 17) / 2, -ddY-250 + posy)\n\tdata.append([11 + posx + (dist - 17) / 2, -ddY-250 + posy, 0])\n\t\n\n\tdata.append([ddX + defaultDx + deltaX - 682 + posx + (dist - 17) / 2, -319 + posy, 0])\n\tg.putcells(b, ddX + defaultDx + deltaX - 682 + posx + (dist - 17) / 2, -319 + posy)\n\t\nclass CommandPlacer():\n\tdef __init__(self):\n\t\tself.loc = 0\n\t\tself.dist = 29\n\t\tself.cellLoc = [0, 0]\n\t\tself.lastCmd = -1\n\t\tself.lastDir = -1\n\t\t\n\tdef Push(self, dir):\n\t\t\n\t\tif not(self.lastCmd == 0 and self.lastDir == dir):\n\t\t\tself.loc += 150\n\n\t\tds = [[1,0],[1,0]]\n\t\tpl = [[0,0], [0,4]]\n\t\tspacing = [40, 40]\n\t\tself.Place(ds, pl, spacing, dir)\n\t\t\n\t\tself.cellLoc[dir] += 2\n\t\t\n\t\tself.lastCmd = 0\n\t\tself.lastDir = dir\n\t\t\n\tdef PullSequence(self, dir, shoot):\n\t\tself.loc += 150\n\t\t\n\t\tpl = [[0,2,72,71,-1], [0,0,-1,-1,-1], [-1,-1,10,0,-1], [37 ,41,7,0,51 * shoot]]\n\t\tds = [[1,0,0,1,0],[1,0,1,0,0], [1,0,1,0,0], [1,0,0,1,0]]\n\t\tspacing = [60, 80, 58, 40]\n\t\tself.Place(ds, pl, spacing, dir)\n\t\tself.cellLoc[dir] -= 31\n\t\t\n\tdef Pull(self, dir):\n\t\tself.PullSequence(dir, 1)\n\t\tself.lastCmd = 1\n\t\tself.lastDir = dir\n\t\tself.loc += 150\n\tdef Shoot(self, dir):\n\t\tself.PullSequence(dir, -1)\n\t\tself.lastCmd = 2\n\t\tself.lastDir = dir\n\t\tself.loc += 150\n\t\t\n\tdef CreateBlock(self):\n\t\tself.loc += 150\n\t\t\n\t\t#pltemp = [[0,2,72,71,-1], [0,0,-1,-1,-1], [-1,-1,10,0,-1], [37 ,41,7,0,-1]]\n\t\t\n\t\tds = [[1,0,0,1,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,0,1,0], [1,0,0,1,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,1,0,0], [1,0,0,1,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,0,1,0], [1,0,0,1,0, 0,1,1,0,0]]\n\t\tpl = [[0,2,72,71,-1,-1,-1,-1,-1,-1], [0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,0,2,72,71,-1], [-1,-1,-1,-1,-1,0,0,-1,-1,-1]]\n\t\tpl.extend([[-1,-1,10,0,-1,-1,-1,-1,-1,-1], [37 ,41,7,0,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,-1,-1,10,1,-1], [-1,-1,-1,-1,-1,37,42,8,0,-1]])\n\t\tspacing = [150, 150, 150, 150, 58, 39, 58, 90]\n\t\t\n\t\tself.Place(ds, pl, spacing, 0)\n\t\t\n\t\tself.cellLoc[0] -= 31\n\t\tself.cellLoc[1] -= 31\n\t\t\n\t\tself.lastCmd = 3\n\t\tself.lastDir = -1\n\t\tself.loc += 150\n\t\t\n\tdef Place(self, ds, pl, spacing, dir):\n\t\tfor j in xrange(0, len(pl)):\n\t\t\tfor i in xrange(0, len(pl[0])):\n\t\t\t\tif pl[j][i] >= 0:\n\t\t\t\t\tgld = Glider(posx + (i + dir * 5) * self.dist, posx + pl[j][i] + self.loc, 0, 1, ds[j][i], 0)\n\t\t\t\t\tgld.Place()\n\n\t\t\tself.loc += spacing[j]\n\t\n\tdef Place2Block(self, dir):\n\t\tself.CreateBlock()\n\t\tself.Pull(1 - dir)\n\n\t\tfor j in xrange(0, 14): \n\t\t\tself.Push(dir)\n\t\tfor j in xrange(0, 32): \n\t\t\tself.Push(1 - dir)\n\t\t\t\n\t\tself.CreateBlock()\n\n\t\tself.Pull(1 - dir)\n\t\tfor j in xrange(0, 30): \n\t\t\tself.Push(1 - dir)\n\t\t\t\n\t\tself.Shoot(1 - dir)\n\t\n\tdef Goto(self, x, y):\n\t\t\n\t\twhile (self.cellLoc[0] > x or self.cellLoc[0]%2 != x%2):\n\t\t\tself.Pull(0)\n\t\t\n\t\twhile (self.cellLoc[1] > y or self.cellLoc[1]%2 != y%2):\n\t\t\tself.Pull(1)\n\t\t\t\n\t\tfor j in xrange(0, (y - self.cellLoc[1]) / 2): \n\t\t\tself.Push(1)\n\t\t\n\t\tfor j in xrange(0, (x - self.cellLoc[0]) / 2): \n\t\t\tself.Push(0)\n\n\tdef Set0(self, x0, x1):\n\t\tfor j in xrange(0, x0): \n\t\t\tself.Push(0)\n\t\t\n\t\tfor j in xrange(0, x1): \n\t\t\tself.Push(1)\n\t\t\n\t\tself.cellLoc = [0, 0]\n\t\t\n\tdef PlaceData(self, data):\n\t\t\n\t\tmaxXY = -100000\n\t\tminXY = 100000\n\t\t\n\t\tfor d in data:\n\t\t\tif maxXY < d[0] - d[1]:\n\t\t\t\tmaxXY = d[0] - d[1]\n\t\t\t\t\n\t\t\tif minXY > d[0] - d[1]:\n\t\t\t\tminXY = d[0] - d[1]\n\t\t\n\t\tdXY = []\n\n\t\tfor i in xrange(minXY, maxXY + 1):\n\t\t\tl = []\n\t\t\t\n\t\t\tfor d in data:\n\t\t\t\tif i == d[0] - d[1]:\n\t\t\t\t\tl.append(d)\n\t\t\t\n\t\t\tdXY.append(l)\n\t\t\n\t\tfor i in reversed(dXY):\n\t\t\tfor d in i:\n\t\t\t\tself.Goto(-d[1], d[0])\n\t\t\t\t\n\t\t\t\tif d[2] == 0:\n\t\t\t\t\tself.CreateBlock()\n\t\t\t\tif d[2] == 1:\n\t\t\t\t\tself.Place2Block(1)\n\t\t\t\tif d[2] == 2:\n\t\t\t\t\tself.Place2Block(0)\n\n\n\ndefaultDx = 900\ndata = []\nposx = (593 + 29) - 1116\nposy = 5600 - 6374\nPlaceNegative()\nposx += (896 + 29) + 600\n\nPlaceRef(29, 0, False)\nposx = 0\nposy = 0\nPlaceRef(29, 0, True)\n\n\n\ncmd = CommandPlacer()\ncmd.Set0(1113, 410)\ncmd.PlaceData(data)\ncmd.Pull(0)\ncmd.Pull(1)\n\n#cmd = CommandPlacer()\n#cmd.Goto(1200, 1200)\n#cmd.Place2Block(1)\n#posx += 1000\n\n\nposx = 1716 + (593 + 29) - 1116\nposy = 1500 + 5600 - 6374 + int(cmd.loc/2 + 2000)\nPlaceNegative()\nposx += (896 + 29) + 600\nPlaceRef(29, 0, False)\nposx = 1716\nposy = 1500 + int(cmd.loc/2 + 2000)\nPlaceRef(29, 0, True)\n'''\n\nposx = 1716 + (593 + 29) - 1116\nposy = 1500 + 5600 - 6374 + 3500000\nPlaceNegative()\nposx += (896 + 29) + 600\nPlaceRef(29, 0, False)\nposx = 1716\nposy = 1500 + 3500000\nPlaceRef(29, 0, True)\n'''\n"
+      ],
+      "id": "p11354",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#p11354",
+          "text": "Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11354",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#p11354",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/download/file.php?id=274",
+          "text": "SerizawaGeminoid.7z"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "Serizawa rule is perfect for self replicators and universal constructors, but until now there was no known specific examples of such. Here is a working Universal Constructor based self replicator (Geminoid) in Serizawa.\n\nIt's P13,362,290 with (2444, 3219) step. \n\nThe Geminoid is attached. You can also run the script directly (you need to setup Serizawa rule in golly first and run the script, it takes about 5-10 min): \n\nCode: Select allimport golly as g\n\nclass Glider:\n\tdef __init__(self, x, y, dx, dy, state, gen):\n\t\tself.x = x\n\t\tself.y = y\n\t\tself.gen = gen\n\t\tself.state = state \n\t\tself.dx = dx\n\t\tself.dy = dy\n\t\t\n\tdef Place(self):\n\t\tif self.dx == 0:\n\t\t\tgld = g.parse(\".B$A.A!\", -1, 0, 1, 0, 0, self.dy)\n\t\telse: \n\t\t\tgld = g.parse(\"A$.B$A!\", -self.dx, -1, self.dx, 0, 0, 1)\n\t\t\t\n\t\tgld = g.evolve(gld, self.state)\n\t\tg.putcells(gld, self.x, self.y)\n\nclass Stopper:\n\tdef __init__(self, gld, dist):\n\t\tself.x = gld.x + dist * gld.dx\n\t\tself.y = gld.y - dist * gld.dy\n\t\t\n\tdef Place(self):\n\t\tb = g.parse(\"A!\", 0, 0, 1, 0, 0, 1)\n\t\tg.putcells(b, self.x, self.y)\n\t\tself.Register(data)\n\t\t\n\tdef Register(self, data):\n\t\tdata.append([self.x, self.y, 0])\n\t\t\nclass TripleSplitter:\n\tdef __init__(self, gld, dist):\n\t\tself.dist = dist\n\t\tself.gld = gld\n\t\t\n\t\tself.x = gld.x + dist * gld.dx\n\t\tself.y = gld.y - dist * gld.dy\n\t\t\n\t\tself.fgld = Glider(self.x + 3 * gld.dx, self.y - 3 * gld.dy, gld.dx, gld.dy, 0, 5 + gld.gen + dist * 2 + gld.state)\n\t\tself.rgld = Glider(self.x + 4 * gld.dy - gld.dx, self.y + gld.dy + 4 * gld.dx, gld.dy, -gld.dx, 0, 5 + gld.gen + dist * 2 + gld.state)\n\t\tself.lgld = Glider(self.x - 4 * gld.dy - gld.dx, self.y + gld.dy - 4 * gld.dx, -gld.dy, gld.dx, 0, 5 + gld.gen + dist * 2 + gld.state)\n\t\t\n\tdef Place(self):\n\t\tb = g.parse(\"A.A2$A.A!\", 0, 0, self.gld.dy, 0, 0, self.gld.dx)\n\t\tg.putcells(b, self.x - self.gld.dy, self.y - self.gld.dx)\n\t\tself.Register(data)\n\t\t\n\tdef Register(self, data):\n\t\tif self.gld.dx == 0:\n\t\t\tdata.append([self.x + 1, self.y, 1])\n\t\telse: \n\t\t\tdata.append([self.x, self.y - 1, 2])\n\t\t\t\nclass Splitter:\n\tdef __init__(self, gld, dist, isRight):\n\t\t\n\t\tself.split = TripleSplitter(gld, dist)\n\n\t\tif isRight:\n\t\t\tself.refstop = Stopper(self.split.lgld, 1)\n\t\t\tself.refgld = self.split.rgld\n\t\telse:\n\t\t\tself.refstop = Stopper(self.split.rgld, 1)\n\t\t\tself.refgld = self.split.lgld\n\tdef Place(self):\n\t\n\t\tself.split.Place()\n\t\tself.refstop.Place()\n\t\t\n\t\t\n\tdef Register(self, data):\n\t\tself.split.Register(data)\n\t\tself.refstop.Register(data)\n\nclass Mirror(Splitter):\n\tdef __init__(self, gld, dist, isRight):\n\t\n\t\tSplitter.__init__(self, gld, dist, isRight)\n\t\tself.fstop = Stopper(self.split.fgld, 1)\n\t\n\tdef Place(self):\n\t\t\n\t\tSplitter.Place(self)\n\t\tself.fstop.Place()\n\t\t\n\t\t\n\tdef Register(self, data):\n\t\tSplitter.Register(self, data)\n\t\tself.fstop.Register(data)\n\ndef PlaceNegative():\n\ttotal = 10\n\tdist = 29\n\tdeltaX = 400\n\t\n\tfor i in xrange(0, total): \n\t\tgld = Glider(posx + i * dist, posy, 0, -1, 0, 0)\n\t\t#gld.Place()\n\t\tsplit = Mirror(gld, 10 + i * dist, False)\n\t\tsplit.Place()\n\t\n\t\tmir = Splitter(split.refgld, defaultDx + 2 * dist * (total - i), False)\n\t\tmir.Place()\n\t\t\n\t\tmir = Mirror(mir.split.fgld, 30 * 10, False)\n\t\tmir.Place()\n\t\t\n\t\t\ndef PlaceRef(dist, fact, toplace):\t\t\t\n\ttotal = 10\n\tdelta = [200, 200, 190, 190, 180]\n\t#ds = [[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0],[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0]]\n\t#ir = 11\n\t#d = 36 \n\tir = 1\n\td = 52 \n\tdeltaX = 400\n\t\n\tds = [[1,0,0,1,0,1,0,0,1,0],[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0], [1,0,0,1,0,1,0,0,1,0],[1,0,1,0,0,1,0,1,0,0], [1,0,1,0,0,1,0,1,0,0], [1,0,0,1,0,1,0,0,1,0]]\n\t#placement = [[0,0,-1,-1,-1,-1,-1,-1,-1,-1], [0,4,-1,-1,-1,-1,-1,-1,-1,-1], [0,2,72,71,-1,-1,-1,-1,-1,-1], [0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,10,0,-1,-1,-1,-1,-1,-1], [37 ,41,7,0,51,-1,-1,-1,-1,-1]]\n\t#placement = [[-1,-1,-1,-1,-1,0,0,-1,-1,-1], [-1,-1,-1,-1,-1,0,4,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,0,2,52 + 2 * (dist - 19),51 + 2 * (dist - 19),-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,-1,-1,10,0,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,17 + 2 * (dist - 19),21 + 2 * (dist - 19),7,0,31 + 2 * (dist - 19),-1,-1,-1,-1,-1]]\n\tplacement = []\n\tplacement.extend([[-1,-1,-1,-1,-1,0,2,72,71,-1], [-1,-1,-1,-1,-1,0,0,-1,-1,-1], [-1,-1,-1,-1,-1,-1,-1,10,0,-1], [-1,-1,-1,-1,-1,37 ,41,7,0,-1]])\n\tplacement.extend([[0,2,72,71,-1,-1,-1,-1,-1,-1], [0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,10,0,-1,-1,-1,-1,-1,-1], [37 ,41,7,0,-1,-1,-1,-1,-1,-1]])\n\t#ds = [[1,0,1,0,0,0,0,0,0,0], [1,0,1,0,0,0,0,0,0,0]]\n\t#placement = [[0,4,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0]]\n\t\n\t#for i in xrange(0, 2): \t\n\t#\tplacement.extend(placement)\n\t#\tds.extend(ds)\n\t\t\n\tfor i in xrange(0, total): \n\t\n\t\tgld = Glider(posx + i * dist, posy, 0, 1, 0, 0)\n\t\tsplit = Splitter(gld, 10 + i * dist, True)\n\t\tmir = Mirror(split.refgld, defaultDx + 2 * dist * (total - i), True)\n\t\t\t\n\t\tif toplace: \n\n\t\t\tsplit.Place()\n\t\t\tmir.Place()\n\n\t\tif i >= total / 2:\n\t\t\tmir = Mirror(split.split.fgld, dist * total / 2, True)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld,10 + 60 * (10 - i), True)\n\t\t\tmir.Place()\n\t\t\tdelMir = 10\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, True)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 10, True)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, False)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, delMir, True)\n\t\t\tmir.Place()\n\t\t\t\n\t\tfor j in xrange(0, len(placement)):\n\t\t\tif placement[j][i] >= 0:\n\t\t\t\t#gld = Glider(posx + i * dist, posy + dist * j + i * fact + placement[j][i], 0, 1, ds[j][i], 0)\n\t\t\t\tgld = Glider(posx + i * dist, posy + total * dist * j + placement[j][i], 0, 1, ds[j][i], 0)\n\t\t\t\t#gld.Place()\n\t\tif i <= 4:\n\t\t\tgld = Glider(posx + i * dist, posy - delta[i], 0, 1, 0, 0)\n\t\telse:\n\t\t\tgld = Glider(posx + deltaX + 201, -157 + posy - i * dist, 1, 0, 0, 0)\n\t\t\t\n\t\tif i%5 == 0 or i%5 == 1: \n\t\t\tif i <= 4:\n\t\t\t\tgl = Glider(posx + i * dist, 50 + posy - delta[i], 0, 1, 0, 0)\n\t\t\telse:\n\t\t\t\tgl = Glider(posx + deltaX + 131, -157 + posy - i * dist, 1, 0, 0, 0)\n\t\t\t\n\t\t\tmir = Mirror(gl, 10, i > 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 6, i <= 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 10, i <= 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 6, i > 4)\n\t\t\tmir.Place()\n\t\t\n\t\tif i%5 == 4:\n\t\t\tif i <= 4:\n\t\t\t\tgl = Glider(posx + i * dist,  posy - delta[i], 0, 1, 0, 0)\n\t\t\telse:\n\t\t\t\tgl = Glider(posx + 471, -157 + posy - i * dist, 1, 0, 0, 0)\n\n\t\t\tmir = Mirror(gl, 0, i > 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 5, i <= 4)\n\t\t\tmir.Place()\n\t\t\t\n\t\tif i%5 ==0 or i%5 == 2: \n\t\t\tmir = Mirror(gld, 19, i <= 4)\n\t\t\tmir.Place()\n\t\t\n\t\t\tsp = Splitter(gld, 0, i > 4)\n\t\t\tsp.Place()\n\t\t\tmir = Mirror(sp.refgld, 6, i <= 4)\n\t\t\tmir.Place()\n\t\t\tmir = Mirror(mir.refgld, 6, i <= 4)\n\t\t\tmir.Place()\n\t\tif i%5 == 1 or i%5 == 3: \n\t\t\tmir = Mirror(gld, 19, i > 4)\n\t\t\tmir.Place()\n\t\t\n\tddX = 0\n\tddY = 0 \n\t\n\tif toplace: \n\t\tddX = 1031\n\t\tddY = 774\n\t\t\n\tb = g.parse(\"A!\")\n\tg.putcells(b, 11 + posx + (dist - 17) / 2, -ddY-250 + posy)\n\tdata.append([11 + posx + (dist - 17) / 2, -ddY-250 + posy, 0])\n\t\n\n\tdata.append([ddX + defaultDx + deltaX - 682 + posx + (dist - 17) / 2, -319 + posy, 0])\n\tg.putcells(b, ddX + defaultDx + deltaX - 682 + posx + (dist - 17) / 2, -319 + posy)\n\t\nclass CommandPlacer():\n\tdef __init__(self):\n\t\tself.loc = 0\n\t\tself.dist = 29\n\t\tself.cellLoc = [0, 0]\n\t\tself.lastCmd = -1\n\t\tself.lastDir = -1\n\t\t\n\tdef Push(self, dir):\n\t\t\n\t\tif not(self.lastCmd == 0 and self.lastDir == dir):\n\t\t\tself.loc += 150\n\n\t\tds = [[1,0],[1,0]]\n\t\tpl = [[0,0], [0,4]]\n\t\tspacing = [40, 40]\n\t\tself.Place(ds, pl, spacing, dir)\n\t\t\n\t\tself.cellLoc[dir] += 2\n\t\t\n\t\tself.lastCmd = 0\n\t\tself.lastDir = dir\n\t\t\n\tdef PullSequence(self, dir, shoot):\n\t\tself.loc += 150\n\t\t\n\t\tpl = [[0,2,72,71,-1], [0,0,-1,-1,-1], [-1,-1,10,0,-1], [37 ,41,7,0,51 * shoot]]\n\t\tds = [[1,0,0,1,0],[1,0,1,0,0], [1,0,1,0,0], [1,0,0,1,0]]\n\t\tspacing = [60, 80, 58, 40]\n\t\tself.Place(ds, pl, spacing, dir)\n\t\tself.cellLoc[dir] -= 31\n\t\t\n\tdef Pull(self, dir):\n\t\tself.PullSequence(dir, 1)\n\t\tself.lastCmd = 1\n\t\tself.lastDir = dir\n\t\tself.loc += 150\n\tdef Shoot(self, dir):\n\t\tself.PullSequence(dir, -1)\n\t\tself.lastCmd = 2\n\t\tself.lastDir = dir\n\t\tself.loc += 150\n\t\t\n\tdef CreateBlock(self):\n\t\tself.loc += 150\n\t\t\n\t\t#pltemp = [[0,2,72,71,-1], [0,0,-1,-1,-1], [-1,-1,10,0,-1], [37 ,41,7,0,-1]]\n\t\t\n\t\tds = [[1,0,0,1,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,0,1,0], [1,0,0,1,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,1,0,0], [1,0,0,1,0, 1,0,0,1,0],[1,0,1,0,0, 1,0,0,1,0], [1,0,0,1,0, 0,1,1,0,0]]\n\t\tpl = [[0,2,72,71,-1,-1,-1,-1,-1,-1], [0,0,-1,-1,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,0,2,72,71,-1], [-1,-1,-1,-1,-1,0,0,-1,-1,-1]]\n\t\tpl.extend([[-1,-1,10,0,-1,-1,-1,-1,-1,-1], [37 ,41,7,0,-1,-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1,-1,-1,10,1,-1], [-1,-1,-1,-1,-1,37,42,8,0,-1]])\n\t\tspacing = [150, 150, 150, 150, 58, 39, 58, 90]\n\t\t\n\t\tself.Place(ds, pl, spacing, 0)\n\t\t\n\t\tself.cellLoc[0] -= 31\n\t\tself.cellLoc[1] -= 31\n\t\t\n\t\tself.lastCmd = 3\n\t\tself.lastDir = -1\n\t\tself.loc += 150\n\t\t\n\tdef Place(self, ds, pl, spacing, dir):\n\t\tfor j in xrange(0, len(pl)):\n\t\t\tfor i in xrange(0, len(pl[0])):\n\t\t\t\tif pl[j][i] >= 0:\n\t\t\t\t\tgld = Glider(posx + (i + dir * 5) * self.dist, posx + pl[j][i] + self.loc, 0, 1, ds[j][i], 0)\n\t\t\t\t\tgld.Place()\n\n\t\t\tself.loc += spacing[j]\n\t\n\tdef Place2Block(self, dir):\n\t\tself.CreateBlock()\n\t\tself.Pull(1 - dir)\n\n\t\tfor j in xrange(0, 14): \n\t\t\tself.Push(dir)\n\t\tfor j in xrange(0, 32): \n\t\t\tself.Push(1 - dir)\n\t\t\t\n\t\tself.CreateBlock()\n\n\t\tself.Pull(1 - dir)\n\t\tfor j in xrange(0, 30): \n\t\t\tself.Push(1 - dir)\n\t\t\t\n\t\tself.Shoot(1 - dir)\n\t\n\tdef Goto(self, x, y):\n\t\t\n\t\twhile (self.cellLoc[0] > x or self.cellLoc[0]%2 != x%2):\n\t\t\tself.Pull(0)\n\t\t\n\t\twhile (self.cellLoc[1] > y or self.cellLoc[1]%2 != y%2):\n\t\t\tself.Pull(1)\n\t\t\t\n\t\tfor j in xrange(0, (y - self.cellLoc[1]) / 2): \n\t\t\tself.Push(1)\n\t\t\n\t\tfor j in xrange(0, (x - self.cellLoc[0]) / 2): \n\t\t\tself.Push(0)\n\n\tdef Set0(self, x0, x1):\n\t\tfor j in xrange(0, x0): \n\t\t\tself.Push(0)\n\t\t\n\t\tfor j in xrange(0, x1): \n\t\t\tself.Push(1)\n\t\t\n\t\tself.cellLoc = [0, 0]\n\t\t\n\tdef PlaceData(self, data):\n\t\t\n\t\tmaxXY = -100000\n\t\tminXY = 100000\n\t\t\n\t\tfor d in data:\n\t\t\tif maxXY < d[0] - d[1]:\n\t\t\t\tmaxXY = d[0] - d[1]\n\t\t\t\t\n\t\t\tif minXY > d[0] - d[1]:\n\t\t\t\tminXY = d[0] - d[1]\n\t\t\n\t\tdXY = []\n\n\t\tfor i in xrange(minXY, maxXY + 1):\n\t\t\tl = []\n\t\t\t\n\t\t\tfor d in data:\n\t\t\t\tif i == d[0] - d[1]:\n\t\t\t\t\tl.append(d)\n\t\t\t\n\t\t\tdXY.append(l)\n\t\t\n\t\tfor i in reversed(dXY):\n\t\t\tfor d in i:\n\t\t\t\tself.Goto(-d[1], d[0])\n\t\t\t\t\n\t\t\t\tif d[2] == 0:\n\t\t\t\t\tself.CreateBlock()\n\t\t\t\tif d[2] == 1:\n\t\t\t\t\tself.Place2Block(1)\n\t\t\t\tif d[2] == 2:\n\t\t\t\t\tself.Place2Block(0)\n\n\n\ndefaultDx = 900\ndata = []\nposx = (593 + 29) - 1116\nposy = 5600 - 6374\nPlaceNegative()\nposx += (896 + 29) + 600\n\nPlaceRef(29, 0, False)\nposx = 0\nposy = 0\nPlaceRef(29, 0, True)\n\n\n\ncmd = CommandPlacer()\ncmd.Set0(1113, 410)\ncmd.PlaceData(data)\ncmd.Pull(0)\ncmd.Pull(1)\n\n#cmd = CommandPlacer()\n#cmd.Goto(1200, 1200)\n#cmd.Place2Block(1)\n#posx += 1000\n\n\nposx = 1716 + (593 + 29) - 1116\nposy = 1500 + 5600 - 6374 + int(cmd.loc/2 + 2000)\nPlaceNegative()\nposx += (896 + 29) + 600\nPlaceRef(29, 0, False)\nposx = 1716\nposy = 1500 + int(cmd.loc/2 + 2000)\nPlaceRef(29, 0, True)\n'''\n\nposx = 1716 + (593 + 29) - 1116\nposy = 1500 + 5600 - 6374 + 3500000\nPlaceNegative()\nposx += (896 + 29) + 600\nPlaceRef(29, 0, False)\nposx = 1716\nposy = 1500 + 3500000\nPlaceRef(29, 0, True)\n'''\n"
+    },
+    {
+      "code": [],
+      "id": "p11384",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11384#p11384",
+          "text": "Re: Serizawa - Working Geminoid (Self replicator)"
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11384",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11384#p11384",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/2013/11/new-technology-from-replicator-project.html",
+          "text": "current Conway's Life Geminoid replicators"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?f=2&t=1006&start=50#p9121",
+          "text": "for the diagonal \"Demonoid\" spaceship"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "Very nice work!  Finally, a Geminoid device with orthogonal signals, so that its bounding box is a reasonably good approximation of its size...  It's nice to see Geminoid principles applied to a completely different rule.\n\nThe pattern as it stands is not quite a Geminoid spaceship.  It's also not quite a self-replicator, at least according to my annoyingly technical definition of the term.  The original Gemini spaceship had a separate \"destructor arm\" that shot down old copies of the replicator units after they went dormant.  Disabling or removing that Gemini destructor arm (which is quite easy to do) produces a \"self-constructing puffer\" exactly analogous to this Serizawa Geminoid pattern -- but not a self-replicator, in my view, because there's only ever one copy of the glider streams that encode the construction data.\n\nNow, my opinion about what counts as a self-replicator is just an opinion, of course -- people have definitely built patterns along these same lines in various rules, where the data stream is never replicated and the object just leaves behind empty shells of circuitry behind itself... and sometimes they called these patterns \"replicators\".\n\nBut it doesn't seem like a very satisfactory kind of replication, somehow.  -- Come to think of it, I said something similar about current Conway's Life Geminoid replicators, so I'm not playing favorites too much, at least.  But the interesting question is:  how easy is it to put together variations of this design that everyone would agree is a true self-replicator?\n\nIt might be worth thinking about making a true Geminoid spaceship, for starters.  Is it possible to clean up one of these Serizawa logic circuits (i.e., patterns made out of single stable state-1 dots) using single gliders from just one construction arm?  I haven't played around with this rule very much, but there aren't many different ways to collide a glider with a dot.  It looks to me as if one glider at a time will let you move a dot, or convert a dot into two gliders, or absorb a glider -- but to delete a dot you need two synchronized gliders.\n\nThe glider+dot->2 gliders reaction brings up the possibility of a \"destruction seed\" -- pre-built constellation of dots off to the side of a circuit, that could be triggered cleanly to produce a synchronized salvo to shoot down the circuit once it has gone dormant.  Paul Chapman and I spent some time working on a Conway's Life version of this destruction method, for the diagonal \"Demonoid\" spaceship -- but there's no complete working model of a Demonoid yet.  Has any investigation been done along those lines in the Serizawa rule?"
+    },
+    {
+      "code": [],
+      "id": "p11392",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11392#p11392",
+          "text": "Re: Serizawa - Linear Self Replicator"
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11392",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11392#p11392",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "About Self replication there is definitely a confusion of a kind. \n\nI would consider it self replicator the same way Gaoucher's self replicator (in Nobili's rule) is replicator. I think the original Von Neumann replicator is linear replicator as well. Also in Codd's rule all the replicators are of this kind. \n\nAlso the original design of Conway's replicator in life, is linear replicator that makes only one copy of itself. \n\nSo I think my replicator has the proper \"basic\" self replicator property, i.e. it replicates itself using universal constructor. \n\nThat said, I do agree that a point of having a replicator is the ability of multiple copies i.e. quadratic growth. \n\nSo I suggest a change of terminology: \n\nA linear self replicator, and a quadratic self replicator. \n\nA linear self replicators unlike puffers or spaceships include universal constructors in them. That means that they can add any construable addition inside them. I mean you can add a glider gun to Gemini, and this glider gun would travel with it (or write your name). This property is unique for self replicators only, you can't add glider gun to some spaceship and expect it to travel alongside it. \n\nA quadratic self replicator is like linear self replicator, but also exhibits quadratic growth i.e. makes more than one copy of itself. \n\nMany of known self replicators are linear self replicators. Also many of quadratic growth self replicator are not universal replicators, that means that they have a considerable limitation of what can travel alongside them. \n\nAlso a Geminiod probably should be defined as Linear Self Replicator that destroys it's parent. Thus being both a space ship and linear self replicator. \n\n===========================================\n\nNow having this linear self replicator in Serizawa, what remains is making it Geminoid as well as making Demonoid. \n\nIn Serizawa there is no point of adding destruction arm, due to the fact that one glider doesn't deletes a block but deletes a block and splits into two gliders. Which as you mentioned require destruction seeds. This seeds circuitry can be triggered by single glider that comes from existing arm.\n\nWell I think it's the next challenge for the Serizawa rule - to make a Geminoid."
+    },
+    {
+      "code": [],
+      "id": "p11397",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11397#p11397",
+          "text": "Re: Serizawa - Linear Self Replicator"
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11397",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11397#p11397",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:I would consider it self replicator the same way Goucher's self replicator (in Nobili's rule) is replicator. I think the original Von Neumann replicator is linear replicator as well. Also in Codd's rule all the replicators are of this kind. \n\nAlso the original design of Conway's replicator in life, is linear replicator that makes only one copy of itself. \n\nSo I think my replicator has the proper \"basic\" self replicator property, i.e. it replicates itself using universal constructor.\nAbsolutely.  My (minor) objection to calling this Serizawa self-constructor a \"replicator\" applies equally to all those Nobili and Codd self-constructing patterns.\n\nsimsim314 wrote:That said, I do agree that a point of having a replicator is the ability of multiple copies i.e. quadratic growth. \n\nSo I suggest a change of terminology: \n\nA linear self replicator, and a quadratic self replicator.\nThat's a certainly a good and clear distinction, and I've been using basically the same terms to describe the initial Conway's Life replicator design (linear) and the next-stage diamond-shaped design (which will be quadratic-growth).\n\nsimsim314 wrote:Also a Geminoid probably should be defined as Linear Self Replicator that destroys it's parent. Thus being both a space ship and linear self replicator.\nWell, there I'm not so sure. I'm probably going to keep the terminology I've been using since the Gemini came out.  The Gemini is not a linear self-replicator because there are never even two copies of the glider data streams, let alone an unbounded number -- there's just one copy that moves slowly and throws off some stable stuff along the way for support.  If the Gemini doesn't really replicate itself, then it's not really a \"self-replicating spaceship\".\n\nTo me it makes more sense to call the Gemini a \"self-constructing spaceship\", and if you disable the destructor arm it becomes a \"self-constructing puffer\".  That gets the \"universal constructor\" reference in there, but stops short of claiming self-replicator status.  Seems as if we should save \"self-replicator\" and \"replicator\" for things that there are reliably more and more of over time.  [That requirement also makes me not entirely happy with HighLife-type and other 1D and 2D parity-rule replicators, where the average population does increase but inevitably crashes back to a fixed value every now and then.  Those are clearly replicators -- just not my favorite kind, I guess.]\n\nsimsim314 wrote:Now having this linear self replicator in Serizawa, what remains is making it Geminoid as well as making Demonoid.\nI should probably not try to push \"Demonoid\" as an official type of Geminoid; it will end up being vague and confusing.  \"Demonoid\" was originally just a typo for \"diagonal Geminoid\", but now the idea of self-destructing circuitry is kind of associated with it too -- just because a diagonally moving spaceship can't easily reach its parent with diagonal construction arms, so a different destruct mechanism was needed for efficiency reasons.\n\nBut a Serizawa Demonoid would actually have to move orthogonally, so I suppose it should be called an Orthogonoid instead...  Pre-seeded self-destructing circuitry -- or self-modifying circuitry in general -- can have all kinds of interesting uses, not just in glide-symmetric spaceships.  So we need some more general terminology there.  The Gemini spaceship is incrementally self-erasing; the Demonoid or other seeded circuits would be single-step self-erasers.\n\nHow easy is it to build a Serizawa \"meteor shower\" seed that can cleanly annihilate a given piece of circuitry when it's triggered by a single glider, by shooting a large synchronized salvo at it from far off to one side?  Does it seem to be easier to integrate the \"seeds of destruction\" into the circuit itself?  If so, how much larger does the circuit have to be to accommodate the extra seeds?\n\nMaybe the easiest universal toolkit for Serizawa would be to find ways to build \"freeze-dried slow salvo\" seeds.  Hit a \"seed\" arrangement with one glider and get a chain reaction that produces any sufficiently widely spaced salvo of gliders that you want (all on parallel lanes).  It looks as if two carefully synchronized salvos coming in at 90 degrees could fairly efficiently clean up any chunk of Serizawa circuitry -- so it would just be a matter of figuring out enough glider turning and splitting variations to be able to get all the relative timings right."
+    },
+    {
+      "code": [
+        "x = 459, y = 274, rule = Serizawa\n39$361.A.A2.A.A$362.B4.B7$431.A.A$362.A.A67.B$363.B8$426.A.A2.A.A$\n427.B4.B22$425.A3.A4$361.A3.A54.A9.A$421.B12.A$369.A50.A9.A2$364.A.A\n66.A$360.A44.A8$365.B$364.A.A6$174.A4$429.A4$75.A3.A2$50.A$76.A$54.A\n22.A$53.A$50.A20.A$205.A3.A39.A3.A$59.A$73.A$56.A118.A32.A43.A9.A98.A\n.A$174.A32.A43.A110.B$197.A37.A$180.A32.A43.A$262.A2$178.A32.A43.A2$\n360.A.A3.A.A$361.B5.B6$175.B32.B43.B$174.A.A30.A.A41.A.A9$58.A2$77.A$\n60.A15.A$99.A$54.A27.A$55.A2$80.A3$359.A$363.A.A2$57.A310.A2$78.A281.\nA3.A$59.A17.A$100.A$53.A29.A$54.A2$81.A6$56.A352.A.A$410.B$79.A$58.A\n19.A$101.A$52.A31.A$53.A2$82.A4$411.A.A$412.B$55.A2$80.A$57.A21.A$\n102.A$51.A33.A245.A.A2.A.A$52.A279.B4.B2$83.A325.A.A$410.B5$54.A2$81.\nA$56.A23.A$103.A300.A.A$50.A35.A318.B$51.A2$84.A9$81.B$80.A.A5$53.A2$\n60.A$55.A$403.A3.A$49.A$50.A9.A2$408.A$47.A3.A$408.A5$339.A2$334.A.A$\n330.A!\n"
+      ],
+      "id": "p11398",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11398#p11398",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11398",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11398#p11398",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Show in Viewer"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "I was thinking along those lines, and on my opinion it's simply more elegant to add extra self destruct circuitry. \n\nHere is all it takes for the self destruct circuitry. \n  \nCode: Select all / Show in Viewerx = 459, y = 274, rule = Serizawa\n39$361.A.A2.A.A$362.B4.B7$431.A.A$362.A.A67.B$363.B8$426.A.A2.A.A$\n427.B4.B22$425.A3.A4$361.A3.A54.A9.A$421.B12.A$369.A50.A9.A2$364.A.A\n66.A$360.A44.A8$365.B$364.A.A6$174.A4$429.A4$75.A3.A2$50.A$76.A$54.A\n22.A$53.A$50.A20.A$205.A3.A39.A3.A$59.A$73.A$56.A118.A32.A43.A9.A98.A\n.A$174.A32.A43.A110.B$197.A37.A$180.A32.A43.A$262.A2$178.A32.A43.A2$\n360.A.A3.A.A$361.B5.B6$175.B32.B43.B$174.A.A30.A.A41.A.A9$58.A2$77.A$\n60.A15.A$99.A$54.A27.A$55.A2$80.A3$359.A$363.A.A2$57.A310.A2$78.A281.\nA3.A$59.A17.A$100.A$53.A29.A$54.A2$81.A6$56.A352.A.A$410.B$79.A$58.A\n19.A$101.A$52.A31.A$53.A2$82.A4$411.A.A$412.B$55.A2$80.A$57.A21.A$\n102.A$51.A33.A245.A.A2.A.A$52.A279.B4.B2$83.A325.A.A$410.B5$54.A2$81.\nA$56.A23.A$103.A300.A.A$50.A35.A318.B$51.A2$84.A9$81.B$80.A.A5$53.A2$\n60.A$55.A$403.A3.A$49.A$50.A9.A2$408.A$47.A3.A$408.A5$339.A2$334.A.A$\n330.A!\n\n\nI think adding another destruction arm  will take at least +50%. Adding the destruction seeds path, will probably make it +100%. But on my opinion it's worth it, because it's the point of those \"self constructors\" in the first place, you can add to them \"stuff\" and they will run. All the extra self destruct circuitry will not require a new \"design\", or rewrite my script that construct the stream. It will only require \"extra\" stuff to place \"on top\" of the existing circuitry. \n\nI think this proofs the point of \"universality\" as clear as it gets - you place extra stuff, you run the same script - and wualla, you have self constructing spaceship instead of puffer. \n\nI didn't like the destruction arm in Gemini, and I will probably make it with seeds.\n\nI also thought that Demonoid meant Diamonoid - Diamoned shaped self replicator. In my opninion the destruction mechanism is a small detail of the self construction ship, because this detail is pretty minor, and in my opinion this destruction arm is kind of \"mistake\" or shortcut, to the much more elegant and \"correct\" way of self destruction."
+    },
+    {
+      "code": [
+        "x = 8, y = 130, rule = Serizawa\n3.A3$2.B$.A.A10$6.B$5.A.A8$.B$A.A3$3.B$2.A.A3$.B$A.A3$3.B$2.A.A4$.B$A\n.A3$3.B$2.A.A3$.B$A.A3$3.B$2.A.A6$2.B$.A.A12$6.B$5.A.A6$.B$A.A3$3.B$\n2.A.A3$.B$A.A3$3.B$2.A.A4$.B$A.A3$3.B$2.A.A3$.B$A.A3$3.B$2.A.A6$2.B$.\nA.A12$6.B$5.A.A!\n"
+      ],
+      "id": "p11597",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11597#p11597",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11597",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11597#p11597",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Show in Viewer"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "Here is a small update on construction arm recipe. Now It's possible to have universal constructor with only four streams instead of previous ten (two per arm instead of previous five). \n\nCode: Select all / Show in Viewerx = 8, y = 130, rule = Serizawa\n3.A3$2.B$.A.A10$6.B$5.A.A8$.B$A.A3$3.B$2.A.A3$.B$A.A3$3.B$2.A.A4$.B$A\n.A3$3.B$2.A.A3$.B$A.A3$3.B$2.A.A6$2.B$.A.A12$6.B$5.A.A6$.B$A.A3$3.B$\n2.A.A3$.B$A.A3$3.B$2.A.A4$.B$A.A3$3.B$2.A.A3$.B$A.A3$3.B$2.A.A6$2.B$.\nA.A12$6.B$5.A.A!\n"
+    },
+    {
+      "code": [],
+      "id": "p11598",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11598#p11598",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11598",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11598#p11598",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:Here is a small update on construction arm recipe. Now It's possible to have universal constructor with only four streams instead of previous ten (two per arm instead of previous five).\nThat should certainly take care of bringing the length down under 10K cells -- and pretty easily under 5K, I would think, with a little more optimization.  There are fewer components, so they can be packed more tightly together, so the big initial elbow pushes won't take nearly as long.\n\nWith only four streams, will it be possible to activate both construction arms simultaneously (and save a lot more length) -- or are there still unavoidable signal-crossing conflicts?  Are delay components still needed on both construction arms, or does it become possible to change the timing of the signals in the actual streams, and get the same effect?\n\nIs there any hope of encoding a two-arm construction recipe into a single stream, to get rid of the signal crossing problems and maybe reduce the number of reflectors?"
+    },
+    {
+      "code": [],
+      "id": "p11600",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11600#p11600",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11600",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11600#p11600",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote:Are delay components still needed on both construction arms, or does it become possible to change the timing of the signals in the actual streams, and get the same effect?\n\nIt's a good question. The delay mechanism is not so bad on my opinion, it has a price of course, and in this case can also be optimized as well, but it allows to handle timing, and adjust it for small changes in design instead of redesigning half of the components. Perhaps placing a delay mechanism in the reflection mechanism, will solve the crossing problem better, and will allow a wider range of not crossing input. \n\ndvgrn wrote:Is there any hope of encoding a two-arm construction recipe into a single stream\n\nWell the only thing needed for this is a state machine. 4G->G converter. My main concern with this one, that it will be simply ineffective. Adding extra components + making the construction four time slower (two times slower than current, but four time slower than optimal). In Life you have very light weighted components that allow this, I'm not so sure in Serizawa it's possible so easily. But I'll try this idea, I think this direction definitely worth investigation, and single stream of data can be much more \"dense\" so it will compensate a bit on the inefficiency, hopefully the state machine will not require a too big delay."
+    },
+    {
+      "code": [
+        "x = 60, y = 548, rule = Serizawa\n38.A$46.A3$37.A7.A.A$34.A16.A$37.A3$5.A3$4.A.A22.A$A2$28.A.A23.A$34.A\n4$4.A15.A24.A.A7.A$.A56.A$4.A15.A34.A4$5.A2$30.A9.A$15.A17.A3.A8.B12.\nA$20.A.A7.A9.A4.A.A5.A.A3$21.A32.A$29.A11.A42$46.B$45.A.A46$46.B$45.A\n.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.\nA.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A!\n"
+      ],
+      "id": "p11601",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11601#p11601",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11601",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11601#p11601",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Show in Viewer"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "OK here is 4G->G multiplier (actually it's two 2G->G).\n\nCode: Select all / Show in Viewerx = 60, y = 548, rule = Serizawa\n38.A$46.A3$37.A7.A.A$34.A16.A$37.A3$5.A3$4.A.A22.A$A2$28.A.A23.A$34.A\n4$4.A15.A24.A.A7.A$.A56.A$4.A15.A34.A4$5.A2$30.A9.A$15.A17.A3.A8.B12.\nA$20.A.A7.A9.A4.A.A5.A.A3$21.A32.A$29.A11.A42$46.B$45.A.A46$46.B$45.A\n.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.\nA.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A46$46.B$45.A.A!\n\n\nThe main downside is its slowness, as I was afraid (94 ticks between input gliders). It's \"optimized\" for size based on the interaction between two opposite gliders that toggle a state of a block. Probably not the \"smallest possible\" but it's pretty small using only 6 reflectors (12 for 4G->G), which is OK. \n\nNow the other downside to large glider delay and single stream is that synchronization will now require more space (or more components). \n\nBut it's obvious advantage (no stream sync + only two reflectors per steam) is a good reason to carry on and check it's performance."
+    },
+    {
+      "code": [],
+      "id": "p11602",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11602#p11602",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11602",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11602#p11602",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?f=2&t=1006&p=7447#p7447",
+          "text": "unfinished diagonal self-constructing B3/S23 spaceship"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:Now the other downside to large glider delay and single stream is that synchronization will now require more space (or more components). \n\nBut it's obvious advantage (no stream sync + only two reflectors per steam) is a good reason to carry on and check it's performance.\nThe other downside to a single stream attached to a 4G->G component like this, is that a signal is now required on all four streams.\n\nNo doubt there are ways of using a glider on one stream to suppress a glider on another stream, with just the right timing -- either mutually annihilating both signals, or letting one or the other continue.  But that will also add to the complexity of the design, of course.  And it may still be necessary to add lots of NOP operations on one arm, for when you only want to be running the other arm.\n\nThere actually may be a good case here for a \"serial\" design, along the lines of the unfinished diagonal self-constructing B3/S23 spaceship in the Geminoid Challenge thread.  It seems as if Serizawa can support either re-usable or one-time switching circuitry.  The Demonoid has only one construction arm, but the same idea could be used to reduce four streams to two in Serizawa, or even four streams to one --\n\nStart with a single stream, let it bounce back and forth three times between successive 180-degree reflectors.  There will be four 180-degree reflectors in each replicator unit, at either end of the pattern.  Then, on the fourth pass, unblock four optional outputs from those reflectors to run the two construction arms.  When the construction is done, block up the optional outputs again.  This would allow any pattern and timing of gliders in a single stream, with no extra NOP operations to worry about.\n\nThe construction could then happen very quickly, with minimal timing-adjustment circuits -- you can just move the actual gliders in the stream to get any relative timing you want, since there are no stream-crossing problems.  The overall replication time would still be four times the \"optimal\" speed because you have to wait until all four parallel streams have advanced to the right place.  But the reduction in circuitry might help make up for that extra cost."
+    },
+    {
+      "code": [
+        "x = 1213, y = 977, rule = Serizawa\n98$498.A$533.A3$497.A.A32.A.A$493.A44.A5$489.A4$488.A.A$484.A4$532.A.\nA$528.A9.A3$488.A8.A.A$484.A18.A$488.A4$489.A42.A.A$528.A9.A$550.A$\n558.A3$549.A7.A.A$546.A16.A$549.A3$517.A3$516.A.A22.A$512.A20.A$683.A\n8.A$540.A.A23.A$546.A2$682.A.A8.A$678.A18.A$516.A15.A24.A.A7.A125.A$\n513.A56.A$516.A15.A34.A$702.A$591.A2$517.A$590.A.A91.A18.A$542.A9.A\n33.A120.A$527.A17.A3.A21.A112.A18.A$532.A.A7.A9.A12.A.A3$533.A32.A41.\nA74.A$541.A11.A62.A3$607.A7.A.A$604.A16.A$607.A3$575.A87.A$424.A230.A\n2$574.A.A22.A$570.A83.A.A7.A$409.A15.A106.A117.A16.A$95.A333.A94.A73.\nA.A23.A39.A$99.A.A307.A15.A178.A2$523.A.A7.A$518.A17.A$100.A307.A124.\nA40.A15.A24.A.A7.A$571.A36.A19.A$508.A65.A15.A34.A2$647.A$677.A9.A$\n507.A15.A33.A.A15.A$504.A58.A$507.A15.A76.A9.A$585.A17.A3.A21.A16.A7.\nA.A21.A9.A14.A$590.A.A7.A9.A12.A.A17.A19.A42.A$646.A31.A9.A14.A$537.A\n$531.A.A57.A32.A$599.A11.A$503.A173.A9.A14.A$507.A.A22.A$661.A$642.A\n21.A$508.A10.A126.A.A12.A$532.A2$647.A$518.A12.A.A126.A10.A$515.A21.A\n$518.A$647.A22.A.A$655.A20.A2$646.A.A$642.A$497.A35.A$494.A41.A$497.A\n25.A.A7.A$557.A.A57.A38.A15.A$553.A121.A$617.A38.A15.A$498.A$532.A2$\n616.A54.A2$646.A$643.A17.A$646.A7.A.A3$515.A139.A$512.A16.A117.A$515.\nA7.A.A3$524.A$516.A9$458.A8.A4$457.A.A8.A$453.A18.A$468.A3$477.A$438.\nA3$437.A.A19.A18.A$433.A48.A$459.A18.A4$458.A10$439.A$419.A23.A$423.A\n.A13.A4$108.A307.A21.A4$107.A.A307.A141.A$103.A460.A$417.A141.A5$558.\nA5$448.A9.A4$449.A9.A18.A$419.A62.A$423.A.A23.A9.A18.A3$424.A$448.A9.\nA18.A164$108.B$107.A.A46$108.B$107.A.A46$108.B$107.A.A46$108.B$107.A.\nA12$814.A$849.A3$813.A.A32.A.A$809.A44.A5$805.A4$804.A.A$800.A4$848.A\n.A$844.A9.A3$804.A8.A.A$800.A18.A$804.A4$805.A42.A.A$844.A9.A$866.A$\n874.A2$108.B$107.A.A755.A7.A.A$862.A16.A$865.A3$833.A3$832.A.A22.A$\n828.A20.A$999.A8.A$856.A.A23.A$862.A2$998.A.A8.A$994.A18.A$832.A15.A\n24.A.A7.A125.A$829.A56.A$832.A15.A34.A$1018.A$907.A2$833.A$906.A.A91.\nA18.A$858.A9.A33.A120.A$843.A17.A3.A21.A112.A18.A$848.A.A7.A9.A12.A.A\n3$849.A32.A41.A74.A$857.A11.A62.A3$923.A7.A.A$920.A16.A$923.A3$891.A\n87.A$740.A230.A2$890.A.A22.A$886.A83.A.A7.A$725.A15.A106.A117.A16.A$\n411.A333.A94.A73.A.A23.A39.A$415.A.A307.A15.A178.A$108.B$107.A.A729.A\n.A7.A$834.A17.A$416.A307.A124.A40.A15.A24.A.A7.A$887.A36.A19.A$824.A\n65.A15.A34.A2$963.A$993.A9.A$823.A15.A33.A.A15.A$820.A58.A$823.A15.A\n76.A9.A$901.A17.A3.A21.A16.A7.A.A21.A9.A14.A$906.A.A7.A9.A12.A.A17.A\n19.A42.A$962.A31.A9.A14.A$853.A$847.A.A57.A32.A$915.A11.A$819.A173.A\n9.A14.A$823.A.A22.A$977.A$958.A21.A$824.A10.A126.A.A12.A$848.A2$963.A\n$834.A12.A.A126.A10.A$831.A21.A$834.A$963.A22.A.A$971.A20.A2$962.A.A$\n958.A$813.A35.A$810.A41.A$813.A25.A.A7.A$873.A.A57.A38.A15.A$869.A\n121.A$933.A38.A15.A$814.A$848.A2$932.A54.A2$962.A$959.A17.A$108.B853.\nA7.A.A$107.A.A2$831.A139.A$828.A16.A117.A$831.A7.A.A3$840.A$832.A9$\n774.A8.A4$773.A.A8.A$769.A18.A$784.A3$793.A$754.A3$753.A.A19.A18.A$\n749.A48.A$775.A18.A4$774.A10$108.B646.A$107.A.A625.A23.A$739.A.A13.A\n4$424.A307.A21.A4$423.A.A307.A141.A$419.A460.A$733.A141.A5$874.A5$\n764.A9.A4$765.A9.A18.A$735.A62.A$739.A.A23.A9.A18.A3$740.A$764.A9.A\n18.A!\n"
+      ],
+      "id": "p11603",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11603#p11603",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11603",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11603#p11603",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Show in Viewer"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "I'm not sure what is your concern after having 4G->G converter? each of the converters can have it's \"phase\". i.e. after the  glider is entering an \"interpretation unit\" it splits into four gliders, each is input to one of four 4G -> G converters, each converter in his own phase, giving output per each of 0-1-2-3 mod 4 gliders in the stream. For each 4G->G converter the other three gliders are only \"state switchers\" and only one glider is actually the output. \n\nAlso going for this design, it would be almost necessary reuse the same interpreter for both streams (upper and lower), so I made a circuit for that as well. Here is the concept (not optimized for space, and not synchronized between arms - probably both of these are small details, that can be handled pretty easily): \n\nCode: Select all / Show in Viewerx = 1213, y = 977, rule = Serizawa\n98$498.A$533.A3$497.A.A32.A.A$493.A44.A5$489.A4$488.A.A$484.A4$532.A.\nA$528.A9.A3$488.A8.A.A$484.A18.A$488.A4$489.A42.A.A$528.A9.A$550.A$\n558.A3$549.A7.A.A$546.A16.A$549.A3$517.A3$516.A.A22.A$512.A20.A$683.A\n8.A$540.A.A23.A$546.A2$682.A.A8.A$678.A18.A$516.A15.A24.A.A7.A125.A$\n513.A56.A$516.A15.A34.A$702.A$591.A2$517.A$590.A.A91.A18.A$542.A9.A\n33.A120.A$527.A17.A3.A21.A112.A18.A$532.A.A7.A9.A12.A.A3$533.A32.A41.\nA74.A$541.A11.A62.A3$607.A7.A.A$604.A16.A$607.A3$575.A87.A$424.A230.A\n2$574.A.A22.A$570.A83.A.A7.A$409.A15.A106.A117.A16.A$95.A333.A94.A73.\nA.A23.A39.A$99.A.A307.A15.A178.A2$523.A.A7.A$518.A17.A$100.A307.A124.\nA40.A15.A24.A.A7.A$571.A36.A19.A$508.A65.A15.A34.A2$647.A$677.A9.A$\n507.A15.A33.A.A15.A$504.A58.A$507.A15.A76.A9.A$585.A17.A3.A21.A16.A7.\nA.A21.A9.A14.A$590.A.A7.A9.A12.A.A17.A19.A42.A$646.A31.A9.A14.A$537.A\n$531.A.A57.A32.A$599.A11.A$503.A173.A9.A14.A$507.A.A22.A$661.A$642.A\n21.A$508.A10.A126.A.A12.A$532.A2$647.A$518.A12.A.A126.A10.A$515.A21.A\n$518.A$647.A22.A.A$655.A20.A2$646.A.A$642.A$497.A35.A$494.A41.A$497.A\n25.A.A7.A$557.A.A57.A38.A15.A$553.A121.A$617.A38.A15.A$498.A$532.A2$\n616.A54.A2$646.A$643.A17.A$646.A7.A.A3$515.A139.A$512.A16.A117.A$515.\nA7.A.A3$524.A$516.A9$458.A8.A4$457.A.A8.A$453.A18.A$468.A3$477.A$438.\nA3$437.A.A19.A18.A$433.A48.A$459.A18.A4$458.A10$439.A$419.A23.A$423.A\n.A13.A4$108.A307.A21.A4$107.A.A307.A141.A$103.A460.A$417.A141.A5$558.\nA5$448.A9.A4$449.A9.A18.A$419.A62.A$423.A.A23.A9.A18.A3$424.A$448.A9.\nA18.A164$108.B$107.A.A46$108.B$107.A.A46$108.B$107.A.A46$108.B$107.A.\nA12$814.A$849.A3$813.A.A32.A.A$809.A44.A5$805.A4$804.A.A$800.A4$848.A\n.A$844.A9.A3$804.A8.A.A$800.A18.A$804.A4$805.A42.A.A$844.A9.A$866.A$\n874.A2$108.B$107.A.A755.A7.A.A$862.A16.A$865.A3$833.A3$832.A.A22.A$\n828.A20.A$999.A8.A$856.A.A23.A$862.A2$998.A.A8.A$994.A18.A$832.A15.A\n24.A.A7.A125.A$829.A56.A$832.A15.A34.A$1018.A$907.A2$833.A$906.A.A91.\nA18.A$858.A9.A33.A120.A$843.A17.A3.A21.A112.A18.A$848.A.A7.A9.A12.A.A\n3$849.A32.A41.A74.A$857.A11.A62.A3$923.A7.A.A$920.A16.A$923.A3$891.A\n87.A$740.A230.A2$890.A.A22.A$886.A83.A.A7.A$725.A15.A106.A117.A16.A$\n411.A333.A94.A73.A.A23.A39.A$415.A.A307.A15.A178.A$108.B$107.A.A729.A\n.A7.A$834.A17.A$416.A307.A124.A40.A15.A24.A.A7.A$887.A36.A19.A$824.A\n65.A15.A34.A2$963.A$993.A9.A$823.A15.A33.A.A15.A$820.A58.A$823.A15.A\n76.A9.A$901.A17.A3.A21.A16.A7.A.A21.A9.A14.A$906.A.A7.A9.A12.A.A17.A\n19.A42.A$962.A31.A9.A14.A$853.A$847.A.A57.A32.A$915.A11.A$819.A173.A\n9.A14.A$823.A.A22.A$977.A$958.A21.A$824.A10.A126.A.A12.A$848.A2$963.A\n$834.A12.A.A126.A10.A$831.A21.A$834.A$963.A22.A.A$971.A20.A2$962.A.A$\n958.A$813.A35.A$810.A41.A$813.A25.A.A7.A$873.A.A57.A38.A15.A$869.A\n121.A$933.A38.A15.A$814.A$848.A2$932.A54.A2$962.A$959.A17.A$108.B853.\nA7.A.A$107.A.A2$831.A139.A$828.A16.A117.A$831.A7.A.A3$840.A$832.A9$\n774.A8.A4$773.A.A8.A$769.A18.A$784.A3$793.A$754.A3$753.A.A19.A18.A$\n749.A48.A$775.A18.A4$774.A10$108.B646.A$107.A.A625.A23.A$739.A.A13.A\n4$424.A307.A21.A4$423.A.A307.A141.A$419.A460.A$733.A141.A5$874.A5$\n764.A9.A4$765.A9.A18.A$735.A62.A$739.A.A23.A9.A18.A3$740.A$764.A9.A\n18.A!\n\n\nThe main thing which is still left to solve - is the sequencer algorithm, which is a hold back for all Geminoids for now. I'm hoping to make some very optimized algorithm, that will run up to couple of days for the best output, and will be generic enough to cover a big range of Geminoids. I think everyone who has a final design for Geminoid, will spare few days to optimize the stream sequence.\n\nA rough estimation is that this Geminoid will be much more efficient. My first one had 800 blocks, and spread for 2000 units. This one will have around 350 blocks, and will spread hopefully for less than 500 units, making it at least 8 times more efficient and only twice slower."
+    },
+    {
+      "code": [],
+      "id": "p11605",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11605#p11605",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11605",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11605#p11605",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:I'm not sure what is your concern after having 4G->G converter? each of the converters can have it's \"phase\". i.e. after the  glider is entering an \"interpretation unit\" it splits into four gliders, each is input to one of four 4G -> G converters, each converter in his own phase, giving output per each of 0-1-2-3 mod 4 gliders in the stream. For each 4G->G converter the other three gliders are only \"state switchers\" and only one glider is actually the output.\nThat all makes sense.  The case I was thinking of was this:  if you have two glider streams controlling each of two construction arms, there are bound to be times when arm #1's elbow is already in position but you have to move the other one.  If you're sending a glider to each stream in turn, there has to be some way to send control gliders to the arm #1 circuit without having an effect on the elbow.\n\nOf course if you have cheap INCs and DECs you can just do INCn+DECn as a NOP operation -- but that only makes a NOP the same length as INCn+DECn.  Something else might have to be done if you just want to do, say, a single INC1 on one side, and a NOP on the other...?\n\nI can see that Serizawa DEC operations are very different from B3/S23 Geminoid DECs -- you can get any large DEC with a single operation.  I should probably look into adding something similar for 9hd and 10hd constructor arms -- I can probably produce a 180-degree glider and crash another glider into it later to make a new elbow.  At the moment the search utilities that look for elbow operations just throw out anything with a 180-degree glider (!).\n\nsimsim314 wrote:I'm hoping to make some very optimized algorithm, that will run up to couple of days for the best output, and will be generic enough to cover a big range of Geminoids. I think everyone who has a final design for Geminoid, will spare few days to optimize the stream sequence.\nI'll be very interested to see what you come up with.  I've made a few attempts at a Geminoid optimizer algorithm, but with the range of INC and DEC operations available for B3/S23 Geminoids, the time needed to find the absolute best sequence seemed to be best measured in years or decades, not days... and writing even a \"pretty good\" optimizer was a fairly difficult problem.  For the linear replicator I ended up settling for a compiler that was just smart enough that most people probably couldn't see the stupidity immediately."
+    },
+    {
+      "code": [],
+      "id": "p11609",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11609#p11609",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11609",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11609#p11609",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote: there are bound to be times when arm #1's elbow is already in position but you have to move the other one\n\nWell my solution to this as you mentioned is due to the fact that DEC operation is on one hand pulls back a lot (also due to the fact that the spaces between the gliders are wide), on the other hand the two arms can be simply synchronized. So after DEC operation (with N step) to the correct amount, which is only matter of proper timing, one can achieve the same amount of pulls (INCs) afterwords. More than that the number of pulls (INC) can be made an even number as well. \n\nFor example if I need to INC one arm by 10 and DEC other arm by 12. What I do is decrease both arms, but one arm I will decrease by 32 the other DEC by 12 (+2N which are not important). After adding INC 22 (+2N) times, I will get exactly what I want (DEC by 12 and INC by 10). \n\nOther solution is simply to exploit the fact that it's possible to collide a glider with construction arm without any consequences (the glider dies in Serizawa with direct collision) having as many \"NOPs\" as I need. \n\ndvgrn wrote: I can probably produce a 180-degree glider and crash another glider into it later to make a new elbow. \n\nYes I think it's great idea that can be useful! I'm really inspired by the fact that Geminoids from different rules can give ideas to each other. This single stream Geminoid design come directly from Life, and this Serizawa Geminoid gives some ideas to Life Geminoids. I'm also working on some Linear Self Constructors in other rules (the GeminoidParticles is just one example), having experience with Serizawa gives a lot of \"general\" construction ideas. \n\nsimsim314 wrote: writing even a \"pretty good\" optimizer was a fairly difficult problem\n\nWell I approach it as the usual Traveling Salesman Problem (TSP). There are many heuristic approaches to solve the problem, I will take some specific problem (like Geminoid in GeminoidParticles), and will try to optimize it, compering the different approaches (taking into account that not all \"cities\" are always available). Hopefully to find the approach with best result without carrying too much for performance only the result quality. Hopefully spread the best working idea into a more General Interface that can be programmed for a wide range of construction problems taking into account special construction arms, special constructions that include few operations, and different \"interaction widths\" of different components. \n\nFor some ideas or comparison between heuristic algorithm on TSP, and some ideas how to approach this problem there is a lot on the internet, and a lot of academic researched has been done. Starting from greedy algorithms, or semi greedy (trying only N closest options), dynamic programming, genetic algorithms, neural networks, ant colony optimization, or some other random and statistical approaches. Many of these are applicable in construction order problem for UC with minor modifications. They all have showed a pretty good results in real world problems, optimizing up to 1% from the optimal. \n\nsimsim314 wrote:smart enough that most people probably couldn't see the stupidity immediately\n\nHaha... For encouraging, the simplest greedy algorithm, yields a result which are not twice worse than the optimal. So probably even not optimal, some \"not totally stupid algorithm\" will do an \"OK\" job. \n\nI was thinking with what algorithm the original Geminoid was designed? Anyway I hope that the \"dark ages of construction order\" will soon be over, and we will have some nice heuristic to use."
+    },
+    {
+      "code": [],
+      "id": "p11614",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11614#p11614",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11614",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11614#p11614",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?f=2&t=1006#p7379",
+          "text": "here"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:I was thinking with what algorithm the original Geminoid was designed?\nLet's see... the glider-pair builder script for 9hd is available here, and it includes a list of the known elbow-move recipes at the time (there are more now.)  But it doesn't look as if I ever posted any glider-pair compiler code.\n\nI believe the compiler ended up simply minimizing the cost of each new slow-salvo glider.  It did a little more at the beginning -- looked through all of the available glider-output recipes to find the one that left the elbow in the best location.  After that it just checked to see which elbow start location was cheapest to get to from the current location, and moved the elbow there as efficiently as possible.\n\nWe have combined elbow-move and glider-output recipes like \"m-9g-15:e40 e97 o1 e-89\" (move the elbow closer by 9, glider lane is -15) and also \"m-5g-15:e-10 o-7 o-173 e-16\" (move elbow closer by only 5, same glider lane).  So at the very least, the compiler should choose the elbow output location that is closest to the next target location -- closest in terms of glider-pair cost, that is.\n\nI don't think I even worried about that level of optimization, let alone the more complicated cases where the compiler should really use a slightly more expensive glider-producing recipe that just happens to drop the elbow in exactly the right location for the next glider output -- add one extra glider pair and save a four-glider-pair elbow move later.\n\nWith so many different elbow-move recipes, all about the same cost, it seemed as if no matter how much I worried about this kind of optimization, I'd never improve the total recipe length by more than maybe 10%.  It's probably possible to save a lot more than 10% elsewhere -- e.g., by optimizing the slow salvo that does the actual construction -- but that's another problem entirely."
+    },
+    {
+      "code": [],
+      "id": "p11618",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11618#p11618",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11618",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11618#p11618",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote: it just checked to see which elbow start location was cheapest to get to from the current location\n\nThis what's called a greedy algorithm (going for the closest first).\n\ndvgrn wrote:With so many different elbow-move recipes, all about the same cost, it seemed as if no matter how much I worried about this kind of optimization, I'd never improve the total recipe length by more than maybe 10%. \n\nIn the special case you've described, you probably right. But I do believe that even for your problem, which is a bit different from \"standard\" two arm build, if you continue to improve the recipes, and have some solution starting from 2 to 8 pair-shoots with very wide range of movements, you will need some sort of optimization of the kind. \n\nAny UC construction problem can be reduced into some smaller problems: \n1. What are the next available options (not shadowing anything in between)? \n2. What are the distances (construction cost) to those options?\n3. What is the best next option? \n\nThe first two problems are defined by the construction designs and recipes found for a specific UC, and can be solve pretty fast. The third one is optimization problem. It's clear that if the cost to each available visit is the same or approximately the same, there is nothing to optimize. But in Serizawa Geminoid it's definitely not the case, also in GeminoidParticles it's definitely not the case, I believe that in your case it's true as well, it's just that you used pretty small amount of \"local\" recipes, for movements. Having a wider range of movement costs and options, will certainly increase the optimization possibilities. Also the fact that you were using a slow salvo, may have some effect on it (instead of two arm). \n\nI was thinking to build something like that in Life, which uses two arms instead of one. This could be much faster Geminoid."
+    },
+    {
+      "code": [],
+      "id": "p11630",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11630#p11630",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11630",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11630#p11630",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?f=7&t=1072#p8182",
+          "text": "pre-optimized list of about 100,000 ways to move a hand block"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?f=2&t=1006&start=75#p9590",
+          "text": "half a million recipes for small stable objects"
+        },
+        {
+          "href": "http://www.conwaylife.com/forums/viewtopic.php?p=9901#p10103",
+          "text": "list of possible optimizations"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?f=7&t=1072#p8154",
+          "text": "bending the construction arm around an arbitrary number of elbows"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:In the special case you've described, you probably right. But I do believe that even for your problem, which is a bit different from \"standard\" two arm build, if you continue to improve the recipes, and have some solution starting from 2 to 8 pair-shoots with very wide range of movements, you will need some sort of optimization of the kind.\nOh, I definitely agree -- it would be very nice to have an algorithm that can reliably find a glider-pair recipe that's within 1% of the optimum, instead of just within 10% or 25%.  I originally planned a much slower compiler, which would combine single elbow moves into short sequences which were known to be the most efficient.  Eventually you'd have a database of a few million sequences along these lines:  \"starting with an elbow at 0, with only ten glider pairs you can get Lane -5, Lane -23, and Lane -14 gliders in that order, and the elbow ends up at -16.\"  Then the compiler could try all the most likely ways of stringing these minimal sequences together.\n\nBut there turned out to be more immediate problems that needed solving to get a linear replicator to work at all.  So I left the glider-pair optimization problem for another year.  Hopefully it will be sorted out a little better by the time the first 2D quadratic B3/S23 replicator comes along...!\n\nsimsim314 wrote:Any UC construction problem can be reduced into some smaller problems: \n1. What are the next available options (not shadowing anything in between)? \n2. What are the distances (construction cost) to those options?\n3. What is the best next option?\nAbove I was talking about compiling a fixed slow-salvo construction recipe into actual construction-arm operations (\"elbow ops\").  As you point out here, the optimization problem is really much more complicated than that.\n\nIn B3/S23 stable circuitry, there are usually many ways to place still lifes to produce equally functional circuitry.  In particular, for eaters that suppress glider outputs, there are generally several dozen plausible placements, with several dozen plausible recipes for each eater placement.  Any of these hundreds of combinations might happen to be significantly cheaper to construct, either in terms of the total number of gliders in the slow salvo, or in terms of the total number of glider pairs needed to program the construction arm to generate that slow salvo.\n\nIn both cases, the expense is highly dependent on the precise current placement of the construction arm's hand or elbow.  In single-arm constructions, you always want to have a little surplus junk -- the \"hand\" -- left over on the construction site, so that the slow salvo has something to aim at.  Ideally you want the leftover junk to already happen to be be in exactly the right position to start the next object construction.  Otherwise you have to waste gliders moving the junk around.\n\nIn many cases there are thousands of ways to clean up a construction and leave a little junk behind in different places.  So a really good compiler would keep track of all the possibilities, and hopefully find one that matched up exactly with an input for one of the possible recipes for the next object to be constructed.\n\nAnother way to save on construction expense is to use \"dirty\" recipes that leave extra junk lying around.  As long as it isn't in the way of the actual operation of the circuit, and as long as the circuit doesn't need to self-destruct later, there's no point in cleaning any extra junk up -- and some of it might well come in handy as alternate \"hand\" objects for later incremental constructions.\n\nIn one-arm Geminoid constructions so far, just for the sake of keeping things simple, the recipes have been clean, and the leftover hand object has generally been a block.  Allowing other types of common ash as starting points for construction recipes would immediately cut at least 15% off of the total length of construction salvos.  (If you look closely at the linear B3/S23 replicator in operation, you'll notice I did a few experiments along these lines.)\n\nsimsim314 wrote:The first two problems are defined by the construction designs and recipes found for a specific UC, and can be solve pretty fast. The third one is optimization problem. It's clear that if the cost to each available visit is the same or approximately the same, there is nothing to optimize. But in Serizawa Geminoid it's definitely not the case, also in GeminoidParticles it's definitely not the case, I believe that in your case it's true as well, it's just that you used pretty small amount of \"local\" recipes, for movements. Having a wider range of movement costs and options, will certainly increase the optimization possibilities.\nWell, I don't know about \"pretty small amount\".  I put together a pre-optimized list of about 100,000 ways to move a hand block, and looked up each new adjustment in that table.  Generally it was possible to adjust one of those recipes to fit the current construction situation.  That block-move table was combined with another lookup table with half a million recipes for small stable objects.  For the linear replicator I just cherry-picked the obviously good recipes, of course, instead of letting an automated compiler find the absolute best combinations.\n\nsimsim314 wrote:I was thinking to build something like that in Life, which uses two arms instead of one. This could be much faster Geminoid.\nYes, that was high on my list of possible optimizations for the linear replicator.  I wanted to build a single-arm self-constructor mostly just because it hadn't ever been done before, not because it was the most efficient way to do construction.\n\nHowever, there are definitely a lot of interesting cases where a single arm can do things that are impossible for two-arm constructors (except, obviously, if you use \"one-arm emulation mode\"!)  One example is bending the construction arm around an arbitrary number of elbows."
+    },
+    {
+      "code": [],
+      "id": "p11666",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11666#p11666",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11666",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11666#p11666",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote:In particular, for eaters that suppress glider outputs, there are generally several dozen plausible placements, with several dozen plausible recipes for each eater placement. \n\nHmm.. I didn't think of that. It's like depending on the route the salesmen came into the city the distance to other cities may vary. This is kinda bad news, but the good news are most of the heuristics will work for this cases as well, just a bit slower due to explosion of options. \n\ndvgrn wrote:So a really good compiler would keep track of all the possibilities\n\nWell as I thought the slow salvo is really a much more complex problem with nuances. For example something else that can help, is to place \"few construction blocks\" building in parallel, or finding a way to use the debris from dirty recipes. Anyway sometimes you need to draw the line, and limit your options. Having a few thousand cities and few thousand routs to each city, even the best of the heuristics will take much longer. Not saying it's impassible to optimize, just saying that at some point you make \"assumptions\" and go with them, knowing they are not \"absolutely the best\". \n\ndvgrn wrote:pre-optimized list of about 100,000 ways to move a hand block...half a million recipes for small stable objects.\n\nWow I knew it's a big project, but didn't think it's so big. But if I'm not mistaken for the \"block pairs\" arm movement, you used the standard (Paul Chapman's) 3-4 pairs recipes. Not sure how much expanding the recipes for glider pairs will help, but it might. \n\nAnyway I want to get back to Serizawa Geminoid soon. There are plenty unique challenges there as well. \n\nI was wondering, if this \"opposite gliders shoot approach\" is applicable for life as well. I mean two gliders shoot at each other at 180 degrees from opposite direction, using timing to shoot a glider from any given location, in some reasonable range, and using a slow salvo recipes to move a block arm (like in Serizawa, although here it's much simpler). \n\nHaving a \"slow salvo\", as the \"first arm\" as well."
+    },
+    {
+      "code": [
+        "x = 49, y = 27, rule = B3/S23\n5$31bo$7bo24bo$8bo21b3o5b2o$6b3o6bo21b2o$14b2o23bo$14bobo4$41b2o$18bo\n21b2o$17b2o23bo$17bobo!\n"
+      ],
+      "id": "p11667",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11667#p11667",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11667",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11667#p11667",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Show in Viewer"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "Here is a small recipe for \"opposite gliders shoot\".\n\nCode: Select all / Show in Viewerx = 49, y = 27, rule = B3/S23\n5$31bo$7bo24bo$8bo21b3o5b2o$6b3o6bo21b2o$14b2o23bo$14bobo4$41b2o$18bo\n21b2o$17b2o23bo$17bobo!\n\n\nAs I see it, there would be four 4G->G converters, two for for each glider color, and two interpreters, each per color that would get single glider input and two gliders correctly timed output for the opposite shoot reaction (similar to original Gemini interpreter). It's also simple to make \"NOP\" operation as seen in the recipe. The rest will be done with slow salvo (that will not only \"move\" block, but also will shoot output glider as the usual construction arm)."
+    },
+    {
+      "code": [],
+      "id": "p11668",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11668#p11668",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11668",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11668#p11668",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:dvgrn wrote:In particular, for eaters that suppress glider outputs, there are generally several dozen plausible placements, with several dozen plausible recipes for each eater placement. \n\nHmm.. I didn't think of that. It's like depending on the route the salesmen came into the city the distance to other cities may vary.\nRight -- the current object's construction cost varies significantly depending on the location of the construction arm's elbow and the location of the leftover hand block -- and also the \"current object\" could sometimes be placed in many different locations, each with its own recipe and its own output hand location.  As you say, it definitely looks like the kind of problem where you give up on finding the \"best\" option, and gratefully settle for \"good enough\".\n\nsimsim314 wrote:if I'm not mistaken for the \"block pairs\" arm movement, you used the standard (Paul Chapman's) 3-4 pairs recipes. Not sure how much expanding the recipes for glider pairs will help, but it might.\nI think I understand this point, if you meant \"glider pairs\" in the first sentence.  The odds seem very good that more glider-pair recipes can be found, and that they will shorten the recipe by quite a bit.  What I'm finding as I get deeper into the search tree -- 5 to 8 glider pairs, let's say -- is that there are larger groups of optimized recipes where the 90-degree glider output is on the same lane, but the elbow can move to a wide range of locations.\n\nIf I build the slow salvo mostly using these recipe groups, there's a lot more flexibility to put an elbow exactly where it's needed for the next object construction -- makes it easier to compile a glider-pair recipe incrementally, doing exhaustive searches just for one object at a time, and have it come out looking reasonably close to optimal.\n\nsimsim314 wrote:I was wondering, if this \"opposite gliders shoot approach\" is applicable for life as well. I mean two gliders shoot at each other at 180 degrees from opposite direction, using timing to shoot a glider from any given location, in some reasonable range, and using a slow salvo recipes to move a block arm (like in Serizawa, although here it's much simpler).\nI remember Paul Chapman considered something along those lines in 2003, when we were designing the construction arm that ended up getting used in the original Gemini.  It didn't make sense with the technology we had then, but it might actually be workable now.\n\nHowever, you need at least three gliders to get a 90-degree output -- EDIT: I went and dug up the exact same reaction that you just posted, so no need to quote it again I guess.\n\nVery likely there are 180-degree lanes where two slow glider pairs will produce a clean 90-degree output, but I don't think anyone has done that search yet.  The big problem is glider colors -- with this method, your slow-salvo recipes for manipulating the elbow would all have to be one color, like black or white bishops on a chessboard.  That's a fairly serious limitation, which would probably more than counteract any advantages of this method.  EDIT: In the system you outlined, it seems fairly clear that a separate subsystem for each color of glider, plus having to synchronize two parallel gliders in each of the two subsystems, would all add up to a replicator unit that's several times larger than the current diagonal Geminoid construction arm, and also many times slower. \n\nSystems like Serizawa with orthogonal gliders are very lucky not to have this problem.  Off and on I've considered the idea of a Life construction arm that shoots LWSSes instead of gliders from its elbow.  I've found a few promising reactions, so I'm pretty sure it can be done, and that universal construction is possible with slow LWSS collisions just about as efficiently as with slow glider collisions.  Gemini-style LWSS pairs also look good as a construction toolkit.\n\nBut that would take a complete rewrite of slow-salvo search code, and might or might not make a smaller Geminoid or replicator overall.  There's no huge database of known \"LWSS constructions\" equivalent to Mark Niemiec's and H. Koenig's and many others' work on glider constructions, so a project like that would really be breaking into new territory.  I'm planning on designing a Geminoid spaceship at some point that uses LWSSes for cleanup, at least, to avoid the need for self-destruct circuitry or an extra destructor arm -- but that's a long way off yet."
+    },
+    {
+      "code": [],
+      "id": "p11669",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11669#p11669",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11669",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11669#p11669",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote: with this method, your slow-salvo recipes for manipulating the elbow would all have to be one color\n\nInteresting thought, did anyone done such research? Maybe it's not so bad after all? \n\ndvgrn wrote:would all add up to a replicator unit that's several times larger than the current diagonal Geminoid construction arm\n\nDefinitely. It's not a recipe for optimizing the Geminoid, but as a general construction idea that might be useful in some other cases. For example I was thinking of growing spiral, it might be useful in some \"recursive system\" that would use the same recipe recursively. It also has some elegance about it, starting from the first spiral node, the design will use slow salvo, and it also might somehow benefit the design. \n\nI'm also thinking of \"Universal Geminoid\" that works along these lines, so it would be nice to see many Geminoids in many CA's based on same principles (in Life it could be the old p30 technology, that would require 60 streams, but it will use only duplicators and reflectors, and some basic interactions - no sophistication, which does not exist in other CA's). \n\ndvgrn wrote: I've considered the idea of a Life construction arm that shoots LWSSes instead of gliders from its elbow\n\nAs a thought,  it might be possible to get this kind of design closer to Serizawa design. I think it has some theoretical value as well. Kind of a more \"high level CA design\", that can be done in some basic system like GeminoidParticles or something along those line, and then \"translated\" or \"compiled\" into specific CA like Life or Serizawa or any other rule that has \"support\" for the basic components. \n\nIt might be possible to start from very \"strict\" requirements, and make a way through into CA's with some less advanced technologies."
+    },
+    {
+      "code": [],
+      "id": "p11670",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=216&sr=posts",
+          "text": "12039"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Contact dvgrn"
+        },
+        {
+          "href": "https://b3s23life.blogspot.com/",
+          "text": "Website"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11670#p11670",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11670",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11670#p11670",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=216",
+          "text": "dvgrn"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "simsim314 wrote:dvgrn wrote: with this method, your slow-salvo recipes for manipulating the elbow would all have to be one color\nInteresting thought, did anyone done such research? Maybe it's not so bad after all?\nTo my knowledge, nobody had looked into this question until a few minutes ago...  I just wrote a quick script to look through a sample of the half-million recipes I mentioned above, to see how many of them had all their gliders on one color.\n\nOut of sample of 4380 recipes, 27 of them turned out to have monocolored gliders -- all on the same color, for some reason:  either my sample, or the search that built the original database, seems to be prejudiced toward starting with the first glider on one particular side of the block.  But if you reverse the recipes you get the other glider color, of course.\n\nWith a branching factor for the search tree only (say) half of one percent of the size of the standard slow-salvo search tree, it's not really clear that you'd end up with a universal construction set.  You might never see some orientations of eaters, for example.\n\n-- But, just as an educated guess, I bet you would!  You'd just need maybe a hundred gliders on average to build less common objects, or to do arbitrary small block moves, instead of the current average of ten gliders or less.  Only one way to find out for sure... probably oblique's slow-salvo search program could be fairly easily adapted to have a look at this tree.\n\nsimsim314 wrote:dvgrn wrote:I've considered the idea of a Life construction arm that shoots LWSSes instead of gliders from its elbow...\nAs a thought,  it might be possible to get this kind of design closer to Serizawa design. I think it has some theoretical value as well. Kind of a more \"high level CA design\", that can be done in some basic system like GeminoidParticles or something along those line, and then \"translated\" or \"compiled\" into specific CA like Life or Serizawa or any other rule that has \"support\" for the basic components.\nIt's certainly possible to build an orthogonal Geminoid in Conway's Life with existing technology.  Slow-salvo-constructible glider-to-LWSS and LWSS-to-glider converters are known (or Herschel-to-LWSS, etc.) so the construction data could be stored in an orthogonal loop.  And the current construction arm could easily build and trigger LWSS seeds one after another to produce an LWSS slow salvo -- just at a much higher cost.\n\nWe'd need a couple of different LWSS seeds to get all possible LWSS placements, though.  *WSSes aren't stuck on a single color of diagonal, but if you only build a single type of seed you'll get a somewhat equivalent problem with the phase (since *WSSes are p4, but travel 2 cells every 4 ticks).\n\nWith a little luck, there will turn out to be ways to get both *WSS phases directly from an elbow operation -- i.e., using glider pairs, for a diagonal construction arm.  That way you wouldn't have to spend a lot of time making and triggering spaceship seeds using slow salvos.  I've only run into one phase so far, and haven't figured out how to make the reaction completely clean yet.  But that's just because DOpSearch (the only glider-pair search utility that's been written so far) doesn't look for LWSSes -- it just blindly throws them out with all the other explosive patterns.\n\nWhile we're on the subject, I should mention that theoretically it's also perfectly possible to use loafers as signals in an orthogonal loop, and even to generate a slow-salvo stream of loafers to do constructions with, instead of *WSSes.  I have no idea if that last would work; it seems a little unlikely -- there might be too many explosions and not enough annihilation reactions -- but it's interesting to think about.  Loafers are the closest thing Life has to Serizawa gliders:  no color problems and no phasing problems... and you can fit about seven times as many of them onto the same length tape, compared to Serizawa gliders, since they travel so slowly.\n\nCorderships are even slower, and are also slow-constructible.  But you'd need a diagonal memory tape again, and I'd say there's absolutely no hope of doing one-arm constructions with them...!  No point, either -- for construction they have no advantages over gliders."
+    },
+    {
+      "code": [],
+      "id": "p11673",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11673#p11673",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11673",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11673#p11673",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote:Out of sample of 4380 recipes, 27 of them turned out to have monocolored gliders \n\nSince we are talking about slow salvos as a construction arm (replacing the glider pair), and not slow salvo as \"build recipe\" of other still life, 27 should be enough. \n\nActually from Serizawa I've learned that the only thing you need for construction arm is 3 OPS: pull-pull with different parity and single recipe for push (or push-push and pull which is less likely). Any integer can be constructed from this. In life we also need two colors for gliders. If from those 27 there are those 5 things (pulls of different parity, push, and black-white glider reflection), we have a way to construct everything we need. Of course not optimal, but hey this is not optimal approach in the first place. \n\nTalking of p30 technology, it might be also useful to check out how much \"input streams\" are necessary as slow salvo. It's plausible that we don't need ALL the possible inputs. So maybe it would be enough to have 4-5 different \"input streams\" (by input stream I mean the \"trace\" of a glider in Life-History), for the basic operations, that would cost only 8-10 p30s (also it's possible to \"cross channels\", having two p30's for the two glider stream, and 4-5 p30 for different input streams etc.). Considering that p30s are pretty cheap, using two arms (or even one), it could be somewhat cheaper than what we think. \n\nI'm not  a big fan of the p30 technology, but considering that in many CAs it's the level of technology we have, it could be nice to experiment with it in life, where we can always \"cheat\" with some \"advanced stuff\" if necessary."
+    },
+    {
+      "code": [],
+      "id": "p11676",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1130",
+          "text": "oblique"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1130&sr=posts",
+          "text": "122"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11676#p11676",
+          "text": "Re: Serizawa - Linear Self Replicator"
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11676",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11676#p11676",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1130",
+          "text": "oblique"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote:\nWell, there I'm not so sure. I'm probably going to keep the terminology I've been using since the Gemini came out.  The Gemini is not a linear self-replicator because there are never even two copies of the glider data streams, let alone an unbounded number -- there's just one copy that moves slowly and throws off some stable stuff along the way for support.  If the Gemini doesn't really replicate itself, then it's not really a \"self-replicating spaceship\".\n\nPlaying the heretic I might be tempted to say, that every spaceship is somehow \"replicating\" itself in some sense "
+    },
+    {
+      "code": [],
+      "id": "p11677",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1130",
+          "text": "oblique"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1130&sr=posts",
+          "text": "122"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11677#p11677",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11677",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11677#p11677",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1130",
+          "text": "oblique"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "dvgrn wrote:\nWith a branching factor for the search tree only (say) half of one percent of the size of the standard slow-salvo search tree, it's not really clear that you'd end up with a universal construction set.  You might never see some orientations of eaters, for example.\n\n-- But, just as an educated guess, I bet you would!  You'd just need maybe a hundred gliders on average to build less common objects, or to do arbitrary small block moves, instead of the current average of ten gliders or less.  Only one way to find out for sure... probably oblique's slow-salvo search program could be fairly easily adapted to have a look at this tree.\n\nI'm not quite getting the search space you are describing here. Do you mean: all gliders in one recipe must have the same color? Like in skiping every other \"lane\"? What are the other parameters of the search?"
+    },
+    {
+      "code": [
+        "x = 214, y = 188, rule = LifeHistory\n17$194.B$193.A.A$193.2AB$194.A21$170.B$169.BAB$168.2A2B$169.2A13$154.\nB$153.A.A$153.2AB$154.A41$105.3A$107.A$106.A18$85.3A$87.A$86.A28$55.\n3A$57.A$56.A!",
+        "x = 218, y = 211, rule = LifeHistory\n43$194.B$193.BAB$192.2A2B$193.2A10$181.B$180.BAB$179.2A2B$180.2A24$\n154.B$153.BAB$152.2A2B$153.2A42$105.3A$107.A$106.A18$85.3A$87.A$86.A\n18$65.3A$67.A$66.A8$55.3A$57.A$56.A!\n"
+      ],
+      "id": "p11680",
+      "links": [
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/search.php?author_id=1223&sr=posts",
+          "text": "1828"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11680#p11680",
+          "text": "Re: Serizawa - Linear Self Replicator."
+        },
+        {
+          "href": "https://conwaylife.com/forums/posting.php?mode=quote&p=11680",
+          "text": "Quote"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11680#p11680",
+          "text": "Post"
+        },
+        {
+          "href": "https://conwaylife.com/forums/memberlist.php?mode=viewprofile&u=1223",
+          "text": "simsim314"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Show in Viewer"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Select all"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#",
+          "text": "Show in Viewer"
+        },
+        {
+          "href": "https://conwaylife.com/forums/viewtopic.php?p=11354#top",
+          "text": "Top"
+        }
+      ],
+      "text": "Here is a recipe for a 3 collinear glider pairs for \"slow\" shoot. I also \"proved\" just by brute force that two collinear glider pairs always leave some debris. \n\nCode: Select all / Show in Viewerx = 214, y = 188, rule = LifeHistory\n17$194.B$193.A.A$193.2AB$194.A21$170.B$169.BAB$168.2A2B$169.2A13$154.\nB$153.A.A$153.2AB$154.A41$105.3A$107.A$106.A18$85.3A$87.A$86.A28$55.\n3A$57.A$56.A!\n\nHere is 7 gilders recipe (although it's probably redundant): \n\nCode: Select all / Show in Viewerx = 218, y = 211, rule = LifeHistory\n43$194.B$193.BAB$192.2A2B$193.2A10$181.B$180.BAB$179.2A2B$180.2A24$\n154.B$153.BAB$152.2A2B$153.2A42$105.3A$107.A$106.A18$85.3A$87.A$86.A\n18$65.3A$67.A$66.A8$55.3A$57.A$56.A!\n\n\nLet's do some thinking: assuming we'll find some compact \"two-glider input\" duplicator with simple interpreter (one comes to my mind is just two silvers with two semi Snarks, allowing any distance we choose).\n\nThe advantage of slow salvo is that it can shoot on several targets in the \"shooting range\" (which is the distance between the two interpreters), and it's not \"committed\" to a single block,  so let's say we will use \"5 blocks\" to shoot upon from this salvo, it could be somehow faster than \"back forth\" glider pair approach, with single block, cutting time in places where some long \"travel\" was needed. \n\nAlso as a thought it might be possible to create some part of the new copy using direct shoots from the salvo itself, which might make it even faster than current Geminoid. Of course tweaking the Geometry is necessary, placing most of the \"mass\" of the new copy in the \"shoot range\" of the salvo."
+    }
+  ],
+  "url": "https://conwaylife.com/forums/viewtopic.php?p=11354#p11354"
+}

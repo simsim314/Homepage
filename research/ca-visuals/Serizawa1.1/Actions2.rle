@@ -1,0 +1,7 @@
+# More actions from Serizawa (1986)
+#
+# Top: A 2-way fan-out, created by blocking one of the outputs of a splitter.
+# Bottom: A corner, created by blocking two of the outputs of a splitter.
+#
+x = 26, y = 38, rule = Serizawa
+24.A5$19.A5.A$20.B$19.A5.A23$A4.A$.B10.A$A4.A5$4.A!

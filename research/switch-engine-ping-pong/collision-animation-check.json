@@ -1,0 +1,1763 @@
+{
+  "engine": "Golly 3.3 / HashLife",
+  "rule": "B3/S23",
+  "source": "original 23-cell seed",
+  "generations": [
+    5454680,
+    5455312
+  ],
+  "cell_scale": 15,
+  "validation": "2048-cell causal margin around a 720-generation clip; the final complete search region equals a full-pattern Golly run. Camera follows an exact detected NW glider after the collision.",
+  "return_glider_detected": true,
+  "frames": [
+    {
+      "generation": 5454680,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454684,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454688,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454692,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454696,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454700,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454704,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454708,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454712,
+      "caption": "1 / The spaceship approaches.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 16
+    },
+    {
+      "generation": 5454716,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 15
+    },
+    {
+      "generation": 5454720,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 11
+    },
+    {
+      "generation": 5454724,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 15
+    },
+    {
+      "generation": 5454728,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 18
+    },
+    {
+      "generation": 5454732,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 22
+    },
+    {
+      "generation": 5454736,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 29
+    },
+    {
+      "generation": 5454740,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 41
+    },
+    {
+      "generation": 5454744,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 34
+    },
+    {
+      "generation": 5454748,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 50
+    },
+    {
+      "generation": 5454752,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 39
+    },
+    {
+      "generation": 5454756,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 37
+    },
+    {
+      "generation": 5454760,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 50
+    },
+    {
+      "generation": 5454764,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 39
+    },
+    {
+      "generation": 5454768,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 35
+    },
+    {
+      "generation": 5454772,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 45
+    },
+    {
+      "generation": 5454776,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 55
+    },
+    {
+      "generation": 5454780,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 49
+    },
+    {
+      "generation": 5454784,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 54
+    },
+    {
+      "generation": 5454788,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 63
+    },
+    {
+      "generation": 5454792,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 75
+    },
+    {
+      "generation": 5454796,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 70
+    },
+    {
+      "generation": 5454800,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 56
+    },
+    {
+      "generation": 5454804,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 78
+    },
+    {
+      "generation": 5454808,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 64
+    },
+    {
+      "generation": 5454812,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 78
+    },
+    {
+      "generation": 5454816,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 59
+    },
+    {
+      "generation": 5454820,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 78
+    },
+    {
+      "generation": 5454824,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 48
+    },
+    {
+      "generation": 5454828,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 39
+    },
+    {
+      "generation": 5454832,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 42
+    },
+    {
+      "generation": 5454836,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 41
+    },
+    {
+      "generation": 5454840,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 45
+    },
+    {
+      "generation": 5454844,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 45
+    },
+    {
+      "generation": 5454848,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 53
+    },
+    {
+      "generation": 5454852,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 59
+    },
+    {
+      "generation": 5454856,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 49
+    },
+    {
+      "generation": 5454860,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 38
+    },
+    {
+      "generation": 5454864,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 46
+    },
+    {
+      "generation": 5454868,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 60
+    },
+    {
+      "generation": 5454872,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 44
+    },
+    {
+      "generation": 5454876,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 48
+    },
+    {
+      "generation": 5454880,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 31
+    },
+    {
+      "generation": 5454884,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 33
+    },
+    {
+      "generation": 5454888,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 45
+    },
+    {
+      "generation": 5454892,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 39
+    },
+    {
+      "generation": 5454896,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 54
+    },
+    {
+      "generation": 5454900,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 62
+    },
+    {
+      "generation": 5454904,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 46
+    },
+    {
+      "generation": 5454908,
+      "caption": "2 / The collision unfolds.",
+      "viewport": [
+        781850,
+        -387712,
+        781900,
+        -387680
+      ],
+      "visible_population": 52
+    },
+    {
+      "generation": 5454912,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781874,
+        -387730,
+        781924,
+        -387698
+      ],
+      "visible_population": 42
+    },
+    {
+      "generation": 5454916,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781873,
+        -387731,
+        781923,
+        -387699
+      ],
+      "visible_population": 36
+    },
+    {
+      "generation": 5454920,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781872,
+        -387732,
+        781922,
+        -387700
+      ],
+      "visible_population": 39
+    },
+    {
+      "generation": 5454924,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781871,
+        -387733,
+        781921,
+        -387701
+      ],
+      "visible_population": 47
+    },
+    {
+      "generation": 5454928,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781870,
+        -387734,
+        781920,
+        -387702
+      ],
+      "visible_population": 35
+    },
+    {
+      "generation": 5454932,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781869,
+        -387735,
+        781919,
+        -387703
+      ],
+      "visible_population": 36
+    },
+    {
+      "generation": 5454936,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781868,
+        -387736,
+        781918,
+        -387704
+      ],
+      "visible_population": 46
+    },
+    {
+      "generation": 5454940,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781867,
+        -387737,
+        781917,
+        -387705
+      ],
+      "visible_population": 42
+    },
+    {
+      "generation": 5454944,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781866,
+        -387738,
+        781916,
+        -387706
+      ],
+      "visible_population": 29
+    },
+    {
+      "generation": 5454948,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781865,
+        -387739,
+        781915,
+        -387707
+      ],
+      "visible_population": 30
+    },
+    {
+      "generation": 5454952,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781864,
+        -387740,
+        781914,
+        -387708
+      ],
+      "visible_population": 31
+    },
+    {
+      "generation": 5454956,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781863,
+        -387741,
+        781913,
+        -387709
+      ],
+      "visible_population": 22
+    },
+    {
+      "generation": 5454960,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781862,
+        -387742,
+        781912,
+        -387710
+      ],
+      "visible_population": 29
+    },
+    {
+      "generation": 5454964,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781861,
+        -387743,
+        781911,
+        -387711
+      ],
+      "visible_population": 19
+    },
+    {
+      "generation": 5454968,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781860,
+        -387744,
+        781910,
+        -387712
+      ],
+      "visible_population": 22
+    },
+    {
+      "generation": 5454972,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781859,
+        -387745,
+        781909,
+        -387713
+      ],
+      "visible_population": 15
+    },
+    {
+      "generation": 5454976,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781858,
+        -387746,
+        781908,
+        -387714
+      ],
+      "visible_population": 9
+    },
+    {
+      "generation": 5454980,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781857,
+        -387747,
+        781907,
+        -387715
+      ],
+      "visible_population": 9
+    },
+    {
+      "generation": 5454984,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781856,
+        -387748,
+        781906,
+        -387716
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5454988,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781855,
+        -387749,
+        781905,
+        -387717
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5454992,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781854,
+        -387750,
+        781904,
+        -387718
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5454996,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781853,
+        -387751,
+        781903,
+        -387719
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455000,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781852,
+        -387752,
+        781902,
+        -387720
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455004,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781851,
+        -387753,
+        781901,
+        -387721
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455008,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781850,
+        -387754,
+        781900,
+        -387722
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455012,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781849,
+        -387755,
+        781899,
+        -387723
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455016,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781848,
+        -387756,
+        781898,
+        -387724
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455020,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781847,
+        -387757,
+        781897,
+        -387725
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455024,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781846,
+        -387758,
+        781896,
+        -387726
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455028,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781845,
+        -387759,
+        781895,
+        -387727
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455032,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781844,
+        -387760,
+        781894,
+        -387728
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455036,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781843,
+        -387761,
+        781893,
+        -387729
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455040,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781842,
+        -387762,
+        781892,
+        -387730
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455044,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781841,
+        -387763,
+        781891,
+        -387731
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455048,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781840,
+        -387764,
+        781890,
+        -387732
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455052,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781839,
+        -387765,
+        781889,
+        -387733
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455056,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781838,
+        -387766,
+        781888,
+        -387734
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455060,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781837,
+        -387767,
+        781887,
+        -387735
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455064,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781836,
+        -387768,
+        781886,
+        -387736
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455068,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781835,
+        -387769,
+        781885,
+        -387737
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455072,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781834,
+        -387770,
+        781884,
+        -387738
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455076,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781833,
+        -387771,
+        781883,
+        -387739
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455080,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781832,
+        -387772,
+        781882,
+        -387740
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455084,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781831,
+        -387773,
+        781881,
+        -387741
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455088,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781830,
+        -387774,
+        781880,
+        -387742
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455092,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781829,
+        -387775,
+        781879,
+        -387743
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455096,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781828,
+        -387776,
+        781878,
+        -387744
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455100,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781827,
+        -387777,
+        781877,
+        -387745
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455104,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781826,
+        -387778,
+        781876,
+        -387746
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455108,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781825,
+        -387779,
+        781875,
+        -387747
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455112,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781824,
+        -387780,
+        781874,
+        -387748
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455116,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781823,
+        -387781,
+        781873,
+        -387749
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455120,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781822,
+        -387782,
+        781872,
+        -387750
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455124,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781821,
+        -387783,
+        781871,
+        -387751
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455128,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781820,
+        -387784,
+        781870,
+        -387752
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455132,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781819,
+        -387785,
+        781869,
+        -387753
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455136,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781818,
+        -387786,
+        781868,
+        -387754
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455140,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781817,
+        -387787,
+        781867,
+        -387755
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455144,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781816,
+        -387788,
+        781866,
+        -387756
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455148,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781815,
+        -387789,
+        781865,
+        -387757
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455152,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781814,
+        -387790,
+        781864,
+        -387758
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455156,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781813,
+        -387791,
+        781863,
+        -387759
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455160,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781812,
+        -387792,
+        781862,
+        -387760
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455164,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781811,
+        -387793,
+        781861,
+        -387761
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455168,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781810,
+        -387794,
+        781860,
+        -387762
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455172,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781809,
+        -387795,
+        781859,
+        -387763
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455176,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781808,
+        -387796,
+        781858,
+        -387764
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455180,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781807,
+        -387797,
+        781857,
+        -387765
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455184,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781806,
+        -387798,
+        781856,
+        -387766
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455188,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781805,
+        -387799,
+        781855,
+        -387767
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455192,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781804,
+        -387800,
+        781854,
+        -387768
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455196,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781803,
+        -387801,
+        781853,
+        -387769
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455200,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781802,
+        -387802,
+        781852,
+        -387770
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455204,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781801,
+        -387803,
+        781851,
+        -387771
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455208,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781800,
+        -387804,
+        781850,
+        -387772
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455212,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781799,
+        -387805,
+        781849,
+        -387773
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455216,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781798,
+        -387806,
+        781848,
+        -387774
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455220,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781797,
+        -387807,
+        781847,
+        -387775
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455224,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781796,
+        -387808,
+        781846,
+        -387776
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455228,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781795,
+        -387809,
+        781845,
+        -387777
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455232,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781794,
+        -387810,
+        781844,
+        -387778
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455236,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781793,
+        -387811,
+        781843,
+        -387779
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455240,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781792,
+        -387812,
+        781842,
+        -387780
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455244,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781791,
+        -387813,
+        781841,
+        -387781
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455248,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781790,
+        -387814,
+        781840,
+        -387782
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455252,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781789,
+        -387815,
+        781839,
+        -387783
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455256,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781788,
+        -387816,
+        781838,
+        -387784
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455260,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781787,
+        -387817,
+        781837,
+        -387785
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455264,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781786,
+        -387818,
+        781836,
+        -387786
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455268,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781785,
+        -387819,
+        781835,
+        -387787
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455272,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781784,
+        -387820,
+        781834,
+        -387788
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455276,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781783,
+        -387821,
+        781833,
+        -387789
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455280,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781782,
+        -387822,
+        781832,
+        -387790
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455284,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781781,
+        -387823,
+        781831,
+        -387791
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455288,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781780,
+        -387824,
+        781830,
+        -387792
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455292,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781779,
+        -387825,
+        781829,
+        -387793
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455296,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781778,
+        -387826,
+        781828,
+        -387794
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455300,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781777,
+        -387827,
+        781827,
+        -387795
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455304,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781776,
+        -387828,
+        781826,
+        -387796
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455308,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781775,
+        -387829,
+        781825,
+        -387797
+      ],
+      "visible_population": 5
+    },
+    {
+      "generation": 5455312,
+      "caption": "3 / Follow the return glider.",
+      "viewport": [
+        781774,
+        -387830,
+        781824,
+        -387798
+      ],
+      "visible_population": 5
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "source_pattern": "research/caterloopillar/forward-glider-breakthrough.rle",
+  "pattern_sha256": "c27aef5560cefdec912a114ba22e9fdcc077f146ff110b8a8e9d518d707cd2ba",
+  "engine": "Golly 3.3 / HashLife",
+  "generations": [
+    0,
+    140
+  ],
+  "schematic": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+  "schematic_credit": "dvgrn / GFDL 1.2",
+  "dimensions": [
+    800,
+    520
+  ],
+  "description": "Architecture schematic beside actual early forward reaction; not a whole-spaceship evolution clip."
+}

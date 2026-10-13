@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="760" viewBox="0 0 1420 760" role="img">
+<title>Six blue tile faces using circle and plus connectors</title>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}</style>
+<rect width="100%" height="100%" fill="#f6f5ef"/>
+<text x="32" y="43" font-size="27" font-weight="bold" fill="#233c43">Circle and plus geometry: the spacing forces the corner</text>
+<text x="32" y="79" font-size="16" font-weight="normal" fill="#233c43">A Life cell is divided into an invisible 3x3 grid. Its four keys sit in the CENTRES of the four corner squares.</text>
+<text x="32" y="108" font-size="15" font-weight="normal" fill="#233c43">Life corner centres are separated by 2L/3; blue input centres are separated by L/3.</text>
+<text x="40" y="150" font-size="19" font-weight="bold" fill="#286959">CORNER: full match</text>
+<rect x="40" y="172" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="101.33333333333334" y1="172" x2="101.33333333333334" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="40" y1="233.33333333333334" x2="224" y2="233.33333333333334" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="162.66666666666669" y1="172" x2="162.66666666666669" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="40" y1="294.6666666666667" x2="224" y2="294.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="70.66666666666666" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="193.33333333333334" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="70.66666666666666" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="193.33333333333334" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="224" y="172" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="285.3333333333333" y1="172" x2="285.3333333333333" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="224" y1="233.33333333333334" x2="408" y2="233.33333333333334" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="346.6666666666667" y1="172" x2="346.6666666666667" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="224" y1="294.6666666666667" x2="408" y2="294.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="254.66666666666666" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="377.33333333333337" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="254.66666666666666" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="377.33333333333337" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="40" y="356" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="101.33333333333334" y1="356" x2="101.33333333333334" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="40" y1="417.3333333333333" x2="224" y2="417.3333333333333" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="162.66666666666669" y1="356" x2="162.66666666666669" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="40" y1="478.6666666666667" x2="224" y2="478.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="70.66666666666666" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="193.33333333333334" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="70.66666666666666" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="193.33333333333334" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="224" y="356" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="285.3333333333333" y1="356" x2="285.3333333333333" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="224" y1="417.3333333333333" x2="408" y2="417.3333333333333" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="346.6666666666667" y1="356" x2="346.6666666666667" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="224" y1="478.6666666666667" x2="408" y2="478.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="254.66666666666666" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="377.33333333333337" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="254.66666666666666" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="377.33333333333337" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<line x1="132.0" y1="264.0" x2="132.0" y2="448.0" stroke="#286959" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="316.0" y1="264.0" x2="316.0" y2="448.0" stroke="#286959" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="132.0" y1="264.0" x2="316.0" y2="264.0" stroke="#286959" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="132.0" y1="448.0" x2="316.0" y2="448.0" stroke="#286959" stroke-width="3" stroke-dasharray="3 4"/>
+<circle cx="193.33333333333331" cy="325.3333333333333" r="8.096" fill="none" stroke="#286959" stroke-width="2"/>
+<circle cx="254.66666666666666" cy="325.3333333333333" r="8.096" fill="none" stroke="#286959" stroke-width="2"/>
+<circle cx="193.33333333333331" cy="386.66666666666663" r="8.096" fill="none" stroke="#286959" stroke-width="2"/>
+<circle cx="254.66666666666666" cy="386.66666666666663" r="8.096" fill="none" stroke="#286959" stroke-width="2"/>
+<text x="40" y="568" font-size="11" font-weight="normal" fill="#233c43">Blue circles = lower keys; coloured circles = blue recesses.</text>
+<text x="510" y="150" font-size="19" font-weight="bold" fill="#9e5549">EDGE: no match</text>
+<rect x="510" y="172" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="571.3333333333334" y1="172" x2="571.3333333333334" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="510" y1="233.33333333333334" x2="694" y2="233.33333333333334" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="632.6666666666666" y1="172" x2="632.6666666666666" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="510" y1="294.6666666666667" x2="694" y2="294.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="540.6666666666666" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="663.3333333333334" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="540.6666666666666" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="663.3333333333334" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="694" y="172" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="755.3333333333334" y1="172" x2="755.3333333333334" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="694" y1="233.33333333333334" x2="878" y2="233.33333333333334" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="816.6666666666666" y1="172" x2="816.6666666666666" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="694" y1="294.6666666666667" x2="878" y2="294.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="724.6666666666666" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="847.3333333333334" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="724.6666666666666" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="847.3333333333334" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="510" y="356" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="571.3333333333334" y1="356" x2="571.3333333333334" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="510" y1="417.3333333333333" x2="694" y2="417.3333333333333" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="632.6666666666666" y1="356" x2="632.6666666666666" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="510" y1="478.6666666666667" x2="694" y2="478.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="540.6666666666666" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="663.3333333333334" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="540.6666666666666" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="663.3333333333334" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="694" y="356" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="755.3333333333334" y1="356" x2="755.3333333333334" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="694" y1="417.3333333333333" x2="878" y2="417.3333333333333" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="816.6666666666666" y1="356" x2="816.6666666666666" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="694" y1="478.6666666666667" x2="878" y2="478.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="724.6666666666666" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="847.3333333333334" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="724.6666666666666" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="847.3333333333334" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<line x1="602.0" y1="172" x2="602.0" y2="356" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="786.0" y1="172" x2="786.0" y2="356" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="602.0" y1="172" x2="786.0" y2="172" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="602.0" y1="356" x2="786.0" y2="356" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<circle cx="663.3333333333334" cy="233.33333333333331" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<circle cx="724.6666666666666" cy="233.33333333333331" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<circle cx="663.3333333333334" cy="294.66666666666663" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<circle cx="724.6666666666666" cy="294.66666666666663" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<text x="510" y="568" font-size="11" font-weight="normal" fill="#233c43">Blue circles = lower keys; coloured circles = blue recesses.</text>
+<text x="980" y="150" font-size="19" font-weight="bold" fill="#9e5549">CELL CENTRE: no match</text>
+<rect x="980" y="172" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="1041.3333333333333" y1="172" x2="1041.3333333333333" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="980" y1="233.33333333333334" x2="1164" y2="233.33333333333334" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1102.6666666666667" y1="172" x2="1102.6666666666667" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="980" y1="294.6666666666667" x2="1164" y2="294.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1010.6666666666666" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1133.3333333333333" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1010.6666666666666" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1133.3333333333333" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="1164" y="172" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="1225.3333333333333" y1="172" x2="1225.3333333333333" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1164" y1="233.33333333333334" x2="1348" y2="233.33333333333334" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1286.6666666666667" y1="172" x2="1286.6666666666667" y2="356" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1164" y1="294.6666666666667" x2="1348" y2="294.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1194.6666666666667" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1317.3333333333333" cy="202.66666666666666" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1194.6666666666667" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1317.3333333333333" cy="325.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="980" y="356" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="1041.3333333333333" y1="356" x2="1041.3333333333333" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="980" y1="417.3333333333333" x2="1164" y2="417.3333333333333" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1102.6666666666667" y1="356" x2="1102.6666666666667" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="980" y1="478.6666666666667" x2="1164" y2="478.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1010.6666666666666" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1133.3333333333333" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1010.6666666666666" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1133.3333333333333" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<rect x="1164" y="356" width="184" height="184" fill="#fffefa" stroke="#233c43" stroke-width="1.5"/>
+<line x1="1225.3333333333333" y1="356" x2="1225.3333333333333" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1164" y1="417.3333333333333" x2="1348" y2="417.3333333333333" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1286.6666666666667" y1="356" x2="1286.6666666666667" y2="540" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1164" y1="478.6666666666667" x2="1348" y2="478.6666666666667" stroke="#d6dfd7" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1194.6666666666667" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1317.3333333333333" cy="386.6666666666667" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1194.6666666666667" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<circle cx="1317.3333333333333" cy="509.33333333333337" r="8.096" fill="none" stroke="#5188b4" stroke-width="2.8335999999999997"/>
+<line x1="980" y1="172" x2="980" y2="356" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="1164" y1="172" x2="1164" y2="356" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="980" y1="172" x2="1164" y2="172" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<line x1="980" y1="356" x2="1164" y2="356" stroke="#9e5549" stroke-width="3" stroke-dasharray="3 4"/>
+<circle cx="1041.3333333333333" cy="233.33333333333331" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<circle cx="1102.6666666666667" cy="233.33333333333331" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<circle cx="1041.3333333333333" cy="294.66666666666663" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<circle cx="1102.6666666666667" cy="294.66666666666663" r="8.096" fill="none" stroke="#9e5549" stroke-width="2"/>
+<text x="980" y="568" font-size="11" font-weight="normal" fill="#233c43">Blue circles = lower keys; coloured circles = blue recesses.</text>
+<text x="32" y="614" font-size="17" font-weight="bold" fill="#233c43">Blue width L. Input region: 2L/3 with L/6 margins. Input centres: L/3 and 2L/3.</text>
+<text x="32" y="645" font-size="16" font-weight="normal" fill="#233c43">Centred on the junction, inputs coincide with lower keys at 5L/6 and 7L/6.</text>
+<text x="32" y="688" font-size="15" font-weight="normal" fill="#233c43">Verified with nominal ring/plus profiles: 230,400 integer-offset/value/quarter-turn checks; only the corner offset fits.</text>
+<text x="32" y="722" font-size="15" font-weight="normal" fill="#233c43">The spacing carries the alignment constraint. Both value symbols remain C4-symmetric; the six-type reduction is preserved.</text>
+</svg>

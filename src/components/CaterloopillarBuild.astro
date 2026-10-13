@@ -1,0 +1,235 @@
+---
+import { href } from '../lib/content';
+const nodes = [
+  { at: 1, x: 26, y: 8, w: 132, lines: ['Moving reflector'] },
+  { at: 2, x: 26, y: 77, w: 132, lines: ['Turn, return,', 'and split signals'] },
+  { at: 3, x: 26, y: 146, w: 132, lines: ['Assembled', 'reading head'] },
+  { at: 5, x: 8, y: 227, w: 76, lines: ['Read tape', 'symbols'] },
+  { at: 7, x: 8, y: 306, w: 76, lines: ['Restore', 'the tape'] },
+  { at: 9, x: 100, y: 227, w: 76, lines: ['Decode', 'offsets'] },
+  { at: 10, x: 100, y: 306, w: 76, lines: ['Slow-salvo', 'instructions'] },
+  { at: 11, x: 100, y: 385, w: 76, lines: ['Seeds and', 'tight inserters'] },
+  { at: 13, x: 26, y: 465, w: 132, lines: ['Complete new reader', 'constructs its counterpart'] },
+  { at: 15, x: 8, y: 385, w: 76, lines: ['Erase used', 'heads'] },
+];
+const paths = [
+  { at: 2, d: 'M92 54V77' },
+  { at: 3, d: 'M92 123V146' },
+  { at: 5, d: 'M76 192L46 227' },
+  { at: 7, d: 'M46 273V306' },
+  { at: 9, d: 'M108 192L138 227' },
+  { at: 10, d: 'M138 273V306' },
+  { at: 11, d: 'M138 352V385' },
+  { at: 13, d: 'M138 431V450L120 465' },
+  { at: 14, d: 'M26 489H2V169H26' },
+  { at: 15, d: 'M100 408H84' },
+];
+---
+
+<div class="cater-build" data-cater-build data-stage="1">
+  <aside class="build-map" aria-label="How the Caterloopillar components come together">
+    <div class="map-sticky">
+      <p class="map-heading">How the parts connect</p>
+      <p class="map-position" aria-live="off">Component <span data-part-number>1</span> of 17</p>
+      <div class="map-pictures">
+        <svg
+          class="connection-map"
+          viewBox="0 0 184 520"
+          role="img"
+          aria-label="Moving reflectors and splitters assemble into a reader. The reader restores tape symbols and decodes their offsets into slow-salvo instructions. Inserters construct the new reader, counterpart construction closes the loop, and erasers remove used heads."
+        >
+          <defs
+            ><marker
+              id="cater-build-arrow"
+              markerWidth="6"
+              markerHeight="6"
+              refX="5"
+              refY="3"
+              orient="auto"><path d="M0 0L6 3L0 6" fill="#278172"></path></marker
+            ></defs
+          >
+          {
+            paths.map((p) => (
+              <path
+                data-reveal={p.at}
+                d={p.d}
+                fill="none"
+                stroke="#278172"
+                stroke-width="1.8"
+                marker-end="url(#cater-build-arrow)"
+              />
+            ))
+          }
+          {
+            nodes.map((n) => (
+              <g data-reveal={n.at}>
+                <rect
+                  x={n.x}
+                  y={n.y}
+                  width={n.w}
+                  height="46"
+                  rx="5"
+                  fill="#e8eee7"
+                  stroke="#b5c7bd"
+                />
+                <text
+                  x={n.x + n.w / 2}
+                  y={n.y + (n.lines.length === 1 ? 28 : 19)}
+                  text-anchor="middle"
+                >
+                  {n.lines.map((line, i) => (
+                    <tspan x={n.x + n.w / 2} dy={i ? 16 : 0}>
+                      {line}
+                    </tspan>
+                  ))}
+                </text>
+              </g>
+            ))
+          }
+        </svg>
+        <figure class="whole-map">
+          <a
+            href={href('images/caterloopillar-architecture.png')}
+            aria-label="Enlarge the complete Caterloopillar architecture"
+          >
+            <img
+              src={href('images/caterloopillar-architecture.png')}
+              alt="The complete Caterloopillar arrangement: opposite readers, construction tapes, and crossing glider paths."
+              width="170"
+              height="723"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Complete architecture · dvgrn / LifeWiki · GFDL 1.2</figcaption>
+        </figure>
+      </div>
+    </div>
+  </aside>
+  <div class="build-explanation"><slot /></div>
+</div>
+<style>
+  .cater-build {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 26px;
+    position: relative;
+    margin: 2rem 0 3rem;
+  }
+  .build-map {
+    min-width: 0;
+  }
+  .map-sticky {
+    position: sticky;
+    top: 104px;
+    transform: translateZ(0);
+  }
+  .map-heading {
+    font: 600 0.72rem/1.5 var(--sans);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 0.3rem;
+    color: var(--accent);
+  }
+  .map-position {
+    font: 0.7rem/1.5 var(--sans);
+    color: var(--muted);
+    margin: 0 0 1rem;
+  }
+  .connection-map {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 200px);
+  }
+  .connection-map text {
+    font: 12px var(--sans);
+    fill: var(--ink);
+  }
+  .connection-map [data-reveal] {
+    transition: opacity 200ms;
+  }
+  [data-enhanced] .connection-map [data-reveal][data-visible='false'] {
+    opacity: 0;
+  }
+  .whole-map {
+    display: none;
+    margin: 0;
+  }
+  .whole-map img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 240px);
+    margin: 0 auto;
+    background: white;
+  }
+  .whole-map figcaption {
+    font: 0.64rem/1.5 var(--sans);
+    margin-top: 0.7rem;
+    color: var(--muted);
+  }
+  [data-stage='17'] .whole-map {
+    display: block;
+  }
+  [data-stage='17'] .connection-map {
+    display: none;
+  }
+  .build-explanation {
+    min-width: 0;
+  }
+  @media (min-width: 641px) {
+    [data-enhanced] :global(.complete-architecture) {
+      display: none;
+    }
+  }
+  @media (max-width: 900px) {
+    .cater-build {
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 20px;
+    }
+  }
+  @media (max-width: 640px) {
+    .cater-build {
+      display: block;
+    }
+    .build-map {
+      display: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .connection-map [data-reveal] {
+      transition: none;
+    }
+  }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-cater-build]').forEach((root) => {
+    const steps = Array.from(root.querySelectorAll<HTMLElement>('[data-mechanism-step]'));
+    const number = root.querySelector<HTMLElement>('[data-part-number]')!;
+    const parts = Array.from(root.querySelectorAll<SVGElement>('[data-reveal]'));
+    root.dataset.enhanced = 'true';
+    let queued = false;
+    function update() {
+      queued = false;
+      let stage = 1;
+      for (const step of steps)
+        if (step.getBoundingClientRect().top <= window.innerHeight * 0.32)
+          stage = Number(step.dataset.mechanismStep);
+      root.dataset.stage = String(stage);
+      number.textContent = String(stage);
+      parts.forEach((part) => {
+        part.dataset.visible = String(Number(part.dataset.reveal) <= stage);
+      });
+    }
+    function schedule() {
+      if (!queued) {
+        queued = true;
+        requestAnimationFrame(update);
+      }
+    }
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  });
+</script>

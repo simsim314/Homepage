@@ -29,7 +29,7 @@
   },
   {
     "file": "public/images/mandelbrot.png",
-    "source": "Computed on this site with z(n+1)=z(n)^2+c, 800×440 pixels and 110 maximum iterations; a subject illustration, not a project screenshot.",
+    "source": "Computed on this site with z(n+1)=z(n)^2+c, 800\u00d7440 pixels and 110 maximum iterations; a subject illustration, not a project screenshot.",
     "approval": "approved by author"
   },
   {
@@ -59,13 +59,13 @@
     "source": "https://github.com/simsim314/LifeAPI#readme",
     "renderer": "scripts/render-code-preview.py",
     "description": "Static syntax-colored rendering of documented API operations; no editor controls.",
-    "approval": "pending revised image review"
+    "approval": "approved by author on 2026-10-12"
   },
   {
     "file": "public/images/catforce-combinations.gif",
     "renderer": "scripts/render-catforce-preview.py",
     "description": "Illustrative enumeration of 24 placements of blocks and a beehive; not an actual completed search.",
-    "approval": "pending revised image review"
+    "approval": "approved by author on 2026-10-12"
   },
   {
     "file": "public/images/neural-ca-evolution.gif",
@@ -74,7 +74,8 @@
     "data": "docs/neural-ca-example.json",
     "renderer": "scripts/render-neural-animation.py",
     "description": "Actual model outputs on synthetic hand-drawn input at selected steps; not a benchmark.",
-    "approval": "pending revised image review"
+    "approval": "approved by author on 2026-10-12",
+    "timing": "Input 3000 ms; intermediate samples 220 ms; final state 1000 ms, as requested by author."
   },
   {
     "component": "src/components/ArticleVisual.astro#tqrng-webcam",
@@ -84,12 +85,1111 @@
   {
     "component": "src/components/ArticleVisual.astro#high-dimensional-sphere-packing",
     "description": "Three-dimensional sphere arrangement as subject illustration; not the high-dimensional candidate construction.",
-    "approval": "pending revised image review"
+    "approval": "approved by author on 2026-10-12"
   },
   {
     "component": "src/components/LifeDemo.astro",
     "source": "https://conwaylife.com/wiki/Simkin_glider_gun",
     "description": "Exact RLE evolved in live B3/S23 canvas at adjustable speed, with Play/Pause.",
-    "approval": "slower playback and controls requested by author"
+    "approval": "original homepage design, article reuse and playback controls approved by author"
+  },
+  {
+    "component": "src/components/TileKitViewer.astro",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=73650#p73650",
+    "description": "Interactive rendering of the basic construction pieces used to make cubes and then actual tiles; not the 26 Life tiles. Source CAD exported at uniform 3\u00d7 scale.",
+    "approval": "local review; new cover approval requested before Thingiverse publication"
+  },
+  {
+    "file": "public/images/life-tiles/*; src/assets/images/life-tiles-blue.png; public/models/life-tiles/*",
+    "source": "Local Python models and previously reviewed schematics in research/3d-tiles; 2019 design: https://conwaylife.com/forums/viewtopic.php?p=73033#p73033",
+    "retrieved": "2026-10-13",
+    "approval": "Author said tiles are fine and requested flat coloured sets in the homepage article. New renders use those existing models; no image generation.",
+    "notes": "32 prototype types, including six boundary types. Modern connector profiles and zero-clearance fabrication limitations are labelled in the article."
+  },
+  {
+    "file": "src/assets/images/life-tiles-assembly.png",
+    "source": "Python rendering of the existing bounded-solids 286-piece glider assembly, with 20 mm separation per layer.",
+    "retrieved": "2026-10-13",
+    "approval": "Author requested the complete exploded glider assembly shown in their screenshot as the main illustration.",
+    "notes": "Uses the actual model placements; no changes to tile geometry. The same cover belongs only to the Life in 3D Tiles article and its homepage preview."
+  },
+  {
+    "file": "public/models/life-tiles/*; public/images/life-tiles/*; src/assets/images/life-tiles-assembly.png",
+    "source": "Regenerated from research/3d-tiles/bounded_tiles_3d.py after the author proposed a half-cell blue overhang.",
+    "retrieved": "2026-10-13",
+    "approval": "Author-directed boundary design: full-size blue edge/corner source variants; original grid restored after computation.",
+    "notes": "Dedicated edge tiles have two sockets and corner tiles one; all 16 output keys verified on exported meshes. Boundary port checks and assembly validation are included."
+  },
+  {
+    "file": "src/assets/images/24-cell-quadratic-growth-lifewiki.png",
+    "article": "24-cell-quadratic-growth",
+    "source": "https://conwaylife.com/w/images/8/88/24cellquadraticgrowth.png",
+    "filePage": "https://conwaylife.com/wiki/File:24cellquadraticgrowth.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/25-cell-quadratic-growth-lifewiki.png",
+    "article": "25-cell-quadratic-growth",
+    "source": "https://conwaylife.com/w/images/1/15/25cellquadraticgrowth.png",
+    "filePage": "https://conwaylife.com/wiki/File:25cellquadraticgrowth.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/b60-lifewiki.png",
+    "article": "b60",
+    "source": "https://conwaylife.com/w/images/d/dc/B60.png",
+    "filePage": "https://conwaylife.com/wiki/File:B60.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/bne14t30-lifewiki.png",
+    "article": "bne14t30",
+    "source": "https://conwaylife.com/w/images/3/3f/Bne14t30.png",
+    "filePage": "https://conwaylife.com/wiki/File:Bne14t30.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/brx46b-lifewiki.png",
+    "article": "brx46b",
+    "source": "https://conwaylife.com/w/images/8/81/Brx46b.png",
+    "filePage": "https://conwaylife.com/wiki/File:Brx46b.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/ocellus-lifewiki.png",
+    "article": "ocellus",
+    "source": "https://conwaylife.com/w/images/7/79/Ocellus.png",
+    "filePage": "https://conwaylife.com/wiki/File:Ocellus.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/simkins-p60-lifewiki.png",
+    "article": "simkins-p60",
+    "source": "https://conwaylife.com/w/images/c/cf/Simkinsp60.png",
+    "filePage": "https://conwaylife.com/wiki/File:Simkinsp60.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/switch-engine-ping-pong-lifewiki.png",
+    "article": "switch-engine-ping-pong",
+    "source": "https://conwaylife.com/w/images/9/98/Switchenginepingpong.png",
+    "filePage": "https://conwaylife.com/wiki/File:Switchenginepingpong.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source images selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/still-life-tiles-cover.jpg",
+    "article": "still-life-tiles",
+    "source": "https://conwaylife.com/forums/download/file.php?id=949",
+    "post": "https://conwaylife.com/forums/viewtopic.php?p=31711#p31711",
+    "credit": "Michael Simkin\u2019s original photograph, June 3, 2016",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; original author photos selected at author request, publication approval pending."
+  },
+  {
+    "file": "public/images/still-life-tiles-printer-front.jpg",
+    "article": "still-life-tiles",
+    "source": "https://conwaylife.com/forums/download/file.php?id=951",
+    "post": "https://conwaylife.com/forums/viewtopic.php?p=31711#p31711",
+    "credit": "Michael Simkin\u2019s original photograph, June 3, 2016",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; original author photos selected at author request, publication approval pending."
+  },
+  {
+    "file": "public/images/still-life-tiles-printer-side.jpg",
+    "article": "still-life-tiles",
+    "source": "https://conwaylife.com/forums/download/file.php?id=950",
+    "post": "https://conwaylife.com/forums/viewtopic.php?p=31711#p31711",
+    "credit": "Michael Simkin\u2019s original photograph, June 3, 2016",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; original author photos selected at author request, publication approval pending."
+  },
+  {
+    "file": "src/assets/images/remini-constructor.png",
+    "article": "remini",
+    "source": "https://github.com/simsim314/GreyGooTheory/blob/master/P30Gemini/Remini.mc",
+    "renderer": "scripts/render-remini-detail.py",
+    "validation": "research/remini/render-check.json",
+    "description": "Exact static crop of the original generation-zero macrocell, not a complete overview or a simulation.",
+    "retrieved": "2026-10-13",
+    "approval": "Local review only; new source-derived visual selected at author request, publication approval pending."
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-seed.png",
+    "article": "switch-engine-ping-pong",
+    "source": "https://conwaylife.com/wiki/File:Switchenginepingpong.png",
+    "license": "GFDL 1.2",
+    "licenseFile": "public/licenses/GFDL-1.2.txt",
+    "description": "Original 23-cell seed; identical to the already documented source asset for this same article."
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-growth.gif",
+    "article": "switch-engine-ping-pong",
+    "renderer": "scripts/render-switch-engine-ping-pong.py",
+    "source": "research/switch-engine-ping-pong/seed.rle",
+    "source_distribution": "Golly 3.3 Patterns/Life/Breeders/switch-engine-ping-pong.rle",
+    "source_url": "https://conwaylife.com/wiki/Switch_engine_ping-pong",
+    "engine": "bgolly 3.3 / HashLife / B3/S23",
+    "validation": "research/switch-engine-ping-pong/animation-check.json",
+    "description": "Actual full-plane evolution; fixed crop of the growing fan at generations 33,554,432\u201367,108,864. Pixel aggregation at 32,768 cells per side, no geometry changes. Final state is the pause/reduced-motion fallback.",
+    "approval": "Local review only; publication approval pending.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/remini-activation.gif",
+    "source": "https://github.com/simsim314/GreyGooTheory/blob/master/P30Gemini/Remini.mc",
+    "sourcePattern": "research/remini/Remini.mc",
+    "rule": "B3/S23",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/remini-activation-still.png",
+    "source": "https://github.com/simsim314/GreyGooTheory/blob/master/P30Gemini/Remini.mc",
+    "sourcePattern": "research/remini/Remini.mc",
+    "rule": "B3/S23",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/serizawa-geminoid-circuit.gif",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=11354#p11354",
+    "sourcePattern": "research/ca-visuals/SerizawaGeminoid.rle",
+    "rule": "Serizawa",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/serizawa-geminoid-circuit-still.png",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=11354#p11354",
+    "sourcePattern": "research/ca-visuals/SerizawaGeminoid.rle",
+    "rule": "Serizawa",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/geminoid-particles-construction.gif",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=11513#p11513",
+    "sourcePattern": "research/ca-visuals/GeminoidParticles.rle",
+    "rule": "GeminoidParticles",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/geminoid-particles-construction-still.png",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=11513#p11513",
+    "sourcePattern": "research/ca-visuals/GeminoidParticles.rle",
+    "rule": "GeminoidParticles",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/serizawa-quadratic-evolution.gif",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=12152#p12152",
+    "sourcePattern": "research/ca-visuals/serizawa-quadratic.rle",
+    "rule": "Serizawa",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/serizawa-quadratic-evolution-still.png",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=12152#p12152",
+    "sourcePattern": "research/ca-visuals/serizawa-quadratic.rle",
+    "rule": "Serizawa",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/lfod-c3-spaceship.gif",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=13652#p13652",
+    "sourcePattern": "research/ca-visuals/lfod-spaceship.rle",
+    "rule": "B2/S0",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/lfod-c3-spaceship-still.png",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=13652#p13652",
+    "sourcePattern": "research/ca-visuals/lfod-spaceship.rle",
+    "rule": "B2/S0",
+    "renderer": "scripts/render-ca-gallery.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-crossings.gif",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14050#p14050",
+    "sourcePattern": "research/switch-engine-ping-pong/seed.rle",
+    "rule": "B3/S23",
+    "renderer": "scripts/render-ping-pong-crossings.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-crossings-still.png",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14050#p14050",
+    "sourcePattern": "research/switch-engine-ping-pong/seed.rle",
+    "rule": "B3/S23",
+    "renderer": "scripts/render-ping-pong-crossings.py",
+    "credit": "Golly 3.3 evolution of Michael Simkin\u2019s original source pattern; cropped and sampled for this site.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "research/ca-visuals/Serizawa.rule",
+    "source": "https://github.com/GollyGang/ruletablerepository/blob/gh-pages/downloads/Serizawa1.1.zip",
+    "credit": "Original Golly rule table; source comments retained.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-collision.gif",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14050#p14050",
+    "sourcePattern": "research/switch-engine-ping-pong/seed.rle",
+    "renderer": "scripts/render-ping-pong-collision.py",
+    "rule": "B3/S23",
+    "credit": "Exact Golly 3.3 evolution of the original Michael Simkin source pattern.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-collision-still.png",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14050#p14050",
+    "sourcePattern": "research/switch-engine-ping-pong/seed.rle",
+    "renderer": "scripts/render-ping-pong-collision.py",
+    "rule": "B3/S23",
+    "credit": "Exact Golly 3.3 evolution of the original Michael Simkin source pattern.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/caterloopillar-forward-reaction.gif",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14289#p14289",
+    "sourcePattern": "research/caterloopillar/forward-glider-breakthrough.rle",
+    "renderer": "scripts/render-ca-gallery.py",
+    "rule": "B3/S23",
+    "credit": "Exact Golly 3.3 evolution of the original Michael Simkin source pattern.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/caterloopillar-forward-reaction-still.png",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14289#p14289",
+    "sourcePattern": "research/caterloopillar/forward-glider-breakthrough.rle",
+    "renderer": "scripts/render-ca-gallery.py",
+    "rule": "B3/S23",
+    "credit": "Exact Golly 3.3 evolution of the original Michael Simkin source pattern.",
+    "retrieved": "2026-10-13",
+    "approval": "local preview; website publication has not been requested"
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-cycle.gif",
+    "source": "Original 23-cell seed evolved using Golly HashLife; research/switch-engine-ping-pong/seed.rle",
+    "renderer": "scripts/render-ping-pong-cycle.py",
+    "validation": "research/switch-engine-ping-pong/cycle-animation-check.json",
+    "note": "Complete actual exchange, generations 4685824\u20137012480; both streams visible in a rotated view, exact detected signal locators.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/switch-engine-ping-pong-cycle-still.png",
+    "source": "Original 23-cell seed evolved using Golly HashLife; research/switch-engine-ping-pong/seed.rle",
+    "renderer": "scripts/render-ping-pong-cycle.py",
+    "validation": "research/switch-engine-ping-pong/cycle-animation-check.json",
+    "note": "Complete actual exchange, generations 4685824\u20137012480; both streams visible in a rotated view, exact detected signal locators.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "src/assets/images/convex-hull-batched-bridges.png",
+    "source": "/home/simsim314/Downloads/read_only_convex_hull_batched_bridges_v7.pdf",
+    "sourceSha256": "30edc456fc0e719f294f58b0e1c60d73cd45228c6f966e3b8eefe98470bc930c",
+    "credit": "Michael Simkin, manuscript v7, Figure 1, page 5",
+    "renderer": "/usr/bin/pdftoppm -f 5 -l 5 -scale-to 1400 -png -singlefile; crop (150,118,938,583)",
+    "retrieved": "2026-10-13",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/serizawa-geminoid-building.gif",
+    "source": "research/ca-visuals/SerizawaGeminoid.rle",
+    "renderer": "scripts/render-geminoid-heads.py",
+    "validation": "research/ca-visuals/serizawa-geminoid-building-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "First-end construction detail.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/serizawa-geminoid-building-still.png",
+    "source": "research/ca-visuals/SerizawaGeminoid.rle",
+    "renderer": "scripts/render-geminoid-heads.py",
+    "validation": "research/ca-visuals/serizawa-geminoid-building-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "First-end construction detail.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/serizawa-geminoid-whole.gif",
+    "source": "research/ca-visuals/SerizawaGeminoid.rle",
+    "renderer": "scripts/render-geminoid-whole.py",
+    "validation": "research/ca-visuals/serizawa-geminoid-whole-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "Synchronized upright upper/lower end views follow successive heads. Whole tape overview explicitly compresses height and preserves exact occupancy. Continues until both ends finish their first replacement head circuitry; actual Serizawa targets marked and Particles movable blocks enlarged blue.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/serizawa-geminoid-whole-still.png",
+    "source": "research/ca-visuals/SerizawaGeminoid.rle",
+    "renderer": "scripts/render-geminoid-whole.py",
+    "validation": "research/ca-visuals/serizawa-geminoid-whole-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "Synchronized upright upper/lower end views follow successive heads. Whole tape overview explicitly compresses height and preserves exact occupancy. Continues until both ends finish their first replacement head circuitry; actual Serizawa targets marked and Particles movable blocks enlarged blue.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/geminoid-particles-building.gif",
+    "source": "research/ca-visuals/GeminoidParticles.rle",
+    "renderer": "scripts/render-geminoid-heads.py",
+    "validation": "research/ca-visuals/geminoid-particles-building-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "First-end construction detail.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/geminoid-particles-building-still.png",
+    "source": "research/ca-visuals/GeminoidParticles.rle",
+    "renderer": "scripts/render-geminoid-heads.py",
+    "validation": "research/ca-visuals/geminoid-particles-building-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "First-end construction detail.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/geminoid-particles-whole.gif",
+    "source": "research/ca-visuals/GeminoidParticles.rle",
+    "renderer": "scripts/render-geminoid-whole.py",
+    "validation": "research/ca-visuals/geminoid-particles-whole-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "Synchronized upright upper/lower end views follow successive heads. Whole tape overview explicitly compresses height and preserves exact occupancy. Continues until both ends finish their first replacement head circuitry; actual Serizawa targets marked and Particles movable blocks enlarged blue.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/geminoid-particles-whole-still.png",
+    "source": "research/ca-visuals/GeminoidParticles.rle",
+    "renderer": "scripts/render-geminoid-whole.py",
+    "validation": "research/ca-visuals/geminoid-particles-whole-check.json",
+    "credit": "Original Michael Simkin pattern simulated in Golly 3.3 RuleLoader under its own rule. Actual cells enlarged.",
+    "note": "Synchronized upright upper/lower end views follow successive heads. Whole tape overview explicitly compresses height and preserves exact occupancy. Continues until both ends finish their first replacement head circuitry; actual Serizawa targets marked and Particles movable blocks enlarged blue.",
+    "approval": "local review; publication not authorized"
+  },
+  {
+    "file": "public/images/life-b60.gif",
+    "article": "b60",
+    "source": "https://conwaylife.com/wiki/B60",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-b60-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-b60-still.png",
+    "article": "b60",
+    "source": "https://conwaylife.com/wiki/B60",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-b60-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-bne14t30.gif",
+    "article": "bne14t30",
+    "source": "https://conwaylife.com/wiki/BNE14T30",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-bne14t30-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-bne14t30-still.png",
+    "article": "bne14t30",
+    "source": "https://conwaylife.com/wiki/BNE14T30",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-bne14t30-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-brx46b.gif",
+    "article": "brx46b",
+    "source": "https://conwaylife.com/wiki/BRx46B",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-brx46b-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-brx46b-still.png",
+    "article": "brx46b",
+    "source": "https://conwaylife.com/wiki/BRx46B",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-brx46b-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-ocellus.gif",
+    "article": "ocellus",
+    "source": "https://conwaylife.com/wiki/Ocellus",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-ocellus-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-ocellus-still.png",
+    "article": "ocellus",
+    "source": "https://conwaylife.com/wiki/Ocellus",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-ocellus-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-simkins-p60.gif",
+    "article": "simkins-p60",
+    "source": "https://conwaylife.com/wiki/Simkin%27s_p60",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-simkins-p60-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-simkins-p60-still.png",
+    "article": "simkins-p60",
+    "source": "https://conwaylife.com/wiki/Simkin%27s_p60",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-simkins-p60-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-24-cell-quadratic-growth.gif",
+    "article": "24-cell-quadratic-growth",
+    "source": "https://conwaylife.com/patterns/24cellquadraticgrowth.rle",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-24-cell-quadratic-growth-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-24-cell-quadratic-growth-still.png",
+    "article": "24-cell-quadratic-growth",
+    "source": "https://conwaylife.com/patterns/24cellquadraticgrowth.rle",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-24-cell-quadratic-growth-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-25-cell-quadratic-growth.gif",
+    "article": "25-cell-quadratic-growth",
+    "source": "https://conwaylife.com/patterns/25cellquadraticgrowth.rle",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-25-cell-quadratic-growth-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-25-cell-quadratic-growth-still.png",
+    "article": "25-cell-quadratic-growth",
+    "source": "https://conwaylife.com/patterns/25cellquadraticgrowth.rle",
+    "renderer": "scripts/render-life-results.py",
+    "validation": "research/ca-visuals/life-25-cell-quadratic-growth-check.json",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/life-caterloopillar.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+    "renderer": "scripts/render-caterloopillar-cover.py",
+    "validation": "research/ca-visuals/life-caterloopillar-cover-check.json",
+    "retrieved": "2026-10-13",
+    "license": "Schematic GFDL 1.2; original author reaction simulation"
+  },
+  {
+    "file": "public/images/life-caterloopillar-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+    "renderer": "scripts/render-caterloopillar-cover.py",
+    "validation": "research/ca-visuals/life-caterloopillar-cover-check.json",
+    "retrieved": "2026-10-13",
+    "license": "Schematic GFDL 1.2; original author reaction simulation"
+  },
+  {
+    "file": "public/images/caterloopillar-reading-head.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "renderer": "scripts/render-caterloopillar-reader.py",
+    "validation": "research/caterloopillar/reading-head-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Four exact source parts, distance250. Full-plane native Life, independent state comparisons, genuine glider detection and readable camera zoom."
+  },
+  {
+    "file": "public/images/caterloopillar-reading-head-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "renderer": "scripts/render-caterloopillar-reader.py",
+    "validation": "research/caterloopillar/reading-head-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Four exact source parts, distance250. Full-plane native Life, independent state comparisons, genuine glider detection and readable camera zoom."
+  },
+  {
+    "file": "public/images/caterloopillar-architecture.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+    "license": "GNU Free Documentation License 1.2",
+    "credit": "dvgrn",
+    "note": "Original schematic retained separately from the native reading-head animation."
+  },
+  {
+    "file": "public/images/caterloopillar-forward-reader.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/early-reader-1.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-forward-reader-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/early-reader-1.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-backward-reader.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/early-reader-0.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-backward-reader-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/early-reader-0.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-inner-reflector.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-inner-reflector-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-tape-rebuild.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-tape-rebuild-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-ship-birth.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14512#p14512",
+    "sourcePattern": "research/caterloopillar/edge-shooters.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-ship-birth-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14512#p14512",
+    "sourcePattern": "research/caterloopillar/edge-shooters.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-tail-erasure.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14549#p14549",
+    "sourcePattern": "research/caterloopillar/reader-deletion.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-tail-erasure-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14549#p14549",
+    "sourcePattern": "research/caterloopillar/reader-deletion.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Superseded local experiment. Not used by the current article; the current article builds from small components to later constrained constructions."
+  },
+  {
+    "file": "public/images/caterloopillar-forward-inserter.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "retrieved": "2026-10-13",
+    "note": "Native full c/8 pattern evolved in Golly; enlarged view of the close ship pair and insertion transient. Cyan existing ship, amber only when exact new ship is complete."
+  },
+  {
+    "file": "public/images/caterloopillar-forward-inserter-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "retrieved": "2026-10-13",
+    "note": "Native full c/8 pattern evolved in Golly; enlarged view of the close ship pair and insertion transient. Cyan existing ship, amber only when exact new ship is complete."
+  },
+  {
+    "file": "public/images/caterloopillar-backward-inserter.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "retrieved": "2026-10-13",
+    "note": "Native full c/8 pattern evolved in Golly; enlarged view of the close ship pair and insertion transient. Cyan existing ship, amber only when exact new ship is complete."
+  },
+  {
+    "file": "public/images/caterloopillar-backward-inserter-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "retrieved": "2026-10-13",
+    "note": "Native full c/8 pattern evolved in Golly; enlarged view of the close ship pair and insertion transient. Cyan existing ship, amber only when exact new ship is complete."
+  },
+  {
+    "file": "public/images/caterloopillar-block-to-glider.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/block-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-block-to-glider-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/block-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-block-reflector.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/block-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-block-reflector-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/block-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-glider-to-block.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/block-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-glider-to-block-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+    "sourcePattern": "research/caterloopillar/block-reading-head.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-head-deletion.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-head-deletion-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-tail-deletion.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-tail-deletion-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-mechanisms.py",
+    "validation": "research/caterloopillar/mechanisms-animation-check.json",
+    "retrieved": "2026-10-13",
+    "note": "Full-plane Golly evolution. Complete c/8 insertion/deletion clips retain every simulated cell; camera only crops the view. Block reader uses one original tape symbol with the entire convoy. Actual existing/new ships get reference outlines only after exact cell matches."
+  },
+  {
+    "file": "public/images/caterloopillar-mechanisms.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+    "additionalSources": [
+      "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+      "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297"
+    ],
+    "credit": "Architecture: dvgrn, LifeWiki, GNU FDL 1.2. Native Life: Michael Simkin original reader and completed c/8 ship.",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Card-only composite: credited dvgrn architecture beside enlarged later glider reversal, MWSS beside HWSS, forward/backward tight insertion, tape rebuilding and erasure. Article instead presents parts progressively; cover hidden there."
+  },
+  {
+    "file": "public/images/caterloopillar-mechanisms-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/wiki/File:Caterloopillar.png",
+    "additionalSources": [
+      "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+      "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297"
+    ],
+    "credit": "Architecture: dvgrn, LifeWiki, GNU FDL 1.2. Native Life: Michael Simkin original reader and completed c/8 ship.",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Card-only composite: credited dvgrn architecture beside enlarged later glider reversal, MWSS beside HWSS, forward/backward tight insertion, tape rebuilding and erasure. Article instead presents parts progressively; cover hidden there."
+  },
+  {
+    "file": "public/images/caterloopillar-working-reader.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-complete-head.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Later complete forward-head source assembled from literal RLE components; stable loaf activation. Full-plane native Golly cells, independently checked.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-working-reader-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-complete-head.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Later complete forward-head source assembled from literal RLE components; stable loaf activation. Full-plane native Golly cells, independently checked.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-signal-routing.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-complete-head.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Later head timing/erasure branch with actual splitting and successive turns. Camera follows signals; arrows annotate detected glider directions. Separate from tape-data path.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-signal-routing-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-complete-head.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Later head timing/erasure branch with actual splitting and successive turns. Camera follows signals; arrows annotate detected glider directions. Separate from tape-data path.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-insertion-clearance-failure.gif",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=21826#p21826",
+    "sourcePattern": "research/caterloopillar/clearance-test-eight-recipes.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Rejected original late clearance test: selected existing LWSS is destroyed. Not represented as a working part of the completed ship.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-insertion-clearance-failure-still.png",
+    "article": "caterloopilar",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=21826#p21826",
+    "sourcePattern": "research/caterloopillar/clearance-test-eight-recipes.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Rejected original late clearance test: selected existing LWSS is destroyed. Not represented as a working part of the completed ship.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-mwss-beside-hwss.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Unchanged complete c/8 pattern evolved in Golly. New MWSS beside an intact passing HWSS, reference offset (11,-9). Exact ship and independent four-generation motion checks.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-mwss-beside-hwss-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Unchanged complete c/8 pattern evolved in Golly. New MWSS beside an intact passing HWSS, reference offset (11,-9). Exact ship and independent four-generation motion checks.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-glider-reversal.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-complete-head.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Actual later-head timing/erasure circuit: southwest input at720, northeast and southeast outputs at800. Full-plane Golly evolution with exact independent Life checks. Direction arrows are annotations.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-glider-reversal-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-complete-head.rle",
+    "renderer": "scripts/render-caterloopillar-difficult-parts.py",
+    "validation": "research/caterloopillar/difficult-parts-validation.json",
+    "note": "Actual later-head timing/erasure circuit: southwest input at720, northeast and southeast outputs at800. Full-plane Golly evolution with exact independent Life checks. Direction arrows are annotations.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-basic-reflector.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/isolated-moving-reflector.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Original source patterns evolved in full-plane Golly; independent small-pattern checks and exact convoy counts in the validation report.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-basic-reflector-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/isolated-moving-reflector.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Original source patterns evolved in full-plane Golly; independent small-pattern checks and exact convoy counts in the validation report.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-command-offsets.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/encoded-symbol--4.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Original source patterns evolved in full-plane Golly; independent small-pattern checks and exact convoy counts in the validation report.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-command-offsets-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/encoded-symbol--4.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Original source patterns evolved in full-plane Golly; independent small-pattern checks and exact convoy counts in the validation report.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-tape-to-salvo.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/forward-salvo-ahead-example.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Six literal reading-only convoys and five symbols ahead. One outgoing band recovers0,-4,+2,+2,-8 in order at native12000. Nominal1500tick command spacing; separate2000tick repeat of the same restored symbol. Band identified by actual NE glider anchor minx+miny; full-plane independent checks at0,3000,12000. Other output repeats remain visible but unhighlighted.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-tape-to-salvo-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/forward-salvo-ahead-example.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Six literal reading-only convoys and five symbols ahead. One outgoing band recovers0,-4,+2,+2,-8 in order at native12000. Nominal1500tick command spacing; separate2000tick repeat of the same restored symbol. Band identified by actual NE glider anchor minx+miny; full-plane independent checks at0,3000,12000. Other output repeats remain visible but unhighlighted.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-whole-head-construction.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Follows all16 additions to one convoy, ending at740000 ticks. Exact later states derived from cell-for-cell verified2000-tick /250-cell native translation and Life translation invariance, not a claimed direct740000 run. Intermediate reaction phases are native. Time skips between recipe sites are labelled.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-whole-head-construction-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Follows all16 additions to one convoy, ending at740000 ticks. Exact later states derived from cell-for-cell verified2000-tick /250-cell native translation and Life translation invariance, not a claimed direct740000 run. Intermediate reaction phases are native. Time skips between recipe sites are labelled.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-whole-head-erasure.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Full original c/8 pattern evolved in Golly. Counts original co-moving ship templates: forward16 to0, backward13 to0. Whole-convoy overview plus enlarged actual reaction.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-whole-head-erasure-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Full original c/8 pattern evolved in Golly. Counts original co-moving ship templates: forward16 to0, backward13 to0. Whole-convoy overview plus enlarged actual reaction.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-whole-tail-erasure.gif",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Full original c/8 pattern evolved in Golly. Counts original co-moving ship templates: forward16 to0, backward13 to0. Whole-convoy overview plus enlarged actual reaction.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "public/images/caterloopillar-whole-tail-erasure-still.png",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar",
+    "sourcePattern": "research/caterloopillar/Caterloopillar_c8.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Full original c/8 pattern evolved in Golly. Counts original co-moving ship templates: forward16 to0, backward13 to0. Whole-convoy overview plus enlarged actual reaction.",
+    "retrieved": "2026-10-13"
+  },
+  {
+    "file": "src/data/caterloopillar-head.json",
+    "article": "caterloopilar",
+    "source": "https://github.com/simsim314/Caterloopilar/blob/master/Code/WSSStapler.py",
+    "sourcePattern": "research/caterloopillar/forward-complete-head.rle",
+    "renderer": "scripts/render-caterloopillar-stages.py",
+    "validation": "research/caterloopillar/intermediate-stages-validation.json",
+    "note": "Exact244-cell original head, grouped from literal RLE generator components for a native SVG component explorer. Original Python and pickles are never executed."
   }
 ]

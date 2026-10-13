@@ -4,7 +4,11 @@ description: 'A 46-generation conduit that carries a B-heptomino directly to ano
 type: 'research'
 topics: ['game-of-life']
 status: 'demonstrated'
-showPreview: false
+showPreview: true
+image: /images/life-brx46b.gif
+imageAlt: B-heptomino evolving through the 46-generation BRx46B conduit.
+imageCredit: Original pattern evolved with Golly 3.3; local animation with a still fallback.
+imageSource: https://conwaylife.com/wiki/BRx46B
 visual: 'life'
 date: '2026-10-12'
 tags: ['B-heptomino', 'conduit', 'signal transport']

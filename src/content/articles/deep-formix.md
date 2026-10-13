@@ -1,8 +1,9 @@
 ---
 title: 'Deep-Formix'
-description: 'Uniting two GPU chess codebases with deep NNUE evaluation and 32 position-dependent models.'
+description: 'A custom deep, narrow evaluation network, NNUE-style updates, and a working GPU chess search—developed while stress-testing Gemini.'
 type: 'project'
-topics: ['chess', 'artificial-intelligence', 'programming-computing']
+topics: ['chess', 'programming-computing']
+presentationOrder: -80
 status: 'implemented'
 visual: 'neural'
 featured: true
@@ -10,7 +11,7 @@ image: /images/deep-formix-gpu.png
 imageAlt: Conceptual illustration of a chess knight on a GPU chip with parallel circuit paths.
 imageCredit: AI-generated editorial illustration of GPU chess computation; not an actual hardware photograph.
 date: '2026-10-12'
-tags: ['CUDA', 'NNUE', 'neural evaluation']
+tags: ['CUDA', 'NNUE', 'neural evaluation', 'artificial intelligence']
 github: 'https://github.com/simsim314/Deep-Formix'
 sources:
   [
@@ -21,9 +22,15 @@ sources:
   ]
 ---
 
-Deep-Formix brings two existing GPU chess approaches together and adds a new evaluation architecture. The integration is a central contribution: fast GPU move generation, a GPU engine framework, and a deep NNUE model become parts of the same engine.
+## Stress-testing Gemini
 
-The work also investigates how much chess evaluation can be carried by a learned model rather than a long search. It combines C++/CUDA engine code with Python training tools.
+Deep-Formix started as my attempt to stress-test Gemini, which I considered the best AI model at the time. It made a lot of bugs, but I still managed to get a working version of **depth-four full search on the GPU, using the full chess rules**.
+
+That was the practical goal: get the engine working despite the bugs. The project also brought two existing GPU chess approaches together and added a new evaluation architecture.
+
+The biggest achievement for me was the **custom neural evaluation network**. I wanted it to make complex decisions directly from a position, using a long tail of small, fully connected 32×32 layers: little computation at each layer, but strong expressive power through depth. The architecture also supports the NNUE approach to efficient updates.
+
+The work investigates how much chess evaluation can be carried by a learned model rather than a long search. It combines C++/CUDA engine code with Python training tools.
 
 ## The main idea
 

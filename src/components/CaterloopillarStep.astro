@@ -1,0 +1,54 @@
+---
+interface Props {
+  stage: number;
+}
+const { stage } = Astro.props;
+---
+
+<section class="mechanism-step" data-mechanism-step={stage}>
+  <p class="component-number">{String(stage).padStart(2, '0')} / Building the mechanism</p>
+  <slot />
+</section>
+<style>
+  .mechanism-step {
+    margin-bottom: 4.5rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 100px;
+  }
+  .component-number {
+    font: 600 0.68rem/1.5 var(--sans);
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+  }
+  .mechanism-step :global(h2) {
+    margin-top: 0;
+  }
+  .mechanism-step :global(img) {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 1.2rem 0;
+  }
+  .mechanism-step :global(.complete-architecture) {
+    text-align: center;
+  }
+  .mechanism-step :global(.complete-architecture img) {
+    width: auto;
+    max-width: 100%;
+    max-height: 850px;
+    background: white;
+  }
+  .mechanism-step :global(.complete-architecture figcaption) {
+    font: 0.8rem/1.6 var(--sans);
+    color: var(--muted);
+  }
+  .mechanism-step :global(.next-connection) {
+    border-left: 2px solid var(--accent);
+    padding: 0.55rem 0 0.55rem 1rem;
+    font-size: 0.9em;
+    color: var(--muted);
+  }
+</style>

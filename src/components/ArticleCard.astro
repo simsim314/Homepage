@@ -7,25 +7,34 @@ interface Props {
   article: Article;
   compact?: boolean;
   preview?: boolean;
+  previewId?: string;
 }
-const { article, compact = false, preview = false } = Astro.props;
+const {
+  article,
+  compact = false,
+  preview = false,
+  previewId = `preview-${article.id}`,
+} = Astro.props;
 const { data } = article;
 const hasPreview = preview && data.showPreview;
 ---
 
-<article class:list={['article-card', { compact, 'has-preview': hasPreview }]}>
+<article
+  class:list={['article-card', { compact, 'has-preview': hasPreview }]}
+  data-article-id={article.id}
+>
   {
     hasPreview && (
       <a
         class="card-image"
-        id={`preview-${article.id}`}
+        id={previewId}
         href={articleHref(article)}
         aria-label={`Read ${data.title}`}
       >
         {data.image ? (
           <ProjectImage src={data.image} alt={data.imageAlt || data.title} />
         ) : (
-          <ArticleVisual id={article.id} kind={data.visual} />
+          <ArticleVisual id={article.id} kind={data.visual} instance={previewId} />
         )}
       </a>
     )

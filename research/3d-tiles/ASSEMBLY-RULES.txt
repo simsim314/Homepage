@@ -1,0 +1,39 @@
+Agreed assembly convention, 2026-10-13
+
+Complete the entire declared previous layer before beginning the next layer.
+Bridging over an omitted tile is not allowed. Every input must connect to an
+existing compatible output. A missing output is neither zero nor one.
+An input marked "don't care" accepts either Boolean value, but still requires
+a supplying connector. Designed separator spaces and socket clearance are not
+missing tiles. No moving gates or other presence-detection hardware is proposed.
+
+Layer sequence for the 26-type construction:
+  starting black/white state; blue; orange horizontal; orange vertical;
+  purple; new black/white state.
+
+For the finite glider drawing, the input is a 5x5 patch with zero padding.
+The blue layer consists of its 16 interior junction pieces. The first orange
+layer has 36 strips over the central 3x3 target cells. The second orange layer
+has 27 strips over those same target cells. Their required footprints are
+declared explicitly; the exposed outer blue border is padding, not an omitted
+orange tile. A larger simulation needs additional boundary treatment.
+
+This convention enforces complete connections in the assembly model. It does
+not assert that a person cannot physically rest a rigid piece over an empty
+space. The precise 3D connection from the final rule layer to the lower,
+preserved original-centre C column remains a separate geometry question.
+
+Boundary extension, 2026-10-13:
+The bounded-solids model extends the demonstration to all 5x5 target cells.
+Four half-blue edge types and two quarter-blue corner types supply constant
+outside zeros. These types may be used only on the declared outer perimeter,
+rotated inward. Their only input sockets are the two/one on-board values.
+All on-board padding cells evolve normally. Both Life-state layers have the
+same 5x5 footprint. Infinite-plane agreement requires enough initial padding
+for the chosen number of generations; the outside-zero boundary is fixed.
+The stepped B/W solids now implement the original-centre connection.
+
+Source context:
+https://conwaylife.com/forums/viewtopic.php?p=72988#p72988
+https://conwaylife.com/forums/viewtopic.php?p=73016#p73016
+https://conwaylife.com/forums/viewtopic.php?p=73033#p73033

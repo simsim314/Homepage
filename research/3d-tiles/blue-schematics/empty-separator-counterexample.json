@@ -1,0 +1,29 @@
+{
+  "case": "all-zero blue, orange shifted across the separator",
+  "input_recess_centres": [
+    [
+      6,
+      6
+    ],
+    [
+      18,
+      6
+    ],
+    [
+      30,
+      6
+    ],
+    [
+      42,
+      6
+    ]
+  ],
+  "engaged_inputs": 3,
+  "unfilled_input": [
+    30,
+    6
+  ],
+  "overlap_with_empty_separator": 0.0,
+  "overlap_with_one_raised_X_at_missing_input": 10.577437374430096,
+  "scope": "One exact solid counterexample and one local blocker test, not exhaustive orientation proof."
+}

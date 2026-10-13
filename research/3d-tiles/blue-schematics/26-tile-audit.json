@@ -1,0 +1,340 @@
+{
+  "neighbourhoods_checked": 512,
+  "packed_interiors_checked": 20,
+  "orange_post_examples_checked": 3,
+  "families": {
+    "blue_rotational_classes": 6,
+    "orange_input_cases": 8,
+    "purple_masks": 8,
+    "black_white_logical_cases": 4
+  },
+  "purple_categories": {
+    "0–2": 46,
+    "3": 84,
+    "4": 126,
+    "5–9": 256
+  },
+  "life_outputs": {
+    "0": 372,
+    "1": 140
+  },
+  "result": "All logical checks passed.",
+  "scope": "Reconstructed routing and logical ports; not a physical-fit/CAD proof.",
+  "source": "https://conwaylife.com/forums/viewtopic.php?p=73033#p73033",
+  "packed_shapes_per_total": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 3,
+    "5": 3,
+    "6": 3,
+    "7": 2,
+    "8": 1,
+    "9": 1
+  },
+  "purple_mask_accepted_totals": {
+    "P0": [
+      0,
+      1,
+      2
+    ],
+    "P3a": [
+      3
+    ],
+    "P3b": [
+      3
+    ],
+    "P4b": [
+      4
+    ],
+    "P4c": [
+      4
+    ],
+    "P5b": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "P4a": [
+      4
+    ],
+    "P5a": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "orange_catalogue": [
+    {
+      "input": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "output": [
+        0,
+        0,
+        0,
+        "C0"
+      ]
+    },
+    {
+      "input": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "output": [
+        1,
+        0,
+        0,
+        "C0"
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "output": [
+        1,
+        0,
+        0,
+        "C1"
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "output": [
+        1,
+        1,
+        0,
+        "C1"
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "output": [
+        1,
+        0,
+        0,
+        "C0"
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "output": [
+        1,
+        1,
+        0,
+        "C0"
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "output": [
+        1,
+        1,
+        0,
+        "C1"
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "output": [
+        1,
+        1,
+        1,
+        "C1"
+      ]
+    }
+  ],
+  "separator_proposal": {
+    "spacer_squares": 9,
+    "x_markers_per_square": 4,
+    "x_markers": 36,
+    "data_outputs": 16,
+    "fractional_x_centres": [
+      [
+        0.45,
+        0.05
+      ],
+      [
+        0.55,
+        0.05
+      ],
+      [
+        0.45,
+        0.15
+      ],
+      [
+        0.55,
+        0.15
+      ],
+      [
+        0.45,
+        0.25
+      ],
+      [
+        0.55,
+        0.25
+      ],
+      [
+        0.45,
+        0.35
+      ],
+      [
+        0.55,
+        0.35
+      ],
+      [
+        0.05,
+        0.45
+      ],
+      [
+        0.15,
+        0.45
+      ],
+      [
+        0.05,
+        0.55
+      ],
+      [
+        0.15,
+        0.55
+      ],
+      [
+        0.25,
+        0.45
+      ],
+      [
+        0.35,
+        0.45
+      ],
+      [
+        0.25,
+        0.55
+      ],
+      [
+        0.35,
+        0.55
+      ],
+      [
+        0.45,
+        0.45
+      ],
+      [
+        0.55,
+        0.45
+      ],
+      [
+        0.45,
+        0.55
+      ],
+      [
+        0.55,
+        0.55
+      ],
+      [
+        0.65,
+        0.45
+      ],
+      [
+        0.75,
+        0.45
+      ],
+      [
+        0.65,
+        0.55
+      ],
+      [
+        0.75,
+        0.55
+      ],
+      [
+        0.85,
+        0.45
+      ],
+      [
+        0.95,
+        0.45
+      ],
+      [
+        0.85,
+        0.55
+      ],
+      [
+        0.95,
+        0.55
+      ],
+      [
+        0.45,
+        0.65
+      ],
+      [
+        0.55,
+        0.65
+      ],
+      [
+        0.45,
+        0.75
+      ],
+      [
+        0.55,
+        0.75
+      ],
+      [
+        0.45,
+        0.85
+      ],
+      [
+        0.55,
+        0.85
+      ],
+      [
+        0.45,
+        0.95
+      ],
+      [
+        0.55,
+        0.95
+      ]
+    ],
+    "status": "New positional spacer proposal. No physical wildcard/full-fit proof."
+  },
+  "historical_note": "The 2019 posts explicitly allow wildcard cavity gaps; they do not specify this new 20% separator or its filler geometry."
+}

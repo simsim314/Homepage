@@ -1,0 +1,710 @@
+[
+  {
+    "next": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=75",
+    "posts": [
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 13th, 2016, 12:56 pm\n\t\t\t",
+        "codes": [],
+        "id": "p29984",
+        "text": "Thinking of it, this \"spearhead\" design could reach orthogonal c/2. Some SL will need to be converted to horizontal *WSS and shot at a second \"reading head\" which converts the signal back to SL. The time delay can be adjusted, but the limit is c/2."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby NoLongerBreathedIn » April 13th, 2016, 7:36 pm\n\t\t\t",
+        "codes": [],
+        "id": "p29990",
+        "text": "Is it possible to place the initial target much nearer to the correct lane by simply lengthening the gap between the head of the ship and the first loaf? If not, why?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 14th, 2016, 1:37 am\n\t\t\t",
+        "codes": [],
+        "id": "p29996",
+        "text": "NoLongerBreathedIn wrote:Is it possible to place the initial target much nearer to the correct lane by simply lengthening the gap between the head of the ship and the first loaf? \n\nDefinitely possible. I'm avoiding this due to self sufficiency principle, so I wouldn't need to synchronize few reading heads. Now the first reading head is \"general\" and it doesn't depend on location of other reading heads. \n\nI've tried to answer your question here in length."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 15th, 2016, 3:32 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30046",
+        "text": "While debugging the \"Pick a speed\" script, I've managed to complete the c/9 caterloopillar (the script itself needs some more work): \n\nIt's c252/2268 (=c/9) and a bit smaller than the c/8. Check it out.\n\nLooking at the design of the c/9 it's almost identical to c/8. It's quite surprising that this is possible, at least for such high speeds.\n\nEDIT While on it here is c/11. It's c252/2772."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Kazyan » April 15th, 2016, 5:53 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30049",
+        "text": "Once that script is complete, does that mean we now have an explicit construction method for all rational (read: possible) orthogonal speeds below c/4?  "
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby BlinkerSpawn » April 15th, 2016, 6:04 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30051",
+        "text": "Could somebody resubmit the currently completed caterloopillars as attached downloadable files as opposed to github pages? My tablet has issues with copy/pasting such massive blocks of text."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 15th, 2016, 6:04 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30052",
+        "text": "BlinkerSpawn wrote:Could somebody resubmit the currently completed caterloopillars as attached downloadable files as opposed to github pages? My tablet has issues with copy/pasting such massive blocks of text.\nAnother tablet user.\n\nDoes it not let you select?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 15th, 2016, 6:24 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30053",
+        "text": "Kazyan wrote:Once that script is complete, does that mean we now have an explicit construction method for all rational (read: possible) orthogonal speeds below c/4?  \n\nI actually did some shortcut - due to it some pretty rare cases are not covered. \n\nTo be exact, one needs this property to have a valid speed: \n\nperiod +/- 2 * step != 0 (mod 8 )\n\nThis means that all odd periods will be covered, and some of the even. I will explore the way to avoid this restriction, but the script with this restriction is in advanced stage. \n\nThe restriction is allowing twice less slow salvo recipes, now I'm using 16 and in general case it should be 32."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 15th, 2016, 6:34 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30054",
+        "text": "BlinkerSpawn wrote:Could somebody resubmit the currently completed caterloopillars as attached downloadable files as opposed to github pages? My tablet has issues with copy/pasting such massive blocks of text.\n\nIt's over the size limit allowed for attachment. \n\nIn chrome you can just chose \"Ctrl + S\" to save the file."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 15th, 2016, 6:55 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30055",
+        "text": "I would say that finding a smaller 31c/240 should be high priority at this point."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 15th, 2016, 7:01 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30056",
+        "text": "muzik wrote:I would say that finding a smaller 31c/240 should be high priority at this point.\n\nWhy?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby BlinkerSpawn » April 15th, 2016, 8:33 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30059",
+        "text": "muzik wrote:BlinkerSpawn wrote:Could somebody resubmit the currently completed caterloopillars as attached downloadable files as opposed to github pages? My tablet has issues with copy/pasting such massive blocks of text.\nAnother tablet user.\n\nDoes it not let you select?\n\"ERROR\"\n\"Bug detected in PasteClipboard!\""
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 15th, 2016, 8:34 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30060",
+        "text": "Here is 2c/9 (1016/4572). \n\nIt was somewhat more challenging, as it's the fastest caterloopillar yet, and caterloopillar is growing in size when reaching c/4 and this is c/4.5 so pretty close to maximal speed. \n\nI think I'll try some more speeds to debug it properly , but the script is basically working - as you can see. Although convincing it to work flawlessly start to finish - is harder than I expected.\n\nEDIT 2c/11  (376/2068)\n\nEDIT2 c/12 (98/1176) (minimal population = 125427)."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 16th, 2016, 4:37 am\n\t\t\t",
+        "codes": [],
+        "id": "p30074",
+        "text": "simsim314 wrote:muzik wrote:I would say that finding a smaller 31c/240 should be high priority at this point.\n\nWhy?\n\nI don't know how to describe it, but we just do. It's better to have a smaller and less populous ship than that 620901 cell monstrosity."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 16th, 2016, 5:00 am\n\t\t\t",
+        "codes": [],
+        "id": "p30075",
+        "text": "How is it more important to improve existing monster (by another smaller monster), than covering new speeds?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Sokwe » April 16th, 2016, 5:10 am\n\t\t\t",
+        "codes": [],
+        "id": "p30077",
+        "text": "simsim314 wrote:How is it more important to improve existing monster (by another smaller monster), than covering new speeds?\nI suppose it really comes down to a difference of opinion.  I would personally like to see c/6 and c/7 rakes, if only to fill those holes on the status page.  Of course, all of this is moot once you get the generator script running satisfactorily."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 16th, 2016, 5:19 am\n\t\t\t",
+        "codes": [],
+        "id": "p30078",
+        "text": "simsim314 wrote:How is it more important to improve existing monster (by another smaller monster), than covering new speeds?\nCome to think of it, covering speeds is probably more important, but it would just be really satisfying to see the amount of cells on the smallest 31c/240 go down.\n\n\nSpeaking of, what is the most exotic speed you can make?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 16th, 2016, 5:40 am\n\t\t\t",
+        "codes": [],
+        "id": "p30079",
+        "text": "muzik wrote:Speaking of, what is the most exotic speed you can make?\n\nThere is no limitation on exoticness, I'll try to make some division of high prime numbers. \n\nThe problem with exotic speeds, is my current \"lazy\" implementation - which prefers to make 1000 skip than to use recipe of length 10. This makes the exotic speeds pretty inefficient - but still workable. Some more job needs to be done to improve those cases. I need to limit the amount of allowed skips, and somehow chose between two strategies - moving the block or just waiting. \n\nSokwe wrote: I would personally like to see c/6 and c/7 rakes, if only to fill those holes on the status page.\n\nI actually was thinking of this point. c/7 is ready (172/1204 with minpop = 201948). \n\nBut c/6 belongs to currently unsupported speeds due to the limitation of  (period +/- 2 * step) != 0 (mod 8 ) and for c/6 is 6 + 2 * 1 = 8.\n\nNOTE Note that all the limitation and problems pointed out, are just the state of the current implementation and the script which is not matured yet. It's not limitation of the design in any way, and should be possible to solve pretty easily with extra work.\n\nEDIT To muzik request c11/67 (308/1876, population = 359218)."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby HartmutHolzwart » April 16th, 2016, 6:16 am\n\t\t\t",
+        "codes": [],
+        "id": "p30080",
+        "text": "Just a minor question:\n\nWhat is the approximate minimum period reachable with this technique? Are there possible short cuts for specific speeds (I know that your deaign goal was to have a general solution, just interested to get your view)?\n\nAgain: Really a breakthrough! Thanks!\n\nHartmut"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 16th, 2016, 7:04 am\n\t\t\t",
+        "codes": [],
+        "id": "p30082",
+        "text": "HartmutHolzwart wrote:What is the approximate minimum period reachable with this technique?\n\nFor my implementation the minimal step is 96 and minimal period 892. \n\nHartmutHolzwart wrote:Are there possible short cuts for specific speeds\n\nMy design was minimalistic in one sense only - it's simple to implement for many different speeds, with minimal tweaking. \n\nThere are many alternatives which could improve specific speeds. In particular one can send gliders to destroy the salvos, thus the only limitation on the period would be the period of the reading head. \n\nA while back, when I was working without self destruct and no generality, periods in 300-400 range ticks were possible (don't trust the numbers, I then didn't knew the complexities of period calculations).\n\nOn  my opinion this doesn't worth it - twice lower period is still high and it comes with much more headache.\n\nEDIT Just added c/13 it's the smallest caterloopillar yet (minimal = 117090). \n\nI think I'll prepare the script for release - it has issues, but works most of the time well."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 16th, 2016, 7:40 am\n\t\t\t",
+        "codes": [],
+        "id": "p30083",
+        "text": "What's interesting, caterloopillar is in the smaller end on the size spectrum. The smallest caterloopillar (c/13 with 117K and c/12 with 125K) is superseded only by the demonoid - which is relatively speaking just tiny (more than 4 times smaller than any other constructible spaceship). The smallest cateloopillars are smaller than Parallel HBK and waterbear. \n\nThis is kinda surprising considering no real attempt was made to optimize the size, this result came out of generic script that was encouraged to sacrifices size for simplicity and scriptability."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 16th, 2016, 11:28 am\n\t\t\t",
+        "codes": [],
+        "id": "p30089",
+        "text": "It looks like the script is more or less working, it's in a stage of advanced debugging - so it will work for many speeds. \n\nIt's now automatically searching for valid step and period and does not assume anything about them. Notice the script will only try multiplication of the given step and period - it will assert and will not try to make it work, if you give it 8/64 instead of 1/8. The error messages are pretty self explanatory. It will (usually) work if the input is valid. \n\n-----\n\nTo install: \n\n1. Download and copy under golly/scripts/python/ folder. \n\n2. Copy the rule LifeHistoryNoMark.rule into your golly rules folder!\n\n3*. Although the attached script is working, it was made to fit the attachment limit, so I strongly recommend to download OptimizedEven.txt and OptimizedOdd.txt from the Data folder on github as it has somewhat better slow salvo recipe collection than the attached ones (this will improve the final cell count by 10%).\n\n4. Run Caterlooper.py from golly. \n\nPlease tell me if the script is working on your station, report bugs, and suggest features. It's not well polished script yet."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » April 16th, 2016, 5:30 pm\n\t\t\t",
+        "codes": [
+          "---------------------------\nPython error:\n---------------------------\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"C:\\Users\\dvgrn\\Desktop\\L2\\golly-2.7-win64\\Scripts\\Python\\Caterlooper.py\", line 639, in <module>\n    if wssFront[i][0] == wssFront[0][0]:\nIndexError: list index out of range\n"
+        ],
+        "id": "p30100",
+        "text": "simsim314 wrote:Please tell me if the script is working on your station, report bugs, and suggest features. It's not well polished script yet.\nI think I followed the instructions correctly.  At first I got an error about not being able to find \"WssData.pkl\" in Roaming\\Golly.  So I uncommented the following two lines temporarily at the bottom of WssReader.py, ran that script, and then re-commented them again:\n\nSaveWssLane(\"WssLaneData.pkl\")\nSaveWss(\"WssData.pkl\")\n\nNot sure if WssLaneData.pkl is needed any more or not, but it doesn't seem to have done any harm.\n\nThen things looked much more promising for a while.  But for 31c/240, and then again for c/7, the script crashed with an error after several minutes:\n\nCode: Select all---------------------------\nPython error:\n---------------------------\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"C:\\Users\\dvgrn\\Desktop\\L2\\golly-2.7-win64\\Scripts\\Python\\Caterlooper.py\", line 639, in <module>\n    if wssFront[i][0] == wssFront[0][0]:\nIndexError: list index out of range\n\nThe status bar text at the time was \"Adjusting the front and the back to be at the same rail\".\n\nThis was with the OptimizedEven.txt and OptimizedOdd.txt supplied in the 7z archive.  Here are the direct links to the 5-megabyte versions:  OptimizedEven.txt and OptimizedOdd.txt (it took me a while to see the \"Raw\" links).\n\nEDIT: The same error happened at c/8 also, using the full OptimizedEven.txt and OptimizedOdd.txt, just after the script successfully saved something -- the tail half, maybe.  It looks like it's probably done most or all of the construction work correctly, just isn't able to stick the halves together without running into this error (?)"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 16th, 2016, 6:21 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30104",
+        "text": "dvgrn wrote:So I uncommented the following two lines temporarily at the bottom of WssReader.py, ran that script, and then re-commented them again\n\nLooks correct to me. I've attached a script with the hot fix to this issue. You could also find the pkl files in the Data folder on GitHub..\n\ndvgrn wrote: the script crashed with an error after several minutes:\n\nFirst of all some good news - it managed to build the front and the back for you, it's pretty advanced stage already. I would suggest to replace the dir value to something more approachable, so you could see the files created, specifically front and back. \n\nAnother important question: what do you see on the screen after the error? Do you see SLs or *WSSs? This usually means the front has collapsed, and I don't see how this could be for c/8. \n\nAnother \"question/request\" - can you switch to base 8 for this test? I kinda tried to be sensitive to this configuration, but who knows... \n\nI would start from verifying the files of the front and back were created and saved properly in the \"dir\" that you will define."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 16th, 2016, 6:31 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30105",
+        "text": "Meanwhile I have ran the script to all periods under 21 (except 5/21 which is still running). \n\nHere is the report: \n\nc/5 : 508/2540, pop = 390897\n2c/13 : 216/1404, pop = 218478\n3c/13 : 1524/6604, pop = 658860\nc/15 : 100/1500, pop = 108728\n2c/15 : 152/1140, pop = 188470\nc/16 : 98/1568, pop = 106262\n3c/16 : 390/2080, pop = 307754\nc/17 : 100/1700, pop = 98621\n2c/17 : 152/1292, pop = 171658\n3c/17 : 324/1836, pop = 265261\n4c/17 : 2032/8636, pop = 801673\nc/19 : 100/1900, pop = 93555\n2c/19 : 104/988, pop = 153619\n3c/19 : 228/1444, pop = 228196\n4c/19 : 688/3268, pop = 407817\nc/20 : 98/1960, pop = 93497\n3c/20 : 198/1320, pop = 203690\nc/21 : 100/2100, pop = 88972\n2c/21 : 104/1092, pop = 144020\n4c/21 : 432/2268, pop = 319572\n\nThe smallest Caterloopillar now is c/21 with 89K active cells. \nThe largest which is also the fastest with 802K and speed 4c/17.\n\nEDIT I ran the script for 31/240, and it worked actually surprisingly well - I was expecting a real failure. \n\n31c/240 : 186/1440, pop = 361070\n\nIt's obviously not optimized, and it uses way too many SKIP operations. \n\nI think the next step would be introducing some optimization - and hopefully make it work on other stations."
+      }
+    ],
+    "url": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=50"
+  },
+  {
+    "next": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=100",
+    "posts": [
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby drc » April 16th, 2016, 8:34 pm\n\t\t\t",
+        "codes": [
+          "---------------------------\nPython error:\n---------------------------\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"C:\\Users\\Daniel\\Desktop\\stuff\\clip\\Code\\Caterlooper.py\", line 2, in <module>\n    from CaterlooperUtils import *\nImportError: No module named CaterlooperUtils\n\n---------------------------\nOK   \n---------------------------\n"
+        ],
+        "id": "p30108",
+        "text": "of course it gives me an error\n\nCode: Select all---------------------------\nPython error:\n---------------------------\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"C:\\Users\\Daniel\\Desktop\\stuff\\clip\\Code\\Caterlooper.py\", line 2, in <module>\n    from CaterlooperUtils import *\nImportError: No module named CaterlooperUtils\n\n---------------------------\nOK   \n---------------------------\n"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » April 16th, 2016, 9:30 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30109",
+        "text": "drc wrote:of course it gives me an error...\nBased on the error message you quoted, it looks like you missed the part of the instructions about dropping all the files into Golly's Scripts/Python folder.\n\nI didn't like that part very much -- I already have way too much stuff cluttering up the Scripts/Python folder, and I'd like to be able to keep Caterlooper files organized in a subdirectory at least.\n\nHowever, following those instructions seemed to get me past that particular error without any trouble.  Will have to wait until tomorrow to figure out what went wrong on my laptop during the final construction stages."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby thunk » April 16th, 2016, 10:21 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30110",
+        "text": "Got a working(?) c/24 caterloopillar, at under 85k cells. (Golly 2.8 p2 on mac.)"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 12:23 am\n\t\t\t",
+        "codes": [],
+        "id": "p30112",
+        "text": "drc wrote:of course it gives me an error\n\nI'ts a good surprise - finally someone using my GitHub posted code. \n\nUnfortunately it became a mess - \n\nGitHub Code folder - is just a mess of work in progress stuff. \nGitHub CaterlooperScript Foler - I'm trying to keep updated with the final \"release\".\n\nAnd the files attached in this forum - they should be working as well. \n\nI've fixed the issue in GitHub Code folder - you can use it now as well."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 12:26 am\n\t\t\t",
+        "codes": [],
+        "id": "p30113",
+        "text": "thunk wrote:Got a working(?) c/24 caterloopillar, at under 85k cells.\n\nGreat! any issues? Please let me know..."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby drc » April 17th, 2016, 12:46 am\n\t\t\t",
+        "codes": [
+          "---------------------------\nPython error:\n---------------------------\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"C:\\Users\\Daniel\\Desktop\\stuff\\clip\\Code\\Caterlooper.py\", line 482, in <module>\n    recipes.Init(\"OptimizedEven.txt\", \"OptimizedOdd.txt\", \"WSS.txt\")\n  File \"RecipeManager.py\", line 171, in Init\n    self.LoadMoveTable(pathEven, True)\n  File \"RecipeManager.py\", line 176, in LoadMoveTable\n    ins = open(path, \"r\" )\nIOError: [Errno 2] No such file or directory: 'OptimizedEven.txt'\n\n---------------------------\nOK   \n---------------------------\n"
+        ],
+        "id": "p30114",
+        "text": "Now it gives me unfinished ships, like this unfinished c/101:\n\nhttps://mega.nz/#!a1JXyRCB (It's 1.28 MB, so it doesn't fit in the attachment slot.)\nEDIT: Also an error:\n\nCode: Select all---------------------------\nPython error:\n---------------------------\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"C:\\Users\\Daniel\\Desktop\\stuff\\clip\\Code\\Caterlooper.py\", line 482, in <module>\n    recipes.Init(\"OptimizedEven.txt\", \"OptimizedOdd.txt\", \"WSS.txt\")\n  File \"RecipeManager.py\", line 171, in Init\n    self.LoadMoveTable(pathEven, True)\n  File \"RecipeManager.py\", line 176, in LoadMoveTable\n    ins = open(path, \"r\" )\nIOError: [Errno 2] No such file or directory: 'OptimizedEven.txt'\n\n---------------------------\nOK   \n---------------------------\n\n\nEven though I have it."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 12:52 am\n\t\t\t",
+        "codes": [],
+        "id": "p30115",
+        "text": "drc wrote:Now it gives me unfinished ships\n\nThis is really strange. Do you get some error message? What is written on golly status bar? \n\ndrc wrote:https://mega.nz/#!a1JXyRCB\n\nThis file asks for encryption, when non given it says:\nYou can't import or download an encrypted file as the decryption key is missing."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby drc » April 17th, 2016, 12:54 am\n\t\t\t",
+        "codes": [],
+        "id": "p30116",
+        "text": "simsim314 wrote:\nYou can't import or download an encrypted file as the decryption key is missing.\nWell I ran the c/8 and it is smaller, so I can upload it here\n\nAlso I forgot the error and now edited it"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 12:59 am\n\t\t\t",
+        "codes": [],
+        "id": "p30117",
+        "text": "@drc - you need to place the data together with the script in the same folder - it would be simpler if you would download the attached script first. \n\nYes you just started - you can't do anything without slow salvo recipe list."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby HartmutHolzwart » April 17th, 2016, 9:48 am\n\t\t\t",
+        "codes": [],
+        "id": "p30125",
+        "text": "So 24/223 would be a good speed to get a small caterloopillar example?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 12:54 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30130",
+        "text": "HartmutHolzwart wrote:So 24/223 would be a good speed to get a small caterloopillar example?\n\nWell specifically 96/982 for some technical reasons can't work. In practice the minimal step is 98 and minimal period is 912. This makes 98/912 the fastest recipe applying speed, but not the smallest caterloopillar. \n\nIt turns out the more sparsely *WSSs are placed, the smaller the design is. If you think of it - all the operations are done by \"full path\" of single head, so for lower speeds the same head is created more slowly but with less *WSSs, using same recipes. \n\nTo be more empirical, 98/912 - has 434K active cells, while 100/8700 - has only 63K. (I will commit all my Caterloopillars in single batch later on with all the relevant metadata). \n\nBut this only measured by active cells. The bounding box of slower speeds is obviously growing, I think the smallest bounding box is for c/17 or c/19 and is around 450X150K.\n\nEDIT I've batch commit all the relevant caterloopillars - check this message."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 1:23 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30133",
+        "text": "@codeholic and other wiki moderators:\n\nHow do you suggest to update the spaceship page?\n\nI mean the script is not working for very high periods due to golly limitations, so do we want to keep track of all the available speeds (and here's the full list of Caterloopers created by me), or we can say that the script is covering every speed < c/4 when period is of type: 2k + 1, 8k or 8k + 4? \n\nThe speed list is growing rapidly, after the Caterlooper script release. I think the high period speeds should be considered spam, or we will just have N^2 speeds for very high N."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 2:06 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30134",
+        "text": "Another batch commit: \n\n5c/21:2540/10668, pop = 915290\nc/25:100/2500, pop = 84876\nc/27:100/2700, pop = 84154\nc/28:98/2744, pop = 83516\nc/29:100/2900, pop = 81582\nc/31:100/3100, pop = 77445\nc/32:98/3136, pop = 77591\nc/33:100/3300, pop = 77143\nc/35:100/3500, pop = 74769\nc/67:100/6700, pop = 63135\nc/87:100/8700, pop = 62343\n49c/456:98/912, pop = 433416\n\nSmallest now is c/87 with 62,343 cells. Getting pretty close to the Demonoid.\nFastest and largest 5c/21, with 915,290 cells. \n\nThis design has very large range of sizes."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 17th, 2016, 5:14 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30139",
+        "text": "Can someone list all of these speeds on the Caterloopillar page?\n\n\n\nalso, simsim314 what happens if you try to run the script with 17c/45?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 17th, 2016, 5:33 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30140",
+        "text": "muzik wrote:Can someone list all of these speeds on the Caterloopillar page?\n\nI don't think we should add hundreds and thousands of speeds, it looks like spam. I hope some of the moderators will respond to this post. \n\nmuzik wrote:also, simsim314 what happens if you try to run the script with 17c/45?\n\nIt will exit with message that the speed is too high. If you try to ignore the message and place the reading heads - they will just overlap each other and will not work,  just creating a mess instead. \n\nEven valid speeds - like 5c/21 takes time just to find the valid step and period."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Sokwe » April 17th, 2016, 6:09 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30142",
+        "text": "simsim314 wrote:How do you suggest to update the spaceship page?\nFor now, we should put a moratorium on adding new caterloopillar-based speeds.  I'm honestly not sure what we should do with the tables."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby NoLongerBreathedIn » April 17th, 2016, 10:28 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30149",
+        "text": "I think this calls for an overhaul. My approach would be a list of sporadic velocities (by small spaceships and fixed-speed tracks), and then a couple lines for each VSS, detailing possible velocities."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 18th, 2016, 3:02 am\n\t\t\t",
+        "codes": [],
+        "id": "p30155",
+        "text": "Sokwe wrote:For now, we should put a moratorium on adding new caterloopillar-based speeds.\n\nAre you serious? This sounds pretty crazy to me. One limit I found in the script is c/95 - and this is because the tail part construction gets out from \"C\" long long boundaries. And although not python and not golly are limited by it, the API between them does. I think there are many such small nuances that limit the script, but not the design and can be fixed pretty simply. Eventually the ships would be just too big to fit in memory, yet again with \"better golly\" or better script implementation this could be increased. \n\nAlthough we usually prefer specific design over script, it sounds to me kinda pointless to run the script for all constructible speeds, we're talking in amount of ten thousands. This definitely can be considered spam."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby codeholic » April 18th, 2016, 3:31 am\n\t\t\t",
+        "codes": [],
+        "id": "p30156",
+        "text": "Well, I think we should stop being engineers at this point and become mathematicians. If there are any principal limitations for the caterloopillar design besides speed limit of c/4, they should be mentioned. Otherwise I would just assume, we've got a good enough theory how to build a spaceship of any orthogonal speed slower than c/4, verified by a working method and numerous examples, and maybe use a little bit more vague wordings when talking about \"achieved speeds\". In the end, a 17c/45 rake has also never been explicitly constructed (not that I know of, at least). Nevertheless there is a \"yes\" in the corresponding cell in LifeWiki:Game of Life Status page."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Sokwe » April 18th, 2016, 4:04 am\n\t\t\t",
+        "codes": [],
+        "id": "p30157",
+        "text": "simsim314 wrote:Sokwe wrote:For now, we should put a moratorium on adding new caterloopillar-based speeds.\nAre you serious? This sounds pretty crazy to me.\nTo clarify, I don't want to add distinct table entries for every speed that has a caterloopillar.  I think the \"All speeds slower than c/4, orthogonal\" entry in the history table is a good compromise for now.  Personally, I think the overall design is convincing enough to make this claim."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 18th, 2016, 4:37 am\n\t\t\t",
+        "codes": [],
+        "id": "p30158",
+        "text": "Sokwe wrote: I think the \"All speeds slower than c/4, orthogonal\" \n\nTo be more exact - m/8k, m/(8k + 4), m/(2k + 1). \n\nThe design is convincing indeed, but there is a distinct difference between having a general design and a real concrete construction. We still don't have a script or any caterloopillar for 8k + 2 and 8k + 6 period cases. It should be possible - and yet we can't say this problem is solved, It's very close to be solved, but not solved."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 18th, 2016, 4:45 am\n\t\t\t",
+        "codes": [],
+        "id": "p30159",
+        "text": "There is still a point in making concrete constructions - for example one can minimize the bounding box or the cell count. I think we did try to minimize any design, and we do have several designs for same speed: for example 31/240 has bug shield and centipede.\n\nI'm now trying to optimize caterloopillar to reach the demonoid size. Another interesting question is the highest demonstrable speed, as the script takes a lot of time to run, rendering speeds very close to c/4 pretty impossible to build.\n\nEDIT I also think we should expand caterloopillar in the wiki, to specify all the constructed speeds. At least the interesting ones - say up to period 20, and smallest/fastest/slowest etc."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 18th, 2016, 5:05 am\n\t\t\t",
+        "codes": [],
+        "id": "p30160",
+        "text": "codeholic wrote:In the end, a 17c/45 rake has also never been explicitly constructed (not that I know of, at least). Nevertheless there is a \"yes\" in the corresponding cell \n\nWell this is very very trivial modification, and applies to any caterloopillar design as well. On the other hand placing slow salvos for periods 8k + 2 and 8k + 6 is somewhat challenging. I don't think there is a limitation, but the script is not supporting those periods - and we have no concrete example for any of them."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 18th, 2016, 8:23 am\n\t\t\t",
+        "codes": [],
+        "id": "p30165",
+        "text": "The wiki page looks good to me, I would suggest to add such comment in Life status page as well. \n\nWe should definitely expand caterloopillar value in LifeWiki, mentioning some interesting examples, the python script, smallest and fastest existing examples etc. Adding the limits of the current script in golly. \n\nAlso can someone remove c/8 speed from caterloopillar page? We can change it to c/8 caterloopillar, or first caterloopillar or whatever, but now it looks like caterloopillar is something related to c/8 speed. And c/8 relation to caterloopillar is only historical (it was the first example)."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 18th, 2016, 8:24 am\n\t\t\t",
+        "codes": [],
+        "id": "p30166",
+        "text": "Since it is the smallest known of its speed, and is an already known speed, should we create a seperate wiki page for the 31c/240 caterloopillar? Is it notable enough out of all of the caterloopillars for that?\n\nI did remove all of the caterloopillars from the spaceships table, to lessen clutter. I think that someone should create a table documenting all known caterloopillar speed sunder their userspace.\n\n\n\nCould a caterloopilar with <10000 cells exist?"
+      }
+    ],
+    "url": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=75"
+  },
+  {
+    "next": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=125",
+    "posts": [
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 18th, 2016, 8:38 am\n\t\t\t",
+        "codes": [],
+        "id": "p30167",
+        "text": "muzik wrote: should we create a seperate wiki page for the 31c/240 caterloopillar? \n\nDon't think so. We should instead add special mention in the caterloopillar page about this speed. Maybe we should add \"interesting speeds section\", adding there c/8 as the first speed, 31/240 as centipede alternative, and maybe some more (fastest, largest, slowest, minimal bounding box and cell count)... \n\nmuzik wrote:Could a caterloopilar with <10000 cells exist?\n\nDon't think so. I've now reached 58K with c/92, Which should be pretty easily optimized by factor of 2, getting into demonoid range. I don't think less than 20K is feasible, remember that all the slow salvo SLs take pretty large space. Maybe some more advanced tricks can be introduced - but with current basic design I don't see it getting under 20K. Lets hope Demonoid can be superseded, thus breaking the smallest designed ship record.\n\nEDIT I've verified the script on a \"clean\" station. Can more people report success/failures with the script? Please download it from the attached file first, and tell me if you're getting any errors for simple speeds (c/8, c/13 etc.)."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 18th, 2016, 1:27 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30170",
+        "text": "Assuming the speed of light in Life is the same as the speed of light in our universe, the slowest Life ship we have travels at a leisurely 7708237 mph.\n\nThe fastest speed travelled by a man-made object is just 157000 mph...\n\n\n\n\nThat said, what is the slowest speed you can make (that is not a stationary object)?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby codeholic » April 18th, 2016, 1:50 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30171",
+        "text": "Infinitesimal."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby apg » April 18th, 2016, 1:56 pm\n\t\t\t",
+        "codes": [
+          "Greetings, APG...\n\nroot@kali:~# python\nPython 2.7.11 (default, Dec  9 2015, 00:29:25) \n[GCC 5.3.1 20151205] on linux2\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>> (299792458 * 3600 / (0.0254 * 36 * 1760)) * (6.0/2621440)\n1534.9196534371836\n>>> \n"
+        ],
+        "id": "p30172",
+        "text": "muzik wrote:Assuming the speed of light in Life is the same as the speed of light in our universe, the slowest Life ship we have travels at a leisurely 7708237 mph.\n\nWhich ship is that? My original (6, 3)c/2621440 half-baked knightship travels at 1535 mph (in the L_infinity norm):\n\nCode: Select allGreetings, APG...\n\nroot@kali:~# python\nPython 2.7.11 (default, Dec  9 2015, 00:29:25) \n[GCC 5.3.1 20151205] on linux2\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>> (299792458 * 3600 / (0.0254 * 36 * 1760)) * (6.0/2621440)\n1534.9196534371836\n>>> \n\n\nThat's roughly twice the speed of sound.\n\nmuzik wrote:That said, what is the slowest speed you can make (that is not a stationary object)?\n\nIf it's not a stationary object, at least one of the four edges of the bounding box must advance at a speed of Omega(sqrt(log(t))). Does that answer your question?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby biggiemac » April 18th, 2016, 2:15 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30173",
+        "text": "calcyman wrote:\nmuzik wrote:That said, what is the slowest speed you can make (that is not a stationary object)?\n\nIf it's not a stationary object, at least one of the four edges of the bounding box must advance at a speed of Omega(sqrt(log(t))). Does that answer your question?\n\nThat doesn't really make it clear, because the relation between speed and t is confusing.\n\nSay something lives in an M x N bounding rectangle.  There are 2^(MN) patterns of ons and offs within such a rectangle, and every one of them has a definite evolution sequence.  To not be a stationary object, it has to leave that bounding box before exhausting all of them, or it will be in a loop.\n\nIf something hasn't left its initial M x N bounding box after 2^(MN) generations then it has to be stationary.  The smallest bound one can make is thus a single cell displacement of the whole pattern after 2^(MN) generations, for a speed of c/2^(MN).  But since we can make bounding boxes arbitrarily large then there is no lower bound in an infinite plane.\n\nFor example, it's possible to drag the Demonoid construction arms as far apart as you like, making the replication cycle take longer.  The bounding box goes up and the overall speed drops."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » April 18th, 2016, 3:28 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30177",
+        "text": "biggiemac wrote:calcyman wrote:If it's not a stationary object, at least one of the four edges of the bounding box must advance at a speed of Omega(sqrt(log(t))). Does that answer your question?\nThat doesn't really make it clear, because the relation between speed and t is confusing.\n...\nIf something hasn't left its initial M x N bounding box after 2^(MN) generations then it has to be stationary.\nDefinitely confusing.  There's no particular reason why a spaceship shouldn't leave its bounding box temporarily, is there?  This slowest possible spaceship could perfectly well be highly non-monotonic.\n\nSo if the initial bounding box is big enough to contain a universal computer-constructor, or even some non-universal circuitry that calculates... I don't know, the Goodstein function for some value or other? ... then we can arrange to have the constructor wait until the computer has completed its task, and then build and trigger a slow-salvo seed that destroys the whole UCC and rebuilds it at a 1-cell offset.\n\nThat will be a perfectly good spaceship, even if the bounding box goes up to a square googolplex and back down again.  So then the question is, what's a good tradeoff to aim for, between the slowness of a calculation task and the size of the calculation circuitry?\n\nFor packing into a smaller initial bounding box, it might be better to encode the destruction/reconstruction information into some kind of stable 2D memory structure.  I'm not sure, though.  A Geminoid-style glider tape folded into a 2D shape might be able to store construction information a lot more efficiently, especially if there's a way to call \"subroutines\" to build repeated structures like the reflectors along two edges of the memory area.  It will certainly be easier to copy at a 1-cell offset, I would think -- though that's not really a necessary feature.  Something like this could still be truly hideously slow even if it moved itself a thousand cells in each cycle.\n\nNone of these ultraslow self-constructing spaceships are going to be particularly compact -- but really a Caterloopillar isn't all that small either."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Apple Bottom » April 19th, 2016, 6:58 am\n\t\t\t",
+        "codes": [],
+        "id": "p30210",
+        "text": "simsim314 wrote:EDIT I also think we should expand caterloopillar in the wiki, to specify all the constructed speeds. At least the interesting ones - say up to period 20, and smallest/fastest/slowest etc.\n\nThis sounds sensible to me.\n\nIn fact I'd suggest doing two things: listing the interesting speeds (using some generally-accepted notion of interestingness) on the main Caterloopillar page, and adding a auxilliary article listing all speeds for which Caterloopillars have explicitely been constructed.\n\nThat kind of \"List of ${FOOBAR}\" article is common enough on Wikipedia etc., and I think it would strike a good balance between the competing interests of keeping the main article uncluttered on one hand, and providing comprehensive information on an interesting and important piece of technology on the other."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 19th, 2016, 8:17 am\n\t\t\t",
+        "codes": [],
+        "id": "p30212",
+        "text": "@Apple Bottom - my point was not to post all the available speeds at spaceship page, as it looks like real spam. \n\nHaving a list of links to all available speeds - is not a bad idea, but needs additional thought of how to avoid explosion. Maybe have some \"collection\" of caterloopillars, like Jason's collection of guns."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » May 3rd, 2016, 6:30 am\n\t\t\t",
+        "codes": [],
+        "id": "p30585",
+        "text": "Here's a challenge: make a c/5648 caterloopillar.\n\nI can't run Python scripts, so I'll leave that responsibility to someone else."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » May 3rd, 2016, 8:29 am\n\t\t\t",
+        "codes": [],
+        "id": "p30588",
+        "text": "muzik wrote:Here's a challenge: make a c/5648 caterloopillar.\n\nWhy this speed? the script is currently limited by c/101 or something. \n\nmuzik wrote:I can't run Python scripts\n\nWhy?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » May 3rd, 2016, 8:32 am\n\t\t\t",
+        "codes": [
+          "x = 12, y = 14, rule = B3457/S4568\n4bo2bo$4b4o$2b8o$2b2ob2ob2o$obobo2bobobo$2ob6ob2o$ob3o2b3obo$3ob4ob3o$\n2ob6ob2o$b3o4b3o$b3o4b3o$3b2o2b2o$3bo4bo$5b2o!"
+        ],
+        "id": "p30589",
+        "text": "simsim314 wrote:\nWhy this speed? the script is currently limited by c/101 or something. \n\n\nI want something that travels at this speed: \n\nCode: Select all / Show in Viewerx = 12, y = 14, rule = B3457/S4568\n4bo2bo$4b4o$2b8o$2b2ob2ob2o$obobo2bobobo$2ob6ob2o$ob3o2b3obo$3ob4ob3o$\n2ob6ob2o$b3o4b3o$b3o4b3o$3b2o2b2o$3bo4bo$5b2o!\n\nsimsim314 wrote:Why?\n\nDon't have access to a computer at this second. I'll see if I can download something that can run Python though"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » May 3rd, 2016, 11:17 am\n\t\t\t",
+        "codes": [],
+        "id": "p30595",
+        "text": "muzik wrote:I want something that travels at this speed: \n\nHeh... anyway the script can be modified to work with more speeds - but it would have some other limit, and it seems people are not interested in covering speeds with caterloopillar or finding the optimal size for some specific speed, it looks like the point of universal speed covering was proven, and the script is working for some wide enough range of speeds. \n\nI'ts still interesting to beat the minimal designed ship record though."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » May 3rd, 2016, 5:08 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30602",
+        "text": "simsim314 wrote:I'ts still interesting to beat the minimal designed ship record though.\nAt the moment I'd be tempted to do that by reworking the Demonoid, actually, since the current design is nowhere near optimal.  I suspect it can be brought down to around 20,000 ON cells, which might be a hard target for a Caterloopillar to beat.\n\nI haven't come up with a single-channel design that seems likely to improve on the 0hd model -- though it might happen, if single-channel elbow operation recipes turn out to be within a factor of two of the efficiency of 0hd glider-pair recipes.\n\nHowever, it's definitely possible to find a slow-salvo recipe for the current construction arm constellation that's shorter than 540 gliders.  That recipe was generated completely by hand, with no time spent on optimizing it for the 0hd elbow-op library... In fact, the 0hd library didn't even exist when that slow salvo was compiled.\n\nA revised slow salvo using one of the recent eater2 seeds, and a few other optimizations like using the cheapest possible lane to delete extra debris, could easily bring the population below 24,000, and just possibly below 20,000 with enough work.\n\nI can see that the Caterloopillar's initial stage of creating a target block and then pushing it way out, can be replaced by something much lower population, just by building the block in the right place to begin with (right?)  But that only reduces a small fraction at the front of the ship.\n\nsimsim314 wrote:There are many alternatives which could improve specific speeds. In particular one can send gliders to destroy the salvos, thus the only limitation on the period would be the period of the reading head.\nI don't have a clear picture of where those gliders would come from -- is this just for the negative helix, or can you bounce gliders up to the front somehow, too?  (Without increasing the total population to something huge, that is, like the shield bug vs. the Centipede.)\n\nWhat are other likely reduction points?  Might there be a way to use only even-phase *WSSes, for example, instead of a mix of even and odd?  That would cut down the minimum population by five percent or so, if it didn't increase the *WSS population (which it probably would).\n\nOf course, the Caterloopillar is an order of magnitude ahead on the bounding box already -- there's no way the Demonoid is going to catch up on that metric."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » May 3rd, 2016, 7:44 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30607",
+        "text": "I actually see three sources of Caterloopillar improvement: \n\n1. Shortening the front push (which is irrelevant for lower speeds and is minor in any case). Actually I introduced it in some local tests, and it was pretty useless. For high periods it improved maybe by 2-3%, for low periods the distance between the reading heads was too large. \n\n2. Using the skip operation more wisely. This optimization aims to add operations but decrease the distance between \"none\" operations, i.e. waiting for \"magical\" period adjustments. For c/8 the waiting couldn't be too long anyway, but for something like c/100 it could wait for 100 distances (which is not too large but currently costs about 50% of the ship).\n\n3. Another small (but important) nuance is that the distance between the front and back in the script, was made intentionally wide - to reduce \"chances\" of any harm. This made the script universal, but less optimal. This cost is constant and is about extra 2K cells.\n\nAll in all I think I can safely say that reduction from the current best which is about 56K to around 25K should be achievable in relatively small amount of work. \n\nComparing this to Demonoid - tweaking the slow salvo is kinda hell. Maybe you could improve it, but it will take much more work. \n\ndvgrn wrote:Without increasing the total population to something huge, that is, like the shield bug vs. the Centipede.\n\nI was thinking about it again (specifically about chocoholic suggestion to replace the backward helix by self destructing gliders which bounce of some distant self maintaining \"islands\" of slow salvos), and I see no way such glider will cost less than *WSS. It will require *WSS just to allow it to self maintain itself. I think the self destruct is currently relatively cheap. \n\nIn other words - I now simply don't see any way to improve Caterloopillar other than small tweaking of the current script."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Scorbie » May 4th, 2016, 6:42 am\n\t\t\t",
+        "codes": [],
+        "id": "p30616",
+        "text": "Is there any way to make use of speed-specific optimizations, if there is any? Sadly I am not sure what kind of speed-specific optimizations there are... Maybe something like integrating the 17c/45 rxn or 31c/240 rxn."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » May 4th, 2016, 8:21 am\n\t\t\t",
+        "codes": [],
+        "id": "p30618",
+        "text": "The helix is pretty optimized as well, 4 *WSS give you any step and speed you need - this is kinda hard to beat, with something specific - especially for larger steps.\n\nEDIT Minimal caterloopillar step is 98 - I don't see a way one can beat 4 *WSS for such large step."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby apg » May 4th, 2016, 12:05 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30621",
+        "text": "dvgrn wrote:Of course, the Caterloopillar is an order of magnitude ahead on the bounding box already -- there's no way the Demonoid is going to catch up on that metric.\n\nWhat about an orthogonal Demonoid which uses a tape of MWSSes? I think that has a very good chance of beating the smallest Caterloopillar, not least because H-to-MWSS and MWSS-to-G technology is so cheap."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » May 5th, 2016, 4:28 pm\n\t\t\t",
+        "codes": [],
+        "id": "p30659",
+        "text": "calcyman wrote:dvgrn wrote:Of course, the Caterloopillar is an order of magnitude ahead on the bounding box already -- there's no way the Demonoid is going to catch up on that metric.\n\nWhat about an orthogonal Demonoid which uses a tape of MWSSes? I think that has a very good chance of beating the smallest Caterloopillar, not least because H-to-MWSS and MWSS-to-G technology is so cheap.\nH-to-MWSS technology is either quick to recover and expensive to construct, or Spartan and slow to recover and inexpensive to construct -- right?  We don't have a small Spartan H-to-MWSS with a sub-100-tick recovery time.  Presumably we'd also need a constructible G-to-H if we're using an MWSS-to-G, and even the cheaper 135-degree MWSS-to-G isn't quite Spartan and might cause expensive troubles with construction order.\n\nIt looks to me like the recipe for an Orthogonoid would turn out to explode pretty far beyond the size of a Caterloopillar, once you take all these details into account.  The bounding box would probably be smaller than a Demonoid, just because it's a nice narrow rectangle instead of a diagonal line, but the population would be a lot higher.\n\nThe biggest piece of untouched Orthogonoid research is that if the construction arm uses signal pairs the way the current 0hd Demonoid does, then the signals would have to be *WSSes, not gliders.  We don't have any elbow-op recipes for *WSS pairs, and we also don't have a decent small transparent *WSS-making component, let alone a Spartan *WSS edge shooter.\n\nA Geminoid that moves diagonally but uses an orthogonal tape, couldn't use the Demonoid's mirror-image trick to cut the total amount of circuitry in half.  An orthogonal-tape self-constructing spaceship that used gliders in its construction arm, would have to build twice as much circuitry, and then use a different half of it at the two ends of the tape.  That's doable, but it doesn't seem like it would set any size or (especially) population records.\n\nMaybe we could string together a single-channel Orthogonoid -- orthogonal tape _and_ orthogonal movement perpendicular to the tape.  That could still use gliders for the construction arm.  In fact, it might be a very nice application of single-channel technology, since the construction-arm elbow could always stay a safe distance away from the circuitry it was constructing.\n\nBut then we'd still need a Spartan H-to-MWSS with a recovery time of 90 ticks, or at least down around 120 ticks, so that the single-channel library will work.  I think that would still be a pretty expensive piece of circuitry. (?)"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » June 28th, 2016, 8:42 am\n\t\t\t",
+        "codes": [],
+        "id": "p32416",
+        "text": "Trying to complete a table on the wiki, what are the minimum populations for the c/9, c/11 and c/12 caterloopillars?\n\nAlso, apparently Daniel found a c/8 caterloopillar smaller than the one in the OP, but the file he attached doesn't seem to show it?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » June 28th, 2016, 10:31 am\n\t\t\t",
+        "codes": [],
+        "id": "p32419",
+        "text": "muzik wrote:what are the minimum populations for the c/9, c/11 and c/12 caterloopillars?\n\nNeed to calculate it... couldn't find any published numbers. \n\nmuzik wrote:Also, apparently Daniel found a c/8 caterloopillar smaller than the one in the OP, but the file he attached doesn't seem to show it?\n\n\nI don't think he \"found\" a smaller one... it could be the script generates a smaller caterloopillar than initially posted (that one was generated with more manual labor). You can simply run the script and get it. \n\nI think he managed to post c/21 cateloopillar, and he's also the only one who confirmed the script is working."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » June 28th, 2016, 10:48 am\n\t\t\t",
+        "codes": [],
+        "id": "p32420",
+        "text": "simsim314 wrote:muzik wrote:what are the minimum populations for the c/9, c/11 and c/12 caterloopillars?\n\nNeed to calculate it... couldn't find any published numbers.\nI got bored checking, but the smallest number I got for c/9 was 169476.\n\nSo probably something below that."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » June 28th, 2016, 1:31 pm\n\t\t\t",
+        "codes": [
+          "# find-minimum-population.py\nimport golly as g\n\ngenstr=g.getstring(\"Enter number of generations to run:\")\nif not genstr.isdigit(): g.exit(\"Invalid number.\")\ngens=int(genstr)\n\np, minpopgen = int(g.getpop()), 0\nfor i in range(gens):\n  g.run(1)\n  q=int(g.getpop())\n  if q<p: p,minpopgen=q,i\n  g.show(\"Minimum population as of T=\"+str(i)+\": \" + str(p) + \" at generation \" + str(minpopgen))\n  # g.update()"
+        ],
+        "id": "p32428",
+        "text": "muzik wrote:simsim314 wrote:muzik wrote:what are the minimum populations for the c/9, c/11 and c/12 caterloopillars?\n\nNeed to calculate it... couldn't find any published numbers.\nI got bored checking, but the smallest number I got for c/9 was 169476.\n\nSo probably something below that.\nYou can run Golly Python scripts, right?  Don't let yourself get bored looking at numbers one generation at a time.  That's what computers are for:\n\nCode: Select all# find-minimum-population.py\nimport golly as g\n\ngenstr=g.getstring(\"Enter number of generations to run:\")\nif not genstr.isdigit(): g.exit(\"Invalid number.\")\ngens=int(genstr)\n\np, minpopgen = int(g.getpop()), 0\nfor i in range(gens):\n  g.run(1)\n  q=int(g.getpop())\n  if q<p: p,minpopgen=q,i\n  g.show(\"Minimum population as of T=\"+str(i)+\": \" + str(p) + \" at generation \" + str(minpopgen))\n  # g.update()\nLaziness isn't generally worth advertising, but it can be very useful as motivation to keep looking for new ways to dodge tedious work...!"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 4th, 2016, 11:05 am\n\t\t\t",
+        "codes": [],
+        "id": "p32722",
+        "text": "Being as stupid as I am, I've decided to list all of the caterloopillar-achieved speeds on the table of spaceship speeds, and, ehm, might need a bit of help completing that task.\n\nI've created a separate page without them just to make sure things don't get entirely too crazy.\n\n\nOf course, measuring the minimum population for each caterloopillar is also going to be a necessary task..."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 4th, 2016, 11:49 am\n\t\t\t",
+        "codes": [],
+        "id": "p32725",
+        "text": "muzik wrote: and, ehm, might need a bit of help completing that task.\n\nYou can see my two posts with more releavnt info, here and here (the published pop value refers to min. pop). \n\nI also need to commit some caterloopillars, which are current record holders in size and speed. \n\nmuzik wrote:I've created a separate page without them just to make sure things don't get entirely too crazy.\n\nI think copperhead had appeared in some soup (although it might be symmetric, yet it's still soup friendly). \n\nAnd 4 engine cordership is definitely engineered from smaller components, although it's much less components  than other engineered ships (4 instead of couple thousands)."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 4th, 2016, 12:02 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32727",
+        "text": "simsim314 wrote:muzik wrote: and, ehm, might need a bit of help completing that task.\n\nYou can see my two posts with more releavnt info, here and here (the published pop value refers to min. pop). \n\n\nI'm mainly looking for the ones I haven't added to the page to be sorted by fastest speed first, so I can organise them by speed.\n\nsimsim314 wrote:muzik wrote:I've created a separate page without them just to make sure things don't get entirely too crazy.\n\nI think copperhead had appeared in some soup (although it might be symmetric, yet it's still soup friendly). \n\nAnd 4 engine cordership is definitely engineered from smaller components, although it's much less components  than other engineered ships (4 instead of couple thousands).\n\nCopperhead's soup was definitely symmetric. I'm only listing assymetric soups, since those are the commonly accepted definition of natural. (Here's hoping for the future that the Loafer/Copperhead/C18Ship dream comes true)\n\nThe Corderships are a weird one. This begs the question; are corderships actually considered engineered? Who knows, one could emerge from a diagonally symmetric soup any day"
+      }
+    ],
+    "url": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=100"
+  },
+  {
+    "next": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=150",
+    "posts": [
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 4th, 2016, 12:17 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32730",
+        "text": "muzik wrote: are corderships actually considered engineered? \n\nMy answer is definitely yes. Even if they can occur in soup with high probability, yet they were found by using simpler components and \"logical manipulations\" with those components, they by definition engineered. This is why Gosper gun is engineered in my opinion. \n\nIn other words: everything is \"natural\" in a sense that for every pattern there is some very rare soup that precedes it. The definition of naturality should be limited by some reasonable probability (like the probability to appear in a random soup > 1/10^12 or something). \n\nAnother point is that in my view symmetric soups should also be included in the definition natural objects, like the symmetrical ships are considered \"elementary\" although they're symmetrical (and symmetry is definitely a \"designed\" feature in those ships). Symmetry is natural feature."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » July 4th, 2016, 2:00 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32735",
+        "text": "simsim314 wrote:muzik wrote: are corderships actually considered engineered? \n\nMy answer is definitely yes. Even if they can occur in soup with high probability, yet they were found by using simpler components and \"logical manipulations\" with those components, they by definition engineered. This is why Gosper gun is engineered in my opinion.\nSeems like a reasonable argument.  Coming at it from a slightly different direction:  Corderships are built out of natural puffers -- not the bare switch engine per se, but block-laying and glider-producing switch engines show up in C1 soups very regularly.  So while they may be engineered, they're much less engineered than other types of macro-spaceships.\n\nIs it worth having different terminology for minimally-engineered (Cordership), moderately-engineered (Caterpillar), and maximally-engineered (Demonoid) objects?  The current distinction between \"engineered\" and \"engineerable\" seems a little too subtle, when it's really trying to distinguish \"non-adjustable\" vs. \"adjustable\".\n\nWhat I've been using for the last several years is \"engineered\" for stuff like the various Corderships, high-period rakes, and so on... but then \"self-supporting\" for the Caterpillar, Centipede, HBKs, and waterbear, and \"self-constructing\" for any object that carries around a construction recipe for itself.  Caterpillars and HBKs and so on don't contain their own construction recipe -- the positions of the pi climbers or the half-bakeries or whatever aren't encoded anywhere.  They do the work of closing the cycle so that the pi climbers can keep climbing indefinitely, or the half-bakeries will continue to get activated by the right gliders... but the spaceship as a whole is definitely not self-constructing.\n\nBut you could convert a Demonoid glider stream into, say, a stream of loafers, and feed it into a completely different-looking loafer-based replicator unit, and it would still construct a Demonoid replicator unit.  The construction data is important, but the particular encoding is irrelevant.\n\nsimsim314 wrote:Another point is that in my view symmetric soups should also be included in the definition natural objects, like the symmetrical ships are considered \"elementary\" although they're symmetrical (and symmetry is definitely a \"designed\" feature in those ships). Symmetry is natural feature.\nPeople have been pretty consistent about calling symmetric-soup objects like the pufferfish \"almost natural\".  Really big areas of perfect symmetry happen very-nearly-never in random soup, so there is something highly artificial about starting with a symmetric soup.  But yes, the products of symmetric soup are still elementary and not engineered."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 4th, 2016, 2:40 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32737",
+        "text": "I think in a way the glider stream is preparing the \"rail\" for itself in Demonoid, similarly to the way pi climbers preparing its own rail in caterpillar. Just the rail in case of pi climbers are simple blinkers, while in case of demonoid is more complex conduit. No spaceship \"contains\" its own tape, so you always can say the tape is \"gliding\" over some sort of \"self constructible\" rails. The only question is how complex the rails are? In case of more complex ships the rails could be very complex and the tape can be pretty simple (gliders, or array of SLs), or the rail can be simple and the tape can contain all the logic (like in case of centipede/caterpillar/waterbear). \n\nWhat's unique in case of complex rail and simple tape, is that due to this feature the speed is usually adjustable (Geminiods and cateloopillars have adjustable speeds), while when you place the logic into the tape, and the rail stay simple, you usually have very limited options for adjusting the speed. \n\nEDIT Another way to look at it, is the option to add some artificial artifact (like SL array in shape of santa claus). All the designed ships can add such feature. \n---- \n\nAbout constructability I agree - it should be considered continuous property. I would say the probability to appear in random soup is good estimation of the degree of entropy some component has, we should obviously get into logarithmic scale on this one. \n\n----\n\nWell why people use \"almost natural\" regarding objects appeared in symmetrical soup, but not \"almost elementary\" for ships appeared in symmetrical search? If the term elementary is placed to distinguish designed and not-designed ships, symmetry is definitely artificially designed property introduced into the search. \n\nMore than that, does ships found using zfind are designed or elementary (and this goes for any new search utility)? Are ships found by iterating different parameters during the search, like the new 3c/7 is designed? because it's everything but elementary, Tim Coe did a lot of tweaks and played with huge amount of parameters to find that one, it definitely looks more like designed to me than \"elementary\". \n\nI think we currently have two distinguishable technologies to \"find\" ships. One technology is helping us to find very artificial and small ships, the other uses natural reaction to generate \"big\" ships. This is just current state, we could get into some \"grey\" area where medium size somewhat artificial ships are being built, using simple components (like we have in case of corderships). \n\nI don't like this terminology - or some assumption that somehow designed ships are somehow worse. They're big yes, and because they're big they're less usable and less elegant, yes - but I do think all the current ships are \"designed\" and artificial in some way, except maybe the *WSS the glider and the SE puffers. \n\nTo make my point more clear: what is more probable, to find Gemini in random soup, or the spaghetti monster? If someone could show spaghetti monster is more probable than Gemini - I would agree to the distinction between designed and \"elementary\"."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 4th, 2016, 2:42 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32738",
+        "text": "I take it that corderships are now officially classed as engineered spaceships then?\n\n\n\nAlso, \"elementary\" spaceships are spaceships which cannot be broken down into any smaller spaceships, that actually take place on certain ship-driving reactions (like blinker syntheses as in the caterpillar). So the gliders in the c/7 diagonal lobster do not make the lobster an engineered spaceship. The spaghetti monster therefore is not engineered but elementary, despite its size.\n\n\nEngineered spaceships don't have adjustable slopes or speeds; they are engineered by their own design. \n\nEngineerable spaceships can have either controllable speeds or directions; their components are engineerable."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » July 4th, 2016, 3:52 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32740",
+        "text": "muzik wrote:I take it that corderships are now officially classed as engineered spaceships then?\nWell, I'm not actually official enough to say for sure.  I wouldn't mind throwing them into that category, but then again I wouldn't mind if they got their own category, along with pufferfish spaceships, and puffer-based spaceships in other rules.  If they were just \"puffer-based spaceships\", would that make everyone happy?\n\nSticking a few puffers together to suppress each other's exhaust, and maybe adding an extra tagalong or so, is certainly a kind of engineering.  But it's much simpler engineering, because the component pieces are capable of traveling at that speed without any external support.\n\nmuzik wrote:Engineered spaceships don't have adjustable slopes or speeds; they are engineered by their own design. \nEngineerable spaceships can have either controllable speeds or directions; their components are engineerable.\nLike Sphenocorona, I do understand the distinction -- but the two terms are so similar, and the underlying concepts are actually different enough, that I have to think about it every time.\n\nWhen it comes right down to it, I'm unlikely to ever use \"engineerable\" as a category, just because \"adjustable\" seems so much clearer.  Subcategories seem easier with \"adjustable\", too:  HBKs and Demonoids (and eventually Orthogonoids) are adjustable-speed but fixed-slope.  With Geminis the speed and direction are independently adjustable.\n\nMaybe you could say something like \"fixed-vector\" for spaceships where both speed and direction are fixed.  But that sounds kind of contrived.  Maybe there's a better new term out there to be found... but usually this kind of classification causes fewer terminology wars, when all the terms have already come into common use.\n\n[I've been trying to get the \"self-supporting\" vs. \"self-constructing\" distinction into common use for several years now, but I'm not sure that I've actually succeeded yet...!]"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 4th, 2016, 3:54 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32741",
+        "text": "Elementary, engineered and adjustable it is then, if everyone else agrees!\n\n\nI think that puffer-based should come under \"engineered\" though"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby praosylen » July 4th, 2016, 3:56 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32742",
+        "text": "simsim314 wrote:To make my point more clear: what is more probable, to find Gemini in random soup, or the spaghetti monster? If someone could show spaghetti monster is more probable than Gemini - I would agree to the distinction between designed and \"elementary\".\nI would say the spaghetti monster, unless there's some precursor to an entire Gemini that fits inside a 27x137 bounding box."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 4th, 2016, 3:56 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32743",
+        "text": "I've done some analysis on the size of caterloopillar, and it turns out I'm very close to optimum. \n\nFor starters I should say the smallest caterloopillar is of the size of ~54K and speed c/92. \n\n1. First of all the critique of the long front - the front costs only ~2K (less than 4%). \n\n2. The recipe consists of ~20 *WSS recipes (or 40 in both directions), so we get ~ 1.35K per *WSS recipe. \n\n3. Out of the 1.35K: \n    ~500 is only the reading heads (front and back).\n    ~650 is the recipe \"unfolded\", SLs for the recipe + slow salvo in progress. \n    ~200 is the skip operation \"vanil blocks\". \n\nObviously it's pretty rough estimates on average. But looking where we can cut here: \n\n1. The front ~4%\n2. The movement recipes ~ 5%-10% (they're close to optimal)\n3. Balancing SKIP operations and movement recipes ~ 5% as well. \n\nAll the estimates are somewhat optimistic, as some work has been done already to optimize all these aspects (except the front). So all in all I can max cut by 20% even in the best scenario, and after a lot of hard work. So I still don't get to 25K range as I hoped. But I think it's cool caterloopillar got so close to the optimal. 54K is definitely well below any other constructible ship except the most tiny of them all - the demonoid. I probably can optimize it to beat the 10-hd demonoid, but not the 0-hd."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 4th, 2016, 4:02 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32744",
+        "text": "A for awesome wrote:I would say the spaghetti monster, unless there's some precursor to an entire Gemini that fits inside a 27x137 bounding box.\n\nI see no reason to limit the bounding box.\n\n In other words I can formulate my question: how big the universe should, be filled with random stuff, so that the probability of appearing of spaghetti monster in it would be > 0.5. Using this formulation we start from extremely large universe, where every known pattern could fit. \n\nCan you prove spaghetti monster universe is smaller than gemini in such formulation?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 4th, 2016, 4:17 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32745",
+        "text": "Challenge: find a predecessor for a Geminoid-type spaceship that fits in an smaller bounding box than the spaghetti monster itself."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 4th, 2016, 4:19 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32746",
+        "text": "@muzik - I've added few speeds and min. count to your page. I must admit this is very tedious and boring for me... I would say that everyone should build some caterloopillar using the script, and say they were the first that built a ship of this particular speed  And post it to your page."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 4th, 2016, 4:21 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32747",
+        "text": "I actually started a page in my user page to list purely caterloopillars, but gave up on it.\n\nYes, I'm kinda lazy. I just want to know where the 2c/x and such would fit in, adding them is the easy part"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby BlinkerSpawn » July 4th, 2016, 4:56 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32751",
+        "text": "Would it be possible for someone to convert the script for generating caterloopillars into Lua?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 4th, 2016, 5:05 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32753",
+        "text": "Well yes it should be possible with some effort, but for what purpose? Python is working for most OS..."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Scorbie » July 4th, 2016, 7:49 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32757",
+        "text": "simsim314 wrote:Well yes it should be possible with some effort, but for what purpose? Python is working for most OS...One reason I can think of is speed. (Not for this case) There are situations where a for loop in python is the bottleneck and you can't really do anything about it... Then I guess you would have to rewrite the whole thing in Lua. I would rather write in Lua in the first place.\nOf course I don't think there is any need to port a already working python script to Lua."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 5th, 2016, 10:11 am\n\t\t\t",
+        "codes": [],
+        "id": "p32807",
+        "text": "I have listed all of the caterloopillar speeds posted on this thread, although knowing on my luck there's probably a bunch more of them somewhere that I don't know about. (Also, come to think of it, are there any more Gemini/Demonoid ships that have been posted on this forum?)\n\nAnyway, can the c/8 or 31c/240 be shrunk anymore simply by running the script again? I can't test this myself due to not having access to a computer."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Apple Bottom » July 5th, 2016, 2:31 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32826",
+        "text": "simsim314 wrote:I think copperhead had appeared in some soup (although it might be symmetric, yet it's still soup friendly). \n\nAye, It's appeared twice in D2_+2 so far."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » July 5th, 2016, 3:09 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32830",
+        "text": "@muzik - great (on adding all the existing pillars)! I'll try to fill the missing squares, and add some additional pillars later on..."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 5th, 2016, 3:23 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32831",
+        "text": "'Twas a tedious job (English translation: prisons of the world, please use this as your form of execution).\n\nBack when I ran drc's \"smaller c/8\", I got what didn't look like a caterloopillar at all...\n\nAlso, why can't speeds like c/14, c/18 and c/26 exist?"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby drc » July 5th, 2016, 3:52 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32835",
+        "text": "muzik wrote:'Back when I ran drc's \"smaller c/8\", I got what didn't look like a caterloopillar at all...\nThe script was giving errors at that time"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » July 5th, 2016, 4:01 pm\n\t\t\t",
+        "codes": [],
+        "id": "p32840",
+        "text": "drc wrote:muzik wrote:'Back when I ran drc's \"smaller c/8\", I got what didn't look like a caterloopillar at all...\nThe script was giving errors at that time\nso you didn't actually get a new c/8... sad"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby gameoflifemaniac » June 7th, 2017, 11:03 am\n\t\t\t",
+        "codes": [
+          "b4o25bo$o29bo$b3o3b3o2bob2o2bob2o2bo3bobo$4bobo3bob2o2bob2o2bobo3bobo$\n4bobo3bobo5bo5bo3bobo$o3bobo3bobo5bo6b4o$b3o3b3o2bo5bo9bobo$24b4o!"
+        ],
+        "id": "p44118",
+        "text": "What's up with the c/92 caterloopillar? You didn't upload it."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby apg » July 18th, 2018, 9:03 am\n\t\t\t",
+        "codes": [],
+        "id": "p61992",
+        "text": "dvgrn wrote:calcyman wrote:dvgrn wrote:Of course, the Caterloopillar is an order of magnitude ahead on the bounding box already -- there's no way the Demonoid is going to catch up on that metric.\n\nWhat about an orthogonal Demonoid which uses a tape of MWSSes? I think that has a very good chance of beating the smallest Caterloopillar, not least because H-to-MWSS and MWSS-to-G technology is so cheap.\nH-to-MWSS technology is either quick to recover and expensive to construct, or Spartan and slow to recover and inexpensive to construct -- right?  We don't have a small Spartan H-to-MWSS with a sub-100-tick recovery time.  Presumably we'd also need a constructible G-to-H if we're using an MWSS-to-G, and even the cheaper 135-degree MWSS-to-G isn't quite Spartan and might cause expensive troubles with construction order.\n\nIt seems you were correct after all: according to the LifeWiki, the Orthogonoid is 707-by-868856 and the c/8 Caterloopillar is 734-by-514927. I suspect your boustrophedonic design could bring the Orthogonoid down below the Caterloopillar, however.\n\n(What is the contest, exactly? To find the smallest-bounding-box spaceship that's slower than c/12?)"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby gameoflifemaniac » July 18th, 2018, 10:14 am\n\t\t\t",
+        "codes": [
+          "b4o25bo$o29bo$b3o3b3o2bob2o2bob2o2bo3bobo$4bobo3bob2o2bob2o2bobo3bobo$\n4bobo3bobo5bo5bo3bobo$o3bobo3bobo5bo6b4o$b3o3b3o2bo5bo9bobo$24b4o!"
+        ],
+        "id": "p61993",
+        "text": "I was waiting for an answer for over a year, and nobody noticed my post. When nobody was answering my question, I deleted my post, and still nobody answered! THAT ISN'T FAIR!!!\nAlso, why didn't anyone answer?\nI wrote:What's up with the c/92 caterloopillar? You didn't upload it."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » July 18th, 2018, 10:35 am\n\t\t\t",
+        "codes": [],
+        "id": "p61995",
+        "text": "calcyman wrote:It seems you were correct after all: according to the LifeWiki, the Orthogonoid is 707-by-868856 and the c/8 Caterloopillar is 734-by-514927. I suspect your boustrophedonic design could bring the Orthogonoid down below the Caterloopillar, however.\nNot sure why it would -- the length of the MWSS recipe would stay about the same, and every time you fold it over and reduce the width, you'll increase the height proportionally.  Not much change to the bounding box, except that an additional width has to be added, a fair fraction of the height of the square Orthogonoid (because the elbows stick out so much farther).\n\nThere are various optimizations that could be applied to the Orthogonoid that would probably make it competitive with the Caterloopillar.  But then there are optimizations that could be applied to the Caterloopillar that would make it a good bit smaller, too!  No idea who would win that race in the end.\n\ncalcyman wrote:(What is the contest, exactly? To find the smallest-bounding-box spaceship that's slower than c/12?)\nDon't know for sure, it's not really my contest...  these days I'm trying to avoid getting fixated on metrics and new-record-smallest things as much as possible.  However, there's some documentary evidence that the current target to beat is the waterbear.  \t13295×28010 is 372392950, with about 198K cells, where the c/8 Caterloopillar is 734×514927 = 377956418 with 233K cells.\n\ngameoflifemaniac wrote:Also, why didn't you (that 'you' is in the plural form) answer?\nI wrote:What's up with the c/92 caterloopillar? You didn't upload it.\nI can't answer in the plural.  But just speaking for myself, I didn't answer because I couldn't find anything useful anywhere about a c/92 Caterloopillar.\n\nEDIT: The two mentions of the c/92 in this thread are here and here. \n The second of these links gives the current state of the art for smallest Caterloopillars.\n\nHowever, this isn't entirely relevant to calcyman's contest question -- simsim314 seems to have been talking about \"smallest\" in terms of population, where the 0hd Demonoid wins hands down (27250 cells, almost an order of magnitude smaller) rather than bounding box (where it definitely doesn't -- 55010×54964 = 3023569640, almost an order of magnitude larger.)"
+      }
+    ],
+    "url": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=125"
+  },
+  {
+    "posts": [
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby yujh » July 3rd, 2020, 9:25 pm\n\t\t\t",
+        "codes": [
+          "x = 448, y = 307123, rule = b3/s23\n6bo$5bobo$5bobo$6bo2$b2o7b2o$o2bo5bo2bo$b2o7b2o2$6bo$5bobo$5bobo$6bo\n226$225b2o$225b2o77$135bo$134bobo$134bo2bo$135b2o13$222bo$221bobo$221b\nobo$222bo2$217b2o7b2o$216bo2bo5bo2bo$217b2o7b2o2$222bo$221bobo$221bobo\n$222bo68$135bo$134bobo$134bo2bo$135b2o17$222bo$221bobo$221bobo$222bo2$\n217b2o7b2o$216bo2bo5bo2bo$217b2o7b2o79$135bo$134bobo$134bo2bo$135b2o\n11$222bo$221bobo$221bobo$222bo2$217b2o7b2o$216bo2bo6b2o$217b2o2$227b2o\n$226bo2bo$226bo2bo$227b2o78$135bo$134bobo$134bo2bo$135b2o8$235bo$235bo\n$235bo9$231bo$230bobo$230bobo$231bo79$135bo$134bobo$134bo2bo$135b2o5$\n235b2o$235b2o9$231bo$230bobo$230bobo$231bo73$135bo$134bobo$134bo2bo$\n135b2o11$235b2o$235b2o93$232bo$231bobo$135bo95bobo$134bobo95bo$134bo2b\no$135b2o90b2o7b2o$226bo2bo5bo2bo$227b2o7b2o2$232bo$231bobo$231bobo$\n232bo78$135bo$134bobo$134bo2bo$135b2o7$232bo$231bobo$231bobo$232bo2$\n236b2o$235bo2bo$236b2o81$135bo$134bobo$134bo2bo$135b2o8$230b2o$229bo2b\no$230b2o$236b3o2$234bo5bo$234bo5bo$234bo5bo2$236b3o80$135bo$134bobo$\n134bo2bo$135b2o6$239b2o$238bo2bo$239b2o9$237bo$237bo$237bo80$135bo$\n134bobo$134bo2bo$135b2o4$239b2o$238bo2bo$239b2o9$237b3o2$235bo5bo$235b\no5bo$235bo5bo2$237b3o83$239b2o$238bo2bo$239b2o5$135bo$134bobo$134bo2bo\n$135b2o5$244b2o$244b2o88$237b2o$237b2o4$135bo109b2o$134bobo107bobo$\n134bo2bo107bo$135b2o75$135bo$134bobo$134bo2bo$135b2o23$258b2o$258b2o\n89$135bo$134bobo$134bo2bo$135b2o5$259bo$258bobo$258bobo$259bo2$254b2o\n7b2o$253bo2bo5bo2bo$254b2o7b2o2$259bo$258bobo$258bobo$259bo88$259bo$\n258bobo$258bobo$259bo2$263b2o$262bo2bo$255b2o6b2o$255b2o$259bo$258bobo\n$258bobo$259bo6$135bo$134bobo$134bo2bo$135b2o85$269b2o$269b2o$276b2o$\n276b2o$135bo$134bobo$134bo2bo$135b2o$264b3o3$267b3o2$265bo$265bo$265bo\n85$269b2o$269b2o$276b2o$276b2o5$264b3o3$267b3o$135bo$134bobo$134bo2bo\n127b2o$135b2o128b2o9$10bo$9b3o$8b2obo$8b3o$8b3o$9b2o51$64bo$63b3o$62b\n2obo$62b3o$63b2o2$56bo$55b3o$55bob2o$56b3o$56b3o$56b2o9$269b2o$269b2o$\n276b2o$276b2o27$135bo$134bobo$134bo2bo$135b2o$5b3o$4bo2bo$7bo$3bo3bo$\n7bo$4bobo43$96b3o$96bo2bo$96bo$96bo$97bobo16$276b2o$276b2o6$73b3o$73bo\n2bo$73bo$73bo$74bobo5$70b3o$70bo2bo$70bo$70bo$71bobo8$135bo$134bobo$\n134bo2bo$135b2o64$127bo$126b3o$126bob2o$127b3o147bo$127b3o146bobo$127b\n2o147bobo$277bo2$272b2o7b2o$271bo2bo5bo2bo$272b2o7b2o2$277bo$276bobo$\n276bobo$277bo12$135bo$134bobo$134bo2bo$135b2o6b3o$142bo2bo$145bo$141bo\n3bo$145bo$142bobo34$129bo$128b3o$127b2obo$127b3o$127b3o$128b2o8$147bo$\n146b3o$146bob2o$147b3o$147b2o17$277bo$152b3o121bobo$151bo2bo121bobo$\n154bo122bo$154bo$151bobo127b2o$280bo2bo$281b2o4$124b3o$123bo2bo$126bo$\n126bo$123bobo15$137b2o$137bobo$137bo6$134b2obo$131bobo3bo4b2o3b4o$130b\n2o3bobo3b3o3bo2b2o$129bo3b2o5b4o4bo2b2o$124bo4bob2o6b3o6bo2bo$124bo5bo\n18b2o2$131b2o$129bo3bo$128bo13bo$132bo8b2o$140bo2bo$131b2o7bobo$129b4o\n8bo$130b3o24$82b3o$82bo2bo$82bo$82bo3bo$82bo$83bo3b2o$89bo4bo$85b2o2bo\n3b3o$87b2o4bob2o$94b3o$94b3o$94b2o11$277b3o$99bo$98b3o174bo5bo$97b2obo\n174bo5bo$97b3o175bo5bo$97b3o$98b2o177b3o2$283bo$282bobo$282bobo$283bo\n47$124b2o$125b2o$124bo10$146bo$145b3o$145bob2o$146b3o$146b3o$146b2o4$\n135bo$134b3o$134bob2o$135b3o$135b3o$135b3o$135b2o15$277b3o2$275bo5bo$\n275bo5bo$275bo5bo2$277b3o2$281b2o$281b2o13$172b2o$171bobo$173bo24$135b\no$134bobo$134bo2bo$135b2o17$218b2o$217bobo$219bo29$291b2o$291b2o3$271b\n2o17b2o$271b2o17b2o3$270b2o$270b2o14$272b2o$271bobo$273bo16$135bo$134b\nobo$134bo2bo$135b2o56$291b2o$291b2o3$271b2o$271b2o44$135bo$134bobo$\n134bo2bo$135b2o48$291b2o$291b2o32$135bo$134bobo$134bo2bo$135b2o62$292b\no$291bobo$291bobo$292bo2$287b2o7b2o$286bo2bo5bo2bo$287b2o7b2o2$292bo$\n291bobo$291bobo$292bo21$135bo$134bobo$134bo2bo$135b2o64$292bo$291bobo$\n291bobo$292bo2$296b2o$295bo2bo$288b2o6b2o$288b2o$292bo$291bobo$291bobo\n$292bo39$135bo$134bobo$134bo2bo$135b2o52$302b2o$302b2o$309b2o$309b2o5$\n297b3o3$300b3o2$298bo$298bo$298bo22$135bo$134bobo$134bo2bo$135b2o60$\n302b2o$302b2o$309b2o$309b2o5$297b3o3$300b3o34$135bo$134bobo$134bo2bo$\n135b2o51$307b2o$306bo$309bo$307b2o65$135bo$134bobo$134bo2bo$135b2o30$\n308b2o$308b2o50$135bo$134bobo$134bo2bo$135b2o40$305bo$304bobo$304bobo$\n305bo2$300b2o7b2o$299bo2bo5bo2bo$300b2o7b2o2$305bo$304bobo$304bobo$\n305bo51$135bo$134bobo$134bo2bo$135b2o34$305bo$304bobo$304bobo$305bo2$\n309b2o$308bo2bo$309b2o2$305bo$304bobo$304bobo$305bo51$135bo$134bobo$\n134bo2bo$135b2o30$303bo$302bobo$302bobo$303bo2$298b2o$297bo2bo$298b2o\n2$310b2o$309bobo$310bo4$306b2o$306b2o43$135bo$134bobo$134bo2bo$135b2o\n38$303bo$302bobo$298bo3bobo$297bobo3bo$297bobo$298bo2$293b2o7b2o$292bo\n2bo5bo2bo$293b2o7b2o6b2o$309bobo$298bo11bo$297bobo$297bobo$298bo$306b\n2o$306b2o47$135bo$134bobo$134bo2bo$135b2o29$299b3o$310b2o$297bo5bo6b2o\n$297bo5bo$297bo5bo2$299b3o3$312b2o$312b2o3$312b2o$312b2o48$135bo$134bo\nbo$134bo2bo$135b2o36$310b2o$310b2o2$306b2o$306b2o4$312b2o$312b2o3$312b\n2o$312b2o56$135bo$134bobo$134bo2bo$135b2o28$310b2o$310b2o3$304b2o$304b\n2o3$312b2o$312b2o3$312b2o$312b2o46$135bo$134bobo$134bo2bo$135b2o47$\n324bo$324bo$324bo46$135bo$134bobo$134bo2bo$135b2o50$324b2o$324b2o60$\n135bo$134bobo$134bo2bo$135b2o30$321bo$320bobo$320bobo$321bo2$316b2o7b\n2o$315bo2bo5bo2bo$316b2o7b2o2$321bo$320bobo$320bobo$321bo69$135bo$134b\nobo$134bo2bo$135b2o16$321bo$320bobo$320bobo$321bo2$325b2o$324bo2bo$\n325b2o72$135bo$134bobo$134bo2bo$135b2o18$321bo$320bobo$320bobo$321bo2$\n325b2o$325b2o3$326b2o$325bo2bo$325bo2bo$326b2o65$135bo$134bobo$134bo2b\no$135b2o20$320bo$319bobo$320bo6$338b2o$338b2o80$135bo$134bobo$134bo2bo\n$135b2o16$338b2o$338b2o72$135bo$134bobo$134bo2bo$135b2o18$335bo$334bob\no$334bobo$335bo2$330b2o7b2o$329bo2bo5bo2bo$330b2o7b2o2$335bo$334bobo$\n334bobo$335bo55$135bo$134bobo$134bo2bo$135b2o30$334b2o$333bobo$334bo4$\n336bo$326b2o8bo$326b2o8bo2$332b3o3b3o2$336bo$336bo$336bo79$135bo$134bo\nbo$134bo2bo$135b2o4$334b2o$333bobo$334bo10$341b3o85$135bo$134bobo$134b\no2bo$135b2o197b2o$333bobo$334bo6$339b3o2$337bo5bo$337bo5bo$337bo5bo2$\n339b3o81$135bo$134bobo$134bo2bo$135b2o3$345b2o$344bo2bo$345b2o8$340b3o\n2$353bo$352bobo$343b2o8bobo$342bo2bo8b2o$343b2o84$135bo$134bobo$134bo\n2bo$135b2o7$340b3o2$353bo$352bobo$343b2o8bobo$342bo2bo8b2o$343b2o66$\n135bo$134bobo$134bo2bo$135b2o25$354bo$353bobo$353bobo$354bo81$135bo$\n134bobo$134bo2bo$135b2o7$357b2o$357b2o3$337b2o17b2o$337b2o17b2o3$336b\n2o$336b2o91$357b2o$357b2o3$356b2o$356b2o5$135bo$134bobo$134bo2bo$135b\n2o87$357b2o$357b2o19$135bo$134bobo$134bo2bo$135b2o69$135bo$134bobo$\n134bo2bo216bo$135b2o216bobo$353bobo$354bo2$349b2o7b2o$348bo2bo5bo2bo$\n349b2o7b2o2$354bo$353bobo$353bobo$354bo88$354bo$353bobo$353bobo$354bo\n2$349b2o7b2o$348bo2bo5bo2bo$349b2o7b2o11$135bo$134bobo$134bo2bo$135b2o\n79$354bo$353bobo$353bobo$354bo2$349b2o7b2o$348bo2bo6b2o$349b2o2$359b2o\n$358bo2bo$358bo2bo$135bo223b2o$134bobo$134bo2bo$135b2o86$367bo$367bo$\n367bo9$363bo$362bobo$362bobo$363bo3$135bo$134bobo$134bo2bo$135b2o81$\n367b2o$3"
+        ],
+        "id": "p100015",
+        "text": "100c/9300 use in golly, not lvCode: Select all / Show in Viewerx = 448, y = 307123, rule = b3/s23\n6bo$5bobo$5bobo$6bo2$b2o7b2o$o2bo5bo2bo$b2o7b2o2$6bo$5bobo$5bobo$6bo\n226$225b2o$225b2o77$135bo$134bobo$134bo2bo$135b2o13$222bo$221bobo$221b\nobo$222bo2$217b2o7b2o$216bo2bo5bo2bo$217b2o7b2o2$222bo$221bobo$221bobo\n$222bo68$135bo$134bobo$134bo2bo$135b2o17$222bo$221bobo$221bobo$222bo2$\n217b2o7b2o$216bo2bo5bo2bo$217b2o7b2o79$135bo$134bobo$134bo2bo$135b2o\n11$222bo$221bobo$221bobo$222bo2$217b2o7b2o$216bo2bo6b2o$217b2o2$227b2o\n$226bo2bo$226bo2bo$227b2o78$135bo$134bobo$134bo2bo$135b2o8$235bo$235bo\n$235bo9$231bo$230bobo$230bobo$231bo79$135bo$134bobo$134bo2bo$135b2o5$\n235b2o$235b2o9$231bo$230bobo$230bobo$231bo73$135bo$134bobo$134bo2bo$\n135b2o11$235b2o$235b2o93$232bo$231bobo$135bo95bobo$134bobo95bo$134bo2b\no$135b2o90b2o7b2o$226bo2bo5bo2bo$227b2o7b2o2$232bo$231bobo$231bobo$\n232bo78$135bo$134bobo$134bo2bo$135b2o7$232bo$231bobo$231bobo$232bo2$\n236b2o$235bo2bo$236b2o81$135bo$134bobo$134bo2bo$135b2o8$230b2o$229bo2b\no$230b2o$236b3o2$234bo5bo$234bo5bo$234bo5bo2$236b3o80$135bo$134bobo$\n134bo2bo$135b2o6$239b2o$238bo2bo$239b2o9$237bo$237bo$237bo80$135bo$\n134bobo$134bo2bo$135b2o4$239b2o$238bo2bo$239b2o9$237b3o2$235bo5bo$235b\no5bo$235bo5bo2$237b3o83$239b2o$238bo2bo$239b2o5$135bo$134bobo$134bo2bo\n$135b2o5$244b2o$244b2o88$237b2o$237b2o4$135bo109b2o$134bobo107bobo$\n134bo2bo107bo$135b2o75$135bo$134bobo$134bo2bo$135b2o23$258b2o$258b2o\n89$135bo$134bobo$134bo2bo$135b2o5$259bo$258bobo$258bobo$259bo2$254b2o\n7b2o$253bo2bo5bo2bo$254b2o7b2o2$259bo$258bobo$258bobo$259bo88$259bo$\n258bobo$258bobo$259bo2$263b2o$262bo2bo$255b2o6b2o$255b2o$259bo$258bobo\n$258bobo$259bo6$135bo$134bobo$134bo2bo$135b2o85$269b2o$269b2o$276b2o$\n276b2o$135bo$134bobo$134bo2bo$135b2o$264b3o3$267b3o2$265bo$265bo$265bo\n85$269b2o$269b2o$276b2o$276b2o5$264b3o3$267b3o$135bo$134bobo$134bo2bo\n127b2o$135b2o128b2o9$10bo$9b3o$8b2obo$8b3o$8b3o$9b2o51$64bo$63b3o$62b\n2obo$62b3o$63b2o2$56bo$55b3o$55bob2o$56b3o$56b3o$56b2o9$269b2o$269b2o$\n276b2o$276b2o27$135bo$134bobo$134bo2bo$135b2o$5b3o$4bo2bo$7bo$3bo3bo$\n7bo$4bobo43$96b3o$96bo2bo$96bo$96bo$97bobo16$276b2o$276b2o6$73b3o$73bo\n2bo$73bo$73bo$74bobo5$70b3o$70bo2bo$70bo$70bo$71bobo8$135bo$134bobo$\n134bo2bo$135b2o64$127bo$126b3o$126bob2o$127b3o147bo$127b3o146bobo$127b\n2o147bobo$277bo2$272b2o7b2o$271bo2bo5bo2bo$272b2o7b2o2$277bo$276bobo$\n276bobo$277bo12$135bo$134bobo$134bo2bo$135b2o6b3o$142bo2bo$145bo$141bo\n3bo$145bo$142bobo34$129bo$128b3o$127b2obo$127b3o$127b3o$128b2o8$147bo$\n146b3o$146bob2o$147b3o$147b2o17$277bo$152b3o121bobo$151bo2bo121bobo$\n154bo122bo$154bo$151bobo127b2o$280bo2bo$281b2o4$124b3o$123bo2bo$126bo$\n126bo$123bobo15$137b2o$137bobo$137bo6$134b2obo$131bobo3bo4b2o3b4o$130b\n2o3bobo3b3o3bo2b2o$129bo3b2o5b4o4bo2b2o$124bo4bob2o6b3o6bo2bo$124bo5bo\n18b2o2$131b2o$129bo3bo$128bo13bo$132bo8b2o$140bo2bo$131b2o7bobo$129b4o\n8bo$130b3o24$82b3o$82bo2bo$82bo$82bo3bo$82bo$83bo3b2o$89bo4bo$85b2o2bo\n3b3o$87b2o4bob2o$94b3o$94b3o$94b2o11$277b3o$99bo$98b3o174bo5bo$97b2obo\n174bo5bo$97b3o175bo5bo$97b3o$98b2o177b3o2$283bo$282bobo$282bobo$283bo\n47$124b2o$125b2o$124bo10$146bo$145b3o$145bob2o$146b3o$146b3o$146b2o4$\n135bo$134b3o$134bob2o$135b3o$135b3o$135b3o$135b2o15$277b3o2$275bo5bo$\n275bo5bo$275bo5bo2$277b3o2$281b2o$281b2o13$172b2o$171bobo$173bo24$135b\no$134bobo$134bo2bo$135b2o17$218b2o$217bobo$219bo29$291b2o$291b2o3$271b\n2o17b2o$271b2o17b2o3$270b2o$270b2o14$272b2o$271bobo$273bo16$135bo$134b\nobo$134bo2bo$135b2o56$291b2o$291b2o3$271b2o$271b2o44$135bo$134bobo$\n134bo2bo$135b2o48$291b2o$291b2o32$135bo$134bobo$134bo2bo$135b2o62$292b\no$291bobo$291bobo$292bo2$287b2o7b2o$286bo2bo5bo2bo$287b2o7b2o2$292bo$\n291bobo$291bobo$292bo21$135bo$134bobo$134bo2bo$135b2o64$292bo$291bobo$\n291bobo$292bo2$296b2o$295bo2bo$288b2o6b2o$288b2o$292bo$291bobo$291bobo\n$292bo39$135bo$134bobo$134bo2bo$135b2o52$302b2o$302b2o$309b2o$309b2o5$\n297b3o3$300b3o2$298bo$298bo$298bo22$135bo$134bobo$134bo2bo$135b2o60$\n302b2o$302b2o$309b2o$309b2o5$297b3o3$300b3o34$135bo$134bobo$134bo2bo$\n135b2o51$307b2o$306bo$309bo$307b2o65$135bo$134bobo$134bo2bo$135b2o30$\n308b2o$308b2o50$135bo$134bobo$134bo2bo$135b2o40$305bo$304bobo$304bobo$\n305bo2$300b2o7b2o$299bo2bo5bo2bo$300b2o7b2o2$305bo$304bobo$304bobo$\n305bo51$135bo$134bobo$134bo2bo$135b2o34$305bo$304bobo$304bobo$305bo2$\n309b2o$308bo2bo$309b2o2$305bo$304bobo$304bobo$305bo51$135bo$134bobo$\n134bo2bo$135b2o30$303bo$302bobo$302bobo$303bo2$298b2o$297bo2bo$298b2o\n2$310b2o$309bobo$310bo4$306b2o$306b2o43$135bo$134bobo$134bo2bo$135b2o\n38$303bo$302bobo$298bo3bobo$297bobo3bo$297bobo$298bo2$293b2o7b2o$292bo\n2bo5bo2bo$293b2o7b2o6b2o$309bobo$298bo11bo$297bobo$297bobo$298bo$306b\n2o$306b2o47$135bo$134bobo$134bo2bo$135b2o29$299b3o$310b2o$297bo5bo6b2o\n$297bo5bo$297bo5bo2$299b3o3$312b2o$312b2o3$312b2o$312b2o48$135bo$134bo\nbo$134bo2bo$135b2o36$310b2o$310b2o2$306b2o$306b2o4$312b2o$312b2o3$312b\n2o$312b2o56$135bo$134bobo$134bo2bo$135b2o28$310b2o$310b2o3$304b2o$304b\n2o3$312b2o$312b2o3$312b2o$312b2o46$135bo$134bobo$134bo2bo$135b2o47$\n324bo$324bo$324bo46$135bo$134bobo$134bo2bo$135b2o50$324b2o$324b2o60$\n135bo$134bobo$134bo2bo$135b2o30$321bo$320bobo$320bobo$321bo2$316b2o7b\n2o$315bo2bo5bo2bo$316b2o7b2o2$321bo$320bobo$320bobo$321bo69$135bo$134b\nobo$134bo2bo$135b2o16$321bo$320bobo$320bobo$321bo2$325b2o$324bo2bo$\n325b2o72$135bo$134bobo$134bo2bo$135b2o18$321bo$320bobo$320bobo$321bo2$\n325b2o$325b2o3$326b2o$325bo2bo$325bo2bo$326b2o65$135bo$134bobo$134bo2b\no$135b2o20$320bo$319bobo$320bo6$338b2o$338b2o80$135bo$134bobo$134bo2bo\n$135b2o16$338b2o$338b2o72$135bo$134bobo$134bo2bo$135b2o18$335bo$334bob\no$334bobo$335bo2$330b2o7b2o$329bo2bo5bo2bo$330b2o7b2o2$335bo$334bobo$\n334bobo$335bo55$135bo$134bobo$134bo2bo$135b2o30$334b2o$333bobo$334bo4$\n336bo$326b2o8bo$326b2o8bo2$332b3o3b3o2$336bo$336bo$336bo79$135bo$134bo\nbo$134bo2bo$135b2o4$334b2o$333bobo$334bo10$341b3o85$135bo$134bobo$134b\no2bo$135b2o197b2o$333bobo$334bo6$339b3o2$337bo5bo$337bo5bo$337bo5bo2$\n339b3o81$135bo$134bobo$134bo2bo$135b2o3$345b2o$344bo2bo$345b2o8$340b3o\n2$353bo$352bobo$343b2o8bobo$342bo2bo8b2o$343b2o84$135bo$134bobo$134bo\n2bo$135b2o7$340b3o2$353bo$352bobo$343b2o8bobo$342bo2bo8b2o$343b2o66$\n135bo$134bobo$134bo2bo$135b2o25$354bo$353bobo$353bobo$354bo81$135bo$\n134bobo$134bo2bo$135b2o7$357b2o$357b2o3$337b2o17b2o$337b2o17b2o3$336b\n2o$336b2o91$357b2o$357b2o3$356b2o$356b2o5$135bo$134bobo$134bo2bo$135b\n2o87$357b2o$357b2o19$135bo$134bobo$134bo2bo$135b2o69$135bo$134bobo$\n134bo2bo216bo$135b2o216bobo$353bobo$354bo2$349b2o7b2o$348bo2bo5bo2bo$\n349b2o7b2o2$354bo$353bobo$353bobo$354bo88$354bo$353bobo$353bobo$354bo\n2$349b2o7b2o$348bo2bo5bo2bo$349b2o7b2o11$135bo$134bobo$134bo2bo$135b2o\n79$354bo$353bobo$353bobo$354bo2$349b2o7b2o$348bo2bo6b2o$349b2o2$359b2o\n$358bo2bo$358bo2bo$135bo223b2o$134bobo$134bo2bo$135b2o86$367bo$367bo$\n367bo9$363bo$362bobo$362bobo$363bo3$135bo$134bobo$134bo2bo$135b2o81$\n367b2o$3"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby PHPBB12345 » July 3rd, 2020, 9:28 pm\n\t\t\t",
+        "codes": [
+          "Incompleted RLE"
+        ],
+        "id": "p100017",
+        "text": "yujh wrote: July 3rd, 2020, 9:25 pm\n100c/9300 use in golly, not lvCode: Select allIncompleted RLE\n"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby yujh » July 3rd, 2020, 9:32 pm\n\t\t\t",
+        "codes": [
+          "Incompleted RLE"
+        ],
+        "id": "p100019",
+        "text": "PHPBB12345 wrote: July 3rd, 2020, 9:28 pm\nyujh wrote: July 3rd, 2020, 9:25 pm\n100c/9300 use in golly, not lvCode: Select allIncompleted RLE\n\n\n\nOOPs!\n\t\t\t\n\t\t\n\t\t\n\t\t\t\t\n\t\t\t 100_9300_Caterloopillar.rle\n\t\t\t\t\t\t(233.81 KiB) Downloaded 203 times\n\t\t\n\t\t\n\t\t\t"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby gameoflifemaniac » July 4th, 2020, 4:33 am\n\t\t\t",
+        "codes": [
+          "Incompleted RLE",
+          "b4o25bo$o29bo$b3o3b3o2bob2o2bob2o2bo3bobo$4bobo3bob2o2bob2o2bobo3bobo$\n4bobo3bobo5bo5bo3bobo$o3bobo3bobo5bo6b4o$b3o3b3o2bo5bo9bobo$24b4o!"
+        ],
+        "id": "p100040",
+        "text": "yujh wrote: July 3rd, 2020, 9:32 pm\nPHPBB12345 wrote: July 3rd, 2020, 9:28 pm\nyujh wrote: July 3rd, 2020, 9:25 pm\n100c/9300 use in golly, not lvCode: Select allIncompleted RLE\n\n\n\nOOPs!100_9300_Caterloopillar.rle\n\n\nI've been looking for that speed for ages."
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby yujh » July 4th, 2020, 7:09 pm\n\t\t\t",
+        "codes": [],
+        "id": "p100078",
+        "text": "\n\t\t\t\n\t\t\n\t\t\n\t\t\t\t\n\t\t\t 100_9100_Caterloopillar.rle\n\t\t\t\t\t\t(233.38 KiB) Downloaded 188 times\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\t\n\t\t\t 100_8900_Caterloopillar.rle\n\t\t\t\t\t\t(231.18 KiB) Downloaded 176 times\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\t\n\t\t\t 100_7100_Caterloopillar.rle\n\t\t\t\t\t\t(238.02 KiB) Downloaded 189 times\n\t\t\n\t\t\n\t\t\t"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby yujh » July 7th, 2020, 1:40 am\n\t\t\t",
+        "codes": [],
+        "id": "p100163",
+        "text": "Bump!!\n\t\t\t\n\t\t\n\t\t\n\t\t\t\t\n\t\t\t 200_9300_Caterloopillar.rle\n\t\t\t\t\t\t(337.55 KiB) Downloaded 189 times\n\t\t\n\t\t\n\t\t\t\n\n\t\t\t\n\t\t\n\t\t\n\t\t\t\t\n\t\t\t Caterloopillars.rar\n\t\t\t200c/1500-200c/2900\t\t\t(1.09 MiB) Downloaded 188 times\n\t\t\n\t\t\n\t\t\t"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby yujh » August 17th, 2020, 5:21 am\n\t\t\t",
+        "codes": [],
+        "id": "p102397",
+        "text": "(sorry)\none of the biggest and fastest I've made\n\t\t\t\n\t\t\n\t\t\n\t\t\t\t\n\t\t\t 2470_10400_Caterloopillar.rle\n\t\t\t19c80 simplified\t\t\t(3.45 MiB) Downloaded 185 times\n\t\t\n\t\t\n\t\t\t"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby yujh » January 8th, 2021, 9:53 pm\n\t\t\t",
+        "codes": [],
+        "id": "p118605",
+        "text": "I’ve made yet another collection of caterloopillars:(There’re still some known speeds in simsim’s collection that didn’t appear in mine yet)\n\nhttps://github.com/yujh-yujh/Caterloopillars"
+      },
+      {
+        "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Hippo.69 » June 14th, 2026, 10:02 am\n\t\t\t",
+        "codes": [],
+        "id": "p229831",
+        "text": "simsim314 wrote: April 9th, 2016, 6:47 pm\nI've finally managed to finish the first caterloopillar for c/8 (which is the first known c/8 orthogonal spaceship). \n\n\nMore then 16 years later ... and it probably was corrected in later posts ... would not putting the topmost loaf a bit lower save all the initial rearangement of the target position? ... making the ship shorter ...\n\nhmmm at least the same start was used several weeks after the first ship released ...\n\nMy bad ... putting the loaf lower mans it would fire glider earlier (so there will be no collision).\n\nThere is another option ... to \"trash agnosticize\" the recipe shows, we can rearrange the slow salvo, such that trash could be destroyed later \"in idle time\". When the (even) lane distance exceeds some constant (33 resp. 19)... we can put more loafs to the 250 stripe.\nHmm, but one should be carefull ... to choose correct stripe to issue xwss (as we should select correct position \"mod 2000 resp. 1500\" ...)\n\nWow, pslmake is unable to start given signature restriction to just one glider. Either monoxl.bin does not suffice or we have another bug..."
+      }
+    ],
+    "url": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=150"
+  }
+]

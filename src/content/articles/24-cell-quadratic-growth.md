@@ -3,8 +3,13 @@ title: '24-cell quadratic growth'
 description: 'A 24-cell breeder discovered between the 25-cell seed and switch engine ping-pong.'
 type: 'research'
 topics: ['game-of-life']
+presentationOrder: 1000
 status: 'demonstrated'
-showPreview: false
+showPreview: true
+image: /images/life-24-cell-quadratic-growth.gif
+imageAlt: Later evolution of the original 24-cell seed, generations 4,194,304–16,777,216.
+imageCredit: Original pattern evolved with Golly 3.3; local animation with a still fallback.
+imageSource: https://conwaylife.com/wiki/24-cell_quadratic_growth
 visual: 'life'
 date: '2026-10-12'
 tags: ['quadratic growth', 'breeder', '2014']
@@ -18,6 +23,8 @@ sources:
 ---
 
 I found **24-cell quadratic growth on October 23, 2014**, two days after my [25-cell pattern](/articles/25-cell-quadratic-growth/).
+
+The animation shows the original seed after 4,194,304–16,777,216 generations. Each lit square contains live cells within a 16,384 × 16,384-cell region; the entire pattern is simulated. The view stays fixed as the structure grows, then the clip resets.
 
 ## What the cell count means
 

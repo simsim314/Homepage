@@ -1,0 +1,37 @@
+{
+  "b60": {
+    "initial_population": 25,
+    "generation": 60,
+    "final_population": 24,
+    "independent_sparse_match": true,
+    "exact_period_return": null
+  },
+  "bne14t30": {
+    "initial_population": 34,
+    "generation": 144,
+    "final_population": 32,
+    "independent_sparse_match": true,
+    "exact_period_return": null
+  },
+  "brx46b": {
+    "initial_population": 27,
+    "generation": 46,
+    "final_population": 25,
+    "independent_sparse_match": true,
+    "exact_period_return": null
+  },
+  "ocellus": {
+    "initial_population": 92,
+    "generation": 114,
+    "final_population": 92,
+    "independent_sparse_match": true,
+    "exact_period_return": 114
+  },
+  "simkins-p60": {
+    "initial_population": 70,
+    "generation": 60,
+    "final_population": 70,
+    "independent_sparse_match": true,
+    "exact_period_return": 60
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "All ideal geometry checks passed.",
+  "placement_checks": 65536,
+  "valid_offsets_modulo_32": [
+    [
+      16,
+      16
+    ]
+  ],
+  "profiles": 8,
+  "voxels_per_profile": 19,
+  "blue_types_up_to_rotation": 6,
+  "scope": "New directional-key proposal; exact profiles, integer offsets, quarter-turns. Not print-ready CAD."
+}

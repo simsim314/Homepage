@@ -4,7 +4,11 @@ description: 'A period-60 oscillator formed from two B60 conduits with glider-su
 type: 'research'
 topics: ['game-of-life']
 status: 'demonstrated'
-showPreview: false
+showPreview: true
+image: /images/life-simkins-p60.gif
+imageAlt: One complete 60-generation cycle of Simkin’s p60.
+imageCredit: Original pattern evolved with Golly 3.3; local animation with a still fallback.
+imageSource: https://conwaylife.com/wiki/Simkin%27s_p60
 visual: 'life'
 date: '2026-10-12'
 tags: ['oscillator', 'p60', 'B60']

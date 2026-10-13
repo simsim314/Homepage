@@ -1,0 +1,178 @@
+---
+import { href } from '../lib/content';
+---
+
+<section
+  id="tile-kit"
+  class="tile-viewer"
+  data-visual-key="life-in-3d-tiles-kit"
+  data-kit-url={href('models/life-tile-kit/manifest.json')}
+>
+  <div class="viewer-heading">
+    <span class="eyebrow">Basic construction pieces · Original CAD</span>
+    <h2>Pieces for building the tiles.</h2>
+    <p>These parts make configurable cubes. Cubes are joined into the actual tiles.</p>
+    <ol class="construction-levels" aria-label="Four levels of the construction">
+      <li><strong>Pieces</strong><span>Core, sides, faces</span></li>
+      <li><strong>Cubes</strong><span>Configured connections</span></li>
+      <li><strong>Tiles</strong><span>Compound operations</span></li>
+      <li><strong>Assembly</strong><span>A cellular automaton</span></li>
+    </ol>
+    <button class="button load-kit" type="button">Explore in 3D</button>
+  </div>
+  <div class="viewer-loaded" hidden>
+    <div class="viewer-toolbar">
+      <label
+        >View
+        <select class="kit-mode">
+          <option value="pair">Two construction pieces</option>
+          <option value="all">All ten construction pieces</option>
+          <option value="side-plain">Plain side</option>
+          <option value="side-connecting">Connecting side</option>
+          <option value="top-plain">Plain top</option>
+          <option value="top-attachment">Attachment top</option>
+          <option value="top-zero">Zero top</option>
+          <option value="top-one">One top</option>
+          <option value="bottom-attachment">Attachment base</option>
+          <option value="bottom-one">One base</option>
+          <option value="bottom-zero">Zero base</option>
+          <option value="bottom-either">Either-value base</option>
+        </select>
+      </label>
+      <label class="separation-control"
+        >Separate faces
+        <input class="kit-separation" type="range" min="0" max="35" value="22" />
+      </label>
+      <button class="kit-reset" type="button">Reset view</button>
+    </div>
+    <div class="kit-stage"></div>
+    <p class="kit-details" aria-live="polite"></p>
+    <p class="viewer-help">Drag to rotate · Scroll or pinch to zoom · Arrow keys rotate the view</p>
+  </div>
+  <p class="kit-loading" role="status" hidden></p>
+  <p class="viewer-source">
+    Michael Simkin’s 2019 construction pieces, rendered from the forum code at 3× scale. This view
+    shows the basic parts, not the 26 compound Life tiles.
+    <a href="https://conwaylife.com/forums/viewtopic.php?p=73650#p73650">Original design ↗</a>
+  </p>
+</section>
+
+<style>
+  .tile-viewer {
+    border: 1px solid var(--line);
+    background: #edf1ea;
+    margin: 2rem 0;
+    padding: 1.4rem;
+  }
+  .viewer-heading h2 {
+    margin: 0.5rem 0;
+  }
+  .viewer-heading p,
+  .viewer-source,
+  .viewer-help {
+    font-size: 0.9rem;
+  }
+  .construction-levels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0;
+    margin: 1rem 0;
+    list-style-position: inside;
+  }
+  .construction-levels li {
+    padding: 0.65rem;
+    background: #e1e8df;
+    font-size: 0.85rem;
+  }
+  .construction-levels span {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+  }
+  .viewer-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.2rem 0;
+  }
+  .viewer-toolbar label {
+    display: grid;
+    gap: 0.4rem;
+    font: 600 0.8rem var(--font-sans);
+  }
+  select,
+  button.kit-reset {
+    padding: 0.6rem;
+    color: #213e42;
+    border: 1px solid #bbc8be;
+    background: #fffdf7;
+  }
+  .kit-stage {
+    height: 420px;
+    width: 100%;
+    background: #e1e8df;
+    overflow: hidden;
+  }
+  .kit-stage :global(canvas) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  .kit-stage :global(canvas:focus-visible) {
+    outline: 3px solid #267165;
+    outline-offset: -3px;
+  }
+  .kit-details {
+    min-height: 2.7em;
+    font-size: 0.9rem;
+  }
+  .viewer-source {
+    border-top: 1px solid #c5d1c6;
+    padding-top: 1rem;
+    margin-bottom: 0;
+  }
+  .viewer-help {
+    color: #465e5f;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  @media (max-width: 600px) {
+    .construction-levels {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .tile-viewer {
+      padding: 1rem;
+    }
+    .kit-stage {
+      height: 320px;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.tile-viewer').forEach((root) => {
+    const load = root.querySelector<HTMLButtonElement>('.load-kit')!;
+    load.addEventListener('click', async () => {
+      load.disabled = true;
+      const status = root.querySelector<HTMLElement>('.kit-loading')!;
+      status.hidden = false;
+      status.textContent = 'Loading the original tile geometry…';
+      try {
+        const { mountTileKit } = await import('../scripts/tile-kit-viewer');
+        await mountTileKit(root);
+        load.remove();
+        status.hidden = true;
+      } catch (error) {
+        root.querySelector<HTMLElement>('.viewer-loaded')!.hidden = true;
+        status.textContent =
+          'The 3D view could not load. Try again or open the original design linked below.';
+        load.disabled = false;
+        console.error(error);
+      }
+    });
+  });
+</script>

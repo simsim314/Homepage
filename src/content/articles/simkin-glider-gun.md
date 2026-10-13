@@ -1,12 +1,13 @@
 ---
 title: 'Simkin Glider Gun'
-description: 'A simple combinatorial search, three blocks, and a repeating source of gliders.'
+description: 'The 29-cell gun: the smallest known by live-cell population when two glider output streams are allowed.'
 type: 'research'
 topics: ['game-of-life']
 status: 'demonstrated'
 showPreview: true
 visual: 'life'
 featured: true
+homepageHero: true
 image: /images/simkin-glider-gun.gif
 imageAlt: Animated B3/S23 simulation of the 29-cell Simkin glider gun.
 imageCredit: Exact B3/S23 simulation, rendered for this site from the documented pattern.
@@ -40,7 +41,9 @@ The search produced the interaction that became one half of the gun. I posted it
 
 The pattern runs a Herschel around a loop formed by two B60 conduits. Each conduit advances the reaction by 60 generations. The complete loop repeats after 120 generations and emits gliders.
 
-The double-barrelled form begins with **29 live cells**. Adding an eater to suppress one output gives a 36-cell single-barrelled form. The [animation on the homepage](/#glider-gun) shows the 29-cell pattern under the ordinary B3/S23 Life rule. Play/Pause controls let you inspect it at a slower pace; gliders leave the finite display at its edges.
+**When two glider output streams are allowed, the 29-cell Simkin gun is the smallest known gun by live-cell population.** This is a population record, rather than a bounding-box record. [LifeWiki documents the record and both forms](https://conwaylife.com/wiki/Simkin_glider_gun).
+
+Adding an eater to suppress one output gives a 36-cell single-barrelled form, tying the Gosper glider gun’s population. The [animation above](#glider-gun) shows the 29-cell pattern under the ordinary B3/S23 Life rule. Play/Pause, Step, Reset, and speed controls let you inspect the reaction; gliders leave the finite display at its edges.
 
 ## Discovery and attribution
 

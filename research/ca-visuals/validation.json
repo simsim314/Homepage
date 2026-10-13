@@ -1,0 +1,7 @@
+{
+  "engine": "Golly 3.3",
+  "lfod": "Exact states match independent B2/S0 at generations 0, 1, 6, 60; generation 6 translates by (-2,0).",
+  "remini": "2400-cell causal margin preserves all displayed cells through generation 2400. The displayed generation 2048 also matches a full original-pattern HashLife run.",
+  "serizawa-geminoid-circuit": "All 368 non-background cells and their states in the generation-zero crop match the original multistate RLE.",
+  "geminoid-particles-construction": "All 127 non-background cells and their states in the generation-zero crop match the original multistate RLE."
+}

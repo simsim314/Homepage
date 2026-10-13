@@ -1,0 +1,20 @@
+# Actions from Fig. 4 of Serizawa (1986)
+#
+# From top to bottom:
+# A: pulse termination
+# B: block movement
+# C: pulse duplication
+# D: block elimination (2 pulses leave)
+# E: reflection
+# F: elimination
+# G: block construction
+# H: elimination            
+# I: obstruction           
+# J: construction of 3 block pattern 
+# K: pulse meeting a 2 block pattern leaving one block behind
+#
+x = 31, y = 81, rule = Serizawa
+17.A$18.B2.A$17.A4$17.A$18.B$17.A$21.A5$26.A3.A$27.B$26.A3.A3$17.A$
+18.B$17.A3.A7$A3.A$.B.B$A3.A$17.A$18.B5.A$17.A5.B$24.A5$19.A.A$20.B$
+17.A$18.B$17.A5$19.A.A$19.ABA$17.A2.A$18.B$17.A5$24.A$25.B3.A$24.A3.A
+BA$28.A.A7$21.A$20.B$18.B2.A$17.A.A6$19.A$18.A2$19.B$18.A.A!

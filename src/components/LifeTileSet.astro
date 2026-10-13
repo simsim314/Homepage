@@ -1,0 +1,73 @@
+---
+import catalogue from '../data/life-tile-catalogue.json';
+import { href } from '../lib/content';
+import LifeTileExplorer from './LifeTileExplorer.astro';
+interface Props {
+  family: string;
+}
+const { family } = Astro.props;
+const tiles = catalogue.filter((tile) => tile.family === family);
+const slugs: Record<string, string> = {
+  Blue: 'blue',
+  Orange: 'orange',
+  Purple: 'purple',
+  'Black / white': 'final',
+  'Boundary blue': 'boundary',
+};
+const examples: Record<string, string> = {
+  Blue: 'blue-1',
+  Orange: 'orange-010',
+  Purple: 'purple-P5a',
+  'Black / white': 'final-2',
+  'Boundary blue': 'corner-1',
+};
+const face = family === 'Purple' ? 'recessed inputs facing up' : 'raised outputs facing up';
+---
+
+<section
+  class="life-tile-set"
+  aria-label={`${family}: all ${tiles.length} tile types`}
+  data-family={family}
+>
+  <figure class="tile-group">
+    <a
+      href={href(`images/life-tiles/set-${slugs[family]}.png`)}
+      target="_blank"
+      rel="noopener"
+      aria-label={`Enlarge the ${family.toLowerCase()} set`}
+    >
+      <img
+        src={href(`images/life-tiles/set-${slugs[family]}.png`)}
+        width="1200"
+        height="488"
+        loading="lazy"
+        decoding="async"
+        alt={`All ${tiles.length} ${family.toLowerCase()} types laid side by side on one plane in 3D, ${face}.`}
+      />
+    </a>
+    <figcaption>{tiles.length} types · {face} · click to enlarge</figcaption>
+  </figure>
+  <LifeTileExplorer tileName={examples[family]} />
+</section>
+<style>
+  .life-tile-set {
+    margin: 1.3rem 0 1.6rem;
+    font-family: var(--sans);
+  }
+  .tile-group {
+    margin: 0;
+  }
+  .tile-group img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+  }
+  .tile-group figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+</style>

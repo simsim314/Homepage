@@ -1,0 +1,3391 @@
+{
+  "source": "research/ca-visuals/GeminoidParticles.rle",
+  "sha256": "a6f583bb92101810d45cc7464cde27fa64f7ba259854da2be8b07ee607aad56d",
+  "engine": "Golly 3.3 / RuleLoader",
+  "rule": "GeminoidParticles",
+  "dimensions": [
+    1100,
+    760
+  ],
+  "generations": [
+    0,
+    49152
+  ],
+  "second_end_anchor": [
+    75,
+    9002
+  ],
+  "head_translation": [
+    148,
+    -112
+  ],
+  "first_completed_head_circuitry_at_each_end": [
+    18048,
+    26880
+  ],
+  "reference_cells": 80,
+  "validation": "Exact source states at both translated head regions match the original fixed circuitry; Serizawa excludes startup targets/transient signal cells by comparing the operating parent. Full-pattern states, not clipped simulations.",
+  "tape_view": [
+    -25,
+    -500,
+    750,
+    18500
+  ],
+  "tape_rendering": "Exact occupied pixels with independently scaled axes. Height is explicitly compressed; cells enlarged. End panels preserve upright geometry and follow successive heads, sharing the same generation.",
+  "frames": [
+    {
+      "generation": 0,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 384,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 768,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 1152,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 1536,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 1920,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 2304,
+      "head_matches": [
+        2,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 2688,
+      "head_matches": [
+        4,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 3072,
+      "head_matches": [
+        6,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 3456,
+      "head_matches": [
+        8,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 3840,
+      "head_matches": [
+        11,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 4224,
+      "head_matches": [
+        13,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 4608,
+      "head_matches": [
+        16,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 4992,
+      "head_matches": [
+        18,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 5376,
+      "head_matches": [
+        20,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 5760,
+      "head_matches": [
+        22,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 6144,
+      "head_matches": [
+        25,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 6528,
+      "head_matches": [
+        26,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 6912,
+      "head_matches": [
+        27,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 7296,
+      "head_matches": [
+        29,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 7680,
+      "head_matches": [
+        32,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 8064,
+      "head_matches": [
+        34,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 8448,
+      "head_matches": [
+        38,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 8832,
+      "head_matches": [
+        40,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 9216,
+      "head_matches": [
+        40,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 9600,
+      "head_matches": [
+        40,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 9984,
+      "head_matches": [
+        40,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 10368,
+      "head_matches": [
+        40,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 10752,
+      "head_matches": [
+        40,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 11136,
+      "head_matches": [
+        43,
+        2
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 11520,
+      "head_matches": [
+        43,
+        3
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 11904,
+      "head_matches": [
+        47,
+        6
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 12288,
+      "head_matches": [
+        47,
+        8
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 12672,
+      "head_matches": [
+        48,
+        10
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 13056,
+      "head_matches": [
+        48,
+        13
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 13440,
+      "head_matches": [
+        49,
+        16
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 13824,
+      "head_matches": [
+        49,
+        17
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 14208,
+      "head_matches": [
+        50,
+        20
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 14592,
+      "head_matches": [
+        50,
+        22
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 14976,
+      "head_matches": [
+        51,
+        25
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 15360,
+      "head_matches": [
+        55,
+        26
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 15744,
+      "head_matches": [
+        60,
+        27
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 16128,
+      "head_matches": [
+        63,
+        29
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 16512,
+      "head_matches": [
+        68,
+        31
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 16896,
+      "head_matches": [
+        72,
+        34
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 17280,
+      "head_matches": [
+        75,
+        38
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 17664,
+      "head_matches": [
+        78,
+        40
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 18048,
+      "head_matches": [
+        80,
+        40
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 18432,
+      "head_matches": [
+        80,
+        40
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 18816,
+      "head_matches": [
+        80,
+        40
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 19200,
+      "head_matches": [
+        80,
+        40
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 19584,
+      "head_matches": [
+        80,
+        40
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 19968,
+      "head_matches": [
+        80,
+        43
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          -20,
+          -155,
+          390,
+          155
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 20352,
+      "head_matches": [
+        80,
+        43
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 20736,
+      "head_matches": [
+        80,
+        46
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 21120,
+      "head_matches": [
+        80,
+        47
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 21504,
+      "head_matches": [
+        80,
+        47
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 21888,
+      "head_matches": [
+        80,
+        48
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 22272,
+      "head_matches": [
+        80,
+        49
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 22656,
+      "head_matches": [
+        80,
+        49
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 23040,
+      "head_matches": [
+        80,
+        49
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 23424,
+      "head_matches": [
+        80,
+        50
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 23808,
+      "head_matches": [
+        80,
+        51
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 24192,
+      "head_matches": [
+        80,
+        54
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 24576,
+      "head_matches": [
+        80,
+        59
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 24960,
+      "head_matches": [
+        80,
+        62
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 25344,
+      "head_matches": [
+        80,
+        67
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 25728,
+      "head_matches": [
+        80,
+        70
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 26112,
+      "head_matches": [
+        80,
+        75
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 26496,
+      "head_matches": [
+        80,
+        77
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 26880,
+      "head_matches": [
+        80,
+        80
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 27264,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 27648,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 28032,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 28416,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 28800,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          55,
+          8847,
+          465,
+          9157
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 29184,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 29568,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 29952,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 30336,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 30720,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 31104,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 31488,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 31872,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 32256,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 32640,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 33024,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 33408,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 33792,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 34176,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 34560,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 34944,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 35328,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 35712,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 36096,
+      "head_matches": [
+        80,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 36480,
+      "head_matches": [
+        47,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 36864,
+      "head_matches": [
+        4,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 37248,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 37632,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 38016,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 38400,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          128,
+          -267,
+          538,
+          43
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 38784,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 39168,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 39552,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 39936,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 40320,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 40704,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 41088,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 41472,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 41856,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 42240,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 42624,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 43008,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 43392,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 43776,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 44160,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 44544,
+      "head_matches": [
+        0,
+        78
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 44928,
+      "head_matches": [
+        0,
+        79
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 45312,
+      "head_matches": [
+        0,
+        61
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 45696,
+      "head_matches": [
+        0,
+        7
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 46080,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 46464,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 46848,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 47232,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          203,
+          8735,
+          613,
+          9045
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 47616,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          351,
+          8623,
+          761,
+          8933
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 48000,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          351,
+          8623,
+          761,
+          8933
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 48384,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          351,
+          8623,
+          761,
+          8933
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 48768,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          351,
+          8623,
+          761,
+          8933
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    },
+    {
+      "generation": 49152,
+      "head_matches": [
+        0,
+        0
+      ],
+      "reference_cells": 80,
+      "end_views": [
+        [
+          276,
+          -379,
+          686,
+          -69
+        ],
+        [
+          351,
+          8623,
+          761,
+          8933
+        ]
+      ],
+      "actual_arm_target_cells": [
+        [],
+        []
+      ]
+    }
+  ]
+}

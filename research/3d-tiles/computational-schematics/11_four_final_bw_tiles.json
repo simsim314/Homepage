@@ -1,0 +1,48 @@
+{
+  "cases": [
+    [
+      "3",
+      "X",
+      1
+    ],
+    [
+      "4",
+      "0",
+      0
+    ],
+    [
+      "4",
+      "1",
+      1
+    ],
+    [
+      "other",
+      "X",
+      0
+    ]
+  ],
+  "verification": {
+    "neighbourhoods_checked": 512,
+    "packed_interiors_checked": 20,
+    "orange_post_examples_checked": 3,
+    "families": {
+      "blue_rotational_classes": 6,
+      "orange_input_cases": 8,
+      "purple_masks": 8,
+      "black_white_logical_cases": 4
+    },
+    "purple_categories": {
+      "0\u20132": 46,
+      "3": 84,
+      "4": 126,
+      "5\u20139": 256
+    },
+    "life_outputs": {
+      "0": 372,
+      "1": 140
+    },
+    "result": "All logical checks passed.",
+    "scope": "Reconstructed routing and logical ports; not a physical-fit/CAD proof.",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=73033#p73033"
+  }
+}

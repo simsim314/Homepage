@@ -2,6 +2,7 @@
 import { render, type CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import TopicNavigation from '../../components/TopicNavigation.astro';
 import { getContent, href } from '../../lib/content';
 export async function getStaticPaths() {
   const { interests } = await getContent();
@@ -13,27 +14,82 @@ interface Props {
 const { interest } = Astro.props;
 const { Content } = await render(interest);
 const { articles, interests } = await getContent();
-const related = articles.filter((a) => a.data.topics.includes(interest.id));
+const related = articles
+  .filter((a) => a.data.topics.includes(interest.id))
+  .sort((a, b) => {
+    const rank = (id: string) => {
+      const position = interest.data.articleOrder.indexOf(id);
+      return position === -1 ? Infinity : position;
+    };
+    return rank(a.id) - rank(b.id) || a.data.presentationOrder - b.data.presentationOrder;
+  });
+const parent = interests.find((i) => i.id === interest.data.parent);
+const children = interests.filter((i) => i.data.parent === interest.id);
 ---
 
-<Base title={interest.data.title} description={interest.data.description}
-  ><section class="container category-intro">
-    <div>
-      <a class="eyebrow" href={href('interests/')}>← All interests</a><h1>
-        {interest.data.title}
-      </h1><div class="prose"><Content /></div><span class="eyebrow"
-        >{related.length} connected articles</span
-      >
-    </div>
-  </section><section class="container section">
-    <div class="article-grid">{related.map((a) => <ArticleCard article={a} />)}</div>
-  </section><section class="container section">
-    <h2>Keep exploring.</h2><div class="topic-links">
+<Base title={interest.data.title} description={interest.data.description}>
+  <div class="container section topic-layout">
+    <aside class="topic-sidebar">
+      <TopicNavigation interests={interests} articles={articles} activeId={interest.id} />
+    </aside>
+    <div class="topic-content">
+      <header class="topic-page-intro">
+        <nav class="topic-breadcrumbs" aria-label="Topic hierarchy">
+          <a href={href('interests/')}>All topics</a>
+          {
+            parent && (
+              <>
+                <>
+                  <span aria-hidden="true">/</span>
+                  <a href={href(`interests/${parent.id}/`)}>{parent.data.title}</a>
+                </>
+              </>
+            )
+          }
+          <span aria-hidden="true">/</span><span aria-current="page">{interest.data.title}</span>
+        </nav>
+        <h1>{interest.data.title}</h1>
+        <p class="topic-deck">{interest.data.description}</p>
+        <a class="text-link topic-article-jump" href="#topic-articles-heading"
+          >Explore the {related.length} {related.length === 1 ? 'article' : 'articles'} ↓</a
+        >
+        <div class="prose topic-introduction" data-topic-introduction={interest.id}>
+          <Content />
+        </div>
+      </header>
       {
-        interests
-          .filter((i) => i.id !== interest.id)
-          .map((i) => <a href={href(`interests/${i.id}/`)}>{i.data.title} ↗</a>)
+        children.length > 0 && (
+          <section class="topic-subtopics" aria-labelledby="subtopics-heading">
+            <h2 id="subtopics-heading">Subtopics</h2>
+            <div class="subtopic-links">
+              {children.map((child) => {
+                const count = articles.filter((a) => a.data.topics.includes(child.id)).length;
+                return (
+                  <a href={href(`interests/${child.id}/`)}>
+                    <strong>{child.data.title} ↗</strong>
+                    <span>
+                      {count} {count === 1 ? 'article' : 'articles'}
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        )
       }
+      <section
+        class="topic-articles"
+        aria-labelledby="topic-articles-heading"
+        data-topic-collection={interest.id}
+      >
+        <div class="section-heading">
+          <h2 id="topic-articles-heading">Articles in this topic</h2>
+          <span class="eyebrow"
+            >{related.length} {related.length === 1 ? 'article' : 'articles'}</span
+          >
+        </div>
+        <div class="article-grid">{related.map((a) => <ArticleCard article={a} preview />)}</div>
+      </section>
     </div>
-  </section></Base
->
+  </div>
+</Base>

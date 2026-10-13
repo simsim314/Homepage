@@ -111,6 +111,42 @@
     {
       "url": "https://conwaylife.com/wiki/File:Caterloopillar.png",
       "evidence": "Actual Caterloopillar schematic and upload history: dvgrn, April 2, 2019"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12619",
+      "evidence": "October 8, 2026 Gargava–Gröbner–Simkin preprint; author confirms this is his work."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.12619v1",
+      "evidence": "Main theorem, gluing overview and AI-assisted development statement."
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.05105",
+      "evidence": "AGZ sparse-dimension logarithmic gain."
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.05042",
+      "evidence": "Klartag stochastic ellipsoid lower bound."
+    },
+    {
+      "url": "https://nihargargava.com/",
+      "evidence": "Current exact title: postdoctoral researcher, Université Paris-Saclay."
+    },
+    {
+      "url": "https://www.imo-official.org/hall-of-fame/ISR/",
+      "evidence": "Bronze medal listed for Michael Simkin; author separately confirms Israel, 1999."
+    },
+    {
+      "url": "https://github.com/simsim314/LifeAPI/blob/master/LifeAPI.h#L1176",
+      "evidence": "64-word state, Boolean neighbour masks, hard-coded rule, and active-column bounds."
+    },
+    {
+      "url": "https://lichess.org/@/simsim314",
+      "evidence": "Author supplied public handle; public API confirms username."
+    },
+    {
+      "url": "https://conwaylife.com/forums/viewtopic.php?p=2323#p2323",
+      "evidence": "Original Andrew Wade Gemini announcement, May18,2010, read in browser; research/gemini/announcement.json. Author confirms contemporary article about this original Gemini sparked his interest; exact remembered article unidentified."
     }
   ],
   "authorEvidence": "See editorial-guide.md",
@@ -139,6 +175,53 @@
         "https://conwaylife.com/forums/viewtopic.php?p=13814#p13814"
       ],
       "note": "Prize verified; amount and recalled Bitcoin arrangement omitted pending clarification."
+    },
+    {
+      "article": "geminoid-particles",
+      "sources": [
+        "https://conwaylife.com/forums/viewtopic.php?p=11513#p11513"
+      ],
+      "note": "Author-designed nine-state rule and period-18092 self-destructing construction; shorter periods are proposals."
+    },
+    {
+      "article": "life-in-3d-tiles",
+      "sources": [
+        "https://conwaylife.com/forums/viewtopic.php?t=3884"
+      ],
+      "note": "March 2019 layered Life tile construction; author reduced to 26 tile types with additional boundary pieces. Based on Adam Goucher’s ideas. No minimum or completed physical build claimed."
+    },
+    {
+      "article": "still-life-tiles",
+      "sources": [
+        "https://conwaylife.com/forums/viewtopic.php?t=2188",
+        "https://conwaylife.com/forums/viewtopic.php?p=31135",
+        "https://conwaylife.com/forums/viewtopic.php?p=31727"
+      ],
+      "note": "Callahan original planar tiling; Goucher tile design; author printable adaptations and reported June 2016 working prints."
+    }
+  ],
+  "localAuthorSources": [
+    {
+      "article": "read-only-convex-hull",
+      "files": [
+        "ConvexHull.doc",
+        "Kirkpatrick-Seidel.pdf",
+        "/home/simsim314/Downloads/read_only_convex_hull_batched_bridges_v7.tex",
+        "/home/simsim314/Downloads/read_only_convex_hull_batched_bridges_v7.pdf"
+      ],
+      "evidence": "Author-provided unpublished v7 TeX and 16-page PDF read locally. New article distinguishes sequential and external uniform shuffled-prefix replay bounds. Author recalls methodology around 2009, exact year uncertain; read-only tape comparison motivated investigation of access regimes and bridges. Raw manuscripts remain outside the repository; Figure 1 extracted for local review."
+    }
+  ],
+  "authorInterviews": [
+    {
+      "date": "2026-10-13",
+      "topics": [
+        "Gemini",
+        "Serizawa Geminoid",
+        "Geminoid Particles",
+        "Remini"
+      ],
+      "evidence": "Author confirms original Andrew Wade Gemini article as introduction to Life; Serizawa Geminoid one of first results, smaller/more efficient; then Geminoid Particles; same construction technique much later in Remini."
     }
   ]
 }

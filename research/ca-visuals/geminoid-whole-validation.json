@@ -1,0 +1,32 @@
+{
+  "method": "Canonical recursive macrocell digest including all states and coordinates; whole-plane comparison to independently evolved full-pattern checkpoints.",
+  "serizawa": [
+    {
+      "generation": 8388608,
+      "canonicalMacrocell": {
+        "level": 23,
+        "sha256": "fc9f3f69529b51d53d85f602aaa461aabce2575ee0af5d2c0f676a0dc1a58dfc"
+      },
+      "allCellsAndStatesEqual": true
+    },
+    {
+      "generation": 25165824,
+      "canonicalMacrocell": {
+        "level": 23,
+        "sha256": "e24baa7a26d989eb9822e98df77c7294dc0bb2f482655d65681b339f0115af31"
+      },
+      "allCellsAndStatesEqual": true
+    }
+  ],
+  "particles": [
+    {
+      "generation": 18432,
+      "canonicalMacrocell": {
+        "level": 15,
+        "sha256": "554995958f1fbe2ba96d4a1201c568510691a27cf3bb76c05cf5604fdff9caf8"
+      },
+      "allCellsAndStatesEqual": true
+    }
+  ],
+  "tapeOccupancy": "At generation8388608 the compressed overview pixel set equals independent aggregation of every decoded cell in the entire displayed plane; optimized renderer preserves exact occupancy."
+}

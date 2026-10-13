@@ -1,0 +1,9 @@
+# An AND gate from Serizawa (1986)
+#
+# Pulses arrive from top and bottom in pairs (1,1), (1,0), (0,1)
+# Only the first pair results in an output signal.
+#
+x = 39, y = 253, rule = Serizawa
+19.A.A$20.B61$19.A.A$20.B3$5.A26.A4$4.A28.A$A37.A$4.A14.A.A11.A4$20.A
+3$17.A4$16.A$13.A23.A$16.A14.A.A4$32.A4$A$4.A.A4$5.A29$20.B$19.A.A
+123$20.B$19.A.A!

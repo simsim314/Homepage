@@ -1,0 +1,676 @@
+{
+  "engine": "Golly 3.3 / RuleLoader",
+  "source": "research/ca-visuals/SerizawaGeminoid.rle",
+  "source_sha256": "1f3a048ef5718028f674cbb3f63a7b1630a2637fc62f8e67668f37364829164e",
+  "rule": "Serizawa",
+  "generations": [
+    0,
+    16777216
+  ],
+  "viewport": [
+    -120,
+    -3360,
+    4860,
+    1500
+  ],
+  "dimensions": [
+    800,
+    660
+  ],
+  "first_complete_stable_head": 12976128,
+  "head_translation": [
+    2444,
+    -3219
+  ],
+  "reference": "Head cells stable across generations 0,128,256,384,480; exact states match at the reported translated location. This checks the head region at its initial phase; startup targets can move once the new head operates. Long input tapes are not part of this check.",
+  "full_source_comparison_generation": 8388608,
+  "full_source_comparison": "All displayed cell states agree with independent full-source Golly evolution.",
+  "rendering": "Fixed framing; exact cells with enlarged circular marks; boxes label head regions. No invented connecting circuitry.",
+  "frames": [
+    {
+      "generation": 0,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 131072,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 262144,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 393216,
+      "stable_head_matches": 0,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 524288,
+      "stable_head_matches": 3,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 655360,
+      "stable_head_matches": 13,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 786432,
+      "stable_head_matches": 26,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 917504,
+      "stable_head_matches": 35,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1048576,
+      "stable_head_matches": 43,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1179648,
+      "stable_head_matches": 51,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1310720,
+      "stable_head_matches": 60,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1441792,
+      "stable_head_matches": 70,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1572864,
+      "stable_head_matches": 81,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1703936,
+      "stable_head_matches": 88,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1835008,
+      "stable_head_matches": 95,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 1966080,
+      "stable_head_matches": 106,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 2097152,
+      "stable_head_matches": 115,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 2228224,
+      "stable_head_matches": 124,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 2359296,
+      "stable_head_matches": 132,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 2490368,
+      "stable_head_matches": 140,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 2621440,
+      "stable_head_matches": 148,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 2752512,
+      "stable_head_matches": 155,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 2883584,
+      "stable_head_matches": 163,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3014656,
+      "stable_head_matches": 173,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3145728,
+      "stable_head_matches": 183,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3276800,
+      "stable_head_matches": 193,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3407872,
+      "stable_head_matches": 204,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3538944,
+      "stable_head_matches": 212,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3670016,
+      "stable_head_matches": 220,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3801088,
+      "stable_head_matches": 229,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 3932160,
+      "stable_head_matches": 239,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4063232,
+      "stable_head_matches": 249,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4194304,
+      "stable_head_matches": 261,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4325376,
+      "stable_head_matches": 271,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4456448,
+      "stable_head_matches": 279,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4587520,
+      "stable_head_matches": 287,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4718592,
+      "stable_head_matches": 294,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4849664,
+      "stable_head_matches": 305,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 4980736,
+      "stable_head_matches": 310,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 5111808,
+      "stable_head_matches": 316,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 5242880,
+      "stable_head_matches": 323,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 5373952,
+      "stable_head_matches": 333,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 5505024,
+      "stable_head_matches": 334,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 5636096,
+      "stable_head_matches": 342,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 5767168,
+      "stable_head_matches": 351,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 5898240,
+      "stable_head_matches": 361,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6029312,
+      "stable_head_matches": 370,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6160384,
+      "stable_head_matches": 377,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6291456,
+      "stable_head_matches": 384,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6422528,
+      "stable_head_matches": 391,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6553600,
+      "stable_head_matches": 394,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6684672,
+      "stable_head_matches": 394,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6815744,
+      "stable_head_matches": 400,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 6946816,
+      "stable_head_matches": 400,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7077888,
+      "stable_head_matches": 406,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7208960,
+      "stable_head_matches": 413,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7340032,
+      "stable_head_matches": 421,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7471104,
+      "stable_head_matches": 425,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7602176,
+      "stable_head_matches": 435,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7733248,
+      "stable_head_matches": 447,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7864320,
+      "stable_head_matches": 456,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 7995392,
+      "stable_head_matches": 464,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 8126464,
+      "stable_head_matches": 472,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 8257536,
+      "stable_head_matches": 481,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 8388608,
+      "stable_head_matches": 491,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 8519680,
+      "stable_head_matches": 502,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 8650752,
+      "stable_head_matches": 509,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 8781824,
+      "stable_head_matches": 516,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 8912896,
+      "stable_head_matches": 527,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9043968,
+      "stable_head_matches": 536,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9175040,
+      "stable_head_matches": 545,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9306112,
+      "stable_head_matches": 553,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9437184,
+      "stable_head_matches": 561,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9568256,
+      "stable_head_matches": 569,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9699328,
+      "stable_head_matches": 576,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9830400,
+      "stable_head_matches": 584,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 9961472,
+      "stable_head_matches": 594,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 10092544,
+      "stable_head_matches": 604,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 10223616,
+      "stable_head_matches": 614,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 10354688,
+      "stable_head_matches": 625,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 10485760,
+      "stable_head_matches": 633,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 10616832,
+      "stable_head_matches": 641,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 10747904,
+      "stable_head_matches": 650,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 10878976,
+      "stable_head_matches": 660,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11010048,
+      "stable_head_matches": 670,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11141120,
+      "stable_head_matches": 680,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11272192,
+      "stable_head_matches": 689,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11403264,
+      "stable_head_matches": 693,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11534336,
+      "stable_head_matches": 693,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11665408,
+      "stable_head_matches": 700,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11796480,
+      "stable_head_matches": 708,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 11927552,
+      "stable_head_matches": 715,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12058624,
+      "stable_head_matches": 722,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12189696,
+      "stable_head_matches": 733,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12320768,
+      "stable_head_matches": 740,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12451840,
+      "stable_head_matches": 744,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12582912,
+      "stable_head_matches": 749,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12713984,
+      "stable_head_matches": 755,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12845056,
+      "stable_head_matches": 758,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 12976128,
+      "stable_head_matches": 759,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 13107200,
+      "stable_head_matches": 759,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 13238272,
+      "stable_head_matches": 759,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 13369344,
+      "stable_head_matches": 758,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 13500416,
+      "stable_head_matches": 756,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 13631488,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 13762560,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 13893632,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14024704,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14155776,
+      "stable_head_matches": 755,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14286848,
+      "stable_head_matches": 755,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14417920,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14548992,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14680064,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14811136,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 14942208,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15073280,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15204352,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15335424,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15466496,
+      "stable_head_matches": 755,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15597568,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15728640,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15859712,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 15990784,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 16121856,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 16252928,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 16384000,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 16515072,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 16646144,
+      "stable_head_matches": 755,
+      "stable_head_reference_cells": 759
+    },
+    {
+      "generation": 16777216,
+      "stable_head_matches": 757,
+      "stable_head_reference_cells": 759
+    }
+  ]
+}

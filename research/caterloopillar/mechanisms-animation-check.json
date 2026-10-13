@@ -1,0 +1,3944 @@
+{
+  "engine": "Golly 3.3 / HashLife",
+  "rule": "B3/S23",
+  "dimensions": [
+    1100,
+    760
+  ],
+  "detail_dimensions": [
+    800,
+    620
+  ],
+  "full_plane_simulation": true,
+  "stages": [
+    {
+      "id": "forward-inserter",
+      "source_file": "research/caterloopillar/Caterloopillar_c8.rle",
+      "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+      "sha256": "bc55a5df6f46bdf87fee2ab476ba828b63b8c5a8d57fed3b20662046e28ed420",
+      "checks": {
+        "whole_pattern": "Original complete c/8 ship, full-plane Golly evolution",
+        "existing_ship_preserved": true,
+        "new_ship_exact_match": true,
+        "relative_offset": [
+          3,
+          -9
+        ],
+        "ship_cells": 12,
+        "independent_four_generation_motion": true,
+        "final_generation": 1600
+      },
+      "frames": [
+        {
+          "generation": 1040,
+          "view": [
+            103,
+            433386,
+            193,
+            433476
+          ],
+          "population": 237412
+        },
+        {
+          "generation": 1048,
+          "view": [
+            103,
+            433382,
+            193,
+            433472
+          ],
+          "population": 237092
+        },
+        {
+          "generation": 1056,
+          "view": [
+            103,
+            433378,
+            193,
+            433468
+          ],
+          "population": 237120
+        },
+        {
+          "generation": 1064,
+          "view": [
+            103,
+            433374,
+            193,
+            433464
+          ],
+          "population": 237211
+        },
+        {
+          "generation": 1072,
+          "view": [
+            103,
+            433370,
+            193,
+            433460
+          ],
+          "population": 237192
+        },
+        {
+          "generation": 1080,
+          "view": [
+            103,
+            433366,
+            193,
+            433456
+          ],
+          "population": 237175
+        },
+        {
+          "generation": 1088,
+          "view": [
+            103,
+            433362,
+            193,
+            433452
+          ],
+          "population": 237082
+        },
+        {
+          "generation": 1096,
+          "view": [
+            103,
+            433358,
+            193,
+            433448
+          ],
+          "population": 237124
+        },
+        {
+          "generation": 1104,
+          "view": [
+            103,
+            433354,
+            193,
+            433444
+          ],
+          "population": 237600
+        },
+        {
+          "generation": 1112,
+          "view": [
+            103,
+            433350,
+            193,
+            433440
+          ],
+          "population": 237244
+        },
+        {
+          "generation": 1120,
+          "view": [
+            103,
+            433346,
+            193,
+            433436
+          ],
+          "population": 237174
+        },
+        {
+          "generation": 1128,
+          "view": [
+            104,
+            433343,
+            192,
+            433431
+          ],
+          "population": 237181
+        },
+        {
+          "generation": 1136,
+          "view": [
+            105,
+            433340,
+            191,
+            433426
+          ],
+          "population": 236909
+        },
+        {
+          "generation": 1144,
+          "view": [
+            105,
+            433336,
+            191,
+            433422
+          ],
+          "population": 237035
+        },
+        {
+          "generation": 1152,
+          "view": [
+            106,
+            433333,
+            190,
+            433417
+          ],
+          "population": 237056
+        },
+        {
+          "generation": 1160,
+          "view": [
+            107,
+            433330,
+            189,
+            433412
+          ],
+          "population": 237058
+        },
+        {
+          "generation": 1168,
+          "view": [
+            107,
+            433326,
+            189,
+            433408
+          ],
+          "population": 237165
+        },
+        {
+          "generation": 1176,
+          "view": [
+            108,
+            433323,
+            188,
+            433403
+          ],
+          "population": 236886
+        },
+        {
+          "generation": 1184,
+          "view": [
+            109,
+            433320,
+            187,
+            433398
+          ],
+          "population": 236650
+        },
+        {
+          "generation": 1192,
+          "view": [
+            110,
+            433317,
+            186,
+            433393
+          ],
+          "population": 236574
+        },
+        {
+          "generation": 1200,
+          "view": [
+            111,
+            433314,
+            185,
+            433388
+          ],
+          "population": 236446
+        },
+        {
+          "generation": 1208,
+          "view": [
+            111,
+            433310,
+            185,
+            433384
+          ],
+          "population": 236314
+        },
+        {
+          "generation": 1216,
+          "view": [
+            112,
+            433307,
+            184,
+            433379
+          ],
+          "population": 235873
+        },
+        {
+          "generation": 1224,
+          "view": [
+            113,
+            433304,
+            183,
+            433374
+          ],
+          "population": 235668
+        },
+        {
+          "generation": 1232,
+          "view": [
+            113,
+            433300,
+            183,
+            433370
+          ],
+          "population": 235259
+        },
+        {
+          "generation": 1240,
+          "view": [
+            114,
+            433297,
+            182,
+            433365
+          ],
+          "population": 235170
+        },
+        {
+          "generation": 1248,
+          "view": [
+            115,
+            433294,
+            181,
+            433360
+          ],
+          "population": 235147
+        },
+        {
+          "generation": 1256,
+          "view": [
+            116,
+            433291,
+            180,
+            433355
+          ],
+          "population": 234971
+        },
+        {
+          "generation": 1264,
+          "view": [
+            117,
+            433288,
+            179,
+            433350
+          ],
+          "population": 234832
+        },
+        {
+          "generation": 1272,
+          "view": [
+            117,
+            433284,
+            179,
+            433346
+          ],
+          "population": 234916
+        },
+        {
+          "generation": 1280,
+          "view": [
+            118,
+            433281,
+            178,
+            433341
+          ],
+          "population": 235098
+        },
+        {
+          "generation": 1288,
+          "view": [
+            118,
+            433277,
+            178,
+            433337
+          ],
+          "population": 235012
+        },
+        {
+          "generation": 1296,
+          "view": [
+            118,
+            433273,
+            178,
+            433333
+          ],
+          "population": 235210
+        },
+        {
+          "generation": 1304,
+          "view": [
+            118,
+            433269,
+            178,
+            433329
+          ],
+          "population": 235402
+        },
+        {
+          "generation": 1312,
+          "view": [
+            118,
+            433265,
+            178,
+            433325
+          ],
+          "population": 235663
+        },
+        {
+          "generation": 1320,
+          "view": [
+            118,
+            433261,
+            178,
+            433321
+          ],
+          "population": 235712
+        },
+        {
+          "generation": 1328,
+          "view": [
+            118,
+            433257,
+            178,
+            433317
+          ],
+          "population": 236070
+        },
+        {
+          "generation": 1336,
+          "view": [
+            118,
+            433253,
+            178,
+            433313
+          ],
+          "population": 236426
+        },
+        {
+          "generation": 1344,
+          "view": [
+            118,
+            433249,
+            178,
+            433309
+          ],
+          "population": 236951
+        },
+        {
+          "generation": 1352,
+          "view": [
+            118,
+            433245,
+            178,
+            433305
+          ],
+          "population": 237186
+        },
+        {
+          "generation": 1360,
+          "view": [
+            118,
+            433241,
+            178,
+            433301
+          ],
+          "population": 237442
+        },
+        {
+          "generation": 1368,
+          "view": [
+            118,
+            433237,
+            178,
+            433297
+          ],
+          "population": 237629
+        },
+        {
+          "generation": 1376,
+          "view": [
+            118,
+            433233,
+            178,
+            433293
+          ],
+          "population": 237497
+        },
+        {
+          "generation": 1384,
+          "view": [
+            118,
+            433229,
+            178,
+            433289
+          ],
+          "population": 237957
+        },
+        {
+          "generation": 1392,
+          "view": [
+            118,
+            433225,
+            178,
+            433285
+          ],
+          "population": 238638
+        },
+        {
+          "generation": 1400,
+          "view": [
+            118,
+            433221,
+            178,
+            433281
+          ],
+          "population": 238540
+        },
+        {
+          "generation": 1408,
+          "view": [
+            118,
+            433217,
+            178,
+            433277
+          ],
+          "population": 238983
+        },
+        {
+          "generation": 1416,
+          "view": [
+            118,
+            433213,
+            178,
+            433273
+          ],
+          "population": 238997
+        },
+        {
+          "generation": 1424,
+          "view": [
+            118,
+            433209,
+            178,
+            433269
+          ],
+          "population": 238989
+        },
+        {
+          "generation": 1432,
+          "view": [
+            118,
+            433205,
+            178,
+            433265
+          ],
+          "population": 239188
+        },
+        {
+          "generation": 1440,
+          "view": [
+            118,
+            433201,
+            178,
+            433261
+          ],
+          "population": 239230
+        },
+        {
+          "generation": 1448,
+          "view": [
+            118,
+            433197,
+            178,
+            433257
+          ],
+          "population": 238981
+        },
+        {
+          "generation": 1456,
+          "view": [
+            118,
+            433193,
+            178,
+            433253
+          ],
+          "population": 238876
+        },
+        {
+          "generation": 1464,
+          "view": [
+            118,
+            433189,
+            178,
+            433249
+          ],
+          "population": 238874
+        },
+        {
+          "generation": 1472,
+          "view": [
+            118,
+            433185,
+            178,
+            433245
+          ],
+          "population": 239104
+        },
+        {
+          "generation": 1480,
+          "view": [
+            118,
+            433181,
+            178,
+            433241
+          ],
+          "population": 238680
+        },
+        {
+          "generation": 1488,
+          "view": [
+            118,
+            433177,
+            178,
+            433237
+          ],
+          "population": 238597
+        },
+        {
+          "generation": 1496,
+          "view": [
+            118,
+            433173,
+            178,
+            433233
+          ],
+          "population": 238697
+        },
+        {
+          "generation": 1504,
+          "view": [
+            118,
+            433169,
+            178,
+            433229
+          ],
+          "population": 238483
+        },
+        {
+          "generation": 1512,
+          "view": [
+            118,
+            433165,
+            178,
+            433225
+          ],
+          "population": 237891
+        },
+        {
+          "generation": 1520,
+          "view": [
+            118,
+            433161,
+            178,
+            433221
+          ],
+          "population": 238114
+        },
+        {
+          "generation": 1528,
+          "view": [
+            118,
+            433157,
+            178,
+            433217
+          ],
+          "population": 237714
+        },
+        {
+          "generation": 1536,
+          "view": [
+            118,
+            433153,
+            178,
+            433213
+          ],
+          "population": 237711
+        },
+        {
+          "generation": 1544,
+          "view": [
+            118,
+            433149,
+            178,
+            433209
+          ],
+          "population": 237787
+        },
+        {
+          "generation": 1552,
+          "view": [
+            118,
+            433145,
+            178,
+            433205
+          ],
+          "population": 237775
+        },
+        {
+          "generation": 1560,
+          "view": [
+            118,
+            433141,
+            178,
+            433201
+          ],
+          "population": 237526
+        },
+        {
+          "generation": 1568,
+          "view": [
+            118,
+            433137,
+            178,
+            433197
+          ],
+          "population": 237531
+        },
+        {
+          "generation": 1576,
+          "view": [
+            118,
+            433133,
+            178,
+            433193
+          ],
+          "population": 237664
+        },
+        {
+          "generation": 1584,
+          "view": [
+            118,
+            433129,
+            178,
+            433189
+          ],
+          "population": 237345
+        },
+        {
+          "generation": 1592,
+          "view": [
+            118,
+            433125,
+            178,
+            433185
+          ],
+          "population": 237223
+        },
+        {
+          "generation": 1600,
+          "view": [
+            118,
+            433121,
+            178,
+            433181
+          ],
+          "population": 237235
+        }
+      ]
+    },
+    {
+      "id": "backward-inserter",
+      "source_file": "research/caterloopillar/Caterloopillar_c8.rle",
+      "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+      "sha256": "bc55a5df6f46bdf87fee2ab476ba828b63b8c5a8d57fed3b20662046e28ed420",
+      "checks": {
+        "whole_pattern": "Original complete c/8 ship, full-plane Golly evolution",
+        "existing_ship_preserved": true,
+        "new_ship_exact_match": true,
+        "relative_offset": [
+          -9,
+          -15
+        ],
+        "ship_cells": 11,
+        "independent_four_generation_motion": true,
+        "final_generation": 1400
+      },
+      "frames": [
+        {
+          "generation": 800,
+          "view": [
+            397,
+            172319,
+            487,
+            172409
+          ],
+          "population": 235559
+        },
+        {
+          "generation": 808,
+          "view": [
+            397,
+            172323,
+            487,
+            172413
+          ],
+          "population": 235460
+        },
+        {
+          "generation": 816,
+          "view": [
+            397,
+            172327,
+            487,
+            172417
+          ],
+          "population": 235891
+        },
+        {
+          "generation": 824,
+          "view": [
+            397,
+            172331,
+            487,
+            172421
+          ],
+          "population": 235838
+        },
+        {
+          "generation": 832,
+          "view": [
+            397,
+            172335,
+            487,
+            172425
+          ],
+          "population": 236221
+        },
+        {
+          "generation": 840,
+          "view": [
+            397,
+            172339,
+            487,
+            172429
+          ],
+          "population": 236081
+        },
+        {
+          "generation": 848,
+          "view": [
+            397,
+            172343,
+            487,
+            172433
+          ],
+          "population": 236697
+        },
+        {
+          "generation": 856,
+          "view": [
+            397,
+            172347,
+            487,
+            172437
+          ],
+          "population": 237069
+        },
+        {
+          "generation": 864,
+          "view": [
+            397,
+            172351,
+            487,
+            172441
+          ],
+          "population": 237019
+        },
+        {
+          "generation": 872,
+          "view": [
+            397,
+            172355,
+            487,
+            172445
+          ],
+          "population": 237548
+        },
+        {
+          "generation": 880,
+          "view": [
+            397,
+            172359,
+            487,
+            172449
+          ],
+          "population": 237845
+        },
+        {
+          "generation": 888,
+          "view": [
+            397,
+            172363,
+            487,
+            172453
+          ],
+          "population": 238030
+        },
+        {
+          "generation": 896,
+          "view": [
+            397,
+            172367,
+            487,
+            172457
+          ],
+          "population": 238440
+        },
+        {
+          "generation": 904,
+          "view": [
+            397,
+            172371,
+            487,
+            172461
+          ],
+          "population": 238506
+        },
+        {
+          "generation": 912,
+          "view": [
+            397,
+            172375,
+            487,
+            172465
+          ],
+          "population": 238565
+        },
+        {
+          "generation": 920,
+          "view": [
+            397,
+            172379,
+            487,
+            172469
+          ],
+          "population": 238641
+        },
+        {
+          "generation": 928,
+          "view": [
+            397,
+            172383,
+            487,
+            172473
+          ],
+          "population": 238850
+        },
+        {
+          "generation": 936,
+          "view": [
+            397,
+            172387,
+            487,
+            172477
+          ],
+          "population": 239303
+        },
+        {
+          "generation": 944,
+          "view": [
+            397,
+            172391,
+            487,
+            172481
+          ],
+          "population": 239000
+        },
+        {
+          "generation": 952,
+          "view": [
+            397,
+            172395,
+            487,
+            172485
+          ],
+          "population": 238797
+        },
+        {
+          "generation": 960,
+          "view": [
+            397,
+            172399,
+            487,
+            172489
+          ],
+          "population": 238899
+        },
+        {
+          "generation": 968,
+          "view": [
+            398,
+            172404,
+            486,
+            172492
+          ],
+          "population": 238599
+        },
+        {
+          "generation": 976,
+          "view": [
+            399,
+            172409,
+            485,
+            172495
+          ],
+          "population": 238620
+        },
+        {
+          "generation": 984,
+          "view": [
+            399,
+            172413,
+            485,
+            172499
+          ],
+          "population": 238509
+        },
+        {
+          "generation": 992,
+          "view": [
+            400,
+            172418,
+            484,
+            172502
+          ],
+          "population": 238134
+        },
+        {
+          "generation": 1000,
+          "view": [
+            401,
+            172423,
+            483,
+            172505
+          ],
+          "population": 237871
+        },
+        {
+          "generation": 1008,
+          "view": [
+            401,
+            172427,
+            483,
+            172509
+          ],
+          "population": 237301
+        },
+        {
+          "generation": 1016,
+          "view": [
+            402,
+            172432,
+            482,
+            172512
+          ],
+          "population": 237403
+        },
+        {
+          "generation": 1024,
+          "view": [
+            403,
+            172437,
+            481,
+            172515
+          ],
+          "population": 237673
+        },
+        {
+          "generation": 1032,
+          "view": [
+            404,
+            172442,
+            480,
+            172518
+          ],
+          "population": 237693
+        },
+        {
+          "generation": 1040,
+          "view": [
+            405,
+            172447,
+            479,
+            172521
+          ],
+          "population": 237412
+        },
+        {
+          "generation": 1048,
+          "view": [
+            405,
+            172451,
+            479,
+            172525
+          ],
+          "population": 237092
+        },
+        {
+          "generation": 1056,
+          "view": [
+            406,
+            172456,
+            478,
+            172528
+          ],
+          "population": 237120
+        },
+        {
+          "generation": 1064,
+          "view": [
+            407,
+            172461,
+            477,
+            172531
+          ],
+          "population": 237211
+        },
+        {
+          "generation": 1072,
+          "view": [
+            407,
+            172465,
+            477,
+            172535
+          ],
+          "population": 237192
+        },
+        {
+          "generation": 1080,
+          "view": [
+            408,
+            172470,
+            476,
+            172538
+          ],
+          "population": 237175
+        },
+        {
+          "generation": 1088,
+          "view": [
+            409,
+            172475,
+            475,
+            172541
+          ],
+          "population": 237082
+        },
+        {
+          "generation": 1096,
+          "view": [
+            410,
+            172480,
+            474,
+            172544
+          ],
+          "population": 237124
+        },
+        {
+          "generation": 1104,
+          "view": [
+            411,
+            172485,
+            473,
+            172547
+          ],
+          "population": 237600
+        },
+        {
+          "generation": 1112,
+          "view": [
+            411,
+            172489,
+            473,
+            172551
+          ],
+          "population": 237244
+        },
+        {
+          "generation": 1120,
+          "view": [
+            412,
+            172494,
+            472,
+            172554
+          ],
+          "population": 237174
+        },
+        {
+          "generation": 1128,
+          "view": [
+            412,
+            172498,
+            472,
+            172558
+          ],
+          "population": 237181
+        },
+        {
+          "generation": 1136,
+          "view": [
+            412,
+            172502,
+            472,
+            172562
+          ],
+          "population": 236909
+        },
+        {
+          "generation": 1144,
+          "view": [
+            412,
+            172506,
+            472,
+            172566
+          ],
+          "population": 237035
+        },
+        {
+          "generation": 1152,
+          "view": [
+            412,
+            172510,
+            472,
+            172570
+          ],
+          "population": 237056
+        },
+        {
+          "generation": 1160,
+          "view": [
+            412,
+            172514,
+            472,
+            172574
+          ],
+          "population": 237058
+        },
+        {
+          "generation": 1168,
+          "view": [
+            412,
+            172518,
+            472,
+            172578
+          ],
+          "population": 237165
+        },
+        {
+          "generation": 1176,
+          "view": [
+            412,
+            172522,
+            472,
+            172582
+          ],
+          "population": 236886
+        },
+        {
+          "generation": 1184,
+          "view": [
+            412,
+            172526,
+            472,
+            172586
+          ],
+          "population": 236650
+        },
+        {
+          "generation": 1192,
+          "view": [
+            412,
+            172530,
+            472,
+            172590
+          ],
+          "population": 236574
+        },
+        {
+          "generation": 1200,
+          "view": [
+            412,
+            172534,
+            472,
+            172594
+          ],
+          "population": 236446
+        },
+        {
+          "generation": 1208,
+          "view": [
+            412,
+            172538,
+            472,
+            172598
+          ],
+          "population": 236314
+        },
+        {
+          "generation": 1216,
+          "view": [
+            412,
+            172542,
+            472,
+            172602
+          ],
+          "population": 235873
+        },
+        {
+          "generation": 1224,
+          "view": [
+            412,
+            172546,
+            472,
+            172606
+          ],
+          "population": 235668
+        },
+        {
+          "generation": 1232,
+          "view": [
+            412,
+            172550,
+            472,
+            172610
+          ],
+          "population": 235259
+        },
+        {
+          "generation": 1240,
+          "view": [
+            412,
+            172554,
+            472,
+            172614
+          ],
+          "population": 235170
+        },
+        {
+          "generation": 1248,
+          "view": [
+            412,
+            172558,
+            472,
+            172618
+          ],
+          "population": 235147
+        },
+        {
+          "generation": 1256,
+          "view": [
+            412,
+            172562,
+            472,
+            172622
+          ],
+          "population": 234971
+        },
+        {
+          "generation": 1264,
+          "view": [
+            412,
+            172566,
+            472,
+            172626
+          ],
+          "population": 234832
+        },
+        {
+          "generation": 1272,
+          "view": [
+            412,
+            172570,
+            472,
+            172630
+          ],
+          "population": 234916
+        },
+        {
+          "generation": 1280,
+          "view": [
+            412,
+            172574,
+            472,
+            172634
+          ],
+          "population": 235098
+        },
+        {
+          "generation": 1288,
+          "view": [
+            412,
+            172578,
+            472,
+            172638
+          ],
+          "population": 235012
+        },
+        {
+          "generation": 1296,
+          "view": [
+            412,
+            172582,
+            472,
+            172642
+          ],
+          "population": 235210
+        },
+        {
+          "generation": 1304,
+          "view": [
+            412,
+            172586,
+            472,
+            172646
+          ],
+          "population": 235402
+        },
+        {
+          "generation": 1312,
+          "view": [
+            412,
+            172590,
+            472,
+            172650
+          ],
+          "population": 235663
+        },
+        {
+          "generation": 1320,
+          "view": [
+            412,
+            172594,
+            472,
+            172654
+          ],
+          "population": 235712
+        },
+        {
+          "generation": 1328,
+          "view": [
+            412,
+            172598,
+            472,
+            172658
+          ],
+          "population": 236070
+        },
+        {
+          "generation": 1336,
+          "view": [
+            412,
+            172602,
+            472,
+            172662
+          ],
+          "population": 236426
+        },
+        {
+          "generation": 1344,
+          "view": [
+            412,
+            172606,
+            472,
+            172666
+          ],
+          "population": 236951
+        },
+        {
+          "generation": 1352,
+          "view": [
+            412,
+            172610,
+            472,
+            172670
+          ],
+          "population": 237186
+        },
+        {
+          "generation": 1360,
+          "view": [
+            412,
+            172614,
+            472,
+            172674
+          ],
+          "population": 237442
+        },
+        {
+          "generation": 1368,
+          "view": [
+            412,
+            172618,
+            472,
+            172678
+          ],
+          "population": 237629
+        },
+        {
+          "generation": 1376,
+          "view": [
+            412,
+            172622,
+            472,
+            172682
+          ],
+          "population": 237497
+        },
+        {
+          "generation": 1384,
+          "view": [
+            412,
+            172626,
+            472,
+            172686
+          ],
+          "population": 237957
+        },
+        {
+          "generation": 1392,
+          "view": [
+            412,
+            172630,
+            472,
+            172690
+          ],
+          "population": 238638
+        },
+        {
+          "generation": 1400,
+          "view": [
+            412,
+            172634,
+            472,
+            172694
+          ],
+          "population": 238540
+        }
+      ]
+    },
+    {
+      "id": "block-to-glider",
+      "source_file": "research/caterloopillar/block-reading-head.rle",
+      "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+      "sha256": "dcfb0d9a014b468718721ef86dd0f1f5b778b1847fe9f0506652e1327a683bf4",
+      "checks": {
+        "0": {
+          "population": 105,
+          "independent_sparse_match": true
+        },
+        "144": {
+          "population": 134,
+          "independent_sparse_match": true
+        }
+      },
+      "frames": [
+        {
+          "generation": 0,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 4,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 8,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 12,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 16,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 20,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 24,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 28,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 32,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 105
+        },
+        {
+          "generation": 36,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 106
+        },
+        {
+          "generation": 40,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 106
+        },
+        {
+          "generation": 44,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 110
+        },
+        {
+          "generation": 48,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 123
+        },
+        {
+          "generation": 52,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 141
+        },
+        {
+          "generation": 56,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 159
+        },
+        {
+          "generation": 60,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 128
+        },
+        {
+          "generation": 64,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 130
+        },
+        {
+          "generation": 68,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 127
+        },
+        {
+          "generation": 72,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 122
+        },
+        {
+          "generation": 76,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 130
+        },
+        {
+          "generation": 80,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 128
+        },
+        {
+          "generation": 84,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 122
+        },
+        {
+          "generation": 88,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 122
+        },
+        {
+          "generation": 92,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 121
+        },
+        {
+          "generation": 96,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 119
+        },
+        {
+          "generation": 100,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 122
+        },
+        {
+          "generation": 104,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 132
+        },
+        {
+          "generation": 108,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 131
+        },
+        {
+          "generation": 112,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 121
+        },
+        {
+          "generation": 116,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 131
+        },
+        {
+          "generation": 120,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 140
+        },
+        {
+          "generation": 124,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 142
+        },
+        {
+          "generation": 128,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 141
+        },
+        {
+          "generation": 132,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 147
+        },
+        {
+          "generation": 136,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 134
+        },
+        {
+          "generation": 140,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 134
+        },
+        {
+          "generation": 144,
+          "view": [
+            0,
+            98,
+            90,
+            158
+          ],
+          "population": 134
+        }
+      ]
+    },
+    {
+      "id": "block-reflector",
+      "source_file": "research/caterloopillar/block-reading-head.rle",
+      "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+      "sha256": "dcfb0d9a014b468718721ef86dd0f1f5b778b1847fe9f0506652e1327a683bf4",
+      "checks": {
+        "0": {
+          "population": 105,
+          "independent_sparse_match": true
+        },
+        "208": {
+          "population": 136,
+          "independent_sparse_match": true
+        },
+        "280": {
+          "population": 111,
+          "independent_sparse_match": true
+        }
+      },
+      "frames": [
+        {
+          "generation": 208,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 136
+        },
+        {
+          "generation": 210,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 138
+        },
+        {
+          "generation": 212,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 131
+        },
+        {
+          "generation": 214,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 121
+        },
+        {
+          "generation": 216,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 119
+        },
+        {
+          "generation": 218,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 125
+        },
+        {
+          "generation": 220,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 124
+        },
+        {
+          "generation": 222,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 121
+        },
+        {
+          "generation": 224,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 127
+        },
+        {
+          "generation": 226,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 124
+        },
+        {
+          "generation": 228,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 127
+        },
+        {
+          "generation": 230,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 121
+        },
+        {
+          "generation": 232,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 118
+        },
+        {
+          "generation": 234,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 121
+        },
+        {
+          "generation": 236,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 118
+        },
+        {
+          "generation": 238,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 118
+        },
+        {
+          "generation": 240,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 120
+        },
+        {
+          "generation": 242,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 122
+        },
+        {
+          "generation": 244,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 134
+        },
+        {
+          "generation": 246,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 118
+        },
+        {
+          "generation": 248,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 122
+        },
+        {
+          "generation": 250,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 126
+        },
+        {
+          "generation": 252,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 128
+        },
+        {
+          "generation": 254,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 132
+        },
+        {
+          "generation": 256,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 127
+        },
+        {
+          "generation": 258,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 129
+        },
+        {
+          "generation": 260,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 129
+        },
+        {
+          "generation": 262,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 135
+        },
+        {
+          "generation": 264,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 136
+        },
+        {
+          "generation": 266,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 134
+        },
+        {
+          "generation": 268,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 147
+        },
+        {
+          "generation": 270,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 119
+        },
+        {
+          "generation": 272,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 114
+        },
+        {
+          "generation": 274,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 111
+        },
+        {
+          "generation": 276,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 111
+        },
+        {
+          "generation": 278,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 111
+        },
+        {
+          "generation": 280,
+          "view": [
+            -35,
+            130,
+            55,
+            190
+          ],
+          "population": 111
+        }
+      ]
+    },
+    {
+      "id": "glider-to-block",
+      "source_file": "research/caterloopillar/block-reading-head.rle",
+      "source": "https://conwaylife.com/forums/viewtopic.php?p=14297#p14297",
+      "sha256": "dcfb0d9a014b468718721ef86dd0f1f5b778b1847fe9f0506652e1327a683bf4",
+      "checks": {
+        "0": {
+          "population": 105,
+          "independent_sparse_match": true
+        },
+        "272": {
+          "population": 114,
+          "independent_sparse_match": true
+        },
+        "416": {
+          "population": 110,
+          "independent_sparse_match": true
+        },
+        "output": {
+          "block_displacement": [
+            0,
+            59
+          ],
+          "original_convoy_intact": true,
+          "extra_output_glider_cells": 5
+        }
+      },
+      "frames": [
+        {
+          "generation": 272,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 114
+        },
+        {
+          "generation": 276,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 280,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 284,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 288,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 292,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 296,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 300,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 304,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 308,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 312,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 316,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 320,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 324,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 328,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 332,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 336,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 340,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 344,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 348,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 352,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 356,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 360,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 364,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 368,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 372,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 376,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 380,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 111
+        },
+        {
+          "generation": 384,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 112
+        },
+        {
+          "generation": 388,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        },
+        {
+          "generation": 392,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        },
+        {
+          "generation": 396,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        },
+        {
+          "generation": 400,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        },
+        {
+          "generation": 404,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        },
+        {
+          "generation": 408,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        },
+        {
+          "generation": 412,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        },
+        {
+          "generation": 416,
+          "view": [
+            0,
+            155,
+            90,
+            215
+          ],
+          "population": 110
+        }
+      ]
+    },
+    {
+      "id": "head-deletion",
+      "source_file": "research/caterloopillar/Caterloopillar_c8.rle",
+      "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+      "sha256": "bc55a5df6f46bdf87fee2ab476ba828b63b8c5a8d57fed3b20662046e28ed420",
+      "checks": {
+        "whole_pattern": "Original complete c/8 ship, full-plane Golly evolution",
+        "original_ship_present_at_start": true,
+        "display_region_empty_at_end": true,
+        "generations": [
+          920,
+          1408
+        ]
+      },
+      "frames": [
+        {
+          "generation": 920,
+          "view": [
+            103,
+            -54,
+            193,
+            36
+          ],
+          "population": 238641
+        },
+        {
+          "generation": 928,
+          "view": [
+            103,
+            -58,
+            193,
+            32
+          ],
+          "population": 238850
+        },
+        {
+          "generation": 936,
+          "view": [
+            103,
+            -62,
+            193,
+            28
+          ],
+          "population": 239303
+        },
+        {
+          "generation": 944,
+          "view": [
+            103,
+            -66,
+            193,
+            24
+          ],
+          "population": 239000
+        },
+        {
+          "generation": 952,
+          "view": [
+            103,
+            -70,
+            193,
+            20
+          ],
+          "population": 238797
+        },
+        {
+          "generation": 960,
+          "view": [
+            103,
+            -74,
+            193,
+            16
+          ],
+          "population": 238899
+        },
+        {
+          "generation": 968,
+          "view": [
+            103,
+            -78,
+            193,
+            12
+          ],
+          "population": 238599
+        },
+        {
+          "generation": 976,
+          "view": [
+            103,
+            -82,
+            193,
+            8
+          ],
+          "population": 238620
+        },
+        {
+          "generation": 984,
+          "view": [
+            103,
+            -86,
+            193,
+            4
+          ],
+          "population": 238509
+        },
+        {
+          "generation": 992,
+          "view": [
+            103,
+            -90,
+            193,
+            0
+          ],
+          "population": 238134
+        },
+        {
+          "generation": 1000,
+          "view": [
+            103,
+            -94,
+            193,
+            -4
+          ],
+          "population": 237871
+        },
+        {
+          "generation": 1008,
+          "view": [
+            103,
+            -98,
+            193,
+            -8
+          ],
+          "population": 237301
+        },
+        {
+          "generation": 1016,
+          "view": [
+            103,
+            -102,
+            193,
+            -12
+          ],
+          "population": 237403
+        },
+        {
+          "generation": 1024,
+          "view": [
+            103,
+            -106,
+            193,
+            -16
+          ],
+          "population": 237673
+        },
+        {
+          "generation": 1032,
+          "view": [
+            103,
+            -110,
+            193,
+            -20
+          ],
+          "population": 237693
+        },
+        {
+          "generation": 1040,
+          "view": [
+            103,
+            -114,
+            193,
+            -24
+          ],
+          "population": 237412
+        },
+        {
+          "generation": 1048,
+          "view": [
+            103,
+            -118,
+            193,
+            -28
+          ],
+          "population": 237092
+        },
+        {
+          "generation": 1056,
+          "view": [
+            103,
+            -122,
+            193,
+            -32
+          ],
+          "population": 237120
+        },
+        {
+          "generation": 1064,
+          "view": [
+            103,
+            -126,
+            193,
+            -36
+          ],
+          "population": 237211
+        },
+        {
+          "generation": 1072,
+          "view": [
+            103,
+            -130,
+            193,
+            -40
+          ],
+          "population": 237192
+        },
+        {
+          "generation": 1080,
+          "view": [
+            103,
+            -134,
+            193,
+            -44
+          ],
+          "population": 237175
+        },
+        {
+          "generation": 1088,
+          "view": [
+            103,
+            -138,
+            193,
+            -48
+          ],
+          "population": 237082
+        },
+        {
+          "generation": 1096,
+          "view": [
+            103,
+            -142,
+            193,
+            -52
+          ],
+          "population": 237124
+        },
+        {
+          "generation": 1104,
+          "view": [
+            103,
+            -146,
+            193,
+            -56
+          ],
+          "population": 237600
+        },
+        {
+          "generation": 1112,
+          "view": [
+            103,
+            -150,
+            193,
+            -60
+          ],
+          "population": 237244
+        },
+        {
+          "generation": 1120,
+          "view": [
+            103,
+            -154,
+            193,
+            -64
+          ],
+          "population": 237174
+        },
+        {
+          "generation": 1128,
+          "view": [
+            103,
+            -158,
+            193,
+            -68
+          ],
+          "population": 237181
+        },
+        {
+          "generation": 1136,
+          "view": [
+            103,
+            -162,
+            193,
+            -72
+          ],
+          "population": 236909
+        },
+        {
+          "generation": 1144,
+          "view": [
+            103,
+            -166,
+            193,
+            -76
+          ],
+          "population": 237035
+        },
+        {
+          "generation": 1152,
+          "view": [
+            103,
+            -170,
+            193,
+            -80
+          ],
+          "population": 237056
+        },
+        {
+          "generation": 1160,
+          "view": [
+            103,
+            -174,
+            193,
+            -84
+          ],
+          "population": 237058
+        },
+        {
+          "generation": 1168,
+          "view": [
+            103,
+            -178,
+            193,
+            -88
+          ],
+          "population": 237165
+        },
+        {
+          "generation": 1176,
+          "view": [
+            103,
+            -182,
+            193,
+            -92
+          ],
+          "population": 236886
+        },
+        {
+          "generation": 1184,
+          "view": [
+            103,
+            -186,
+            193,
+            -96
+          ],
+          "population": 236650
+        },
+        {
+          "generation": 1192,
+          "view": [
+            103,
+            -190,
+            193,
+            -100
+          ],
+          "population": 236574
+        },
+        {
+          "generation": 1200,
+          "view": [
+            103,
+            -194,
+            193,
+            -104
+          ],
+          "population": 236446
+        },
+        {
+          "generation": 1208,
+          "view": [
+            103,
+            -198,
+            193,
+            -108
+          ],
+          "population": 236314
+        },
+        {
+          "generation": 1216,
+          "view": [
+            103,
+            -202,
+            193,
+            -112
+          ],
+          "population": 235873
+        },
+        {
+          "generation": 1224,
+          "view": [
+            103,
+            -206,
+            193,
+            -116
+          ],
+          "population": 235668
+        },
+        {
+          "generation": 1232,
+          "view": [
+            103,
+            -210,
+            193,
+            -120
+          ],
+          "population": 235259
+        },
+        {
+          "generation": 1240,
+          "view": [
+            103,
+            -214,
+            193,
+            -124
+          ],
+          "population": 235170
+        },
+        {
+          "generation": 1248,
+          "view": [
+            103,
+            -218,
+            193,
+            -128
+          ],
+          "population": 235147
+        },
+        {
+          "generation": 1256,
+          "view": [
+            103,
+            -222,
+            193,
+            -132
+          ],
+          "population": 234971
+        },
+        {
+          "generation": 1264,
+          "view": [
+            103,
+            -226,
+            193,
+            -136
+          ],
+          "population": 234832
+        },
+        {
+          "generation": 1272,
+          "view": [
+            103,
+            -230,
+            193,
+            -140
+          ],
+          "population": 234916
+        },
+        {
+          "generation": 1280,
+          "view": [
+            103,
+            -234,
+            193,
+            -144
+          ],
+          "population": 235098
+        },
+        {
+          "generation": 1288,
+          "view": [
+            103,
+            -238,
+            193,
+            -148
+          ],
+          "population": 235012
+        },
+        {
+          "generation": 1296,
+          "view": [
+            103,
+            -242,
+            193,
+            -152
+          ],
+          "population": 235210
+        },
+        {
+          "generation": 1304,
+          "view": [
+            103,
+            -246,
+            193,
+            -156
+          ],
+          "population": 235402
+        },
+        {
+          "generation": 1312,
+          "view": [
+            103,
+            -250,
+            193,
+            -160
+          ],
+          "population": 235663
+        },
+        {
+          "generation": 1320,
+          "view": [
+            103,
+            -254,
+            193,
+            -164
+          ],
+          "population": 235712
+        },
+        {
+          "generation": 1328,
+          "view": [
+            103,
+            -258,
+            193,
+            -168
+          ],
+          "population": 236070
+        },
+        {
+          "generation": 1336,
+          "view": [
+            103,
+            -262,
+            193,
+            -172
+          ],
+          "population": 236426
+        },
+        {
+          "generation": 1344,
+          "view": [
+            103,
+            -266,
+            193,
+            -176
+          ],
+          "population": 236951
+        },
+        {
+          "generation": 1352,
+          "view": [
+            103,
+            -270,
+            193,
+            -180
+          ],
+          "population": 237186
+        },
+        {
+          "generation": 1360,
+          "view": [
+            103,
+            -274,
+            193,
+            -184
+          ],
+          "population": 237442
+        },
+        {
+          "generation": 1368,
+          "view": [
+            103,
+            -278,
+            193,
+            -188
+          ],
+          "population": 237629
+        },
+        {
+          "generation": 1376,
+          "view": [
+            103,
+            -282,
+            193,
+            -192
+          ],
+          "population": 237497
+        },
+        {
+          "generation": 1384,
+          "view": [
+            103,
+            -286,
+            193,
+            -196
+          ],
+          "population": 237957
+        },
+        {
+          "generation": 1392,
+          "view": [
+            103,
+            -290,
+            193,
+            -200
+          ],
+          "population": 238638
+        },
+        {
+          "generation": 1400,
+          "view": [
+            103,
+            -294,
+            193,
+            -204
+          ],
+          "population": 238540
+        },
+        {
+          "generation": 1408,
+          "view": [
+            103,
+            -298,
+            193,
+            -208
+          ],
+          "population": 238983
+        }
+      ]
+    },
+    {
+      "id": "tail-deletion",
+      "source_file": "research/caterloopillar/Caterloopillar_c8.rle",
+      "source": "https://github.com/simsim314/Caterloopilar/blob/master/Caterloopillar_c8.rle",
+      "sha256": "bc55a5df6f46bdf87fee2ab476ba828b63b8c5a8d57fed3b20662046e28ed420",
+      "checks": {
+        "whole_pattern": "Original complete c/8 ship, full-plane Golly evolution",
+        "original_ship_present_at_start": true,
+        "display_region_empty_at_end": true,
+        "generations": [
+          600,
+          1056
+        ]
+      },
+      "frames": [
+        {
+          "generation": 600,
+          "view": [
+            409,
+            514572,
+            499,
+            514662
+          ],
+          "population": 236963
+        },
+        {
+          "generation": 608,
+          "view": [
+            409,
+            514576,
+            499,
+            514666
+          ],
+          "population": 236886
+        },
+        {
+          "generation": 616,
+          "view": [
+            409,
+            514580,
+            499,
+            514670
+          ],
+          "population": 236520
+        },
+        {
+          "generation": 624,
+          "view": [
+            409,
+            514584,
+            499,
+            514674
+          ],
+          "population": 236528
+        },
+        {
+          "generation": 632,
+          "view": [
+            409,
+            514588,
+            499,
+            514678
+          ],
+          "population": 236796
+        },
+        {
+          "generation": 640,
+          "view": [
+            409,
+            514592,
+            499,
+            514682
+          ],
+          "population": 236934
+        },
+        {
+          "generation": 648,
+          "view": [
+            409,
+            514596,
+            499,
+            514686
+          ],
+          "population": 237025
+        },
+        {
+          "generation": 656,
+          "view": [
+            409,
+            514600,
+            499,
+            514690
+          ],
+          "population": 236821
+        },
+        {
+          "generation": 664,
+          "view": [
+            409,
+            514604,
+            499,
+            514694
+          ],
+          "population": 236658
+        },
+        {
+          "generation": 672,
+          "view": [
+            409,
+            514608,
+            499,
+            514698
+          ],
+          "population": 236141
+        },
+        {
+          "generation": 680,
+          "view": [
+            409,
+            514612,
+            499,
+            514702
+          ],
+          "population": 236437
+        },
+        {
+          "generation": 688,
+          "view": [
+            409,
+            514616,
+            499,
+            514706
+          ],
+          "population": 236646
+        },
+        {
+          "generation": 696,
+          "view": [
+            409,
+            514620,
+            499,
+            514710
+          ],
+          "population": 236054
+        },
+        {
+          "generation": 704,
+          "view": [
+            409,
+            514624,
+            499,
+            514714
+          ],
+          "population": 235883
+        },
+        {
+          "generation": 712,
+          "view": [
+            409,
+            514628,
+            499,
+            514718
+          ],
+          "population": 235921
+        },
+        {
+          "generation": 720,
+          "view": [
+            409,
+            514632,
+            499,
+            514722
+          ],
+          "population": 235874
+        },
+        {
+          "generation": 728,
+          "view": [
+            409,
+            514636,
+            499,
+            514726
+          ],
+          "population": 236048
+        },
+        {
+          "generation": 736,
+          "view": [
+            409,
+            514640,
+            499,
+            514730
+          ],
+          "population": 235502
+        },
+        {
+          "generation": 744,
+          "view": [
+            409,
+            514644,
+            499,
+            514734
+          ],
+          "population": 235590
+        },
+        {
+          "generation": 752,
+          "view": [
+            409,
+            514648,
+            499,
+            514738
+          ],
+          "population": 235547
+        },
+        {
+          "generation": 760,
+          "view": [
+            409,
+            514652,
+            499,
+            514742
+          ],
+          "population": 235472
+        },
+        {
+          "generation": 768,
+          "view": [
+            409,
+            514656,
+            499,
+            514746
+          ],
+          "population": 235517
+        },
+        {
+          "generation": 776,
+          "view": [
+            409,
+            514660,
+            499,
+            514750
+          ],
+          "population": 235521
+        },
+        {
+          "generation": 784,
+          "view": [
+            409,
+            514664,
+            499,
+            514754
+          ],
+          "population": 235308
+        },
+        {
+          "generation": 792,
+          "view": [
+            409,
+            514668,
+            499,
+            514758
+          ],
+          "population": 235409
+        },
+        {
+          "generation": 800,
+          "view": [
+            409,
+            514672,
+            499,
+            514762
+          ],
+          "population": 235559
+        },
+        {
+          "generation": 808,
+          "view": [
+            409,
+            514676,
+            499,
+            514766
+          ],
+          "population": 235460
+        },
+        {
+          "generation": 816,
+          "view": [
+            409,
+            514680,
+            499,
+            514770
+          ],
+          "population": 235891
+        },
+        {
+          "generation": 824,
+          "view": [
+            409,
+            514684,
+            499,
+            514774
+          ],
+          "population": 235838
+        },
+        {
+          "generation": 832,
+          "view": [
+            409,
+            514688,
+            499,
+            514778
+          ],
+          "population": 236221
+        },
+        {
+          "generation": 840,
+          "view": [
+            409,
+            514692,
+            499,
+            514782
+          ],
+          "population": 236081
+        },
+        {
+          "generation": 848,
+          "view": [
+            409,
+            514696,
+            499,
+            514786
+          ],
+          "population": 236697
+        },
+        {
+          "generation": 856,
+          "view": [
+            409,
+            514700,
+            499,
+            514790
+          ],
+          "population": 237069
+        },
+        {
+          "generation": 864,
+          "view": [
+            409,
+            514704,
+            499,
+            514794
+          ],
+          "population": 237019
+        },
+        {
+          "generation": 872,
+          "view": [
+            409,
+            514708,
+            499,
+            514798
+          ],
+          "population": 237548
+        },
+        {
+          "generation": 880,
+          "view": [
+            409,
+            514712,
+            499,
+            514802
+          ],
+          "population": 237845
+        },
+        {
+          "generation": 888,
+          "view": [
+            409,
+            514716,
+            499,
+            514806
+          ],
+          "population": 238030
+        },
+        {
+          "generation": 896,
+          "view": [
+            409,
+            514720,
+            499,
+            514810
+          ],
+          "population": 238440
+        },
+        {
+          "generation": 904,
+          "view": [
+            409,
+            514724,
+            499,
+            514814
+          ],
+          "population": 238506
+        },
+        {
+          "generation": 912,
+          "view": [
+            409,
+            514728,
+            499,
+            514818
+          ],
+          "population": 238565
+        },
+        {
+          "generation": 920,
+          "view": [
+            409,
+            514732,
+            499,
+            514822
+          ],
+          "population": 238641
+        },
+        {
+          "generation": 928,
+          "view": [
+            409,
+            514736,
+            499,
+            514826
+          ],
+          "population": 238850
+        },
+        {
+          "generation": 936,
+          "view": [
+            409,
+            514740,
+            499,
+            514830
+          ],
+          "population": 239303
+        },
+        {
+          "generation": 944,
+          "view": [
+            409,
+            514744,
+            499,
+            514834
+          ],
+          "population": 239000
+        },
+        {
+          "generation": 952,
+          "view": [
+            409,
+            514748,
+            499,
+            514838
+          ],
+          "population": 238797
+        },
+        {
+          "generation": 960,
+          "view": [
+            409,
+            514752,
+            499,
+            514842
+          ],
+          "population": 238899
+        },
+        {
+          "generation": 968,
+          "view": [
+            409,
+            514756,
+            499,
+            514846
+          ],
+          "population": 238599
+        },
+        {
+          "generation": 976,
+          "view": [
+            409,
+            514760,
+            499,
+            514850
+          ],
+          "population": 238620
+        },
+        {
+          "generation": 984,
+          "view": [
+            409,
+            514764,
+            499,
+            514854
+          ],
+          "population": 238509
+        },
+        {
+          "generation": 992,
+          "view": [
+            409,
+            514768,
+            499,
+            514858
+          ],
+          "population": 238134
+        },
+        {
+          "generation": 1000,
+          "view": [
+            409,
+            514772,
+            499,
+            514862
+          ],
+          "population": 237871
+        },
+        {
+          "generation": 1008,
+          "view": [
+            409,
+            514776,
+            499,
+            514866
+          ],
+          "population": 237301
+        },
+        {
+          "generation": 1016,
+          "view": [
+            409,
+            514780,
+            499,
+            514870
+          ],
+          "population": 237403
+        },
+        {
+          "generation": 1024,
+          "view": [
+            409,
+            514784,
+            499,
+            514874
+          ],
+          "population": 237673
+        },
+        {
+          "generation": 1032,
+          "view": [
+            409,
+            514788,
+            499,
+            514878
+          ],
+          "population": 237693
+        },
+        {
+          "generation": 1040,
+          "view": [
+            409,
+            514792,
+            499,
+            514882
+          ],
+          "population": 237412
+        },
+        {
+          "generation": 1048,
+          "view": [
+            409,
+            514796,
+            499,
+            514886
+          ],
+          "population": 237092
+        },
+        {
+          "generation": 1056,
+          "view": [
+            409,
+            514800,
+            499,
+            514890
+          ],
+          "population": 237120
+        }
+      ]
+    }
+  ],
+  "resumed_checkpoint_validation": {
+    "start_generation": 1000,
+    "end_generation": 1200,
+    "independent_full_source_run_exact_cell_match": true
+  }
+}

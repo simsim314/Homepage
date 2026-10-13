@@ -1,0 +1,41 @@
+{
+  "neighbourhoods_checked": 512,
+  "packed_interiors_checked": 20,
+  "orange_post_examples_checked": 3,
+  "families": {
+    "blue_rotational_classes": 6,
+    "orange_input_cases": 8,
+    "purple_masks": 8,
+    "black_white_logical_cases": 4
+  },
+  "purple_categories": {
+    "0\u20132": 46,
+    "3": 84,
+    "4": 126,
+    "5\u20139": 256
+  },
+  "life_outputs": {
+    "0": 372,
+    "1": 140
+  },
+  "result": "All logical checks passed.",
+  "scope": "Reconstructed routing and logical ports; not a physical-fit/CAD proof.",
+  "source": "https://conwaylife.com/forums/viewtopic.php?p=73033#p73033",
+  "orange_geometry_draft": {
+    "length_over_L": 0.8,
+    "width_over_L": 0.2,
+    "pitch_over_L": 0.2,
+    "local_x_over_L": [
+      0.1,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "local_y_over_L": 0.1,
+    "global_work_region_over_L": [
+      0.1,
+      0.9
+    ],
+    "status": "Port map and proposed footprint; C profile and height bridges unspecified."
+  }
+}

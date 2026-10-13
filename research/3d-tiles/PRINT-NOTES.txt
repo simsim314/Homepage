@@ -1,0 +1,64 @@
+CONSTRUCTION PIECES FOR MAKING CA TILES — MICHAEL SIMKIN
+
+Ten separate STL parts reconstructed from my March 21, 2019 OpenJSCAD design.
+Original discussion: https://conwaylife.com/forums/viewtopic.php?p=73650#p73650
+
+WHAT THIS SET IS
+The kit supplies pieces for making configurable tiles. It is a lower-level kit,
+separate from the 26-type Conway's Life construction described earlier in the
+thread. These ten files do not constitute a complete assembled Life simulation.
+
+FILES
+side-plain.stl           Plain side panel
+side-connecting.stl      Side panel with outward connection features
+top-plain.stl            Plain top
+top-attachment.stl       Top with attachment features
+top-zero.stl             Top with a zero-valued output connector
+top-one.stl              Top with a one-valued output connector
+bottom-attachment.stl    Base/core with attachment input
+bottom-zero.stl          Base/core with zero-valued input
+bottom-one.stl           Base/core with one-valued input
+bottom-either.stl        Base/core accepting either value
+
+Each bottom part includes the core. Side panels and a top attach around it.
+The article's viewer shows bottom-zero and top-one with adjustable separation.
+Their nominal mating height is 39 mm at the export scale.
+
+SCALE AND PRINTING
+STL coordinates are interpreted in millimetres. The exports use a uniform 3x
+scale relative to the historical code: its 10-unit core becomes 30 mm. This
+preserves the design's relative geometry, including its original clearances.
+All parts have been translated onto Z=0 for import into a slicer.
+
+Treat this as an experimental kit. No new physical print or fit test has been
+performed. Mesh validation does not establish printer tolerances, strength, or
+successful assembly. Inspect connector overhangs in your slicer and choose an
+orientation appropriate to your printer.
+
+Start with one base, one top and one plain side. Check those connections before
+printing multiples. The original clearances are small; printer-specific fit may
+require a revised tolerance parameter rather than simply scaling one part alone.
+Do not rescale mating parts independently.
+
+VALIDATION AND EXPORT CHANGES
+All ten exports are closed meshes with consistent winding, positive volume and
+one solid component. The connecting-side export contained a detached flat
+two-triangle fragment from the legacy boolean calculation; only that zero-
+thickness fragment was removed. The solid part was retained.
+A nominal top/base intersection check found approximately 0.01 cubic mm of
+overlap in the tessellated historical geometry. Physical fit remains untested.
+
+REPRODUCIBILITY
+original-2019.jscad preserves the author's forum code unchanged.
+manifest.json records dimensions, source coordinates and export scale.
+mesh-validation.json records digital checks, not physical testing.
+Website source includes scripts/export-tile-kit.mjs to reproduce the exports.
+
+ATTRIBUTION
+Michael Simkin, 2019 modular kit. The broader Life-tiling discussion includes
+Paul Callahan and Adam Goucher's contributions. This package reconstructs
+Simkin's modular-kit CAD; it does not assign their tile designs to him.
+
+PUBLICATION LICENSE
+To be selected by Michael Simkin before uploading this package to Thingiverse.
+No publication license is assigned by this preparation step.

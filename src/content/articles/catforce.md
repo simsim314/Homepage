@@ -52,9 +52,15 @@ An input file specifies the active pattern, candidate catalysts and their symmet
 
 The README also describes combining candidate results and limiting catalyst arrangements by bounding width and height. The supplied `.in` files are the concrete examples for the configuration format.
 
+## Finding the useful interactions
+
+CatForce returns the interactions that might be useful within the configured search. I then go through the potential solutions **by hand**, inspect what happens, and select the best ones.
+
+Finding a reaction that meets the search condition is one stage; understanding whether it does something useful is another. The search explores combinations quickly, while the next step is looking closely at the results.
+
 ## Implementation constraints
 
-The utility uses brute-force spatial search, with optimizations and a structure amenable to parallelization. As with LifeAPI, the simulation is a 64×64 torus with edge-glider removal.
+The utility uses brute-force spatial search, with optimizations and a structure amenable to parallelization. The bundled LifeAPI version uses a 64×64 torus with edge-glider removal. This describes the engine shipped with CatForce; boundary handling differs from the later standalone LifeAPI code.
 
 Those constraints should be considered when interpreting any search output. A finite-domain reaction must still be checked in the intended Life setting.
 

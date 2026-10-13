@@ -3,8 +3,13 @@ title: '25-cell quadratic growth'
 description: 'The first of three progressively smaller quadratic-growth seeds I found in October 2014.'
 type: 'research'
 topics: ['game-of-life']
+presentationOrder: 1001
 status: 'demonstrated'
-showPreview: false
+showPreview: true
+image: /images/life-25-cell-quadratic-growth.gif
+imageAlt: Later evolution of the original 25-cell seed, generations 4,194,304–16,777,216.
+imageCredit: Original pattern evolved with Golly 3.3; local animation with a still fallback.
+imageSource: https://conwaylife.com/wiki/25-cell_quadratic_growth
 visual: 'life'
 date: '2026-10-12'
 tags: ['quadratic growth', 'breeder', '2014']
@@ -18,6 +23,8 @@ sources:
 ---
 
 I found this **25-cell quadratic-growth pattern on October 21, 2014**. Its initial population improved on the previous 26-cell record, which had stood for eight years.
+
+The animation shows the original seed after 4,194,304–16,777,216 generations. Each lit square contains live cells within a 16,384 × 16,384-cell region; the entire pattern is simulated. The view stays fixed as the structure grows, then the clip resets.
 
 ## A small seed, continuing growth
 

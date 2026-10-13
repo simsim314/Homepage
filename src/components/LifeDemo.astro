@@ -1,31 +1,35 @@
 ---
 interface Props {
   hero?: boolean;
+  autoplay?: boolean;
+  linked?: boolean;
 }
 import { href } from '../lib/content';
-const { hero = false } = Astro.props;
+const { hero = false, autoplay = false, linked = false } = Astro.props;
+const CanvasWrapper = linked ? 'a' : 'div';
 ---
 
 <section
   class:list={['life-demo', { 'life-hero': hero }]}
-  data-autoplay={hero ? 'true' : 'false'}
+  data-autoplay={autoplay ? 'true' : 'false'}
   data-visual-key="simkin-glider-gun"
+  data-article-id="simkin-glider-gun"
   aria-label="Interactive Simkin glider gun"
 >
   <div class="demo-heading">
     <span class="eyebrow">Conway’s Game of Life</span><span class="demo-badge">B3 / S23</span>
   </div>
-  <a
-    class="life-pattern-link"
-    href={href('articles/simkin-glider-gun/')}
-    aria-label="Read about the Simkin Glider Gun"
-    ><canvas
+  <CanvasWrapper
+    href={linked ? href('articles/simkin-glider-gun/#glider-gun') : undefined}
+    aria-label={linked ? 'Read about the Simkin Glider Gun' : undefined}
+  >
+    <canvas
       width="660"
       height="350"
       aria-label="Animated Simkin glider gun evolved by Conway’s Game of Life. Use Play or Pause below."
       role="img">The 29-cell, period-120 Simkin glider gun.</canvas
-    ></a
-  >
+    >
+  </CanvasWrapper>
   <div class="demo-controls">
     <button type="button" data-action="play" aria-pressed="false">▶ Play</button><button
       type="button"

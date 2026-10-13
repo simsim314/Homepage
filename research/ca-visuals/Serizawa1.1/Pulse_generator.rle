@@ -1,0 +1,9 @@
+# A pulse generator, from Serizawa (1986)
+# 
+# A signal is redirected to join a channel, without disturbing other signals
+# that use that channel.
+#
+x = 197, y = 59, rule = Serizawa
+176.A13.A4$175.A13.A.A$171.A24.A$175.A14$154.A36.A$155.B40.A$154.A36.
+A14$A153.A$.B153.B$A153.A10$164.A4$154.A8.A11.A$150.A44.A$154.A8.A11.
+A13.A.A4$155.A8.A11.A13.A!

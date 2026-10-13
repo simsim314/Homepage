@@ -1,0 +1,22 @@
+{
+  "24-cell-quadratic-growth": {
+    "initial_population": 24,
+    "generation": 64,
+    "final_population": 191,
+    "independent_sparse_match": true,
+    "exact_period_return": null,
+    "final_generation": 16777216,
+    "full_final_population": 54564537,
+    "occupied_square_side": 16384
+  },
+  "25-cell-quadratic-growth": {
+    "initial_population": 25,
+    "generation": 64,
+    "final_population": 129,
+    "independent_sparse_match": true,
+    "exact_period_return": null,
+    "final_generation": 16777216,
+    "full_final_population": 91253066,
+    "occupied_square_side": 16384
+  }
+}

@@ -2,7 +2,7 @@
 title: 'Multilayer Mutilated Gear'
 description: 'A simulation of layered, selectively toothed gears as a representation of logic.'
 type: 'project'
-topics: ['simulation-visualization', 'experimental-engineering']
+topics: ['game-of-life', 'simulation-visualization', 'experimental-engineering']
 status: 'experimental'
 visual: 'gear'
 featured: false
@@ -21,10 +21,18 @@ sources:
       'label': 'Forum: mechanical logic, staged folding, delayed wires, and OR gates',
       'url': 'https://conwaylife.com/forums/viewtopic.php?p=205731',
     },
+    {
+      'label': 'Paul Callahan: still-life constraints as planar tiles',
+      'url': 'https://conwaylife.com/forums/viewtopic.php?t=2188',
+    },
   ]
 ---
 
-A mutilated gear has some teeth present and others missing. This project models a multilayer arrangement in which the tooth pattern becomes part of a computational structure.
+I wanted to explore a physical mechanism for Conway’s Game of Life. One inspiration was Paul Callahan’s still-life tiles: their connections encode constraints, so fitting the pieces together can enforce a valid Life still life.
+
+Physical computation and self-replication are recurring interests in my cellular-automaton work. MMG explores the computation side through a mechanical model: a mutilated gear has some teeth present and others missing, and layers of these gears can represent logic.
+
+This project demonstrates simulated mechanisms. A self-replicating physical machine is a broader interest, not a result demonstrated by MMG.
 
 ## The idea
 
@@ -63,3 +71,5 @@ A February 2025 animation demonstrated a delayed wire, addressing the timing nee
 These examples are a starting point for investigating information propagation and logic in the model. Physical tolerances, manufacturing, and measured hardware reliability are outside the demonstrated repository material.
 
 Start with the documented Python interface and compare the grid arrangements with the animations. No performance or universality result is claimed here.
+
+The earlier [still-life tiles](/articles/still-life-tiles/) and [3D Life tiles](/articles/life-in-3d-tiles/) explore another way of putting computation into physical constraints. Tiles encode compatible states; the gear project investigates timed mechanical interactions.

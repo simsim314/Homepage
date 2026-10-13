@@ -1,0 +1,45 @@
+{
+  "pairings_checked_including_rotations": 96,
+  "fit_matrix": {
+    "0": {
+      "0": true,
+      "1": false,
+      "*": false,
+      "C0": false,
+      "C1": false,
+      "C*": false
+    },
+    "1": {
+      "0": false,
+      "1": true,
+      "*": false,
+      "C0": false,
+      "C1": false,
+      "C*": false
+    },
+    "C0": {
+      "0": false,
+      "1": false,
+      "*": false,
+      "C0": true,
+      "C1": false,
+      "C*": false
+    },
+    "C1": {
+      "0": false,
+      "1": false,
+      "*": false,
+      "C0": false,
+      "C1": true,
+      "C*": false
+    }
+  },
+  "rejected_union_cavities_unused_cells": {
+    "0": 8,
+    "1": 8,
+    "C0": 4,
+    "C1": 4
+  },
+  "result": "Full-fit checks passed. Every union-cavity wildcard is rejected.",
+  "scope": "Nominal registered extrusions at equal depth; not full tile CAD. Previous wildcard proposal rejected."
+}

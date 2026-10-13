@@ -1,0 +1,87 @@
+{
+  "scope": "Digital mesh checks; not a physical print or fit test.",
+  "parts": [
+    {
+      "id": "side-plain",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 9670.962,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "side-connecting",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 9527.281,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "top-plain",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 19965.79,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "top-attachment",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 20241.277,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "top-zero",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 21758.068,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "top-one",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 21202.354,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "bottom-attachment",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 48550.586,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "bottom-one",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 47784.014,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "bottom-zero",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 47190.081,
+      "solidComponents": 1,
+      "validMesh": true
+    },
+    {
+      "id": "bottom-either",
+      "watertight": true,
+      "consistentWinding": true,
+      "volumeMm3": 46199.801,
+      "solidComponents": 1,
+      "validMesh": true
+    }
+  ],
+  "nominalTopBaseOverlapMm3": 0.009879,
+  "fitNote": "Tiny overlap remains in the historical CAD at the nominal mating position. Physical tolerances and print fit need testing."
+}

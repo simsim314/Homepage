@@ -1,0 +1,61 @@
+{
+  "period_samples": 120,
+  "translation_step_over_L": 0.008333333333333333,
+  "tested_axis_directions": [
+    "horizontal",
+    "vertical"
+  ],
+  "patterns": {
+    "empty": {
+      "horizontal": {
+        "surviving_translations": 1820,
+        "intended_translations": 4,
+        "extra_candidates": 1816
+      },
+      "vertical": {
+        "surviving_translations": 1820,
+        "intended_translations": 4,
+        "extra_candidates": 1816
+      }
+    },
+    "one_big_X": {
+      "horizontal": {
+        "surviving_translations": 4,
+        "intended_translations": 4,
+        "extra_candidates": 0
+      },
+      "vertical": {
+        "surviving_translations": 4,
+        "intended_translations": 4,
+        "extra_candidates": 0
+      }
+    },
+    "four_small_Xs": {
+      "horizontal": {
+        "surviving_translations": 4,
+        "intended_translations": 4,
+        "extra_candidates": 0
+      },
+      "vertical": {
+        "surviving_translations": 4,
+        "intended_translations": 4,
+        "extra_candidates": 0
+      }
+    },
+    "four_rotated_Ls": {
+      "horizontal": {
+        "surviving_translations": 4,
+        "intended_translations": 4,
+        "extra_candidates": 0
+      },
+      "vertical": {
+        "surviving_translations": 4,
+        "intended_translations": 4,
+        "extra_candidates": 0
+      }
+    }
+  },
+  "big_X_half_arm_length_over_L": 0.075,
+  "big_X_bar_width_over_L": 0.016666666666666666,
+  "scope": "Conservative raster test across all binary values. Axis-aligned translations only. No arbitrary-angle, tolerance, or final C/BW alignment proof."
+}

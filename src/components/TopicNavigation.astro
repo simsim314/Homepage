@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { href, type Article } from '../lib/content';
+interface Props {
+  interests: CollectionEntry<'interests'>[];
+  articles: Article[];
+  activeId?: string;
+  articleTopics?: string[];
+  allActive?: boolean;
+}
+const { interests, articles, activeId, articleTopics = [], allActive = false } = Astro.props;
+const primary = interests.filter((i) => !i.data.parent);
+const active = interests.find((i) => i.id === activeId);
+const expandedParent = active?.data.parent || activeId;
+const count = (id: string) => articles.filter((a) => a.data.topics.includes(id)).length;
+---
+
+<nav class="topic-navigation" aria-label="Browse by topic">
+  <span class="eyebrow">Topics</span>
+  <ul>
+    <li>
+      <a href={href('#articles')} aria-current={allActive ? 'page' : undefined}>
+        <span>All articles</span><span class="topic-count">{articles.length}</span>
+      </a>
+    </li>
+    {
+      primary.map((interest) => {
+        const children = interests.filter((i) => i.data.parent === interest.id);
+        const expanded = expandedParent === interest.id || articleTopics.includes(interest.id);
+        return (
+          <li>
+            <a
+              href={href(`interests/${interest.id}/`)}
+              aria-current={activeId === interest.id ? 'page' : undefined}
+              class:list={{ 'related-topic': articleTopics.includes(interest.id) }}
+            >
+              <>
+                <span>{interest.data.title}</span>
+                <span class="topic-count">{count(interest.id)}</span>
+              </>
+            </a>
+            {expanded && children.length > 0 && (
+              <ul class="topic-subnavigation" aria-label={`${interest.data.title} subtopics`}>
+                {children.map((child) => (
+                  <li>
+                    <a
+                      href={href(`interests/${child.id}/`)}
+                      aria-current={activeId === child.id ? 'page' : undefined}
+                      class:list={{ 'related-topic': articleTopics.includes(child.id) }}
+                    >
+                      <span>{child.data.title}</span>
+                      <span class="topic-count">{count(child.id)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

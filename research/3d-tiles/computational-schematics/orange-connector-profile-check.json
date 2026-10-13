@@ -1,0 +1,33 @@
+{
+  "profile_sample_step": 0.05,
+  "life_width": 60,
+  "fits_matrix": {
+    "0": {
+      "0": true,
+      "1": false,
+      "C0": false,
+      "C1": false
+    },
+    "1": {
+      "0": false,
+      "1": true,
+      "C0": false,
+      "C1": false
+    },
+    "C0": {
+      "0": false,
+      "1": false,
+      "C0": true,
+      "C1": false
+    },
+    "C1": {
+      "0": false,
+      "1": false,
+      "C0": false,
+      "C1": true
+    }
+  },
+  "all_profiles_C4_symmetric": true,
+  "logical_neighbourhoods_checked": 512,
+  "status": "Proposed C profiles. Sampled nominal checks, not print-fit certification."
+}

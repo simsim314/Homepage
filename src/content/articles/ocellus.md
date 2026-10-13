@@ -4,7 +4,11 @@ description: 'A period-114 relay oscillator built around a reduced 180-degree re
 type: 'research'
 topics: ['game-of-life']
 status: 'demonstrated'
-showPreview: false
+showPreview: true
+image: /images/life-ocellus.gif
+imageAlt: One complete 114-generation cycle of Ocellus.
+imageCredit: Original pattern evolved with Golly 3.3; local animation with a still fallback.
+imageSource: https://conwaylife.com/wiki/Ocellus
 visual: 'life'
 date: '2026-10-12'
 tags: ['oscillator', 'p114', 'shared credit']

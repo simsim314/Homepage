@@ -1,0 +1,12 @@
+# Signals on the top channel set a flag to 1.
+# If the flag is 0, signals on the bottom channel die.
+# If the flag is 1, signals on the bottom channel output 1 and set the flag to 0.
+#
+# To start with, the flag is 0. A signal on the bottom channel dies.
+# Then the flag is set. A signal on the bottom channel gets through.
+# The flag is set again. Further signals on the top channel have no effect.
+#
+x = 283, y = 47, rule = Serizawa
+255.A20.A4$A75.A127.A51.A20.A$.B75.B127.B76.A$A75.A127.A51.A20.A13$
+250.A15.A14.A$254.A.A18.A.A9$250.A$254.A.A3$255.A7$139.A97.A38.A$140.
+B97.B41.A$139.A97.A38.A4$275.A!

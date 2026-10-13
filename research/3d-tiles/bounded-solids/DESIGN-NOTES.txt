@@ -1,0 +1,8 @@
+26 original computation types + 4 full-width blue edge types + 2 full-width blue corner types.
+Blue overhangs the board by half a cell on every edge; orange/purple/final return to the original grid. Outside cells are fixed zero constants in boundary blue routing.
+Assembly rule: the six boundary types may be placed only on the declared outer perimeter, facing inward.
+On-board padding cells evolve normally; an empty cell is not automatically a zero-to-zero wire.
+The supplied glider advances one full generation on the same 5x5 footprint, preserving all five live cells.
+For unlimited evolution on the infinite plane, choose more padding or enlarge the board when activity reaches it.
+Nominal millimetres, zero mating clearance. New annular purple keys are prototype design choices.
+Complete each layer before starting the next; no bridging. Full-width boundary blue types have only 2 or 1 input sockets, all over real cells. Exterior zero outputs are built into their keys; no outside input sockets are left unfilled.

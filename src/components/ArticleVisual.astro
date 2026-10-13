@@ -3,8 +3,9 @@ import { href } from '../lib/content';
 interface Props {
   id: string;
   kind: string;
+  instance?: string;
 }
-const { id, kind } = Astro.props;
+const { id, kind, instance = id } = Astro.props;
 const supported = [
   'high-dimensional-sphere-packing',
   'tqrng-webcam',
@@ -13,7 +14,7 @@ const supported = [
 ];
 if (!supported.includes(id))
   throw new Error(`Article ${id} needs a unique image, or showPreview: false.`);
-const sphereShade = 'sphere-shade-3d';
+const sphereShade = `sphere-shade-${instance}`;
 const packedSpheres = [];
 for (let x = 0; x < 4; x++)
   for (let y = 0; y < 4; y++)

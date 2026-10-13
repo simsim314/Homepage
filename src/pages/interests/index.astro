@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import InterestGrid from '../../components/InterestGrid.astro';
+import TopicNavigation from '../../components/TopicNavigation.astro';
 import { getContent } from '../../lib/content';
 const { articles, interests } = await getContent();
 ---
@@ -12,7 +13,10 @@ const { articles, interests } = await getContent();
     </h1><p>
       Different starting points into the same collection of research, discoveries, and experiments.
     </p>
-  </section><section class="container section">
-    <InterestGrid interests={interests} articles={articles} />
+  </section><section class="container section topic-layout">
+    <aside class="topic-sidebar">
+      <TopicNavigation interests={interests} articles={articles} />
+    </aside>
+    <div class="topic-content"><InterestGrid interests={interests} articles={articles} /></div>
   </section></Base
 >

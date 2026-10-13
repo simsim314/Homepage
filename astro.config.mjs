@@ -11,6 +11,12 @@ export default defineConfig({
   base: '/Homepage',
   trailingSlash: 'always',
   output: 'static',
+  // Keep lazy 3D imports independent of Vite's regenerated dependency cache.
+  vite: { optimizeDeps: { exclude: ['three'] } },
+  redirects: {
+    '/interests/other-cellular-automata/': '/Homepage/interests/cellular-automata/',
+    '/interests/artificial-intelligence/': '/Homepage/interests/cellular-automata/',
+  },
   integrations: [mdx()],
   markdown: { processor: unified(plugins) },
 });

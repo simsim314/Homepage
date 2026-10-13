@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img">
+<title>Proposed physical C0 and C1 connectors for the eight orange tiles</title>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}</style>
+<rect width="100%" height="100%" fill="#f6f5ef"/>
+<text x="32" y="42" font-size="28" font-weight="bold" fill="#233c43">Orange tiles — proposed C0 / C1 connector shapes</text>
+<text x="32" y="78" font-size="17" font-weight="normal" fill="#233c43">Ordinary circle/plus signals stay the same. The last output uses a distinct centre-state connector.</text>
+<circle cx="148" cy="153" r="17.2" fill="none" stroke="#5188b4" stroke-width="7.2"/>
+<text x="90" y="218" font-size="19" font-weight="bold" fill="#233c43">0 · circle</text>
+<path d="M457.2,153 H498.8 M478,132.2 V173.8" stroke="#5188b4" stroke-width="7.2" fill="none"/>
+<text x="420" y="218" font-size="19" font-weight="bold" fill="#233c43">1 · plus</text>
+<path d="M780.8,125.8 h54.4 v54.4 h-54.4 Z M788.0,133.0 v40.0 h40.0 v-40.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="750" y="218" font-size="19" font-weight="bold" fill="#233c43">C0 · square ring</text>
+<path d="M1138,114.5333911034518 L1176.4666088965482,153 L1138,191.4666088965482 L1099.5333911034518,153 Z M1138,124.7157287525381 L1109.715728752538,153 L1138,181.2842712474619 L1166.284271247462,153 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="1080" y="218" font-size="19" font-weight="bold" fill="#233c43">C1 · diamond ring</text>
+<text x="32" y="259" font-size="22" font-weight="bold" fill="#233c43">Eight directed tile types · input (x, y, y, z) → three packed bits + C_y</text>
+<text x="35" y="307" font-size="19" font-weight="bold" fill="#233c43">O0: 0000</text>
+<text x="35" y="337" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="360" y="337" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="35" y="352" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="65.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="95" y1="352" x2="95" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="125.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="155" y1="352" x2="155" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="185.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="215" y1="352" x2="215" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="245.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="293" y1="382" x2="335" y2="382" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="377" x2="335" y2="382" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="387" x2="335" y2="382" stroke="#233c43" stroke-width="2"/>
+<rect x="360" y="352" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="390.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="420" y1="352" x2="420" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="450.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="480" y1="352" x2="480" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="510.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="540" y1="352" x2="540" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M553.0,365.0 h34.0 v34.0 h-34.0 Z M557.5,369.5 v25.0 h25.0 v-25.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="35" y="440" font-size="15" font-weight="normal" fill="#233c43">Count 0; preserve C0.</text>
+<text x="735" y="307" font-size="19" font-weight="bold" fill="#233c43">O1: 0001</text>
+<text x="735" y="337" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="1060" y="337" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="735" y="352" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="765.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="795" y1="352" x2="795" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="825.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="855" y1="352" x2="855" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="885.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="915" y1="352" x2="915" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M932.0,382.0 H958.0 M945.0,369.0 V395.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="993" y1="382" x2="1035" y2="382" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="377" x2="1035" y2="382" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="387" x2="1035" y2="382" stroke="#233c43" stroke-width="2"/>
+<rect x="1060" y="352" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M1077.0,382.0 H1103.0 M1090.0,369.0 V395.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1120" y1="352" x2="1120" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1150.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="1180" y1="352" x2="1180" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1210.0" cy="382.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="1240" y1="352" x2="1240" y2="412" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1253.0,365.0 h34.0 v34.0 h-34.0 Z M1257.5,369.5 v25.0 h25.0 v-25.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="735" y="440" font-size="15" font-weight="normal" fill="#233c43">Count 1; preserve C0.</text>
+<text x="35" y="490" font-size="19" font-weight="bold" fill="#233c43">O2: 0110</text>
+<text x="35" y="520" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="360" y="520" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="35" y="535" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="65.0" cy="565.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="95" y1="535" x2="95" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M112.0,565.0 H138.0 M125.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="155" y1="535" x2="155" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M172.0,565.0 H198.0 M185.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="215" y1="535" x2="215" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="245.0" cy="565.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="293" y1="565" x2="335" y2="565" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="560" x2="335" y2="565" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="570" x2="335" y2="565" stroke="#233c43" stroke-width="2"/>
+<rect x="360" y="535" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M377.0,565.0 H403.0 M390.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="420" y1="535" x2="420" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="450.0" cy="565.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="480" y1="535" x2="480" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="510.0" cy="565.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="540" y1="535" x2="540" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M570.0,540.9583694396574 L594.0416305603426,565.0 L570.0,589.0416305603426 L545.9583694396574,565.0 Z M570.0,547.3223304703363 L552.3223304703363,565.0 L570.0,582.6776695296637 L587.6776695296637,565.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="35" y="623" font-size="15" font-weight="normal" fill="#233c43">Count 1; preserve C1.</text>
+<text x="735" y="490" font-size="19" font-weight="bold" fill="#233c43">O3: 0111</text>
+<text x="735" y="520" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="1060" y="520" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="735" y="535" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<circle cx="765.0" cy="565.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="795" y1="535" x2="795" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M812.0,565.0 H838.0 M825.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="855" y1="535" x2="855" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M872.0,565.0 H898.0 M885.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="915" y1="535" x2="915" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M932.0,565.0 H958.0 M945.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="993" y1="565" x2="1035" y2="565" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="560" x2="1035" y2="565" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="570" x2="1035" y2="565" stroke="#233c43" stroke-width="2"/>
+<rect x="1060" y="535" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M1077.0,565.0 H1103.0 M1090.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1120" y1="535" x2="1120" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1137.0,565.0 H1163.0 M1150.0,552.0 V578.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1180" y1="535" x2="1180" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1210.0" cy="565.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="1240" y1="535" x2="1240" y2="595" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1270.0,540.9583694396574 L1294.0416305603426,565.0 L1270.0,589.0416305603426 L1245.9583694396574,565.0 Z M1270.0,547.3223304703363 L1252.3223304703363,565.0 L1270.0,582.6776695296637 L1287.6776695296637,565.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="735" y="623" font-size="15" font-weight="normal" fill="#233c43">Count 2; preserve C1.</text>
+<text x="35" y="673" font-size="19" font-weight="bold" fill="#233c43">O4: 1000</text>
+<text x="35" y="703" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="360" y="703" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="35" y="718" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M52.0,748.0 H78.0 M65.0,735.0 V761.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="95" y1="718" x2="95" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="125.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="155" y1="718" x2="155" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="185.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="215" y1="718" x2="215" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="245.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="293" y1="748" x2="335" y2="748" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="743" x2="335" y2="748" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="753" x2="335" y2="748" stroke="#233c43" stroke-width="2"/>
+<rect x="360" y="718" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M377.0,748.0 H403.0 M390.0,735.0 V761.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="420" y1="718" x2="420" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="450.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="480" y1="718" x2="480" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="510.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="540" y1="718" x2="540" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M553.0,731.0 h34.0 v34.0 h-34.0 Z M557.5,735.5 v25.0 h25.0 v-25.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="35" y="806" font-size="15" font-weight="normal" fill="#233c43">Count 1; preserve C0.</text>
+<text x="735" y="673" font-size="19" font-weight="bold" fill="#233c43">O5: 1001</text>
+<text x="735" y="703" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="1060" y="703" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="735" y="718" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M752.0,748.0 H778.0 M765.0,735.0 V761.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="795" y1="718" x2="795" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="825.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="855" y1="718" x2="855" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="885.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="915" y1="718" x2="915" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M932.0,748.0 H958.0 M945.0,735.0 V761.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="993" y1="748" x2="1035" y2="748" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="743" x2="1035" y2="748" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="753" x2="1035" y2="748" stroke="#233c43" stroke-width="2"/>
+<rect x="1060" y="718" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M1077.0,748.0 H1103.0 M1090.0,735.0 V761.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1120" y1="718" x2="1120" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1137.0,748.0 H1163.0 M1150.0,735.0 V761.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1180" y1="718" x2="1180" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1210.0" cy="748.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="1240" y1="718" x2="1240" y2="778" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1253.0,731.0 h34.0 v34.0 h-34.0 Z M1257.5,735.5 v25.0 h25.0 v-25.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="735" y="806" font-size="15" font-weight="normal" fill="#233c43">Count 2; preserve C0.</text>
+<text x="35" y="856" font-size="19" font-weight="bold" fill="#233c43">O6: 1110</text>
+<text x="35" y="886" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="360" y="886" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="35" y="901" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M52.0,931.0 H78.0 M65.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="95" y1="901" x2="95" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M112.0,931.0 H138.0 M125.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="155" y1="901" x2="155" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M172.0,931.0 H198.0 M185.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="215" y1="901" x2="215" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="245.0" cy="931.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="293" y1="931" x2="335" y2="931" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="926" x2="335" y2="931" stroke="#233c43" stroke-width="2"/>
+<line x1="327" y1="936" x2="335" y2="931" stroke="#233c43" stroke-width="2"/>
+<rect x="360" y="901" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M377.0,931.0 H403.0 M390.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="420" y1="901" x2="420" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M437.0,931.0 H463.0 M450.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="480" y1="901" x2="480" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="510.0" cy="931.0" r="10.75" fill="none" stroke="#5188b4" stroke-width="4.5"/>
+<line x1="540" y1="901" x2="540" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M570.0,906.9583694396574 L594.0416305603426,931.0 L570.0,955.0416305603426 L545.9583694396574,931.0 Z M570.0,913.3223304703363 L552.3223304703363,931.0 L570.0,948.6776695296637 L587.6776695296637,931.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="35" y="989" font-size="15" font-weight="normal" fill="#233c43">Count 2; preserve C1.</text>
+<text x="735" y="856" font-size="19" font-weight="bold" fill="#233c43">O7: 1111</text>
+<text x="735" y="886" font-size="14" font-weight="bold" fill="#233c43">BOTTOM · all four recessed</text>
+<text x="1060" y="886" font-size="14" font-weight="bold" fill="#233c43">TOP · all four raised</text>
+<rect x="735" y="901" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M752.0,931.0 H778.0 M765.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="795" y1="901" x2="795" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M812.0,931.0 H838.0 M825.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="855" y1="901" x2="855" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M872.0,931.0 H898.0 M885.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="915" y1="901" x2="915" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M932.0,931.0 H958.0 M945.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="993" y1="931" x2="1035" y2="931" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="926" x2="1035" y2="931" stroke="#233c43" stroke-width="2"/>
+<line x1="1027" y1="936" x2="1035" y2="931" stroke="#233c43" stroke-width="2"/>
+<rect x="1060" y="901" width="240" height="60" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<path d="M1077.0,931.0 H1103.0 M1090.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1120" y1="901" x2="1120" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1137.0,931.0 H1163.0 M1150.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1180" y1="901" x2="1180" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1197.0,931.0 H1223.0 M1210.0,918.0 V944.0" stroke="#5188b4" stroke-width="4.5" fill="none"/>
+<line x1="1240" y1="901" x2="1240" y2="961" stroke="#c9b194" stroke-width="1" stroke-dasharray="3 4"/>
+<path d="M1270.0,906.9583694396574 L1294.0416305603426,931.0 L1270.0,955.0416305603426 L1245.9583694396574,931.0 Z M1270.0,913.3223304703363 L1252.3223304703363,931.0 L1270.0,948.6776695296637 L1287.6776695296637,931.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="735" y="989" font-size="15" font-weight="normal" fill="#233c43">Count 3; preserve C1.</text>
+<text x="32" y="1056" font-size="18" font-weight="bold" fill="#233c43">The same rectangular piece is used horizontally, then rotated 90° for the second pass.</text>
+<text x="32" y="1090" font-size="17" font-weight="normal" fill="#233c43">C0 and C1 fit neither ordinary input profile, so the next orange layer cannot cover the C column.</text>
+<text x="32" y="1124" font-size="16" font-weight="normal" fill="#233c43">Proposed dimensions: body 4L/5 × L/5; connector pitch L/5. C profiles are symmetric under 90° turns.</text>
+<text x="32" y="1165" font-size="15" font-weight="normal" fill="#233c43">Profile proposal only. The C-channel height and final-layer reach-down connection remain to be designed.</text>
+</svg>

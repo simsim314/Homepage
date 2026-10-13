@@ -1,0 +1,53 @@
+[
+  {
+    "id": "ocellus",
+    "rleLinks": [
+      "https://www.conwaylife.com/patterns/ocellus.rle"
+    ],
+    "source": "x = 31, y = 25, rule = B3/S23\n7b2o4bo$7b2o3bobo$13bo3$2o2b2o2b2o$2o2b2ob2o16bo$9bo15b3o$22bo5bo$\n22b6obo$3b2o22bobo$2bo2b2o15b2o2bo2b2o$2bo4b2o13bobo2b2o$2o3bob2o\n17bobo$bobo23bo$bob6o$2bo5bo$3b3o$5bo19b2o2b2o$25b2o2b2o3$17bo$16b\nobo3b2o$17bo4b2o!\n#C [[ THUMBSIZE 2 THEME 6 GRID GRIDMAJOR 0 SUPPRESS THUMBLAUNCH ]]\n#C [[ AUTOSTART ]]\n#C [[ LOOP 114 GPS 19 THUMBSIZE 2 ZOOM 10 ]] ",
+    "url": "https://conwaylife.com/wiki/Ocellus"
+  },
+  {
+    "id": "b60",
+    "rleLinks": [
+      "https://www.conwaylife.com/patterns/b60.rle"
+    ],
+    "source": "x = 21, y = 13, rule = B3/S23\no11b2o5b2o$3o9b2o5b2o$2bo$2bo12b2o$15b2o5$6bo$6bobo$6b3o$8bo!\n#C [[ THUMBSIZE 2 THEME 6 GRID GRIDMAJOR 0 SUPPRESS THUMBLAUNCH ]]\n#C [[ AUTOSTART ]]\n#C [[ ZOOM 16 X -2 Y -2 GPS 20 LOOP 61 PAUSE 2 T 60 PAUSE 2 WIDTH 480 HEIGHT 400 THUMBSIZE 2 ]] ",
+    "url": "https://conwaylife.com/wiki/B60"
+  },
+  {
+    "id": "bne14t30",
+    "rleLinks": [
+      "https://www.conwaylife.com/patterns/bne14t30.rle"
+    ],
+    "source": "x = 17, y = 22, rule = B3/S23\n11b2o$11bobo$13bo$7b2o3bob2o$8bo3bo3bo$8bob2ob2obo$9bobobobo7$2o$b2o$\n2o$o4$2o$2o!\n#C [[ THUMBSIZE 2 THEME 6 GRID GRIDMAJOR 0 SUPPRESS THUMBLAUNCH ]]\n#C [[ AUTOSTART ]]\n#C [[ THUMBSIZE 2 ZOOM 12 HEIGHT 400 GPS 10 PAUSE 2 LOOP 144 ]] ",
+    "url": "https://conwaylife.com/wiki/BNE14T30"
+  },
+  {
+    "id": "brx46b",
+    "rleLinks": [
+      "https://www.conwaylife.com/patterns/brx46b.rle"
+    ],
+    "source": "x = 13, y = 25, rule = B3/S23\n11b2o$2b2o7b2o$2b2o3$11bo$2o8bobo$b2o7bobo$2o9bo$o13$6bob2o$6bobo$7bo!\n#C [[ THUMBSIZE 2 THEME 6 GRID GRIDMAJOR 0 SUPPRESS THUMBLAUNCH ]]\n#C [[ AUTOSTART ]]\n#C [[ THUMBSIZE 3 ZOOM 15 HEIGHT 500 GPS 10 PAUSE 2 T 46 PAUSE 2 LOOP 47 ]] ",
+    "url": "https://conwaylife.com/wiki/BRx46B"
+  },
+  {
+    "id": "simkins-p60",
+    "rleLinks": [
+      "https://www.conwaylife.com/patterns/simkinsp60.rle",
+      "https://www.conwaylife.com/patterns/simkinsp60withmazings.rle"
+    ],
+    "source": "x = 33, y = 31, rule = B3/S23\n22bo$13b2o5b3o$14bo4bo$14bob2o2bo$15bo5bo$16bo3b2o$17bo2$10bo$2o3bo4b\n2o$2o2b2o5b2o$5b2o4bo$6bo3bo6$22bo3bo$21bo4b2o$20b2o5b2o2b2o$21b2o4bo\n3b2o$22bo2$15bo$11b2o3bo$11bo5bo$12bo2b2obo$13bo4bo$10b3o5b2o$10bo!\n#C [[ THUMBSIZE 2 THEME 6 GRID GRIDMAJOR 0 SUPPRESS THUMBLAUNCH ]]\n#C [[ AUTOSTART ]]\n#C [[ GPS 15 THUMBSIZE 2 ZOOM 12 WIDTH 480 HEIGHT 480 ]] ",
+    "url": "https://conwaylife.com/wiki/Simkin%27s_p60"
+  },
+  {
+    "id": "24-cell-quadratic-growth",
+    "source": "#N 24-cell quadratic growth\n#O Michael Simkin\n#C It had been the smallest known pattern, that exhibits quadratic population\n#C growth, before it was superseded by switch engine ping-pong.\n#C www.conwaylife.com/wiki/24-cell_quadratic_growth\nx = 39786, y = 143, rule = B3/S23\n39782bo$39782bo$39783b2o$39785bo$39785bo$39738bo46bo$39739bo45bo$\n39740bo$39739bo$39738bo$39740b3o101$2o$o28$19bo$18b3o$20bo!\n",
+    "url": "https://conwaylife.com/patterns/24cellquadraticgrowth.rle"
+  },
+  {
+    "id": "25-cell-quadratic-growth",
+    "source": "#N 25-cell quadratic growth\n#O Michael Simkin\n#C It had been the smallest known pattern, that exhibits quadratic population\n#C growth, before it was superseded by 24-cell quadratic growth and\n#C switch engine ping-pong.\n#C www.conwaylife.com/wiki/25-cell_quadratic_growth\nx = 21372, y = 172, rule = B3/S23\n21368bo$21368bo$21369b2o$21371bo$21371bo$21324bo46bo$21325bo45bo$\n21326bo$21325bo$21324bo$21326b3o151$70b2o$71bo$8b2o$9bo5$o$o$o!\n",
+    "url": "https://conwaylife.com/patterns/25cellquadraticgrowth.rle"
+  }
+]

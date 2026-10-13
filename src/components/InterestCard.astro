@@ -1,23 +1,67 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { href } from '../lib/content';
+import { href, articleHref, type Article } from '../lib/content';
+import ProjectImage from './ProjectImage.astro';
+import ArticleVisual from './ArticleVisual.astro';
 interface Props {
   interest: CollectionEntry<'interests'>;
   count: number;
   number: number;
+  representative?: Article;
+  children: CollectionEntry<'interests'>[];
 }
-const { interest, count, number } = Astro.props;
+const { interest, count, number, representative, children } = Astro.props;
 ---
 
-<a
-  class:list={['interest-card', 'interest-typographic', `interest-${interest.id}`]}
-  href={href(`interests/${interest.id}/`)}
->
+<article class:list={['interest-card', 'interest-illustrated', `interest-${interest.id}`]}>
+  {
+    representative?.data.showPreview && (
+      <figure class="interest-example" data-article-id={representative.id}>
+        <a
+          class="interest-image"
+          href={href(`interests/${interest.id}/`)}
+          aria-label={`Explore ${interest.data.title}: ${count} ${count === 1 ? 'article' : 'articles'}`}
+        >
+          {representative.data.image ? (
+            <ProjectImage
+              src={representative.data.image}
+              alt={representative.data.imageAlt || representative.data.title}
+            />
+          ) : (
+            <ArticleVisual
+              id={representative.id}
+              kind={representative.data.visual}
+              instance={`interest-${interest.id}`}
+            />
+          )}
+        </a>
+        <figcaption>
+          <>
+            <span>From this topic: </span>
+            <a href={articleHref(representative)}>{representative.data.title} ↗</a>
+          </>
+        </figcaption>
+      </figure>
+    )
+  }
   <div class="interest-copy">
     <span class="eyebrow"
       >{String(number).padStart(2, '0')} / {count} {count === 1 ? 'article' : 'articles'}</span
-    ><h3>{interest.data.title}<span aria-hidden="true">↗</span></h3><p>
+    ><h3>
+      <a href={href(`interests/${interest.id}/`)}
+        >{interest.data.title}<span aria-hidden="true"> ↗</span></a
+      >
+    </h3><p>
       {interest.data.description}
     </p>
+    {
+      children.length > 0 && (
+        <div class="interest-subtopics" aria-label={`More in ${interest.data.title}`}>
+          {children.map((child) => (
+            <a href={href(`interests/${child.id}/`)}>{child.data.title} ↗</a>
+          ))}
+        </div>
+      )
+    }
   </div>
-</a>
+</article>

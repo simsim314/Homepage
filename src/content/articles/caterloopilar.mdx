@@ -1,0 +1,393 @@
+---
+title: 'Caterloopillar'
+description: 'How readers, glider routing, close-spaced inserters, and deletion come together in the 2016 Pattern of the Year.'
+type: 'research'
+topics: ['game-of-life']
+presentationOrder: -100
+status: 'demonstrated'
+visual: 'life'
+featured: true
+showPreview: false
+image: /images/caterloopillar-mechanisms.gif
+imageAlt: Caterloopillar architecture on the left; close views of glider reversal, MWSS insertion beside a passing HWSS, both stream constructors, tape rebuilding, and deletion cycle on the right.
+imageCredit: 'Architecture by dvgrn, LifeWiki (GFDL 1.2). Later head components from my generator; tight insertions and deletion from the complete c/8 ship. Original patterns evolved in Golly.'
+imageSource: https://github.com/simsim314/Caterloopilar
+date: '2026-10-12'
+updated: '2026-10-13'
+tags: ['spaceships', 'cellular automata', 'construction']
+github: 'https://github.com/simsim314/Caterloopilar'
+sources:
+  [
+    {
+      'label': 'Development, searches, and design discussions, 2014–2015',
+      'url': 'https://conwaylife.com/forums/viewtopic.php?t=1448',
+    },
+    {
+      'label': 'Two-week recipe search and RecipeStapler',
+      'url': 'https://conwaylife.com/forums/viewtopic.php?p=20637#p20637',
+    },
+    {
+      'label': 'Glue++ search improvements using LifeAPI',
+      'url': 'https://conwaylife.com/forums/viewtopic.php?p=20936#p20936',
+    },
+    {
+      'label': 'Pattern of the Year 2016: official results',
+      'url': 'https://conwaylife.com/forums/viewtopic.php?p=44028',
+    },
+    {
+      'label': 'Construction thread: initial mechanism and working c/8 ship',
+      'url': 'https://conwaylife.com/forums/viewtopic.php?f=2&t=2151',
+    },
+    {
+      'label': 'Construction constraints and speed discussion',
+      'url': 'https://conwaylife.com/forums/viewtopic.php?p=30110',
+    },
+    {
+      'label': 'Completed RLE patterns and construction scripts',
+      'url': 'https://github.com/simsim314/Caterloopilar',
+    },
+    {
+      'label': 'LifeWiki: Caterloopillar history and mechanism',
+      'url': 'https://conwaylife.com/wiki/Caterloopillar',
+    },
+    {
+      'label': 'Schematic source and image history (dvgrn)',
+      'url': 'https://conwaylife.com/wiki/File:Caterloopillar.png',
+    },
+    {
+      'label': 'Image license: GNU FDL 1.2',
+      'url': 'https://www.gnu.org/licenses/old-licenses/fdl-1.2.html',
+    },
+  ]
+---
+
+import CaterloopillarBuild from '../../components/CaterloopillarBuild.astro';
+import CaterloopillarStep from '../../components/CaterloopillarStep.astro';
+import CaterloopillarHead from '../../components/CaterloopillarHead.astro';
+
+Caterloopillar is a family of engineered spaceships in Conway’s Game of Life. Its two opposing readers construct one another, renew their tapes, and remove their old machinery. **Caterloopillars won Pattern of the Year 2016**, with 49 stars in the [community results](https://conwaylife.com/forums/viewtopic.php?p=44028).
+
+The explanation below builds the mechanism in order: a reflector, the components of a head, a complete read, tape encoding, slow-salvo output, construction of a new head, and removal of the old heads. The full spaceship comes after those connections.
+
+<CaterloopillarBuild>
+<CaterloopillarStep stage={1}>
+
+## First, a glider reflector
+
+A glider carries a signal diagonally. A **reflector** is a reaction that changes its direction, so the signal can reach a different part of a machine. In the reaction below, a northwest-going glider meets moving spaceships and emerges travelling northeast.
+
+![An isolated moving reflector redirects an actual northwest-going glider toward the northeast.](/images/caterloopillar-basic-reflector.gif)
+
+This reaction is isolated from the original Caterloopillar reading mechanism. The complete little reaction is evolved, including ships outside the close view. It establishes one useful operation: route a glider without losing the signal.
+
+The reflector’s spaceships travel at $c/2$, faster than the glider’s $c/4$. The collision must therefore be arranged for the moment they meet. Its lane, phase, and arrival time are part of the mechanism.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={2}>
+
+## Caterloopillar needs turns, reversals, and splits
+
+Routing a complete reader requires more than one turn. Some convoy reactions split a signal; others return an output along the reverse diagonal. Here a southwest-going glider enters a group of moving ships. The reaction produces a northeast-going return signal and a southeast-going second output.
+
+![A southwest input meets the later head’s moving ships and produces a northeast return plus a southeast output.](/images/caterloopillar-glider-reversal.gif)
+
+This particular reaction belongs to the head’s timing and erasure circuit. Its role will become clear after the reader is assembled. For now, it adds two capabilities to the toolkit: send information back, and send a second signal elsewhere.
+
+These reactions cannot be placed independently and expected to work together. A signal leaving one must arrive on the lane and phase accepted by the next. The spacing between the convoy’s ships makes those connections.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={3}>
+
+## Put the components into one reading head
+
+A **reading head** is an ordered convoy of lightweight, middleweight, and heavyweight spaceships, collectively **\*WSS**. It combines a tape activator, signal-routing reactions, a final converter, its timing mechanism, and erasure routing.
+
+<CaterloopillarHead />
+
+Select the parts above to see where they sit in one original forward-head design. The isolated reflector from the first step is the inner turning section. The final converter lies farther along the convoy. The timing and erasure ships form a separate signal path.
+
+The ships’ relative positions stay fixed while they travel. That makes the head a moving machine: one group encounters a symbol, another catches its glider, and another finishes the transfer. We can now follow one operation through that assembled machine.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={4}>
+
+## Follow one complete reading operation
+
+The tape is a row of small **still lifes**, stable patterns that wait until a reader reaches them. This forward-head example reads a seven-cell **loaf**. Its tape-reading section is shown as a whole at the top of the animation; the enlarged lower view follows the actual signal.
+
+![A complete reading operation: a loaf is activated, its signal travels through the head, and a new loaf is restored 250 cells away.](/images/caterloopillar-reading-head.gif)
+
+Watch the same symbol through the entire chain: activation, flight through the convoy, reflection, conversion back into a loaf, and the departure of an output glider. By the end, the original reading convoy survives, the loaf has advanced **250 cells**, and one construction glider has escaped.
+
+The next three steps separate those events so their jobs are clear. The timing and erasure section is omitted from this reading-only demonstration; we return to it afterward.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={5}>
+
+## Read: turn a stationary symbol into a signal
+
+A spaceship reaches the loaf and activates it. The first reactions turn that stationary object into glider signals inside the convoy. This is the input stage of the reader.
+
+![The later reading head activates its seven-cell loaf.](/images/caterloopillar-working-reader.gif)
+
+The glider that continues along the tape-transfer path travels toward the inner reflector. Intermediate signals inside this first group are part of the local reaction; they are not all outgoing construction commands. The command output is the glider that survives the final conversion and leaves the reader.
+
+Earlier prototypes used blocks as well as loaves. A block has four cells; the tape symbol in these later 250-cell examples is a loaf with seven. Both serve as stored symbols, but their reading reactions are different.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={6}>
+
+## Route: return the tape signal toward its converter
+
+The tape signal reaches the moving reflector introduced at the beginning. The ships turn it back toward the final conversion site. Their spacing supplies the connection between the activator and converter.
+
+![The tape-reading glider turns through the moving reflectors inside the original working head.](/images/caterloopillar-inner-reflector.gif)
+
+This is the **tape-transfer path**, distinct from the timing and erasure circuit containing the more elaborate reversal. It carries the information needed to restore the symbol. The whole-operation view above shows where this short turn lies in the head.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={7}>
+
+## Restore the symbol and emit a construction command
+
+The returned glider meets the final converter. A stable loaf remains **250 cells ahead of the original position**, and a northeast-going glider continues out of the reader.
+
+![The final converter restores the loaf and releases the outgoing construction glider.](/images/caterloopillar-tape-rebuild.gif)
+
+The restored loaf keeps the tape available for another reading cycle. The escaping glider carries the instruction toward construction elsewhere. Reading therefore advances the stored program while producing a physical output from it.
+
+The convoy’s motion and the tape’s motion are different. The ships travel quickly at $c/2$; the tape advances by a chosen displacement each cycle. That slower reconstruction is what will determine the complete spaceship’s speed.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={8}>
+
+## Keep successive readers in step
+
+One successful read does not yet give a repeating machine. Successive heads need compatible spacing, and the timing machinery must renew its own seed at the appropriate displaced position. In the example with 750-cell reader spacing and a 250-cell tape transfer, the next head has 1,000 cells to cover before reaching the same restored symbol. At $c/2$, that gives a 2,000-generation repeat for that symbol.
+
+Each head has a **helix**, a repeating signal-transfer mechanism. In this later forward-head example, one branch returns toward the timing seed. Another turns through additional ships and reaches the reversal and split examined earlier; those outputs feed the erasure route.
+
+![The assembled later head routes signals through its timing circuit and outgoing erasure branches.](/images/caterloopillar-signal-routing.gif)
+
+This circuit uses the same moving-reflector toolkit, but its job is cadence and cleanup. It is separate from the glider that restores a tape loaf and leaves as a construction command.
+
+In the [construction discussion](https://conwaylife.com/forums/viewtopic.php?p=29824#p29824), I explained why each head carries its own helix and self-destruct machinery. Keeping those functions local made it easier to adjust the design’s speed without adding dependencies between readers.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={9}>
+
+## Encode a command as a displaced tape symbol
+
+The stored program is more precise than a row of equally spaced objects. A tape symbol occupies a nominal slot, with a small positional offset encoding the command. In the original forward generator, the slots are separated by a chosen **step**, and the recipe value is added to the symbol’s position.
+
+For the 250-cell example, the generator’s placement has the form
+
+$$
+y_i=y_{\mathrm{base}}+250(i+1)+r_i.
+$$
+
+Here $r_i$ is the stored recipe value. The small shift changes when the reader meets the symbol and where the escaping glider lies. It selects the glider’s lane as well as changing its timing; it is not simply an arbitrary waiting gap.
+
+![The same original reader decodes tape-symbol offsets minus four, plus two, and plus six into different outgoing glider lanes.](/images/caterloopillar-command-offsets.gif)
+
+These three independent tests use the same convoy and shift only its loaf. All three restore their loaf 250 cells away and leave the convoy intact. At the same generation, their outgoing northeast gliders occupy distinct diagonals:
+
+| Stored offset $r$ | Output lane anchor $x_{\min}+y_{\min}$ |
+| ----------------- | -------------------------------------- |
+| −4                | 356                                    |
+| +2                | 362                                    |
+| +6                | 366                                    |
+
+The numbers are measured in these example coordinates. The relationship is what matters: changing the stored offset changes the output lane. The generator also supports **SKIP**, leaving a slot without a symbol so that the corresponding reading opportunity supplies no instruction.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={10}>
+
+## Read a sequence into a slow salvo
+
+A recipe needs many commands in order. Repeated convoys read the encoded symbols, restore them, and emit gliders one at a time. Those gliders form a **slow salvo**: each construction reaction has time to settle before another instruction reaches it.
+
+![Six original reading convoys decode five symbols into successive outgoing construction gliders.](/images/caterloopillar-tape-to-salvo.gif)
+
+This reading-only example contains six original convoys at **750-cell spacing**, with five stored symbols ahead of them. Their recipe offsets are `0, −4, +2, +2, −8`; the nominal tape slots are 250 cells apart. The upper view shows the train and emerging gliders. Yellow marks **one selected output band**: its five departing gliders recover the recipe `0, −4, +2, +2, −8` in order. Other gliders belong to neighbouring repeats. The lower view enlarges the newest output of the selected sequence.
+
+Successive symbols are transferred before later heads read them. Along the selected outgoing band, the nominal slot displacement is absorbed by those transfers; the remaining small offset selects each command’s lane. The next reader supplies the next command with a **nominal interval of 1,500 generations**, modified by the encoded offsets.
+
+The spacing of readers, symbol transfer, and encoded offsets jointly determine the output. Construction uses the order, lane, and timing of those gliders. The demonstration stops at that output and omits erasers, so the decoding operation stays visible.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={11}>
+
+## Use the salvo to prepare an insertion site
+
+The construction program first prepares a small constellation at the site where a spaceship is needed. Slow-salvo reactions move and modify a working still life, then make the seed required by a particular ship recipe. The last reactions turn that seed into a moving spaceship.
+
+The [recipe manager](https://github.com/simsim314/Caterloopilar/blob/master/Code/RecipeManager.py) tracks the working block’s position. When it appends a ship-making recipe, it corrects the stored commands by the block’s current coordinate difference. This is why the tape’s glider lanes and the construction site’s position have to be designed together.
+
+![A prepared insertion reaction completes an MWSS beside a passing HWSS in the full c/8 pattern.](/images/caterloopillar-mwss-beside-hwss.gif)
+
+The clip above shows the finishing part of one such construction in the complete c/8 ship. An MWSS emerges beside a passing HWSS. The nearby ship is already part of the stream; cyan marks it, and amber appears when the new ship exactly matches the completed MWSS.
+
+Making this one ship is only a component of making a reader. Every required ship needs its own position, phase, and recipe, while preserving the ships already passing through the site.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={12}>
+
+## Fit the inserters into both crowded streams
+
+The delicate requirement is clearance throughout the reaction. An intermediate spark can destroy a neighbour even when the final ship would fit. This completed-ship forward insertion places two LWSS reference positions only **three cells across the lanes and nine along the stream**.
+
+![A tight LWSS insertion in the completed forward stream preserves the neighbouring ship.](/images/caterloopillar-forward-inserter.gif)
+
+The backward stream requires its own constructor, operating around a different convoy and schedule. Here an MWSS is inserted beside an existing MWSS, with a reference offset of **nine across and fifteen along**.
+
+![The backward constructor inserts a new MWSS beside a passing MWSS in the full c/8 pattern.](/images/caterloopillar-backward-inserter.gif)
+
+The “two inserters” construct the **forward and backward reader streams**, rather than merely two spaceship types. Their recipes must work in those actual surroundings. Reference offsets describe the ships’ placement, not a fixed count of empty cells between their changing edges.
+
+The [late clearance discussion](https://conwaylife.com/forums/viewtopic.php?p=21742#p21742) records preliminary sparks invalidating most recipes for close pairs. [Construction order](https://conwaylife.com/forums/viewtopic.php?p=21825#p21825), lingering honeyfarm debris, and [phase/parity coverage](https://conwaylife.com/forums/viewtopic.php?p=21841#p21841) needed further tests.
+
+<details>
+<summary>See a rejected clearance test</summary>
+
+In [Dave Greene’s original test](https://conwaylife.com/forums/viewtopic.php?p=21826#p21826), the developing construction destroys an LWSS already passing beside it. This is a failed candidate, not a component of the finished ship.
+
+![An original late clearance test destroys the passing LWSS.](/images/caterloopillar-insertion-clearance-failure.gif)
+
+</details>
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={13}>
+
+## Construct an entire new reading head
+
+A completed reader is the result of many such constructions. The program places its ships in the required order, so they join the same moving convoy. The first ship is not yet a reading head; the later additions give it the complete mechanism.
+
+![One forward reading head is followed from no ships through all sixteen ship additions in the original complete c/8 pattern.](/images/caterloopillar-whole-head-construction.gif)
+
+This view follows **one convoy through all 16 additions** in the full c/8 ship. The upper view keeps the entire growing head in frame. The lower view enlarges the current addition within that same convoy. Travel between separate recipe sites is fast-forwarded; each ship addition is shown.
+
+The complete sequence reaches **generation 740,000**. A cell-for-cell Golly check verifies the full pattern’s 2,000-generation translation. That period and Life’s translation invariance determine the later states exactly, allowing this view to follow the head along the long construction corridor. Intermediate reaction phases also come from Golly.
+
+Only after all the required ships are present does the new convoy have the full reader, routing, conversion, timing, and erasure machinery. It can now take its place among the repeating heads.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={14}>
+
+## The new reader constructs its counterpart
+
+The forward and backward streams sustain one another. A forward reader decodes the instructions for constructing the backward reader. The backward reader supplies the construction instructions that replace the forward reader. Both transfer their tapes to the positions needed for the next cycle.
+
+This closes the construction dependency: each half receives the program that produces it from the other half. The new heads carry the same functional equipment, so the process can repeat after reconstruction.
+
+There is still unfinished work. The old heads continue travelling after reading their tapes. A spaceship must remove them at the right time, rather than leave an ever-growing trail of escaped machinery.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={15}>
+
+## Remove every ship of the used forward head
+
+The erasure signals introduced in the timing circuit now catch the used forward reader. They remove its ships after its reading and construction jobs are complete.
+
+![The full sixteen-ship forward head is followed as timed erasure removes all of its original ships.](/images/caterloopillar-whole-head-erasure.gif)
+
+The upper view follows the entire used convoy, with a count of its original ships still intact. The enlarged view follows a remaining piece. The count falls from **16 to zero**. This shows the whole head’s removal, rather than only the disappearance of one selected LWSS pair.
+
+The construction schedule must leave the erasure route clear and deliver its signals after the last useful read. A reader destroyed too early would cut off the program; one destroyed too late would interfere with subsequent machinery.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={16}>
+
+## Remove the used backward head too
+
+The other end has its own erasure sequence. Its ships travel in the opposite direction, so the routing and timing have to fit that stream.
+
+![The entire thirteen-ship backward head is followed as its original ships are erased.](/images/caterloopillar-whole-tail-erasure.gif)
+
+This complete backward convoy starts with **13 original ships** in the view and ends with none of them intact. Both halves have now been renewed and their old moving tools removed. Signals elsewhere in the full pattern continue outside these close views.
+
+Deletion was developed alongside construction. Codeholic challenged the tail-erasing arrangement and proposed simpler routes; I used a glider salvo to simplify the timing and lane intersections. Cleanup had to be part of the mechanism from the beginning.
+
+</CaterloopillarStep>
+
+<CaterloopillarStep stage={17}>
+
+## Now connect the complete Caterloopillar
+
+The complete arrangement brings together the reactions we have followed: reflect and split signals, assemble a head, read and restore symbols, decode slow salvos, construct new heads in both directions, and erase the old ones.
+
+<figure className="complete-architecture">
+  <a href="/Homepage/images/caterloopillar-architecture.png">
+    <img
+      src="/Homepage/images/caterloopillar-architecture.png"
+      alt="Complete Caterloopillar architecture: opposed reader streams, long tapes, and their construction and erasure signal paths."
+      width="170"
+      height="723"
+      loading="lazy"
+    />
+  </a>
+  <figcaption>
+    Architecture by dvgrn / LifeWiki,{' '}
+    <a href="https://conwaylife.com/wiki/File:Caterloopillar.png">original image</a>,{' '}
+    <a href="https://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GNU FDL 1.2</a>. Open to
+    enlarge.
+  </figcaption>
+</figure>
+
+I [announced the first completed Caterloopillar on April 9, 2016](https://conwaylife.com/forums/viewtopic.php?p=29796#p29796). Its whole pattern advances 250 cells in 2,000 generations:
+
+$$
+\frac{250c}{2000}=\frac{c}{8}.
+$$
+
+The ordinary $c/2$ spaceships are the moving tools. The slower displacement of the reconstructed tapes determines the motion of the complete spaceship. Compatible reader spacing and recipe timing allow other speeds; glider communication at $c/4$ limits the approach. The [repository](https://github.com/simsim314/Caterloopilar) includes examples at c/8, c/17, 2c/9, and 31c/240.
+
+</CaterloopillarStep>
+</CaterloopillarBuild>
+
+## Finding the interactions a few at a time
+
+The development thread records the toolkit growing rather slowly. In November 2014 I searched small still-life constellations for edge shooters. On [November 24](https://conwaylife.com/forums/viewtopic.php?p=14512#p14512), I reported four of eight required middleweight-spaceship cases and later updated the same post to seven. Only two heavyweight cases were available. The [December 1 collection](https://conwaylife.com/forums/viewtopic.php?p=14673#p14673) still needed timing adjustments to fill its gaps.
+
+Some searches ran for weeks. In [June 2015](https://conwaylife.com/forums/viewtopic.php?p=20637#p20637), I described reaching depth eight in two weeks with my slow-salvo search: recipes built from eight incoming gliders. Going another level deeper was expensive enough that I estimated months of work.
+
+The later updates show the same accumulation. On [July 4](https://conwaylife.com/forums/viewtopic.php?p=20977#p20977), the lightweight-spaceship toolkit was complete, while the middleweight and heavyweight collections were partial. On [July 6](https://conwaylife.com/forums/viewtopic.php?p=21033#p21033), six of eight middleweight cases and two of eight heavyweight cases were usable. By [July 9](https://conwaylife.com/forums/viewtopic.php?p=21070#p21070), the lightweight and middleweight toolkits were complete; heavyweight gaps remained.
+
+A reaction that worked alone might fail next to an existing object. My [RecipeStapler approach](https://conwaylife.com/forums/viewtopic.php?p=20652#p20652) kept alternative recipes and tested them against the surrounding pattern, seeking one that preserved what was already there.
+
+## Better tools made better recipes possible
+
+I moved the search into **Glue++**, using [LifeAPI](/articles/lifeapi/) and C++ with parallel processing. In the [July 2 update](https://conwaylife.com/forums/viewtopic.php?p=20936#p20936), I described changes that reduced one workload from roughly five hours and 2 GB to half an hour and 100 MB. Saving intermediate results and searching the final layer without storing another full tree made deeper searches practical.
+
+By August, the [recipes had shortened from roughly 40–50 gliders to 15–20](https://conwaylife.com/forums/viewtopic.php?p=21781#p21781). That reduced the amount of tape and construction needed for each spaceship.
+
+The design grew through discussion as well as searches. Hartmut Holzwart revived the adjustable-speed spaceship discussion, with earlier proposals from David Bell and Jason Summers. Alexey Nigin proposed the opposing construction streams. Dave Greene contributed slow-salvo recipes, clearance checks, and the overall diagram; Chris Cain and Codeholic helped expose timing and deletion problems. My work combined the reaction searches, recipe tools, construction scripts, and the many adjustments needed to close the loop.
+
+## Finishing a prototype
+
+By [August 13](https://conwaylife.com/forums/viewtopic.php?p=21888#p21888), I wanted to finish a prototype with some restrictions on supported speeds instead of waiting for every case. Deeper searches also needed more memory than the 8 GB machine available to me. Longer adjustment recipes could fill remaining gaps. These were practical decisions about getting the two construction streams to work together.
+
+The finished pattern therefore represents more than a collection of glider-to-spaceship reactions. It closes the loop with tight insertions that preserve passing ships, compatible timing at both construction sites, and removal of the used heads.
+
+## Original patterns and checks
+
+Animated cells are evolved in Golly from original literal patterns or the unchanged complete c/8 ship. The isolated reflector and offset tests were also checked against independent Life evolution. Offset tests preserve the original reading convoy, restore the loaf, and emit one correctly identified construction glider.
+
+The small reading examples use the original generator’s 250-cell design; the full-head construction and erasure views use the completed ship directly. The full Golly state after 2,000 generations matches every starting live cell translated 250 cells upward. That exact period and Life’s translation invariance determine the later construction states; the final view is at generation 740,000, after 370 periods. The construction overview includes time skips between recipe sites, while showing each of the sixteen additions. Its live cells are obtained from the exact whole-pattern states; the component outlines and counters are annotations.
+
+The selected-part explorer displays the original head’s actual cells, grouped by their generator components. The accumulating side diagram is a guide to functional connections. The final architecture is dvgrn’s credited original. The presentation was inspired by [Gabriel Nivasch’s explanation of Caterpillar](https://www.gabrielnivasch.org/fun/life/caterpillar), a different engineered Life spaceship.

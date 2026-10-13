@@ -20,7 +20,13 @@ sources:
   ]
 ---
 
-CryptoCash asks how a physical NFC token might be authenticated publicly when its chip uses a symmetric AES secret. The repository combines that proposed system with a smaller, implemented circuit experiment.
+## Cryptocurrency you can hold
+
+I wanted to give cryptocurrency a physical form: something you can hold in your hand that represents value independently of an abstract balance on a phone. The attraction is the feel of real money.
+
+The idea still needs a phone and an app. I am not claiming that a physical token removes those requirements. I am also not entirely sure how to explain the appeal; somehow, having crypto cash feels right to me.
+
+That intuition led to the technical question: how could a physical NFC token be authenticated publicly when its chip uses a symmetric AES secret? The repository explores the proposed system through an implemented circuit experiment.
 
 ## The problem
 

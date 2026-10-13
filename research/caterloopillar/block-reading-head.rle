@@ -1,0 +1,3 @@
+#C First block only from p14297 forward reader; other tape symbols omitted. All spaceship cells retained.
+x = 80, y = 132, rule = B3/S23
+46boo$46booo$46booo$46booo$45bo1boo$45booo$46bo$$$$$$$$$$$$$77boo$77booo$76bo1boo$76booo$77bo$$$$$$$$$$$$22boo$21booo$21boo1bo$22booo$23bo$o1bo$3bo$3bo$o2bo$1booo$$$4bo1bo$3bo$3bo3bo$3bo3bo$3bo$3bo2bo$3booo$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$31bo1bo$34bo$30bo3bo$30bo3bo$34bo$31bo2bo$32booo$$$$35bo1bo$38bo$34bo3bo7bo1bo$34bo3bo10bo$38bo6bo3bo$35bo2bo10bo$36booo7bo2bo$47booo$$$$$$$$$$$$$$42boo$42boo!

@@ -1,0 +1,149 @@
+{
+  "engine": "bgolly 3.3 / HashLife",
+  "rule": "B3/S23",
+  "seed_source": "Golly Patterns/Life/Breeders/switch-engine-ping-pong.rle",
+  "seed_sha256": "08c2ff1e513e63aa162ae80b64df6cc22aa33e1ea5cf71c00b4ff9af97e809bf",
+  "viewport": [
+    -10125312,
+    -8552447,
+    16089088,
+    8486913
+  ],
+  "cells_per_pixel": 32768,
+  "samples": [
+    {
+      "generation": 33554432,
+      "population": 35284161
+    },
+    {
+      "generation": 34603008,
+      "population": 37214881
+    },
+    {
+      "generation": 35651584,
+      "population": 39271330
+    },
+    {
+      "generation": 36700160,
+      "population": 41322817
+    },
+    {
+      "generation": 37748736,
+      "population": 43464070
+    },
+    {
+      "generation": 38797312,
+      "population": 45638288
+    },
+    {
+      "generation": 39845888,
+      "population": 47863389
+    },
+    {
+      "generation": 40894464,
+      "population": 50158573
+    },
+    {
+      "generation": 41943040,
+      "population": 52470608
+    },
+    {
+      "generation": 42991616,
+      "population": 54885478
+    },
+    {
+      "generation": 44040192,
+      "population": 57282087
+    },
+    {
+      "generation": 45088768,
+      "population": 59820227
+    },
+    {
+      "generation": 46137344,
+      "population": 62334721
+    },
+    {
+      "generation": 47185920,
+      "population": 64960537
+    },
+    {
+      "generation": 48234496,
+      "population": 67597081
+    },
+    {
+      "generation": 49283072,
+      "population": 70306435
+    },
+    {
+      "generation": 50331648,
+      "population": 73065703
+    },
+    {
+      "generation": 51380224,
+      "population": 75860205
+    },
+    {
+      "generation": 52428800,
+      "population": 78739123
+    },
+    {
+      "generation": 53477376,
+      "population": 81619944
+    },
+    {
+      "generation": 54525952,
+      "population": 84620411
+    },
+    {
+      "generation": 55574528,
+      "population": 87598971
+    },
+    {
+      "generation": 56623104,
+      "population": 90709460
+    },
+    {
+      "generation": 57671680,
+      "population": 93807863
+    },
+    {
+      "generation": 58720256,
+      "population": 97001817
+    },
+    {
+      "generation": 59768832,
+      "population": 100225019
+    },
+    {
+      "generation": 60817408,
+      "population": 103502151
+    },
+    {
+      "generation": 61865984,
+      "population": 106845091
+    },
+    {
+      "generation": 62914560,
+      "population": 110210801
+    },
+    {
+      "generation": 63963136,
+      "population": 113672944
+    },
+    {
+      "generation": 65011712,
+      "population": 117123847
+    },
+    {
+      "generation": 66060288,
+      "population": 120709201
+    },
+    {
+      "generation": 67108864,
+      "population": 124270961
+    }
+  ],
+  "validation": "The 23-cell seed and decoded generation-64 output agree with an independent sparse B3/S23 implementation.",
+  "description": "Fixed cropped viewport on the growing fan. The full pattern is simulated; each lit image pixel represents a square containing live cells. Sampled generations, not real-time playback."
+}

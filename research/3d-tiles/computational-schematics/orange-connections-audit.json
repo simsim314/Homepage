@@ -1,0 +1,11 @@
+{
+  "neighbourhoods_checked": 512,
+  "cases_with_auxiliary_flags_different_from_true_centre": 384,
+  "required_channels": {
+    "blue": "0/1",
+    "orange": "0/1 and typed C0/C1",
+    "purple": "3,4,other",
+    "final": "new 0/1 repeated four times"
+  },
+  "scope": "Logical channels and canonical two-pass layout. Not a mechanical fit or mixed-orientation exclusion proof."
+}

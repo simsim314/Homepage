@@ -16,11 +16,25 @@ const image = images[`../assets${src}`]?.default;
 const animated = src.endsWith('.gif');
 const dimensions = src.includes('simkin-glider-gun')
   ? [660, 350]
-  : src.includes('neural-ca')
-    ? [360, 360]
-    : src.includes('catforce')
-      ? [576, 342]
-      : [293, 306];
+  : src.includes('caterloopillar-mechanisms')
+    ? [1100, 760]
+    : src.includes('caterloopillar-reading-head')
+      ? [800, 660]
+      : /(?:serizawa-geminoid|geminoid-particles)-whole/.test(src)
+        ? [1100, 760]
+        : /(?:serizawa-geminoid|geminoid-particles)-building/.test(src)
+          ? [800, 660]
+          : /ping-pong-(collision|cycle)/.test(src)
+            ? [800, 600]
+            : /life-|switch-engine-ping-pong|remini-activation|serizawa-|geminoid-particles-|lfod-c3/.test(
+                  src,
+                )
+              ? [800, 520]
+              : src.includes('neural-ca')
+                ? [360, 360]
+                : src.includes('catforce')
+                  ? [576, 342]
+                  : [293, 306];
 if (!image && !animated) throw new Error(`Missing project image: ${src}`);
 ---
 

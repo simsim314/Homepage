@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="330" viewBox="20 130 610 330" role="img">
+<title>Four black/white tile types: purple and centre inputs, uniform Life outputs</title>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}</style>
+<rect x="20" y="130" width="610" height="330" fill="#f6f5ef"/>
+<text x="32" y="43" font-size="29" font-weight="bold" fill="#233c43">The four final black/white tiles</text>
+<text x="32" y="79" font-size="17" font-weight="normal" fill="#233c43">Two recessed inputs: the purple category and the original centre C. Four raised outputs: the next cell state.</text>
+<text x="32" y="111" font-size="16" font-weight="normal" fill="#233c43">Bottom and top use the same assembly coordinates. C* is the combined square/diamond recess: C0 OR C1.</text>
+<text x="36" y="159" font-size="21" font-weight="bold" fill="#233c43">B3: 3 + C0 or C1 → LIVE</text>
+<text x="36" y="193" font-size="15" font-weight="bold" fill="#233c43">BOTTOM · input locations</text>
+<text x="386" y="193" font-size="15" font-weight="bold" fill="#233c43">TOP · four identical outputs</text>
+<rect x="36" y="211" width="205" height="205" fill="#faf9f4" stroke="#233c43" stroke-width="2"/>
+<rect x="56.5" y="231.5" width="123.0" height="123.0" fill="#eadff0" stroke="#c7b6d1" stroke-dasharray="4 4"/>
+<rect x="179.5" y="231.5" width="41.0" height="164.0" fill="#f5eee3" stroke="#c9b194" stroke-dasharray="4 4"/>
+<rect x="87.0" y="270.0" width="62" height="46" rx="5" fill="#fffefa" stroke="#7d529b" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="112.0" y="299.0" font-size="16" font-weight="bold" fill="#7d529b">3</text>
+<rect x="179.0" y="269.0" width="42" height="48" fill="#fffefa" stroke="#ad6b23" stroke-width="2"/>
+<path d="M188.38333333333333,281.3833333333333 h23.23333333333333 v23.23333333333333 h-23.23333333333333 Z M191.45833333333334,284.4583333333333 v17.083333333333332 h17.083333333333332 v-17.083333333333332 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<path d="M200.0,276.57155245043253 L216.42844754956747,293.0 L200.0,309.42844754956747 L183.57155245043253,293.0 Z M200.0,280.9202591547298 L187.92025915472982,293.0 L200.0,305.0797408452702 L212.07974084527018,293.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="185.0" y="358.6" font-size="16" font-weight="bold" fill="#ad6b23">C*</text>
+<text x="48" y="402" font-size="13" font-weight="normal" fill="#233c43">Both inputs recessed</text>
+<line x1="266" y1="309" x2="354" y2="309" stroke="#233c43" stroke-width="2"/>
+<line x1="346" y1="304" x2="354" y2="309" stroke="#233c43" stroke-width="2"/>
+<line x1="346" y1="314" x2="354" y2="309" stroke="#233c43" stroke-width="2"/>
+<rect x="386" y="211" width="205" height="205" fill="#263d45" stroke="#233c43" stroke-width="2"/>
+<line x1="454.3333333333333" y1="211" x2="454.3333333333333" y2="416" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="386" y1="279.3333333333333" x2="591" y2="279.3333333333333" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="522.6666666666666" y1="211" x2="522.6666666666666" y2="416" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="386" y1="347.66666666666663" x2="591" y2="347.66666666666663" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="411.28333333333336" y1="245.16666666666666" x2="429.05" y2="245.16666666666666" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="420.1666666666667" y1="236.28333333333333" x2="420.1666666666667" y2="254.04999999999998" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="547.95" y1="245.16666666666666" x2="565.7166666666667" y2="245.16666666666666" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="556.8333333333334" y1="236.28333333333333" x2="556.8333333333334" y2="254.04999999999998" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="411.28333333333336" y1="381.83333333333337" x2="429.05" y2="381.83333333333337" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="420.1666666666667" y1="372.95000000000005" x2="420.1666666666667" y2="390.7166666666667" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="547.95" y1="381.83333333333337" x2="565.7166666666667" y2="381.83333333333337" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="556.8333333333334" y1="372.95000000000005" x2="556.8333333333334" y2="390.7166666666667" stroke="#fcf8e9" stroke-width="3.075"/>
+<text x="468.5" y="319.5" font-size="17" font-weight="bold" fill="#fcf8e9">LIVE</text>
+<text x="36" y="445" font-size="15" font-weight="normal" fill="#233c43">Purple count includes the centre.</text>
+<text x="386" y="445" font-size="15" font-weight="normal" fill="#233c43">Corner centres: L/6 and 5L/6.</text>
+<text x="748" y="159" font-size="21" font-weight="bold" fill="#233c43">W4: 4 + C0 → DEAD</text>
+<text x="748" y="193" font-size="15" font-weight="bold" fill="#233c43">BOTTOM · input locations</text>
+<text x="1098" y="193" font-size="15" font-weight="bold" fill="#233c43">TOP · four identical outputs</text>
+<rect x="748" y="211" width="205" height="205" fill="#faf9f4" stroke="#233c43" stroke-width="2"/>
+<rect x="768.5" y="231.5" width="123.0" height="123.0" fill="#eadff0" stroke="#c7b6d1" stroke-dasharray="4 4"/>
+<rect x="891.5" y="231.5" width="41.0" height="164.0" fill="#f5eee3" stroke="#c9b194" stroke-dasharray="4 4"/>
+<rect x="799.0" y="270.0" width="62" height="46" rx="5" fill="#fffefa" stroke="#7d529b" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="824.0" y="299.0" font-size="16" font-weight="bold" fill="#7d529b">4</text>
+<rect x="891.0" y="269.0" width="42" height="48" fill="#fffefa" stroke="#ad6b23" stroke-width="2"/>
+<path d="M900.3833333333333,281.3833333333333 h23.23333333333333 v23.23333333333333 h-23.23333333333333 Z M903.4583333333334,284.4583333333333 v17.083333333333332 h17.083333333333332 v-17.083333333333332 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="897.0" y="358.6" font-size="16" font-weight="bold" fill="#ad6b23">C0</text>
+<text x="760" y="402" font-size="13" font-weight="normal" fill="#233c43">Both inputs recessed</text>
+<line x1="978" y1="309" x2="1066" y2="309" stroke="#233c43" stroke-width="2"/>
+<line x1="1058" y1="304" x2="1066" y2="309" stroke="#233c43" stroke-width="2"/>
+<line x1="1058" y1="314" x2="1066" y2="309" stroke="#233c43" stroke-width="2"/>
+<rect x="1098" y="211" width="205" height="205" fill="#fffefa" stroke="#233c43" stroke-width="2"/>
+<line x1="1166.3333333333333" y1="211" x2="1166.3333333333333" y2="416" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1098" y1="279.3333333333333" x2="1303" y2="279.3333333333333" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1234.6666666666667" y1="211" x2="1234.6666666666667" y2="416" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1098" y1="347.66666666666663" x2="1303" y2="347.66666666666663" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1132.1666666666667" cy="245.16666666666666" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<circle cx="1268.8333333333333" cy="245.16666666666666" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<circle cx="1132.1666666666667" cy="381.83333333333337" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<circle cx="1268.8333333333333" cy="381.83333333333337" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<text x="1180.5" y="319.5" font-size="17" font-weight="bold" fill="#5188b4">DEAD</text>
+<text x="748" y="445" font-size="15" font-weight="normal" fill="#233c43">Purple count includes the centre.</text>
+<text x="1098" y="445" font-size="15" font-weight="normal" fill="#233c43">Corner centres: L/6 and 5L/6.</text>
+<text x="36" y="514" font-size="21" font-weight="bold" fill="#233c43">B4: 4 + C1 → LIVE</text>
+<text x="36" y="548" font-size="15" font-weight="bold" fill="#233c43">BOTTOM · input locations</text>
+<text x="386" y="548" font-size="15" font-weight="bold" fill="#233c43">TOP · four identical outputs</text>
+<rect x="36" y="566" width="205" height="205" fill="#faf9f4" stroke="#233c43" stroke-width="2"/>
+<rect x="56.5" y="586.5" width="123.0" height="123.0" fill="#eadff0" stroke="#c7b6d1" stroke-dasharray="4 4"/>
+<rect x="179.5" y="586.5" width="41.0" height="164.0" fill="#f5eee3" stroke="#c9b194" stroke-dasharray="4 4"/>
+<rect x="87.0" y="625.0" width="62" height="46" rx="5" fill="#fffefa" stroke="#7d529b" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="112.0" y="654.0" font-size="16" font-weight="bold" fill="#7d529b">4</text>
+<rect x="179.0" y="624.0" width="42" height="48" fill="#fffefa" stroke="#ad6b23" stroke-width="2"/>
+<path d="M200.0,631.5715524504326 L216.42844754956747,648.0 L200.0,664.4284475495674 L183.57155245043253,648.0 Z M200.0,635.9202591547298 L187.92025915472982,648.0 L200.0,660.0797408452702 L212.07974084527018,648.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="185.0" y="713.6" font-size="16" font-weight="bold" fill="#ad6b23">C1</text>
+<text x="48" y="757" font-size="13" font-weight="normal" fill="#233c43">Both inputs recessed</text>
+<line x1="266" y1="664" x2="354" y2="664" stroke="#233c43" stroke-width="2"/>
+<line x1="346" y1="659" x2="354" y2="664" stroke="#233c43" stroke-width="2"/>
+<line x1="346" y1="669" x2="354" y2="664" stroke="#233c43" stroke-width="2"/>
+<rect x="386" y="566" width="205" height="205" fill="#263d45" stroke="#233c43" stroke-width="2"/>
+<line x1="454.3333333333333" y1="566" x2="454.3333333333333" y2="771" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="386" y1="634.3333333333334" x2="591" y2="634.3333333333334" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="522.6666666666666" y1="566" x2="522.6666666666666" y2="771" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="386" y1="702.6666666666666" x2="591" y2="702.6666666666666" stroke="#6e858c" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="411.28333333333336" y1="600.1666666666666" x2="429.05" y2="600.1666666666666" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="420.1666666666667" y1="591.2833333333333" x2="420.1666666666667" y2="609.05" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="547.95" y1="600.1666666666666" x2="565.7166666666667" y2="600.1666666666666" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="556.8333333333334" y1="591.2833333333333" x2="556.8333333333334" y2="609.05" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="411.28333333333336" y1="736.8333333333334" x2="429.05" y2="736.8333333333334" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="420.1666666666667" y1="727.95" x2="420.1666666666667" y2="745.7166666666667" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="547.95" y1="736.8333333333334" x2="565.7166666666667" y2="736.8333333333334" stroke="#fcf8e9" stroke-width="3.075"/>
+<line x1="556.8333333333334" y1="727.95" x2="556.8333333333334" y2="745.7166666666667" stroke="#fcf8e9" stroke-width="3.075"/>
+<text x="468.5" y="674.5" font-size="17" font-weight="bold" fill="#fcf8e9">LIVE</text>
+<text x="36" y="800" font-size="15" font-weight="normal" fill="#233c43">Purple count includes the centre.</text>
+<text x="386" y="800" font-size="15" font-weight="normal" fill="#233c43">Corner centres: L/6 and 5L/6.</text>
+<text x="748" y="514" font-size="21" font-weight="bold" fill="#233c43">Wother: other + C0 or C1 → DEAD</text>
+<text x="748" y="548" font-size="15" font-weight="bold" fill="#233c43">BOTTOM · input locations</text>
+<text x="1098" y="548" font-size="15" font-weight="bold" fill="#233c43">TOP · four identical outputs</text>
+<rect x="748" y="566" width="205" height="205" fill="#faf9f4" stroke="#233c43" stroke-width="2"/>
+<rect x="768.5" y="586.5" width="123.0" height="123.0" fill="#eadff0" stroke="#c7b6d1" stroke-dasharray="4 4"/>
+<rect x="891.5" y="586.5" width="41.0" height="164.0" fill="#f5eee3" stroke="#c9b194" stroke-dasharray="4 4"/>
+<rect x="799.0" y="625.0" width="62" height="46" rx="5" fill="#fffefa" stroke="#7d529b" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="806.0" y="654.0" font-size="16" font-weight="bold" fill="#7d529b">other</text>
+<rect x="891.0" y="624.0" width="42" height="48" fill="#fffefa" stroke="#ad6b23" stroke-width="2"/>
+<path d="M900.3833333333333,636.3833333333333 h23.23333333333333 v23.23333333333333 h-23.23333333333333 Z M903.4583333333334,639.4583333333334 v17.083333333333332 h17.083333333333332 v-17.083333333333332 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<path d="M912.0,631.5715524504326 L928.4284475495674,648.0 L912.0,664.4284475495674 L895.5715524504326,648.0 Z M912.0,635.9202591547298 L899.9202591547298,648.0 L912.0,660.0797408452702 L924.0797408452702,648.0 Z" fill="#ad6b23" fill-rule="evenodd"/>
+<text x="897.0" y="713.6" font-size="16" font-weight="bold" fill="#ad6b23">C*</text>
+<text x="760" y="757" font-size="13" font-weight="normal" fill="#233c43">Both inputs recessed</text>
+<line x1="978" y1="664" x2="1066" y2="664" stroke="#233c43" stroke-width="2"/>
+<line x1="1058" y1="659" x2="1066" y2="664" stroke="#233c43" stroke-width="2"/>
+<line x1="1058" y1="669" x2="1066" y2="664" stroke="#233c43" stroke-width="2"/>
+<rect x="1098" y="566" width="205" height="205" fill="#fffefa" stroke="#233c43" stroke-width="2"/>
+<line x1="1166.3333333333333" y1="566" x2="1166.3333333333333" y2="771" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1098" y1="634.3333333333334" x2="1303" y2="634.3333333333334" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1234.6666666666667" y1="566" x2="1234.6666666666667" y2="771" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="1098" y1="702.6666666666666" x2="1303" y2="702.6666666666666" stroke="#c7d0c9" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="1132.1666666666667" cy="600.1666666666666" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<circle cx="1268.8333333333333" cy="600.1666666666666" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<circle cx="1132.1666666666667" cy="736.8333333333334" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<circle cx="1268.8333333333333" cy="736.8333333333334" r="7.345833333333332" fill="none" stroke="#5188b4" stroke-width="3.0749999999999997"/>
+<text x="1180.5" y="674.5" font-size="17" font-weight="bold" fill="#5188b4">DEAD</text>
+<text x="748" y="800" font-size="15" font-weight="normal" fill="#233c43">Other means total 0–2 or 5–9.</text>
+<text x="1098" y="800" font-size="15" font-weight="normal" fill="#233c43">Corner centres: L/6 and 5L/6.</text>
+<text x="32" y="880" font-size="23" font-weight="bold" fill="#233c43">Shared stepped underside · section through the two input locations</text>
+<text x="32" y="914" font-size="17" font-weight="normal" fill="#233c43">The C input reaches down to the first orange layer. The purple input meets the higher purple output.</text>
+<rect x="95" y="1066" width="315" height="50" fill="#e8d8f0" stroke="#7d529b" stroke-width="2"/>
+<rect x="95" y="1116" width="315" height="50" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<rect x="95" y="1166" width="475" height="50" fill="#f6e4cd" stroke="#ad6b23" stroke-width="2"/>
+<text x="120" y="1200" font-size="16" font-weight="normal" fill="#233c43">First orange layer</text>
+<text x="120" y="1148" font-size="16" font-weight="normal" fill="#233c43">Second orange layer</text>
+<text x="120" y="1100" font-size="16" font-weight="normal" fill="#233c43">Purple layer</text>
+<path d="M60, 961 H610 V999 H551 V1166 H501 V999 H410 V1066 H95 V999 H60 Z" fill="#d4dddb" stroke="#233c43" stroke-width="2"/>
+<path d="M238,1067 V1048 H264 V1067" fill="#fffefa" stroke="#233c43" stroke-width="2"/>
+<rect x="242" y="1052" width="18" height="14" fill="#7d529b"/>
+<path d="M513,1167 V1148 H539 V1167" fill="#fffefa" stroke="#233c43" stroke-width="2"/>
+<rect x="517" y="1152" width="18" height="14" fill="#ad6b23"/>
+<text x="205" y="986" font-size="17" font-weight="bold" fill="#233c43">Final B/W tile</text>
+<text x="690" y="984" font-size="18" font-weight="bold" fill="#7d529b">HIGH INPUT: purple category</text>
+<text x="690" y="1022" font-size="18" font-weight="bold" fill="#ad6b23">LOW INPUT: original C0 / C1</text>
+<text x="690" y="1060" font-size="16" font-weight="normal" fill="#233c43">Two layer heights lower, if layers have equal thickness.</text>
+<text x="690" y="1108" font-size="16" font-weight="normal" fill="#233c43">Other exposed C ports get clearance, not data sockets.</text>
+<text x="690" y="1146" font-size="16" font-weight="bold" fill="#233c43">Finish the previous layer; no bridging over missing pieces.</text>
+<text x="32" y="1280" font-size="16" font-weight="normal" fill="#233c43">Purple input boxes are typed placeholders. The section shows the height relationship, not a finished CAD profile.</text>
+<text x="32" y="1320" font-size="16" font-weight="normal" fill="#233c43">Actual purple key shapes and clearances remain to be designed; the four logical cases are verified for all 512 neighbourhoods.</text>
+<text x="32" y="1359" font-size="17" font-weight="bold" fill="#233c43">Black/white denotes the new Life cell state. Every corner on one tile carries that same state.</text>
+</svg>

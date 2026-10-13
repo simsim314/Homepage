@@ -1,0 +1,5 @@
+# A delay of 27 timesteps.
+#
+x = 30, y = 27, rule = Serizawa
+8.A$15.A7.A4$7.A.A6.A7.A$3.A25.A$16.A7.A6$A8.A$.B13.A$A8.A12.A.A3$23.
+A$8.A5$A$.B$A!

@@ -2,9 +2,14 @@
 title: 'The c/3 spaceship in Live Free or Die'
 description: 'A prize-winning period-six spaceship at a previously undiscovered speed in B2/S0.'
 type: research
-topics: [other-cellular-automata]
+topics: [cellular-automata]
+presentationOrder: -50
 status: demonstrated
-showPreview: false
+showPreview: true
+imageSource: https://conwaylife.com/forums/viewtopic.php?p=13652#p13652
+imageCredit: 'Golly HashLife evolution of my original October 5, 2014 spaceship, generations 0–60. Individual cells are shown; the loop returns to the initial position.'
+imageAlt: 'The original period-six c/3 spaceship moving through the Live Free or Die rule B2/S0.'
+image: /images/lfod-c3-spaceship.gif
 date: 2026-10-12
 tags: [B2/S0, Live Free or Die, spaceship, c/3, prize]
 sources:

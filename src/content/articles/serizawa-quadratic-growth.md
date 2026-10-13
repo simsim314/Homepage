@@ -2,9 +2,14 @@
 title: 'Serizawa quadratic growth'
 description: 'Five-cell and later four-cell seeds with quadratic growth, posted in June 2014.'
 type: research
-topics: [other-cellular-automata]
+topics: [cellular-automata]
+presentationOrder: -55
 status: demonstrated
-showPreview: false
+showPreview: true
+imageSource: https://conwaylife.com/forums/viewtopic.php?p=12152#p12152
+imageCredit: 'Golly RuleLoader evolution of my June 4, 2014 four-cell seed, generations 262,144–1,048,576. A lit pixel represents an 2,048 × 2,048-cell region containing non-background cells.'
+imageAlt: 'The original four-cell Serizawa seed evolving into a diamond-shaped pattern of growing particle streams.'
+image: /images/serizawa-quadratic-evolution.gif
 date: 2026-10-12
 tags: [Serizawa, quadratic growth, small seeds]
 sources:
@@ -17,6 +22,8 @@ sources:
 ---
 
 I posted a **five-cell quadratic-growth seed in Serizawa on June 3, 2014**. The following day, after discussing smaller candidates with Dave Greene, I posted a clear four-cell example.
+
+The animation runs the clear four-cell seed far past its early transient, from generation **262,144 to 1,048,576**. The later triangular region is visible inside the wider expanding pattern. The view is sampled and zoomed out; each pixel represents an occupied 2,048 × 2,048-cell region.
 
 ## The five-cell seed
 

@@ -1,0 +1,89 @@
+@RULE GeminoidParticles
+
+@TABLE
+n_states:9
+neighborhood:Moore
+symmetries:rotate4reflect
+
+# 0 is ground, nothingness
+# 1,tail
+# 2, pusher
+# 3, puller
+# 4, reflect
+# 5, destroyable reflector and blocker
+# 6, stable reflector and blocker
+# 7, dynamic block that pushed-pulled-reflected  
+# 8, death helper
+
+var particle = {2,3,4}
+var static = {5,6,7}
+var ref = {5,6}
+
+var any1 = {0,1,2,3,4,5,6,7}
+var any2 = {0,1,2,3,4,5,6,7}
+var any3 = {0,1,2,3,4,5,6,7}
+var any4 = {0,1,2,3,4,5,6,7}
+var any5 = {0,1,2,3,4,5,6,7}
+var any6 = {0,1,2,3,4,5,6,7}
+var any7 = {0,1,2,3,4,5,6,7}
+var any8 = {0,1,2,3,4,5,6,7}
+
+0,particle,0,0,1,0,0,0,0,particle
+
+# reflect
+0,ref,0,particle,1,0,0,0,0,particle
+0,particle,ref,0,0,0,0,0,0,particle
+0,particle,0,ref,0,0,0,0,0,particle
+
+5,particle,1,particle,0,0,0,0,0,0
+
+#dynamic block
+0,0,7,0,0,2,0,0,0,2
+0,7,0,2,0,0,0,0,0,2
+0,7,2,0,0,0,0,0,0,7
+7,2,1,0,0,0,0,0,0,0
+
+0,7,0,3,1,0,0,0,0,7
+7,7,1,0,0,0,0,0,0,0
+
+4,1,0,0,7,0,0,0,0,4
+0,7,0,4,1,0,0,0,0,1
+
+#interactions 
+0,4,0,4,0,0,0,0,0,5
+0,4,0,0,0,0,4,0,0,4
+4,4,1,0,0,1,0,0,0,6
+0,4,0,0,0,4,0,0,0,7
+
+#death
+6,8,0,0,0,0,0,0,0,0
+7,8,0,0,0,0,0,0,0,0
+
+8,any1,any2,any3,any4,any5,any6,any7,any8,0
+particle,1,0,8,6,0,0,0,0,particle
+0,6,0,0,particle,0,0,0,0,8
+particle,8,any2,any3,any4,any5,any6,any7,any8,0
+
+5, particle,0,0,0,0,0,0,0,0
+7, particle,0,0,0,0,0,0,0,0
+
+0,7,0,0,0,7,0,0,0,8
+
+#move rules 
+
+1,any1,any2,any3,any4,any5,any6,any7,any8,0
+
+particle,any1,any2,any3,any4,any5,any6,any7,any8,1
+0,particle,0,0,0,0,0,0,0,particle
+0,particle,0,0,static,0,0,0,0,particle
+0,static,0,0,0,particle,0,0,0,particle
+
+@COLORS
+0 0 0 0
+1 255 255 255
+2 0 95 191
+3 255 216 25
+4 226 22 56
+5 57 229 22
+6 255 101 25
+8 120 120 120

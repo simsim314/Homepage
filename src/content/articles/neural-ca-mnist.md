@@ -1,16 +1,17 @@
 ---
 title: 'Neural CA MNIST'
-description: 'A 50-step neural digit refiner whose intermediate images carry the evolving state.'
+description: 'A hand-drawn digit is the input; 50 local neural updates produce the evolving images shown in the animation.'
 type: 'project'
-topics: ['artificial-intelligence']
+topics: ['cellular-automata']
+presentationOrder: -60
 status: 'experimental'
 visual: 'neural'
 featured: false
 image: /images/neural-ca-evolution.gif
 imageAlt: A hand-drawn digit input and the actual model outputs at steps 1, 10, 20, 35, and 50.
-imageCredit: Actual outputs from the repository’s ONNX model on a synthetic hand-drawn input; an example, not a benchmark.
+imageCredit: Input is a synthetic hand-drawn 3 on a 28×28 grid. Later frames are actual ONNX outputs at steps 1, 10, 20, 35, and 50.
 date: '2026-10-12'
-tags: ['MNIST', 'local computation', 'ONNX', 'cellular automata']
+tags: ['MNIST', 'local computation', 'ONNX', 'cellular automata', 'artificial intelligence']
 github: 'https://github.com/simsim314/NeauralCA_MNIST'
 demo: 'https://simsim314.github.io/NeauralCA_MNIST/'
 demoNote: 'The ONNX model may take around 30 seconds to load. Wait for Ready before pressing Run.'
@@ -25,7 +26,7 @@ sources:
 
 This experiment processes a handwritten digit through 50 spatially local neural updates. Each step produces another 28×28 image, making the computation visible as a sequence rather than only a final label.
 
-The [sequence on the homepage](/#article-neural-ca-mnist) was computed with the published ONNX model, using a synthetic hand-drawn 3 as input. It shows the actual images at steps 1, 10, 20, 35, and 50. It is one example of the evolving state, not an accuracy measurement.
+The animation begins with a **synthetic hand-drawn 3**, represented as a 28×28 grayscale image. That is the input supplied to the published ONNX model. It stays visible for three seconds, followed by a faster sequence of the actual images at steps 1, 10, 20, 35, and 50. The numbered frames are selected updates, rather than every intervening step. This is one example of the evolving state, not an accuracy measurement.
 
 ## Images as state
 

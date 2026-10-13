@@ -1,0 +1,168 @@
+---
+import head from '../data/caterloopillar-head.json';
+const selected = head.groups.find((group) => group.key === 'turn')!;
+const labels: Record<string, string> = {
+  read: 'Read / split',
+  turn: 'Turn',
+  restore: 'Restore / output',
+  clock: 'Timing',
+  erase: 'Erase route',
+};
+---
+
+<div class="head-explorer" data-head-explorer>
+  <p class="explorer-title">One assembled forward head</p>
+  <p class="explorer-note">
+    The original 250-cell-transfer design. Select a part to locate it in the convoy and inspect its
+    cells.
+  </p>
+  <svg
+    class="head-overview"
+    viewBox="-92 -266 910 370"
+    role="img"
+    aria-label="Original forward head, with its tape reader, inner reflector, final converter, timing circuit and erasure routing grouped by function."
+  >
+    <g transform="matrix(0,-1,1,0,0,0)">
+      {head.cells.map(([x, y]) => <rect x={x} y={y} width="1" height="1" fill="#b5e8d1" />)}
+      {
+        head.groups.map((group) => (
+          <rect
+            class="part-outline"
+            data-head-part={group.key}
+            data-selected={group.key === selected.key}
+            x={group.box[0]}
+            y={group.box[1]}
+            width={group.box[2]}
+            height={group.box[3]}
+            fill="none"
+            stroke-width="1.5"
+          />
+        ))
+      }
+    </g>
+    {
+      head.groups.map((group) => (
+        <text
+          x={group.box[1] + group.box[3]}
+          y={-group.box[0] - group.box[2] - 6}
+          text-anchor="end"
+          fill="#efbf61"
+          font-size="16"
+        >
+          {labels[group.key]}
+        </text>
+      ))
+    }
+  </svg>
+  <div class="head-controls" role="group" aria-label="Locate a reading-head component">
+    {
+      head.groups.map((group) => (
+        <button
+          type="button"
+          data-select-part={group.key}
+          aria-pressed={group.key === selected.key}
+        >
+          {group.title}
+        </button>
+      ))
+    }
+  </div>
+  <p class="part-description" data-head-description>{selected.description}</p>
+  <svg
+    class="head-detail"
+    viewBox={selected.box.join(' ')}
+    role="img"
+    aria-label="Enlarged original cells of the selected component"
+    data-head-detail
+  >
+    {head.cells.map(([x, y]) => <rect x={x} y={y} width="1" height="1" fill="#b5e8d1" />)}
+  </svg>
+  <p class="explorer-note">
+    Upper view: whole head, rotated 90°. Lower view: selected cells in their original orientation.
+    Outlines are labels; all cells come from the original generator.
+  </p>
+</div>
+<style>
+  .head-explorer {
+    border: 1px solid var(--line);
+    padding: 18px;
+    margin: 1.5rem 0;
+    font-family: var(--sans);
+  }
+  .explorer-title {
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 0.5rem !important;
+  }
+  .explorer-note {
+    font: 0.74rem/1.6 var(--sans);
+    color: var(--muted);
+  }
+  .head-overview,
+  .head-detail {
+    shape-rendering: crispEdges;
+  }
+  .head-overview {
+    width: 100%;
+    height: 220px;
+    display: block;
+    background: #102f39;
+    transform: none;
+  }
+  /* A native coordinate transform keeps the whole head horizontal. */
+  .head-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 14px 0;
+  }
+  .head-controls button {
+    padding: 7px 9px;
+    font: 0.7rem/1.5 var(--sans);
+    border: 1px solid var(--line);
+    background: transparent;
+    cursor: pointer;
+  }
+  .head-controls button[aria-pressed='true'] {
+    border-color: var(--accent);
+    background: #e8eee7;
+    color: var(--accent);
+  }
+  .part-description {
+    font: 0.83rem/1.7 var(--sans);
+    min-height: 3.4em;
+  }
+  .head-detail {
+    width: 100%;
+    height: 285px;
+    display: block;
+    background: #102f39;
+  }
+  .part-outline {
+    stroke: #58747c;
+  }
+  .part-outline[data-selected='true'] {
+    stroke: #efbf61;
+    stroke-width: 2;
+  }
+</style>
+<script>
+  import head from '../data/caterloopillar-head.json';
+  document.querySelectorAll<HTMLElement>('[data-head-explorer]').forEach((root) => {
+    const buttons = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-select-part]'));
+    const outlines = Array.from(root.querySelectorAll<SVGElement>('[data-head-part]'));
+    const detail = root.querySelector<SVGElement>('[data-head-detail]')!;
+    const description = root.querySelector<HTMLElement>('[data-head-description]')!;
+    buttons.forEach((button) =>
+      button.addEventListener('click', () => {
+        const group = head.groups.find((g) => g.key === button.dataset.selectPart)!;
+        buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+        outlines.forEach((o) => {
+          o.dataset.selected = String(o.dataset.headPart === group.key);
+        });
+        detail.setAttribute('viewBox', group.box.join(' '));
+        description.textContent = group.description;
+      }),
+    );
+  });
+</script>

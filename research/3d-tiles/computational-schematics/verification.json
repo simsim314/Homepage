@@ -1,0 +1,141 @@
+{
+  "neighbourhoods_checked": 512,
+  "packed_interiors_checked": 20,
+  "orange_post_examples_checked": 3,
+  "families": {
+    "blue_rotational_classes": 6,
+    "orange_input_cases": 8,
+    "purple_masks": 8,
+    "black_white_logical_cases": 4
+  },
+  "purple_categories": {
+    "0–2": 46,
+    "3": 84,
+    "4": 126,
+    "5–9": 256
+  },
+  "life_outputs": {
+    "0": 372,
+    "1": 140
+  },
+  "result": "All logical checks passed.",
+  "scope": "Reconstructed routing and logical ports; not a physical-fit/CAD proof.",
+  "source": "https://conwaylife.com/forums/viewtopic.php?p=73033#p73033",
+  "example": {
+    "input": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "blue_gathered": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "orange_rows": [
+      [
+        1,
+        0,
+        0,
+        "C1"
+      ],
+      [
+        1,
+        1,
+        0,
+        "C1"
+      ],
+      [
+        1,
+        1,
+        0,
+        "C1"
+      ],
+      [
+        1,
+        0,
+        0,
+        "C0"
+      ]
+    ],
+    "orange_columns": [
+      [
+        1,
+        1,
+        1,
+        "C1"
+      ],
+      [
+        1,
+        0,
+        0,
+        "C1"
+      ],
+      [
+        0,
+        0,
+        0,
+        "C0"
+      ]
+    ],
+    "packed_interior": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "carried_centre": 1,
+    "purple_category": "4",
+    "matching_purple_tiles": [
+      {
+        "name": "P4a",
+        "rotation": 0
+      }
+    ],
+    "next_cell": 1
+  }
+}

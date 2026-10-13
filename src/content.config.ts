@@ -8,6 +8,9 @@ const interests = defineCollection({
     title: z.string(),
     description: z.string(),
     order: z.number(),
+    parent: z.string().optional(),
+    representative: z.string().optional(),
+    articleOrder: z.array(z.string()).default([]),
     visual: z.enum(['packing', 'life', 'neural', 'crypto', 'chess', 'fractal', 'gear']).optional(),
   }),
 });
@@ -20,8 +23,17 @@ const articles = defineCollection({
       type: z.enum(['research', 'project']),
       topics: z.array(z.string()).min(1),
       tags: z.array(z.string()).default([]),
-      status: z.enum(['demonstrated', 'implemented', 'experimental', 'candidate', 'ongoing']),
+      status: z.enum([
+        'demonstrated',
+        'implemented',
+        'experimental',
+        'candidate',
+        'ongoing',
+        'preprint',
+        'note',
+      ]),
       featured: z.boolean().default(false),
+      homepageHero: z.boolean().default(false),
       showPreview: z.boolean().optional(),
       presentationOrder: z.number().default(0),
       date: z.coerce.date(),
@@ -37,7 +49,7 @@ const articles = defineCollection({
       visual: z
         .enum(['packing', 'life', 'neural', 'crypto', 'chess', 'fractal', 'gear'])
         .default('packing'),
-      sources: z.array(z.object({ label: z.string(), url: z.url() })).min(1),
+      sources: z.array(z.object({ label: z.string(), url: z.url().optional() })).min(1),
     })
     .transform((data) => ({ ...data, showPreview: data.showPreview ?? Boolean(data.image) })),
 });

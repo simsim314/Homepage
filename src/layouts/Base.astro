@@ -13,7 +13,7 @@ const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site
 const canonical = new URL(Astro.url.pathname.replace(/\/404\/?$/, '/404.html'), Astro.site);
 const { interests } = await getContent();
 const nav = [
-  { label: 'Home', path: '' },
+  { label: 'All articles', path: '', anchor: '#articles' },
   { label: 'Interests', path: 'interests/' },
   { label: 'Research', path: 'research/' },
   { label: 'Projects', path: 'projects/' },
@@ -51,7 +51,7 @@ const nav = [
           {
             nav.map((n) => (
               <a
-                href={href(n.path)}
+                href={`${href(n.path)}${n.anchor || ''}`}
                 aria-current={
                   Astro.url.pathname === href(n.path) ||
                   (n.path && Astro.url.pathname.startsWith(href(n.path)))
@@ -83,11 +83,17 @@ const nav = [
       <div class="container footer-grid">
         <div>
           <a class="footer-name" href={href()}>Michael Simkin</a><p>
-            AI research, mathematical exploration, and computational discovery.
-          </p><a href={site.github}>GitHub ↗</a>
+            AI research, cellular automata, and mathematical exploration.
+          </p><a href={`mailto:${site.email}`}>{site.email}</a><br /><a href={site.github}
+            >GitHub ↗</a
+          >
         </div><div>
           <span class="eyebrow">Explore the interests</span><div class="footer-topics">
-            {interests.map((i) => <a href={href(`interests/${i.id}/`)}>{i.data.title}</a>)}
+            {
+              interests
+                .filter((i) => !i.data.parent)
+                .map((i) => <a href={href(`interests/${i.id}/`)}>{i.data.title}</a>)
+            }
           </div>
         </div>
       </div><div class="container footer-bottom">

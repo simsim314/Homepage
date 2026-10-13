@@ -1,0 +1,8 @@
+{
+  "author": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tPost\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby dvgrn » August 7th, 2015, 10:34 am\n\t\t\t",
+  "codes": [
+    "#C 21st \"0\" recipe in WSS750K.rle\nx = 39, y = 43, rule = LifeHistory\n19.2A$7.A11.2A$8.A$6.3A3$2A$2A4$10.3A2$8.A5.A12.A$8.A5.A2.2D7.A.A$8.A\n5.A2.2D7.A.A$27.A$10.3A6$18.2A$17.A2.A$18.2A2$14.A$13.A.A$13.A.A$14.A\n8$36.3A$35.A2.A$38.A$38.A$35.A.A!"
+  ],
+  "id": "p21742",
+  "text": "simsim314 wrote:Front with self destruct + generated SL (forgot it in previous design), same cost - 19 *WSS...\nLooks really good!  Only one HWSS, and one pair of LWSSes that's maybe a little too close for comfort.  The great majority of LWSS recipes won't work to add the trailing LWSS to that pair, due to preliminary sparks extending a little too far at just the wrong time.  Luckily there are occasional exceptions:\n\nCode: Select all / Show in Viewer#C 21st \"0\" recipe in WSS750K.rle\nx = 39, y = 43, rule = LifeHistory\n19.2A$7.A11.2A$8.A$6.3A3$2A$2A4$10.3A2$8.A5.A12.A$8.A5.A2.2D7.A.A$8.A\n5.A2.2D7.A.A$27.A$10.3A6$18.2A$17.A2.A$18.2A2$14.A$13.A.A$13.A.A$14.A\n8$36.3A$35.A2.A$38.A$38.A$35.A.A!\nSo what's the next step?  Is there code in the works to string together *WSS recipes, junk cleanup, and block-move recipes to automatically assemble a slow salvo that builds 19-*WSSS streams with the correct timing?  Seems as if it has been possible for a while now to finish the construction on one of these strange-loop Caterpillars.\n\nBut it might still take a while to get all the bugs out of a universal Caterloopillar construction script.  I'd love to see a random sample in action in the meantime...!"
+}

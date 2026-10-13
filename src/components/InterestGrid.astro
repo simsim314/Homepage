@@ -7,15 +7,26 @@ interface Props {
   articles: Article[];
 }
 const { interests, articles } = Astro.props;
+const primaryInterests = interests.filter((interest) => !interest.data.parent);
 ---
 
-<div class:list={['interest-grid', { 'balanced-thirds': interests.length % 3 === 0 }]}>
+<div
+  class:list={[
+    'interest-grid',
+    {
+      'balanced-thirds': primaryInterests.length % 3 === 0,
+      'balanced-last-pair': primaryInterests.length % 3 !== 0 && primaryInterests.length % 4 === 2,
+    },
+  ]}
+>
   {
-    interests.map((interest, index) => (
+    primaryInterests.map((interest, index) => (
       <InterestCard
         interest={interest}
         number={index + 1}
         count={articles.filter((article) => article.data.topics.includes(interest.id)).length}
+        representative={articles.find((article) => article.id === interest.data.representative)}
+        children={interests.filter((child) => child.data.parent === interest.id)}
       />
     ))
   }

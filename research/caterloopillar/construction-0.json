@@ -1,0 +1,213 @@
+{
+  "pagination": [
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151#",
+      "text": "Page 1 of 7"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=25",
+      "text": "2"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=50",
+      "text": "3"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=75",
+      "text": "4"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=100",
+      "text": "5"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=150",
+      "text": "7"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=25",
+      "text": "Next"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151#",
+      "text": "Page 1 of 7"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=25",
+      "text": "2"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=50",
+      "text": "3"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=75",
+      "text": "4"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=100",
+      "text": "5"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=150",
+      "text": "7"
+    },
+    {
+      "href": "https://conwaylife.com/forums/viewtopic.php?t=2151&start=25",
+      "text": "Next"
+    }
+  ],
+  "posts": [
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 9th, 2016, 6:47 pm",
+      "id": "p29796",
+      "text": "I've finally managed to finish the first caterloopillar for c/8 (which is the first known c/8 orthogonal spaceship). \n\nAll the recipes and the design itself is adjustable to any speed < c/4 as the design is based on gliders signal transferring. The basic idea is to have front and back streams of \"*WSS\" salvos I call \"reading heads\" that convert SL stream into slow salvo recipes. The SL stream is the \"matter\" which is actually moving in the stream in the correct direction. See the attached image I reposted from dvgrn illustration for clarification. \n\nThis is a direct continuation of this thread, I just wanted to have more practical thread, with relevant scripts, recipes and results collected here.\n\n-----\n\nCaterloopillar c/8 can be found here:\nhttps://raw.githubusercontent.com/simsi ... lar_c8.rle\n\nI will add and refine this repository, with all the relevant scripts, recipes, search utilities and the results."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 9th, 2016, 7:39 pm",
+      "id": "p29799",
+      "text": "Wait, so this is a spaceship with adjustable speed?\n\nSince I can't really use a computer right now, how big is it and what is its minimum cell count?\n\n\n\nMake one that travels at 13c/37."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 9th, 2016, 8:05 pm",
+      "id": "p29802",
+      "text": "[quoted text / pattern omitted]\n\nYep... it's general concept that can be used for many speeds, I actually built one with speed c/8 which can be pretty trivially adjusted to say c/(8n) for any n. \n\n[quoted text / pattern omitted]\n\nIt's pretty big. Some numbers:\n\ncell count:\nminimal  - 232,815 \nmaximal - 239,370\n\nbounding box ~ 734 X 500K\n\nIt's actually 250c/2000. \n\n[quoted text / pattern omitted]\n\nHehe why this speed? \n\nGenerally speaking for now I'm trying to cover all speeds < c/4 (and 13/37 is way faster). The current technology is pretty mature for it, although it's far from being complete. \n\nAnother point to mention is that this concept should work for any oblique direction as well, but I'm not targeting this question, as well as higher speeds, at least for now."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 9th, 2016, 8:08 pm",
+      "id": "p29803",
+      "text": "Well, the main thing I want to know, is what is the smallest orthogonal spaceship that can be made with this technology that does not travel at a speed with other known orthogonal spaceships?"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby biggiemac » April 9th, 2016, 8:13 pm",
+      "id": "p29806",
+      "text": "Very nice!!  I was hoping this project wasn't abandoned.  Once I'm at my computer I'll watch it run.  Congrats on the completed ship, I know finishing this kind of engineering project well enough to have a concrete result is a good feeling."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 9th, 2016, 8:15 pm",
+      "id": "p29807",
+      "text": "I've added this to the spaceship page, not sure if I should create a full blown article on it since this technology gives us infinite speeds"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 9th, 2016, 8:20 pm",
+      "id": "p29809",
+      "text": "[quoted text / pattern omitted]\n\nFor starters c/8 is not known speed until now... it's the first and thus the smallest c/8 orthogonal spaceship. The design should work for any speed as long as it's less than c/4. Notice that until now we have very limited collection of \"high\" speeds at all. Adjustable high speed is kinda new thing."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 9th, 2016, 8:24 pm",
+      "id": "p29810",
+      "text": "[quoted text / pattern omitted]\n\nThanks! For now the feeling is a very strong headache... I didn't expect it to be that complex, with so so many nuances."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby NoLongerBreathedIn » April 9th, 2016, 10:43 pm",
+      "id": "p29814",
+      "text": "Out of curiosity, why do you spend so much effort on pushing the initial target all the way out?\nIt seems like it could be placed with a single glider collision, considering how the initial block is formed."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby codeholic » April 10th, 2016, 1:52 am",
+      "id": "p29817",
+      "text": "Congratulations! Does your method work with oblique and diagonal speeds? If yes, which ones?"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 10th, 2016, 4:40 am",
+      "id": "p29823",
+      "text": "So, c/9 next?"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 5:00 am",
+      "id": "p29824",
+      "text": "[quoted text / pattern omitted]\n\nThere was very long discussion on this topic - my main goal is robustness, i.e. the simplicity to adjust the design to many other speeds. Thus I'm trying to minimize any \"speed specific\" nuances and calculations. Your suggestion will require some extra calculations, which depends on the specifics of \"reading heads\" distances, which is speed dependent. \n\nWhile I was a bit naive thinking the adjustment can be as simple as changing the spacing between the reading heads, still the simplicity of working with the same basic mechanism of slow salvo, makes the design and the scripting for it relatively straightforward - allowing to focus on the real main issues. \n\nEach reading head is self sufficient, it has it's own helix and self-destruct, thus avoiding any dependency on other reading heads. \n\nBut yes it's definitely should be possible to optimize and squeeze any specific design by factor of 2 or more. Also the slow salvo movement turned out to be not so efficient, especially for large distances. I'm planning to optimize it as well. \n\n[quoted text / pattern omitted]\n\nThanks! I'm not sure about oblique - I didn't started to play with it yet. It's kinda tricky to figure out how the *WSS streams turn out in oblique context, they should align well but I'm not sure they can be adjusted properly without intersections. \n\nThe speeds that could be covered in principle should be those which can be transmitted with gliders - i.e. c/4 is the limit. \n\nFor now I'm focusing to cover all uncovered orthogonal high periods < c/4, and hopefully will be able to make some script that will work for any orthogonal speed < c/4 (this is challenging enough)."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 5:10 am",
+      "id": "p29826",
+      "text": "[quoted text / pattern omitted]\n\nYep: \n\nc/9, 2c/9, c/11, 2c/11, c/13, 2c/13, 3c/13 etc. \n\nHopefully I'll make a script general enough to produce all of the speeds automatically. This is the main goal. \n\nThe c/8 scripts are very messy. I think I'll commit everything as is, in day or two - just for people to have some reference of how it works, and maybe contribute or use some of them for their own projects."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 6:15 am",
+      "id": "p29828",
+      "text": "I was looking at this wiki page and any caterloopillar can be converted into puffer (just don't delete the last block), and rake (just add extra SL to shoot random glider). I'm not sure those patterns are even worth posting as they're trivial modifications of the caterloopillar. \n\nAs for a gun - it could be somewhat tricky, although universal constructors based ships are usually simply constructed to work as guns, for caterloopillar it might be more difficult."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 10th, 2016, 6:30 am",
+      "id": "p29829",
+      "text": "[quoted text / pattern omitted]\nAdded this info.\n\nCould a 31c/240 caterloopillar be constructed that is smaller than centipede in terms of cell count?"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby HartmutHolzwart » April 10th, 2016, 7:45 am",
+      "id": "p29832",
+      "text": "Congratulations as well! Great job! \n\nDid you need to invent some new tricks or was it just a huge work to get everything to fit together? I assume the helper scripts for construction must be rather complex!\n\nSo far, every caterpillar construction project needed specific techniques, as different aspects were dominating the complexity. It would be really interesting to have an overview article elaborating on this.\n\nOverall, the progress in the last 15 years is really amazing! That's only possible because so many of you contribute not only their time, but also their talent and ingenuity."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 8:15 am",
+      "id": "p29833",
+      "text": "[quoted text / pattern omitted]\nThanks! And thanks for bringing up the discussion on the idea in the first place!\n\n[quoted text / pattern omitted]\n\nThere were no new tricks, but slight modifications using old tricks. Also there was a lot of small scripting tricks and additional utilities to support the construction process. The amount of small details in the construction was way beyond expected. \n\nThe basic loop structure and the recipes *WSS collection worked well, but some slight modifications were done to the backward salvo to support the existing recipes. \n\n[quoted text / pattern omitted]\n\nAlthough caterloopillar is also a specific design, the design pattern should be able to support much much wider range of speeds. All caterloopillar recipes were designed with adjustability in mind, and hopefully the same aspects will dominate all caterloopillars for all the relevant speeds. \n\nI'll try to document as I go along, posting and refining the relevant scripts. \n\n[quoted text / pattern omitted]\n\nThe relevant caterloopillar with 186c/1440 speed should be indeed smaller than the centipede. I see no reason it would be very different from the current 250c/2000 caterloopillar in cell count. \n\n[quoted text / pattern omitted]\nThanks!"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Scorbie » April 10th, 2016, 8:20 am",
+      "id": "p29834",
+      "text": "Congrats a lot! Installed Golly to watch this. Got the gist of how it is working. You must have put a lot of effort for this... Congrats!\nAnybody care for running oscar/diff/etc to verify that this is a spaceship?"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby muzik » April 10th, 2016, 8:23 am",
+      "id": "p29835",
+      "text": "Really kind of unfortunate that 17c/45 is greater than c/4, unless that speed can be somehow tweaked into a smaller caterloopilar?\n\nWhat exactly limits this technology from reaching speeds greater than c/4 anyway?"
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 8:29 am",
+      "id": "p29836",
+      "text": "[quoted text / pattern omitted]\nYep it was pretty challenging...thanks! \n\n[quoted text / pattern omitted]\nIf you already have golly, copy the caterloopillar - run it for 2000 iterations, and paste 250 cells above in XOR mode. You will get an empty space. Done this before posting \n\nAlso mentioning golly - with 4GB for the hash table, it starts to run in \"logical mode\" so you can see it moving as fast as you wish. I'm not entirely sure, but I think it's the first orthogonal caterpillar design that fits entirely into golly's hash."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 8:37 am",
+      "id": "p29839",
+      "text": "[quoted text / pattern omitted]\n\nIt uses gliders to transfer \"information\", gliders move at c/4 - and the information can be in \"glider mode\" as much percentile of the time as we wish. \n\nThere is still no general solution for higher speeds, as gliders stop to work - pretty complex and non trivial helices are needed, and to find general design for such speeds is yet an open question. I was thinking a bit about this question, but I still don't have a solution which is not extremely oversized, and very limited."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby biggiemac » April 10th, 2016, 1:15 pm",
+      "id": "p29855",
+      "text": "[quoted text / pattern omitted]\nBut not the first caterpillar to do so! \n\nI'm pretty sure this technology won't be able to handle oblique velocities, because the slow salvo ashpile, the upward helix, and the downward helix all take different angles once there is a nonzero horizontal displacement per period.  It's the same reason slow salvos worked for the centipede and shield bug projects but couldn't for the waterbear."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 2:13 pm",
+      "id": "p29864",
+      "text": "[quoted text / pattern omitted]\n\nDefinitely...while adding the \"orthogonal\" I was obviously thinking of waterbear  \n\n[quoted text / pattern omitted]\n\nOne could have more waterbear like design, having two reading heads that collide gliders instead of the single one that makes slow salvo, as long as we have speed < c/4 and we can use gliders to process information the design pattern is pretty solid. \n\nI don't want to think about oblique direction yet - but there are plenty of options there except of slow salvo. I actually agree that oblique direction is pretty tempting to explore because the orthogonal case is now got down to technicalities, this shows how robust the design is. \n\nIt would be very useful if someone would explore the oblique option possibilities while I'm finishing all the technical stuff regarding the orthogonal design."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby Apple Bottom » April 10th, 2016, 4:05 pm",
+      "id": "p29869",
+      "text": "Outstanding work!\n\nI've started an entry in the LifeWiki for this, too. Since it's missing a picture, I was wondering - would it be OK to use the one from your initial post above? I think it's a great illustration of how the ship works."
+    },
+    {
+      "code": [],
+      "date": "Post\n\t\t\t\t\t\n\t\t\t\t\t\t\t\tby simsim314 » April 10th, 2016, 5:09 pm",
+      "id": "p29870",
+      "text": "[quoted text / pattern omitted]\nThanks.\n\n[quoted text / pattern omitted]\n\nI've also modified the entry to make it more clear. \n\nWe should somehow avoid confusion between three things:\n\n1. Caterloopillar design pattern, which is similar to strange loop concept. \n\n2.  Specific implementation of Caterloopillar design pattern for orthogonal speed using slow salvo, *WSS salvo, and conversion of SL to gliders and back to SL.\n\n3. A spaceship with speed c/8 which is the first specific Caterloopillar implementation, and also the first c/8 known ship.\n\nEDIT Regarding the images: to illustrate Caterloopillar design pattern I would like to use some sort of diagram similar to the one in the first post. \n\nAs for the image of c/8 ship, I think it's more proper to post the front of it like in other long caterpillars images.\n\nEDIT2 I think we should have three entries in wiki: \n\n1. Caterloopillar.\n2. Orthogonal Caterloopillar.\n3. Orthogonal Caterloopillar (c/8)\n\nAs there is only one ship for now, it's not so critical at this stage, and we can leave it all in the same entry."
+    }
+  ],
+  "url": "https://conwaylife.com/forums/viewtopic.php?t=2151"
+}

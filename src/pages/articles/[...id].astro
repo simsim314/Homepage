@@ -3,10 +3,13 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Embed from '../../components/Embed.astro';
+import LifeDemo from '../../components/LifeDemo.astro';
+import ProjectImage from '../../components/ProjectImage.astro';
+import ArticleVisual from '../../components/ArticleVisual.astro';
+import TopicNavigation from '../../components/TopicNavigation.astro';
 import {
   getContent,
   href,
-  previewHref,
   formatDate,
   relatedArticles,
   statusLabels,
@@ -27,13 +30,15 @@ const related = relatedArticles(article, articles);
 ---
 
 <Base title={data.title} description={data.description}>
-  <article class="container article-page">
+  <article class="container article-page" data-article-id={article.id}>
     <header class="article-header">
       <a class="eyebrow" href={href('#articles')}>← The journal</a><div class="article-topics">
         {
-          data.topics.map((t) => (
-            <a href={href(`interests/${t}/`)}>{interests.find((i) => i.id === t)!.data.title}</a>
-          ))
+          data.topics
+            .filter((t) => !interests.find((i) => i.id === t)!.data.parent)
+            .map((t) => (
+              <a href={href(`interests/${t}/`)}>{interests.find((i) => i.id === t)!.data.title}</a>
+            ))
         }
       </div><h1>{data.title}</h1><p class="article-deck">{data.description}</p><div
         class="article-meta"
@@ -50,24 +55,40 @@ const related = relatedArticles(article, articles);
       </div>
     </header>
     {
-      data.showPreview && (
-        <p class="visual-caption">
-          <a href={previewHref(article)}>
-            View the {article.id === 'simkin-glider-gun' ? 'animated pattern' : 'visual preview'} on
-            the homepage ↗
-          </a>
-          {data.imageCredit && <span> · {data.imageCredit}</span>}
-          {data.imageSource && <a href={data.imageSource}> Source ↗</a>}
-        </p>
+      article.id === 'simkin-glider-gun' && (
+        <div id="glider-gun" class="article-animation">
+          <LifeDemo autoplay />
+          <p class="visual-caption">Exact B3/S23 simulation of the documented 29-cell pattern.</p>
+        </div>
+      )
+    }
+    {
+      data.showPreview && article.id !== 'simkin-glider-gun' && (
+        <figure class="article-preview">
+          {data.image ? (
+            <ProjectImage src={data.image} alt={data.imageAlt || data.title} eager />
+          ) : (
+            <ArticleVisual id={article.id} kind={data.visual} />
+          )}
+          {(data.imageCredit || data.imageSource) && (
+            <figcaption class="visual-caption">
+              {data.imageCredit && <span>{data.imageCredit}</span>}
+              {data.imageSource && <a href={data.imageSource}> Source ↗</a>}
+            </figcaption>
+          )}
+        </figure>
       )
     }
     <div class="reading-layout">
       <aside class="article-toc">
-        <span class="eyebrow">On this page</span><nav aria-label="Article contents">
-          {headings.filter((h) => h.depth === 2).map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}<a
-            href="#sources">Sources & links</a
-          >
-        </nav>
+        <TopicNavigation interests={interests} articles={articles} articleTopics={data.topics} />
+        <div class="article-page-navigation">
+          <span class="eyebrow">On this page</span><nav aria-label="Article contents">
+            {
+              headings.filter((h) => h.depth === 2).map((h) => <a href={`#${h.slug}`}>{h.text}</a>)
+            }<a href="#sources">Sources & links</a>
+          </nav>
+        </div>
       </aside><div>
         <div class="prose article-body"><Content /></div>
         {
@@ -97,13 +118,11 @@ const related = relatedArticles(article, articles);
           }<ul>
             {
               data.sources.map((s) => (
-                <li>
-                  <a href={s.url}>{s.label} ↗</a>
-                </li>
+                <li>{s.url ? <a href={s.url}>{s.label} ↗</a> : <span>{s.label}</span>}</li>
               ))
             }
           </ul><p>
-            Source-based article prepared on {formatDate(data.date)}.{
+            Article prepared on {formatDate(data.date)}.{
               data.type === 'research' && data.status === 'candidate'
                 ? ' A public commitment records a version of a claim; it does not establish its correctness.'
                 : ''
@@ -136,7 +155,7 @@ const related = relatedArticles(article, articles);
           </div>
           <div class="article-grid">
             {related.map((a) => (
-              <ArticleCard article={a} />
+              <ArticleCard article={a} preview previewId={`related-preview-${a.id}`} />
             ))}
           </div>
         </>

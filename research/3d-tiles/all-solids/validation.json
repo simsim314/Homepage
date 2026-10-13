@@ -1,0 +1,375 @@
+{
+  "types": [
+    {
+      "name": "blue-0",
+      "family": "Blue",
+      "label": "B0 \u00b7 0000",
+      "description": "4 recessed bits; 16 raised copies and 9 fixed X blockers",
+      "triangles": 8160,
+      "volume": 22196.958680163178,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "blue-1",
+      "family": "Blue",
+      "label": "B1 \u00b7 0001",
+      "description": "4 recessed bits; 16 raised copies and 9 fixed X blockers",
+      "triangles": 6500,
+      "volume": 22175.519139919783,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "blue-2",
+      "family": "Blue",
+      "label": "B2 \u00b7 0011",
+      "description": "4 recessed bits; 16 raised copies and 9 fixed X blockers",
+      "triangles": 4840,
+      "volume": 22154.07955870882,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "blue-3",
+      "family": "Blue",
+      "label": "B3 \u00b7 0110",
+      "description": "4 recessed bits; 16 raised copies and 9 fixed X blockers",
+      "triangles": 4840,
+      "volume": 22154.079517741247,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "blue-4",
+      "family": "Blue",
+      "label": "B4 \u00b7 0111",
+      "description": "4 recessed bits; 16 raised copies and 9 fixed X blockers",
+      "triangles": 3180,
+      "volume": 22132.639977497853,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "blue-5",
+      "family": "Blue",
+      "label": "B5 \u00b7 1111",
+      "description": "4 recessed bits; 16 raised copies and 9 fixed X blockers",
+      "triangles": 1520,
+      "volume": 22111.20035531941,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-000",
+      "family": "Orange",
+      "label": "O000 \u00b7 0000",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 2732,
+      "volume": 3474.233499167504,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-001",
+      "family": "Orange",
+      "label": "O001 \u00b7 0001",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 2068,
+      "volume": 3474.23348137402,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-010",
+      "family": "Orange",
+      "label": "O010 \u00b7 0110",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 1736,
+      "volume": 3481.3799922643243,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-011",
+      "family": "Orange",
+      "label": "O011 \u00b7 0111",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 1072,
+      "volume": 3481.379994044617,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-100",
+      "family": "Orange",
+      "label": "O100 \u00b7 1000",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 2068,
+      "volume": 3474.2334991675034,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-101",
+      "family": "Orange",
+      "label": "O101 \u00b7 1001",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 1404,
+      "volume": 3474.233500947795,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-110",
+      "family": "Orange",
+      "label": "O110 \u00b7 1110",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 1072,
+      "volume": 3481.3800118381005,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "orange-111",
+      "family": "Orange",
+      "label": "O111 \u00b7 1111",
+      "description": "4 recessed bits; 3 packed bits and C on top",
+      "triangles": 408,
+      "volume": 3481.3800140071253,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P0",
+      "family": "Purple",
+      "label": "P0 \u00b7 total 0\u20132",
+      "description": "9 recessed inputs; raised category ring other",
+      "triangles": 3996,
+      "volume": 7634.010056184473,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P3a",
+      "family": "Purple",
+      "label": "P3a \u00b7 total 3",
+      "description": "9 recessed inputs; raised category ring 3",
+      "triangles": 2856,
+      "volume": 7637.111679458154,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P3b",
+      "family": "Purple",
+      "label": "P3b \u00b7 total 3",
+      "description": "9 recessed inputs; raised category ring 3",
+      "triangles": 2856,
+      "volume": 7637.111659884392,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P4a",
+      "family": "Purple",
+      "label": "P4a \u00b7 total 4",
+      "description": "9 recessed inputs; raised category ring 4",
+      "triangles": 2524,
+      "volume": 7674.582044054189,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P4b",
+      "family": "Purple",
+      "label": "P4b \u00b7 total 4",
+      "description": "9 recessed inputs; raised category ring 4",
+      "triangles": 2524,
+      "volume": 7674.5820440541875,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P4c",
+      "family": "Purple",
+      "label": "P4c \u00b7 total 4",
+      "description": "9 recessed inputs; raised category ring 4",
+      "triangles": 2524,
+      "volume": 7674.58202486916,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P5a",
+      "family": "Purple",
+      "label": "P5a \u00b7 total 5\u20139",
+      "description": "9 recessed inputs; raised category ring other",
+      "triangles": 2336,
+      "volume": 7669.742671078907,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "purple-P5b",
+      "family": "Purple",
+      "label": "P5b \u00b7 total 5\u20139",
+      "description": "9 recessed inputs; raised category ring other",
+      "triangles": 2704,
+      "volume": 7652.0186990574075,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "final-0",
+      "family": "Black / white",
+      "label": "3 + C* \u2192 live",
+      "description": "Stepped underside: purple + original C; 4 identical raised corner bits",
+      "triangles": 852,
+      "volume": 22743.877224664317,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "final-1",
+      "family": "Black / white",
+      "label": "4 + C0 \u2192 dead",
+      "description": "Stepped underside: purple + original C; 4 identical raised corner bits",
+      "triangles": 1980,
+      "volume": 22766.29126911751,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "final-2",
+      "family": "Black / white",
+      "label": "4 + C1 \u2192 live",
+      "description": "Stepped underside: purple + original C; 4 identical raised corner bits",
+      "triangles": 652,
+      "volume": 22737.705129676902,
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "name": "final-3",
+      "family": "Black / white",
+      "label": "other + C* \u2192 dead",
+      "description": "Stepped underside: purple + original C; 4 identical raised corner bits",
+      "triangles": 2180,
+      "volume": 22711.815603651616,
+      "watertight": true,
+      "connected": true
+    }
+  ],
+  "logical": {
+    "neighbourhoods_checked": 512,
+    "packed_interiors_checked": 20,
+    "orange_post_examples_checked": 3,
+    "families": {
+      "blue_rotational_classes": 6,
+      "orange_input_cases": 8,
+      "purple_masks": 8,
+      "black_white_logical_cases": 4
+    },
+    "purple_categories": {
+      "0\u20132": 46,
+      "3": 84,
+      "4": 126,
+      "5\u20139": 256
+    },
+    "life_outputs": {
+      "0": 372,
+      "1": 140
+    },
+    "result": "All logical checks passed.",
+    "scope": "Reconstructed routing and logical ports; not a physical-fit/CAD proof.",
+    "source": "https://conwaylife.com/forums/viewtopic.php?p=73033#p73033"
+  },
+  "assembly_pieces": 122,
+  "assembly_boolean_checks": 343,
+  "max_overlap": 6.40441042681535e-05,
+  "port_fit_matrix": {
+    "0": {
+      "0": true,
+      "1": false,
+      "C0": false,
+      "C1": false,
+      "3": false,
+      "4": false,
+      "other": false
+    },
+    "1": {
+      "0": false,
+      "1": true,
+      "C0": false,
+      "C1": false,
+      "3": false,
+      "4": false,
+      "other": false
+    },
+    "C0": {
+      "0": false,
+      "1": false,
+      "C0": true,
+      "C1": false,
+      "3": false,
+      "4": false,
+      "other": false
+    },
+    "C1": {
+      "0": false,
+      "1": false,
+      "C0": false,
+      "C1": true,
+      "3": false,
+      "4": false,
+      "other": false
+    },
+    "3": {
+      "0": false,
+      "1": false,
+      "C0": false,
+      "C1": false,
+      "3": true,
+      "4": false,
+      "other": false
+    },
+    "4": {
+      "0": false,
+      "1": false,
+      "C0": false,
+      "C1": false,
+      "3": false,
+      "4": true,
+      "other": false
+    },
+    "other": {
+      "0": false,
+      "1": false,
+      "C0": false,
+      "C1": false,
+      "3": false,
+      "4": false,
+      "other": true
+    },
+    "X": {
+      "0": true,
+      "1": true,
+      "C0": false,
+      "C1": false,
+      "3": false,
+      "4": false,
+      "other": false
+    },
+    "C*": {
+      "0": false,
+      "1": false,
+      "C0": true,
+      "C1": true,
+      "3": false,
+      "4": false,
+      "other": false
+    }
+  },
+  "scope": "Nominal meshes, canonical assembly, fixed socket orientation. No print tolerances or arbitrary-placement proof."
+}

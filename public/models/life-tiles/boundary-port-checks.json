@@ -1,0 +1,38 @@
+[
+  {
+    "type": "edge-00",
+    "sockets": 2,
+    "matched_keys_and_rejected_wrong_bits": true,
+    "verified_output_keys": 16
+  },
+  {
+    "type": "edge-01",
+    "sockets": 2,
+    "matched_keys_and_rejected_wrong_bits": true,
+    "verified_output_keys": 16
+  },
+  {
+    "type": "edge-10",
+    "sockets": 2,
+    "matched_keys_and_rejected_wrong_bits": true,
+    "verified_output_keys": 16
+  },
+  {
+    "type": "edge-11",
+    "sockets": 2,
+    "matched_keys_and_rejected_wrong_bits": true,
+    "verified_output_keys": 16
+  },
+  {
+    "type": "corner-0",
+    "sockets": 1,
+    "matched_keys_and_rejected_wrong_bits": true,
+    "verified_output_keys": 16
+  },
+  {
+    "type": "corner-1",
+    "sockets": 1,
+    "matched_keys_and_rejected_wrong_bits": true,
+    "verified_output_keys": 16
+  }
+]

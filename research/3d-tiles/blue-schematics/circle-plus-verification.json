@@ -1,0 +1,20 @@
+{
+  "placement_checks": 230400,
+  "life_cell_pitch": 60,
+  "blue_piece_width": 60,
+  "life_connector_coordinates": [
+    10,
+    50
+  ],
+  "blue_input_coordinates": [
+    20,
+    40
+  ],
+  "only_valid_offset_modulo_cell": [
+    [
+      30,
+      30
+    ]
+  ],
+  "scope": "Exact nominal ring/plus profiles, integer offsets and quarter-turns; no print tolerance proof."
+}

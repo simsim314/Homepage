@@ -1,9 +1,13 @@
 # Michael Simkin — Personal Research Journal
 
 An Astro website at **https://simsim314.github.io/Homepage/**. The homepage is the
-journal: interests, featured work, and all recent articles. There is no separate
-blog. Twenty-six published research/project articles share one collection and one
-canonical URL each, across nine interest landing pages.
+journal: interest themes first, followed by recent articles. There is no separate
+blog. Thirty research/project articles share one collection and one
+canonical URL each, across six main interests and three nested interest pages.
+
+To continue this project in a new chat, read [CONTINUE-HERE.md](CONTINUE-HERE.md).
+It records the author's instructions, interview evidence, current pages and tile
+geometry, verification results, publication restrictions, and a ready-to-paste prompt.
 
 ## Development
 
@@ -28,7 +32,25 @@ npm run verify      # diagnostics, build, link/asset/anchor and content checks
 The built-site verifier checks internal URLs, local images, scripts, KaTeX fonts,
 canonical article coverage in the homepage/search/sitemap, duplicate element IDs,
 and equations rendered from both Markdown and MDX. It also rejects repeated
-content images and diagrams across all pages.
+content images and diagrams assigned to different articles or topics. Reuse for
+the same article on its homepage preview and article page is allowed.
+
+## Construction-piece CAD
+
+The 3D Life article has an on-demand viewer for the original 2019 construction
+pieces. These make cubes that can be combined into actual tiles; they are not
+the 26-type Life tile set. Three.js and the models load only when requested.
+
+`npm run export:construction-pieces` regenerates the ten STL files and manifest
+from `research/3d-tiles/original-2019.jscad`, using a pinned legacy JSCAD API for
+source compatibility. The original code is excluded from formatting to preserve
+it unchanged. Exports use millimetres at 3× scale and remove one detached flat
+fragment from the legacy boolean result. Digital mesh checks and physical-fit
+limitations are recorded in `research/3d-tiles/`.
+
+The Thingiverse package and description are prepared locally. Publication needs
+a selected license and account sign-in. This is separate from permission to
+upload or deploy the website.
 
 ## Adding an article
 
@@ -54,6 +76,9 @@ sources:
 ```
 
 Required fields: title, description, type, topics, status, date, and sources.
+A source has a label and normally a URL; author-supplied unpublished materials
+may use a label without a public URL. `note` identifies a research note, while
+`preprint` identifies work with a public preprint.
 `showPreview`, `presentationOrder`, `updated`, `github`, `demo`, `demoNote`, `image`, `imageAlt`, `imageCredit`, and `imageSource` are optional.
 `date` is this article's publication date, not the repository's creation date.
 Initial articles were prepared on October 12, 2026; historical result dates are
@@ -86,7 +111,7 @@ the computed Mandelbrot image are identified as subject illustrations.
 
 The exact Simkin-gun animation can be regenerated with
 `python scripts/render-life-gif.py` (optional Python/Pillow development tooling).
-The homepage Life simulation runs at 10 generations per second by default,
+The Simkin Glider Gun article’s Life simulation runs at 10 generations per second by default,
 with Play/Pause, step, reset and speed controls. It respects reduced motion.
 GIF first frames provide a reduced-motion fallback; a footer control pauses
 other animated images.
@@ -107,9 +132,14 @@ order: 8
 visual: packing
 ```
 
-Interest cards are typographic and automatically numbered by display order.
+Interest cards show a named representative article from their own collection.
+Set `representative: article-slug` on a main interest; it must refer to a
+non-draft, illustrated article connected to that interest. Main interests are
+automatically numbered by display order; nested interests appear within them.
 A `visual` field is accepted for compatibility but is optional.
 The landing page, homepage card, filter, and footer navigation are generated.
+Optional `parent: cellular-automata` makes an interest a child of Cellular Automata.
+Articles inherit parent categories automatically; invalid parents and cycles fail the build.
 Unknown or duplicate article topics fail the build rather than silently orphaning
 content. Draft articles are excluded from every published index and route.
 
@@ -121,8 +151,7 @@ motives and recollections the author supplies. Keep repository-based explanation
 factual and distinguish implementation, experiments, and candidate claims.
 `docs/content-sources.json` records the initial evidence review.
 
-Edit `src/lib/site.ts` for verified email and arXiv URLs. They are currently empty,
-so invented contact details and publications are never shown. The existing
+Edit `src/lib/site.ts` for verified contact details. The author supplied `simsim314@gmail.com` for public contact; no arXiv profile URL has been supplied. The sphere-packing article links the verified research preprint directly. The existing
 `Spirtuality` repository is separate and is not imported or modified.
 
 ## GitHub Pages deployment
@@ -161,15 +190,17 @@ scripts/                # Markdown base-path plugin and build verification
 
 ## Image placement policy
 
-A content image appears exactly once across the entire site. Interest cards,
-category indexes and related-article links use text cards. Homepage featured
-work and recent articles share the visual placements: a featured cover is never
-repeated in recent articles.
-The Simkin gun appears only on the homepage, with playback controls; its article
-links there. All covers appear only on the homepage; article pages link back to their cover. The build
-verifier rejects repeated image contents or visual identifiers across pages.
-The review page links to each unique homepage placement and does not reproduce
-images.
+Each content visual belongs to one article. Its homepage preview and its own
+article page may show the same visual; different articles must never share it. A topic card may show a clearly named
+article from that topic. Its picture and theme heading open the thematic interest page; the explicit named-example caption opens the article. Category indexes, the journal, and related articles use image previews where
+available. Thematic pages have visible introductions and their own curated article order (`articleOrder`); the date of a recent article does not determine where a topic story begins.
+The Simkin gun appears in the original homepage hero and on its own article,
+with playback controls. The homepage canvas links directly to that article.
+Other covers appear in the homepage preview and on their own article pages.
+Set `homepageHero: true` on one article to select the lead exhibit. The build
+verifier tracks article ownership and rejects images or diagrams reused by a
+different article or topic, including identical file contents under different names.
+The review page links to each article’s preview without adding a separate gallery.
 
 The museum article is retained as a draft and excluded from published routes,
 search and indexes. `presentationOrder` sorts articles sharing a publication
@@ -187,3 +218,70 @@ new preview needs a distinct image and the author’s approval before publicatio
 `docs/life-discovery-coverage.json` records the 11 discoveries listed on the
 author’s LifeWiki profile and their corresponding source-backed articles.
 No inference package or model download is required to build the website.
+
+## Life tile article and models
+
+`src/content/articles/life-in-3d-tiles.mdx` is the normal article at
+`/Homepage/articles/life-in-3d-tiles/`. Its metadata adds it to the homepage,
+Cellular Automata, search, and related articles. `LifeTileSet.astro` displays every
+type in each family in one compact shared-plane 3D image. Four worked 2D
+input/output examples reuse the earlier schematics; full glider drawings are
+expandable. Each set (blue, orange, purple, black/white, and boundary blue) has
+one visible rotatable example beneath its group image, with independently rotatable
+top and underside views shown together (stacked on mobile). Reset restores both
+faces. Viewers activate near the viewport, release WebGL
+resources offscreen, and preserve their camera state when revisited. The
+complete assembly has a separate viewer with a 0–200 mm layer-spacing slider,
+starting at 40 mm. Top, underside, reset, zoom, and keyboard controls are
+available. Three.js, the shared GLB, and assembly data load on demand.
+
+The full-width edge and corner blue variants overhang by half a cell and
+contain only two or one underside sockets over real cells. Exterior zeros
+are encoded in the output keys; the final grid returns to the input footprint.
+`research/3d-tiles/check_boundary_ports.py` tests the actual exported sockets,
+wrong-bit rejection, output keys, and exterior solid undersides.
+
+`research/3d-tiles/export_homepage_tiles.py` renders the existing STL meshes
+from `research/3d-tiles/bounded-solids/`, copies models and approved schematics
+into `public/`, and updates `src/data/life-tile-catalogue.json` and the cover.
+Regenerate with Python, NumPy, Pillow, and trimesh installed:
+
+```sh
+python research/3d-tiles/export_homepage_tiles.py
+python research/3d-tiles/render_compact_sets.py
+python research/3d-tiles/render_assembly_cover.py
+npm run verify
+```
+
+Python is only needed to regenerate these assets, not to build the website.
+The 32 exported types are nominal prototypes with zero mating clearance; see
+the included design notes before preparing physical prints.
+
+`npm run preview -- --port 4321` serves the last build. After editing, rebuild
+or use `npm run dev -- --port 4321` for live updates (stop the preview first).
+
+## Current topic grouping and switch-engine animation
+
+The main interests are Papers, CA Research, Conway’s Game of Life, Cryptography
+& Implementation, Chess, and Engineering & Computing. Computational geometry
+remains nested within Papers (which includes preprints and unpublished notes);
+Life is a separate main collection rather than a child of CA Research. Neural
+CA belongs to CA Research. AI remains an article theme/tag in Deep-Formix and
+other relevant work, without a separate AI topic. The old AI route redirects
+to CA Research; its former introduction is archived in docs/historical-interests/.
+
+Switch-engine ping-pong is featured and ordered before the 24/25-cell growth
+seeds. Its cover is an actual Golly HashLife animation with a fixed close view
+of the growing fan at sampled generations 33,554,432–67,108,864. The simulation
+uses the full plane; only the displayed view is cropped. Each lit image pixel
+represents a square containing live cells. The last sampled state is the
+pause/reduced-motion fallback. Regenerate with installed bgolly and Pillow:
+
+```sh
+python scripts/render-switch-engine-ping-pong.py
+```
+
+The renderer verifies the 23-cell seed and compares decoded generation 64 with
+an independent sparse B3/S23 implementation. Source and frame-generation
+provenance are in research/switch-engine-ping-pong/animation-check.json. New
+visuals remain local review material; website publication still needs permission.
