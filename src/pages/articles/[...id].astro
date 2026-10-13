@@ -63,7 +63,7 @@ const related = relatedArticles(article, articles);
       )
     }
     {
-      data.showPreview && article.id !== 'simkin-glider-gun' && (
+      data.showPreview && data.showArticlePreview && article.id !== 'simkin-glider-gun' && (
         <figure class="article-preview">
           {data.image ? (
             <ProjectImage src={data.image} alt={data.imageAlt || data.title} eager />

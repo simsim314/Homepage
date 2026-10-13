@@ -35,6 +35,7 @@ const articles = defineCollection({
       featured: z.boolean().default(false),
       homepageHero: z.boolean().default(false),
       showPreview: z.boolean().optional(),
+      showArticlePreview: z.boolean().default(true),
       presentationOrder: z.number().default(0),
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),
